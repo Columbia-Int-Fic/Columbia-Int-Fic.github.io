@@ -9,18 +9,7 @@
         <link rel="shortcut icon" href="images/favicon_io/favicon.ico"/> 
         <link rel="stylesheet" href="credits.css"> <!-- CSS -->
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Playfair font-->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script> <!-- jQuery import-->
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-176737183-1');
-        </script>
     </head>
 
     <body>
@@ -47,19 +36,47 @@
                 </div>
                 <!-- prompt space to credits-->
             </section>
-            <a class="space-bar" id="firstPage" href="bootstrap-credits.html">continue</a>
-                        
+            <div class="space-bar" id="firstPage"><p class="space-text">continue</p></div>
+
+            <!-- project credits -->
+            <section class="project-credits" style="display:none" id="project-credits">
+                <h1>Project Credits</h1>
+                <div class="creds-rolling">
+                    <h4>Writing</h4>
+                    <p>Story One: name1, name2</p>
+                    <p>Story Two: name1, name2</p>
+                    <p>Story Three: name1, name2</p>
+                    <p>Story Four: name1, name2</p>
+                    <br />
+                    <h4>Tech</h4>
+                    <p>name1, name2, name3</p>
+                    <br />
+                    <h4>Visuals</h4>
+                    <p> name1, name2, name3</p>
+                    <br />
+                    <h4>Social Media</h4>
+                    <p> name1, name2, name3</p>
+                    <br />
+                </div>
+            </section> 
+            <div class="footer">
+                <img src="./images/favicon_io/apple-touch-icon.png" alt="int-fic icon">
+                <!-- # of people visiting not configured --> 
+                <h2>people from [x] countries have embarked on this journey</h2>
+            </div> 
+            
             <script type="text/javascript">
                 $(document).ready(function(){
                     /* delay continue button */
                     $("div.space-bar").delay(1000).fadeTo(1000,1);
                 });
+                /* script to show second page */
+                $("div.space-bar").click(function(){
+                        $("#counters").hide();
+                        $("#firstPage").hide();
+                        $("#project-credits").fadeIn("slow");
+                });
             </script>    
         </main> 
-        <footer>
-            <img src="./images/white crown logo.png" alt="int-fic icon">
-            <!-- # of people visiting not configured --> 
-            <h2>people from [x] countries have embarked on this journey</h2>
-        </footer> 
     </body>
 </html>
