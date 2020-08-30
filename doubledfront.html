@@ -9,10 +9,103 @@
         <title>A Doubled Front</title>
         <meta name="description" content="A Doubled Font">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="doubled.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body id="story-body">
-        
-        <script src="" async defer></script>
+
+        <div class="story-txt">
+            <iframe
+                mozallowfullscreen="true"
+                src="doubledfrontstory.html"
+                frameborder="0"
+                width="100%" height="100%"
+                id="twine-embed">
+            </iframe>
+        </div>
+
+            <!--Overlay that appears on top of the page-->
+            <div id="bg-modal">
+
+                <!--Email notification overlay-->
+                <div class="modal-email" id="email-1">
+                    <h2 id="notif">You've got mail!</h2>
+                    <p id="modal-email-text">
+                    </p>
+                    <btn id="open-btn" onclick="off()">OPEN</btn>
+                </div>
+
+                <!--Picture overlay-->
+                <div id="modal-pic">
+                        <img height="400"
+                        src=""
+                        id="myImage"
+                        onclick="off()"> 
+                </div>
+            </div>
+
+            <!--Script for opening overlay-->
+            <script>
+                window.onmessage = function(e) {
+                    on();
+                    s = e.data.toString();
+                    simg = s.substring(0, 3);
+                    semail = s.substring(0, 5);
+                    console.log("simg: " + simg);
+                    console.log("semail: " + semail);
+                    if (simg=="img") {
+                        s = s.charAt(3);
+                        console.log(s);
+                        document.getElementById("myImage").src = "images/sinead/img" + s + ".jpg";
+                    }
+                    else if (semail=="email") {
+                        s = s.charAt(5);
+                        console.log(s);
+                        emailOn(s);
+                    }
+                    
+                }
+                function on() {
+                    document.getElementById('bg-modal').style.display = "block";
+                    document.getElementById('modal-pic').style.display="block";
+                }
+                function off() {
+                    document.getElementById('bg-modal').style.display = "none";
+                    document.getElementById('email-1').style.display="none";
+                    document.getElementById('modal-pic').style.display="none";
+                }
+
+                function emailOn(x) {
+                    console.log("the email number " + x);
+                    document.getElementById('email-1').style.display = "block";
+                    document.getElementById('modal-pic').style.display="none";
+                    if (x==1) {
+                        document.getElementById('modal-email-text').innerHTML="Subject: Daily COVID-19 Report, New York City<br>\
+                        Number of New Cases: 6,131<br>";
+                    }
+                    if (x==2) {
+                        document.getElementById('modal-email-text').innerHTML="From: Louisa Jones (louisianajones@cifmail.com)<br>\
+                        To: Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        Date: Sunday, March 15, 02:36pm<br>\
+                        Subject: Early summer?<br>";
+                    }
+                }
+            </script>
+
+        </main>
+
+        <footer class="footer">
+            
+        </footer>
+
+        <!--Script triggered when exiting story-->
+        <script>
+            var back = document.getElementsByClassName('story-pg-whatif');
+
+            var warning = function (e) {
+                if (!confirm("Your game won't be saved. Are you sure?")) e.preventDefault();
+            };
+
+            back[0].addEventListener('click', warning, false);
+        </script>
     </body>
 </html>
