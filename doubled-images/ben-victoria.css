@@ -1,37 +1,36 @@
 tw-story {
     font-family: "Maven Pro", sans-serif;
     font-size:100%;
-    color: black;
-    background-color: white;
-}
-  
-body
-{
-    background-color: #F4F5EC;
+    background-color: #F3E9D2;
 }
 
 tw-passage
 {
-    color: black;
+    color: #0D1F2D;
     font-size: 20px;
     line-height: normal; 
 }
 
 tw-link
 {
-    color: black;
+    color: #0D1F2D;
     font-weight: 700;
+}
+
+tw-link:hover 
+{
+    color: #8A95A4;
 }
 
 /* External Links */
 a {
     text-decoration: none;
     font-weight: 500;
-    color: black;
+    color: #F3E9D2;
 }
 
 a:hover{
-    color: #00bfff;
+    color: #8A95A4;
 }
 
 /* 0.0: WeChat SVGs */
@@ -76,8 +75,4 @@ a:hover{
     font-style: italic;
     font-weight: 700;
     cursor: pointer;
-}
-
-.numbers {
-    display: none;
 }

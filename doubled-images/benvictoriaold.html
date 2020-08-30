@@ -28,6 +28,23 @@
   
 <tw-passagedata pid="1" name="Intro: Awaken" tags="" position="217.5,212.5" size="100,100">
 
+<style>
+  tw-story
+  {
+  background: #0D1F2D;
+  }
+  
+  tw-passage
+  {
+    color: #F3E9D2;
+  }
+  
+  tw-link
+  {
+    color: #F3E9D2;
+  }
+</style>
+
 <div class="wechat">
   <div class="wechat-static"><img src="iphone1.svg"></div>
   <div class="wechat-button"><img src="translate.svg"></div>
@@ -54,31 +71,33 @@ Glasses. Where are [[my glasses?-&gt;1. Stretching]]</div>
 </tw-passagedata>
 
 <tw-passagedata pid="2" name="1. Stretching" tags="" position="374.5,215.5" size="100,100">The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. <a class="appear">Let’s outdo the sun.</a><div class="hidden">
-I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting <a class="appear2">ready.</a></div>
+I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting ready.
 
-<div class="numbers">1 2 3 4 5[[...-&gt;1.1 Meditation]]</div>
+1 2 3 4 5[[...-&gt;1.1 Meditation]]
+</div>
 
 <script>
   /* click to show second paragrpah */
   $(".appear").click(function(){
     $("div.hidden").fadeIn("slow");
-  });
-
-  /* click and numbers slowly appear */
-  $(".appear2").click(function(){
-    var str = $("div.numbers").html();
-
-    var spans = '<span>' + str.split(/\s+/).join(' </span><span>') + '</span>';
-
-    $(spans).hide().appendTo('body').each(function(i) {
-        $(this).delay(1000 * i).fadeIn();
-    });
+    $("tw-story").css("background-color","#F3E9D2");
+    $("tw-passage").css("color", "#0D1F2D");
+    $("tw-link").css("color", "#0D1F2D");
+    $("a").css("color", "#0D1F2D");
   });
 </script>
 
 </tw-passagedata>
 
-<tw-passagedata pid="3" name="2. Groceries" tags="" position="677.5,217.5" size="100,100">And all is done. I’ve brushed my teeth, washed my face, dressed (and maybe I’ve lied back in bed for just a minute or two). It’s 5:21 AM. Now, to eat:
+<tw-passagedata pid="3" name="2. Groceries" tags="" position="677.5,217.5" size="100,100">
+  
+  <style>
+    tw-passage{
+      color: #0D1F2D;
+    }
+  </style>
+  
+  And all is done. I’ve brushed my teeth, washed my face, dressed (and maybe I’ve lied back in bed for just a minute or two). It’s 5:21 AM. Now, to eat:
 
 Something quick, easy. I have that box of cereal and maybe—yes!—some milk left. I’ll need to get more soon. 
 
@@ -267,7 +286,30 @@ The journey there would be too much, [[anyways.-&gt;13. Reflection]]</tw-passage
 [[Fin.-&gt;21. End]]
 </tw-passagedata>
 
-<tw-passagedata pid="16" name="Preface" tags="" position="453,62.5" size="100,100">//Disclaimer: Before reading, please be aware that the story will heavily feature anxieties regarding racism, discrimination, identity, and death. There will be links provided throughout to articles and resources related to our content.//
+<tw-passagedata pid="16" name="Preface" tags="" position="453,62.5" size="100,100">
+<style>
+  tw-story
+  {
+  background: #0D1F2D;
+  }
+  
+  tw-passage
+  {
+    color: #F3E9D2;
+  }
+  
+  tw-link
+  {
+    color: #F3E9D2;
+  }
+
+  tw-link:hover
+  {
+    color: #8A95A4;
+  }
+</style>
+  
+  //Disclaimer: Before reading, please be aware that the story will heavily feature anxieties regarding racism, discrimination, identity, and death. There will be links provided throughout to articles and resources related to our content.//
 
 Our narrative does not take place during a specific date during the pandemic. Readers will find that referenced statistics and reported events span a time range capturing the height of the pandemic in NYC. This was done to more holistically communicate a complex reality supported by evidence which is recorded at a pace not entirely reflective of lived experience. This narrative follows a day in the life of a registered nurse.
 
