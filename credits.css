@@ -19,7 +19,9 @@ html, body{
 }
 
 body{
-	background-color: #BAD1E5;
+	display:flex; 
+	flex-direction:column;
+	background-color: #FCFCFC;
 }
 
 p, a, h3, h4, h1 {
@@ -28,8 +30,10 @@ p, a, h3, h4, h1 {
 }
 
 main {
-	height: 100%;
+	height: 90%;
 	display: grid;
+	flex:1 0 auto;
+	padding:20px;
 	grid-template-columns: minmax(60px, 1fr) repeat(3, minmax(50px, 380px)) minmax(60px, 1fr); 
 }
 
@@ -45,12 +49,13 @@ main {
 .counter-block {
 	display: inline-block;
 	align-items: center;
-	background-color: var(--blocks);
+	background: #9DC0E8;
+	border-radius: 30px;
 	text-align: center; 
 	height: 450px;
 	width: 400px;
 
-	padding: 50px 50px 30px 50px;
+	padding: 30px 50px 30px 50px;
 	margin: 30px 40px 30px 40px;
 }
 
@@ -61,24 +66,22 @@ main {
 
 .counter-block h3{	
 	font-size:150px;
+	font-weight: 700;
 }
 
 /* continue button */
 .space-bar{
 	grid-column: 1 / span 5;
 	height: 50px;
-	margin-top: 100px 0 0 0;
-	padding-top: 40px;
-	color: var(--light);
+	margin-top: 50px 0 0 0;
+	padding-top: 20px;
 	cursor: pointer;
-	opacity: 0;
+	text-align: center;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 30px;
+	color: #9DC0E8;
 }
 
-.space-text{
-	text-align: center;
-	font-family: 'tt_normsthin_italic', sans-serif;
-	font-size: 30px;
-}
 /* project credits */
 .project-credits { /* span across entire screen */
     display: inline-block;
@@ -86,47 +89,54 @@ main {
     text-align: center;
 	margin-top: 70px;
 	font-size: 18px;
+	overflow: scroll;
 }
 
 .project-credits h1 { /* span across entire screen */
-    font-family: 'mermaid_swash', serif;
+    font-family: 'Playfair Display', serif;
 	padding: 10px;
 	font-size: 80px;
 	word-spacing: 50px;
 }
 
-.project-credits h4 { /* span across entire screen */
+.creds-rolling h4 { /* span across entire screen */
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	padding: 20px
 }
 
-.project-credits p {
-	font-family: 'tt_normslight', sans-serif;
+.creds-rolling p {
+	font-family: 'Maven Pro', sans-serif;
 	letter-spacing: 1px;
 }
 
 /* footer, constant through two pages*/
-.footer{
-	grid-column: 1 / span 5;
+footer{
+	flex-shrink:0;
 	align-self: end;
-	height: 100px;
-	background-color: var(--dark);
+	height: 10%;
+	background: linear-gradient(270deg, #FFBBB1 0%, #FFDB9C 100%);
 	color: var(--light);
 	text-align: center;
-	font-family: 'tt_normsbold', sans-serif;
+	font-family: 'Maven Pro', sans-serif;
+	width:100%;
 }
 
-.footer img {
+footer img {
 	float: left;
 	height: 60px;
-	margin: 20px;
+	margin: 15px;
 }
 
-.footer h2 {
+footer h2 {
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 30px;
 	font-size: 30px;
+}
+
+footer a {
+	padding-right: 50px;
+	float: right;
 }
 
 /* media query */
@@ -154,15 +164,15 @@ main {
 		font-size: 25px;
 	}
 	
-	.footer {
+	footer {
 		height: 75px;
 	}
 
-	.footer img {
+	footer img {
 		display: none;
 	}
 
-	.footer h2 {
+	footer h2 {
 		padding: 10px;
 		font-size: 20px;
 	}

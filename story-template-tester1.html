@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-176737183-1');
+        </script>
+    </head>
+    <body id="story-body">
+        
+        <!-- Ideally make the h2 and h1 as class so you can use
+        same CSS across different webpages for different stories. -->
+        <header class="head">
+            <a href="index.html"><h2 class="story-pg-whatif">WHAT IF</h2></a>
+            <h1 class="story-pg-title">Story Title</h1>
+        </header>
+        
+        <main class="story-main">
+
+            <!-- Script to take user to end credits once story is finished. 
+            It's in accordance with scripting that has been done in the last
+            passage on the Twine story (within the passage itself). Look at
+            test-story-2.html ("Run of the Mill" on Twine) for exmaple. -->
+            <script>
+                window.onmessage = function(e) {
+                    if (e.data == 'hello') {
+                        /* Replace this link with story credits page link */
+                        window.location.href = "credits.html"; 
+                    }
+                };
+            </script>
+
+            <div class="story-txt">
+                <iframe
+                    mozallowfullscreen="true"
+                    src="sinead-and-louisa-1.html"
+                    frameborder="0"
+                    width="100%" height="100%"
+                    id="twine-embed">
+                </iframe>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <p>Columbia Int Fic 2020. Columbia University.</p>
+        </footer>
+
+        <script src="story-template.js"></script>
+    </body>
+</html>
