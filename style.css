@@ -139,7 +139,7 @@ footer {
 }
 
 .splash-txt-1 {
-    font-size: 150px;
+    font-size: 20vh;
     font-family: 'tt_blackitalic', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
