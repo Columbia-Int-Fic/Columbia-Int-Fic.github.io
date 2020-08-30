@@ -248,7 +248,9 @@ Mask-on (link-repeat: &quot;(the right way, of course)&quot;)[(open-url: &#39;ht
 	$(document).ready(function(){
 		$(".lastDigit").click(function(){
 			$(".changeNum").replaceWith("0");
-			$(".p00").delay(2000).fadeOut(0);
+			$(".p00").delay(2000).fadeOut(0).queue(function(){
+				$(".firstNum").replaceWith("05:3");
+			});
 		});
 	});
 </script>
