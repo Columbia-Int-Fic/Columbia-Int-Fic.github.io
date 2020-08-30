@@ -70,7 +70,7 @@ open-url:visited
 
 </style>
 
-<!-- Story JS -->
+<!-- Story JS Jquery Import-->
 <script role="script" id="twine-user-script" type="text/twine-javascript"> /* twine-user-script #1: "UserScript" */
 	/* import jQuery UI library. */
 	$(function () {
@@ -84,7 +84,6 @@ open-url:visited
 
 <!-- Passage 1 Intro: Awaken-->
 <tw-passagedata pid="1" name="Intro: Awaken" tags="" position="112,211" size="100,100">
-
 <!-- Passage 1 CSS -->
 &lt;style&gt;
   tw-story
@@ -102,13 +101,11 @@ open-url:visited
   	color: #F3E9D2;
   }
 &lt;/style&gt;
-
 <div class="wechat">
 	<div class="wechat-static"><img src="/doubled-images/iphone1.svg"></div>
 	<div class="wechat-button"><img src="/doubled-images/translate.svg"></div>
 	<div class="wechat-hidden"><img src="/doubled-images/translated.svg"></div>
   </div>
-  
   <!-- Once user clicks on translate, the below appears -->
   <div class="wechat-hidden"> 
   It isn’t so easy to get to you anymore. Have you eaten? Ma, why stay up so late? 
@@ -213,58 +210,26 @@ I’ll go to the Chinese mart. Make it out to Main Street (if only the 7 were fa
 
 Damn. Some milk. Just some milk. I need to eat. Have you eaten? Ma, have you eaten?
 
-<!-- Email Modal trigger-->
-<span id="emailButton">(text-style: &quot;fade-in-out&quot;)[[Notification: Email-&gt;Daily Report Alert]]]]</span>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-	<!-- Modal content -->
-	<div class="modal-content">
-	  <span class="close">&times;</span>
-	  <p>Some text in the Modal..</p>
-	</div>
-</div>
-
-<script>
-	// Get the modal
-	var modal = document.getElementById("myModal");
-	
-	// Get the button that opens the modal
-	var btn = document.getElementById("emailButton");
-	
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-	
-	// When the user clicks the button, open the modal 
-	btn.onclick = function() {
-	  modal.style.display = "block";
-	}
-	
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-	  modal.style.display = "none";
-	}
-	
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	  if (event.target == modal) {
-		modal.style.display = "none";
-	  }
-	}
-</script>
+(text-style: &quot;fade-in-out&quot;)[[Notification: Email-&gt;Daily Report Alert]]]]
 
 </tw-passagedata>
 
-<!-- Daily Report-->
-<tw-passagedata pid="4" name="3. Daily Report" tags="" position="838,373" size="100,100">(css: &quot;font-size: 100px&quot;)+(align:&quot;=&gt;&lt;=&quot;)[6,131]
+<!-- Passage 4 Daily Report-->
+<tw-passagedata pid="4" name="3. Daily Report" tags="" position="838,373" size="100,100">
 
+<div id="dailyNum"><h1><span class="firstNum">6,13</span><span class="changeNum">1</span></h1></div>
+<div class="p00">
 It’s the daily report. 
 
 Yesterday, six thousand one hundred thirty one more New York City residents were diagnosed with this virus. Over three hundred died. 
 
 These are people. (link-repeat: &quot;You, me, them, us.&quot;)[(open-url: &#39;https://projects.thecity.nyc/covid-19-deaths/&#39;)]
 
-People. These are neighbors. Auntie’s friend, just last week—mooncake master, quick to hug. And Ma has always had that cough, bone-dry, deep. I used to mock it when I was younger. That cough. What if this was it—if she was it—[[that last digit?-&gt;4. Mask]]</tw-passagedata><tw-passagedata pid="5" name="4. Mask" tags="" position="676,365" size="100,100">It’s time to head out. Better safe than sorry, now that the subway is so unpredictable. 
+People. These are neighbors. Auntie’s friend, just last week—mooncake master, quick to hug. And Ma has always had that cough, bone-dry, deep. I used to mock it when I was younger. That cough. What if this was it—if she was it— |p0&gt;[&lt;span class=&quot;lastDigit&quot;&gt;the last digit?&lt;/span&gt;]
+[(click: ?p0)[(live: 2s)[(t8n: &quot;dissolve&quot;)(show: ?p1)]]]
+</div>
+
+|p1)[It’s time to head out. Better safe than sorry, now that the subway is so unpredictable. 
 
 Here’s a mask. Surgical, of course. We need to ration the N95s as best as possible. This— PPE—I realize, is everything. For me, it’s life. And with these shortages: what is there left to do but try? 
 
@@ -276,7 +241,37 @@ I wonder if I should wear sunglasses today. It’s not slated to be that sunny, 
 
 Agh. I know better. I know, I know. And I can’t be late.
 
-Mask-on (link-repeat: &quot;(the right way, of course)&quot;)[(open-url: &#39;https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html&#39;)]: [[let’s go.-&gt;5. Walking]]</tw-passagedata><tw-passagedata pid="6" name="5. Walking" tags="" position="518,364" size="100,100">&lt;style&gt;
+Mask-on (link-repeat: &quot;(the right way, of course)&quot;)[(open-url: &#39;https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html&#39;)]: [[let’s go.-&gt;5. Walking]]]
+
+<script>
+	/* Replace 1 with 0, replace text*/
+	$(document).ready(function(){
+		$(".lastDigit").click(function(){
+			$(".changeNum").replaceWith("0");
+			$(".p00").delay(2000).fadeOut(0);
+		});
+	});
+</script>
+
+</tw-passagedata>
+
+<!-- Mask -->
+<tw-passagedata pid="5" name="4. Mask" tags="" position="676,365" size="100,100">It’s time to head out. Better safe than sorry, now that the subway is so unpredictable. 
+
+Here’s a mask. Surgical, of course. We need to ration the N95s as best as possible. This— PPE—I realize, is everything. For me, it’s life. And with these shortages: what is there left to do but try? 
+
+I’m reaching for the mask and I subtly flinch, the kind that arrests your breath and shutters your eyes. It’s not unfamiliar, not in any way. 
+
+No. It’s not its foreignness to me, but its foreignness to others. To be visibly East Asian and wear a mask is to dig into the peril I embody, to wear it like an affront to those who see me, this Oriental threat. (link-repeat: &quot;Somehow, I become a threat.&quot;)[(open-url: &#39;https://www.straitstimes.com/world/united-states/fake-flyers-and-face-mask-fear-california-fights-coronavirus-discrimination&#39;)]
+
+I wonder if I should wear sunglasses today. It’s not slated to be that sunny, to be honest, but a part of me—I’m slightly ashamed to admit—is scared, wants to hide. To hide perhaps the most visibly East Asian, one of the most ridiculed, features of my appearance. Maybe a hat too: my black hair is distinctive, I suppose. To reduce the area my body encompasses becomes a statistical game. Today, will I be discriminated against for the visibility of my identity? 
+
+Agh. I know better. I know, I know. And I can’t be late.
+
+Mask-on (link-repeat: &quot;(the right way, of course)&quot;)[(open-url: &#39;https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html&#39;)]: [[let’s go.-&gt;5. Walking]]</tw-passagedata>
+
+
+<tw-passagedata pid="6" name="5. Walking" tags="" position="518,364" size="100,100">&lt;style&gt;
 	#count{
 		text-align: center;
 		font-size:25px;
@@ -479,7 +474,7 @@ I’m on the edge of the bed now, straightening out my limbs and snow-angeling t
 |num)[&lt;div id=&quot;count&quot;&gt;(live:1s)[1  (stop:)] (live:2s)[2  (stop:)] (live:3s)[3  (stop:)] (live:4s) [4  (stop:)] (live:5s)[[[5... -&gt;1.1 Meditation]](stop:)]&lt;/div&gt;]
 </tw-passagedata>
 
-<!-- Daily Report Alert-->
+<!-- Passage 3.5 Daily Report Alert-->
 <tw-passagedata pid="23" name="Daily Report Alert" tags="" position="849,212" size="100,100">
 
 <div class="email">
