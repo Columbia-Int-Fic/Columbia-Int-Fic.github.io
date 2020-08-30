@@ -1,129 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8"/>
-
-        <!--icon-->
-        <link rel="icon" href="images/favicon_io/favicon.ico" type="image/ico" />
-
-        <!--stylesheet link-->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Current CSS -->
         <link rel="stylesheet" href="style.css"/>
+        <!-- Logo link -->
+        <link rel="shortcut icon" href="images/white-logo.svg"/>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Playfair font-->
         
-        <!--fonts-->
-            <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Roboto">
-
-        <title>Columbia Int Fic: What IF</title>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-176737183-1');
-        </script>
+         <!--icon-->
+            <link rel="icon" href="images/favicon_io/favicon.ico" type="image/ico" />
+    
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-1"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-176737183-1');
+            </script>
+    
+        <title>Columbia Int Fic: what IF</title>
     </head>
     
-    <!--navigation bar--> 
+    <body id="home-body">
+
+    <!--Navigation bar--> 
     <nav class="navigation">
         <a href="#">about</a>
         <a href="#" >meet the team</a> 					
         <a href="#">submit a story</a> 
         <a href="#.html">contact us</a> 
     </nav>
-    
-    
-    
 
-        <body id="home-body"> <!--changed "body" id to "home-body" for CSS specification-->
-
-            <!--Code for intro splash screen-->
-            <div class="splash">
-                <img width="1200" height="1200"
-                src="images/logo sketch 3.png" 
-                class="splash-logo" alt="Columbia Int Fic Logo">
-                <h1 class="splash-txt-1">WHAT IF?</h1>
-                <h1 class="splash-txt-2">Click to continue</h1>
-            </div>
-            
-            <!----
-
-    below js code for pop ups and buttons. each button is labeled
-
-
-    story one below
-
-     -->
-        
-        <div class="popup" onclick="myFunction()"><p>
-            <u>
-        <a href="#story1" class="Button story1"></a>
-            </u>
-        </p><span class="popuptext" id="myPopup1"> 
-                <h1>Story 1</h1>
-                 <p>This is story number one. It's awesome.(Should be on New York)<br>
-    <a href="story-template.html" class="enterButton">enter</a>
-                </p>
-            </span></div>      
-
-<!-- story two -->
-            
- <div class="popup" onclick="myFunction2()"><p><u><a href="#story2" class="Button story2"></a></u></p><span class="popuptext" id="myPopup2"> 
-                <h1>Story 2</h1>
-                 <p>This is story number two. It's awesome. (Should be on South Korea)<br>
-    <a href="story-template.html" class="enterButton">enter</a>
-                </p>
-            </span></div> 
-
-<!-- story three -->
-            
- <div class="popup" onclick="myFunction3()"><p><u><a href="#story3" class="Button story3"></a></u></p><span class="popuptext" id="myPopup3"> 
-                <h1>Story 3</h1>
-                 <p>This is story number three. It's awesome. (Should be over Philly-ish. This placement might be tricky)<br>
-    <a href="story-template.html" class="enterButton">enter</a>
-                </p>
-            </span></div> 
-            
-<!-- story four -->
-            
- <div class="popup" onclick="myFunction4()"><p><u><a href="#story4" class="Button story4"></a></u></p><span class="popuptext" id="myPopup4"> 
-                <h1>Story 4</h1>
-                 <p>This is story number four. It's awesome. (This should be over Ireland, though the story also occurs in New Orleans)
-                     <br><a href="story-template.html" class="enterButton">enter</a>
-                </p>
-            </span></div> 
-            
-<script>
-    
-    //probably a simpler way to write this, but here's the popup functions//
-function myFunction() {
-    var popup = document.getElementById("myPopup1");
-    popup.classList.toggle("show");
-}
-    function myFunction2() {
-    var popup = document.getElementById("myPopup2");
-    popup.classList.toggle("show");
-}
-    function myFunction3() {
-    var popup = document.getElementById("myPopup3");
-    popup.classList.toggle("show");
-}
-    function myFunction4() {
-    var popup = document.getElementById("myPopup4");
-    popup.classList.toggle("show");
-}
+    <main> 
+        <div class="container-fluid">
+          <!--Code for intro splash screen-->
+          <div class="splash">
+            <img width="1200" src="images/white-logo.svg" class="splash-logo" alt="Columbia Int Fic Logo">
+            <h1 class="splash-txt-1">what IF</h1>
+            <p class="splash-txt-2">click to continue</p>
+          </div>
   
-</script>
+          <!-- JS for pop-ups and buttons. Each button is labeled-->
+          <!-- Story One -->
+          <div class="popup" onclick="myFunction()"><p><u><a href="#story1" class="Button story1"></a></u></p><span class="popuptext" id="myPopup1"> 
+            <h1>Story 1</h1>
+            <p>This is story number one. It's awesome. (Should be on New York)<br>
+              <a href="./ben-victoria/ben-victoria.html" class="enterButton">enter</a>
+            </p>
+          </span></div> 
+  
+          <!-- Story Two -->      
+          <div class="popup" onclick="myFunction2()"><p><u><a href="#story2" class="Button story2"></a></u></p><span class="popuptext" id="myPopup2"> 
+            <h1>Story 2</h1>
+            <p>This is story number two. It's awesome. (Should be on South Korea)<br>
+              <a href="story-template.html" class="enterButton">enter</a>
+            </p>
+          </span></div> 
+  
+          <!-- Story Three -->
+          <div class="popup" onclick="myFunction3()"><p><u><a href="#story3" class="Button story3"></a></u></p><span class="popuptext" id="myPopup3"> 
+            <h1>Story 3</h1>
+            <p>This is story number three. It's awesome. (Should be over Philly-ish. This placement might be tricky)<br>
+          <a href="i-see-you-1.html" class="enterButton">enter</a>
+            </p>
+          </span></div> 
+  
+          <!-- Story Four -->
+          <div class="popup" onclick="myFunction4()"><p><u><a href="#story4" class="Button story4"></a></u></p><span class="popuptext" id="myPopup4"> 
+            <h1>Story 4</h1>
+            <p>This is story number four. It's awesome. (This should be over Ireland, though the story also occurs in New Orleans)
+                <br><a href="sinead-page-1.html" class="enterButton">enter</a>
+            </p>
+          </span></div>  
+          
+          <!-- JS for pop-up buttons-->
+          <script>
+            //probably a simpler way to write this, but here's the popup functions//
+            function myFunction() {
+              var popup = document.getElementById("myPopup1");
+              popup.classList.toggle("show");
+            }
+            function myFunction2() {
+              var popup = document.getElementById("myPopup2");
+              popup.classList.toggle("show");
+            }
+            function myFunction3() {
+              var popup = document.getElementById("myPopup3");
+              popup.classList.toggle("show");
+            }
+            function myFunction4() {
+              var popup = document.getElementById("myPopup4");
+              popup.classList.toggle("show");
+            }
+          </script>
+        </div>
+    </main>
 
-<footer class="footer">
-                <p>Columbia Int Fic 2020. Columbia University.</p>
-            </footer>
   
     <script src="index.js"></script>   
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    </body>
+  </body>
     
 
 </html>

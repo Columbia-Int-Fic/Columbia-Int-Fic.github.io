@@ -1,21 +1,24 @@
-/*broken fonts yay
-@font-face {
-    font-family: "Roboto";
-    src: url("Roboto-Regular.ttf")
+:root {
+    --dark: #000000; 
+	--light: #FFFFFF; 
+	--blocks: #99B3C6;
+    --transition: all 0.3s ease 0s; 
+    /* all variables above */
 }
-*/
 
-body {
-        font-family: 'Roboto', serif;
-      }
+html, body{
+	height:100%;
+	overflow: auto;
+    font-family: 'Maven Pro', sans-serif;
+}
 
 #home-body {
-    background-image: url(images/Group.svg);
-    background-color: #2B2D35;
-    height: 800px; /*it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
+    background-image: url(/images/bluemap.svg);
+    background-color: #EEEEEE;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 95%;
+    width: 100%;
     
 /* can't figure out the figma dimensions, but here they are whenever I figure it out
     position: absolute;
@@ -35,38 +38,38 @@ ISSUES: should we add mini-logo?
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-family: "Roboto-Regular", sans-serif; 
-    font-size: 20pt;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
     color: white;
-    background-color: #2B2D35;
     text-align-last: right;
-    padding: 30% -40%; /*fix padding on right side, why won't it workkkk*/
+    padding-bottom: 15px;
     display: inline-block;
 }
 
 /* Need to style nav links in white */
 
 nav a:link{
-    font-family: "Roboto-Regular", "Roboto", sans-serif;
-    color: white;
+    color: black;
     text-decoration:none;
+    padding-right: 30px;
 }
 
 nav a:hover {
-    color: aquamarine;
     text-decoration: underline;
 }
 
 
 /* general links appearance*/
 
-a:link {color: #000000; text-decoration: none; font-family: "Roboto-Regular", sans-serif;
+a:link {color: #000000; text-decoration: none; 
 } 
 a:visited {color: mediumaquamarine; 
 } 
 a:focus {color: #000000; 
 } 
-a:hover {color: aquamarine; 
+a:hover {
+    color: aquamarine; 
 } 
 a:active {color: blue; 
 } 
@@ -81,6 +84,192 @@ footer {
     width: 100%;
 }
 */
+
+/* CSS styling for splash screen */
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 91, 148, 0.8) 0%, rgba(5, 91, 148, 0.44) 100%);    
+    z-index: 200;
+    color: white;
+    text-align: center;
+    line-height: 30vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 30vh;
+    transition: all 0.5s;
+}
+
+/* Splash screen text fade in keyframe function */
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+/* Splash screen image and text fade in */
+.splash-logo {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    display: block;
+    margin: 0 auto;
+    max-width: 230px;
+    max-height: 230px;
+    width: auto;
+    height: auto;
+    margin-top: 10%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    line-height: 90vh;
+    
+}
+
+.splash-txt-1 {
+    font-size: 150px;
+    font-family: 'tt_blackitalic', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1s;
+}
+
+.splash-txt-2 {
+    font-family: 'Maven Pro', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+    cursor: pointer;
+}
+
+  
+/*Button
+    There's the general button code and then each button also gets its own code for placement purposes.
+*/
+
+.Button {
+    background: #D69898;
+    border-radius:42px;
+	border:5px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:14px 14px;
+	text-decoration:none;
+}
+
+.Button:hover {
+	background-color:#ffffff;
+}
+.Button:active {
+	position:relative;
+	top:1px;
+}
+
+/* story 1 (New York) */
+.story1 {
+    margin-left: 850%;
+    margin-bottom: -625%;
+}
+
+
+/* story 2 (South Korea) */
+.story2 {
+    margin-left: 2500%;
+    margin-bottom: -750%;
+}
+
+/* story 3 (Philadelphia) */
+.story3 {
+    margin-left: 600%;
+    margin-bottom: -725%;
+}
+
+/* story 4 (Ireland/New Orleans) */
+.story4 {
+    margin-left: 1050%;
+    margin-bottom: -580%;
+}
+
+/*javascript pop-up*/
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+/* The popup matches our style for the most part.*/
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 0%;
+    padding: 3%; 
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    left: 20%;
+    right: 20%;
+    z-index: 10000;
+    font-family: "Maven Pro", sans-serif;
+    border: 4px solid black;
+}
+
+.popup .show {
+    visibility: visible;
+}
+
+.enterButton {
+	background-color:#80c0ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+    font-family: "Maven Pro", sans-serif;
+    font-size:28px;
+	padding:13px 49px;
+	text-decoration:none;
+}
+
+.enterButton:hover {
+	background-color:#6abda4;
+}
+.enterButton:active {
+	position:relative;
+	top:1px;
+}
+
+@font-face {
+    font-family: 'tt_normsbold';
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_blackitalic';
+    src: url('fonts/ttnorms-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* Styling for Sinead-Louisa story body */
 #story-body {
@@ -199,171 +388,4 @@ footer {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-}
-
-/* CSS styling for splash screen */
-.splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(43,45,53,0.6);
-    z-index: 200;
-    color: white;
-    text-align: center;
-    line-height: 30vh;
-}
-
-.splash.display-none {
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -10;
-    color: white;
-    text-align: center;
-    line-height: 30vh;
-    transition: all 0.5s;
-}
-
-/* Splash screen text fade in keyframe function */
-@keyframes fadeIn{
-    to{
-        opacity: 1;
-    }
-}
-
-/* Splash screen image and text fade in */
-.splash-logo {
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    display: block;
-    margin: 0 auto;
-    max-width: 230px;
-    max-height: 95px;
-    width: auto;
-    height: auto;
-    padding-top: 70px;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    line-height: 90vh;
-    
-}
-
-.splash-txt-1 {
-    font-size: 500%;
-    font-family: 'Catamaran', sans-serif;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 1s;
-}
-
-.splash-txt-2 {
-    font-family: 'Catamaran', sans-serif;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 2s;
-}
-
-  
-/*Button
-    There's the general button code and then each button also gets its own code for placement purposes.
-*/
-
-.Button {
-	background-color:#000000;
-	border-radius:42px;
-	border:8px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	padding:14px 14px;
-	text-decoration:none;
-
-}
-.Button:hover {
-	background-color:#ffffff;
-}
-.Button:active {
-	position:relative;
-	top:1px;
-}
-
-/* story 1 (New York) */
-.story1 {
-    margin-left: 850%;
-    margin-bottom: -625%;
-}
-
-
-/* story 2 (South Korea) */
-.story2 {
-    margin-left: 2500%;
-    margin-bottom: -750%;
-}
-
-/* story 3 (Philadelphia) */
-.story3 {
-    margin-left: 600%;
-    margin-bottom: -725%;
-}
-
-/* story 4 (Ireland/New Orleans) */
-.story4 {
-    margin-left: 1050%;
-    margin-bottom: -580%;
-}
-
-/*javascript pop-up*/
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-}
-/* The popup matches our style for the most part.*/
-.popup .popuptext {
-    visibility: hidden;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    border-radius: 0%;
-    padding: 3%; 
-    height: 50%;
-    width: 50%;
-    position: fixed;
-    top: auto;
-    bottom: auto;
-    left: 20%;
-    right: 20%;
-    z-index: 10000;
-    font-family: "Roboto-Regular", sans-serif; 
-    border: 4px solid black;
-}
-
-.popup .show {
-    visibility: visible;
-}
-
-.enterButton {
-	background-color:#80c0ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family: "Roboto", sans-serif;
-	font-size:28px;
-	padding:13px 49px;
-	text-decoration:none;
-}
-.enterButton:hover {
-	background-color:#6abda4;
-}
-.enterButton:active {
-	position:relative;
-	top:1px;
 }
