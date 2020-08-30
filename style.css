@@ -97,6 +97,7 @@ footer {
     color: white;
     text-align: center;
     line-height: 30vh;
+    cursor: pointer;
 }
 
 .splash.display-none {
@@ -109,7 +110,7 @@ footer {
     z-index: -10;
     color: white;
     text-align: center;
-    line-height: 30vh;
+    line-height: 20vh;
     transition: all 0.5s;
 }
 
@@ -126,8 +127,8 @@ footer {
     animation: fadeIn 1s ease-in forwards;
     display: block;
     margin: 0 auto;
-    max-width: 230px;
-    max-height: 230px;
+    max-width: 150px;
+    max-height: 150px;
     width: auto;
     height: auto;
     margin-top: 10%;
@@ -139,7 +140,7 @@ footer {
 }
 
 .splash-txt-1 {
-    font-size: 20vh;
+    font-size: 100px;
     font-family: 'tt_blackitalic', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
