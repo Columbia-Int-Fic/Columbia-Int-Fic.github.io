@@ -44,7 +44,15 @@
 
 /* 0.3: Groceries */
 #groceries {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    border: 2px solid #0D1F2D;
+    border-radius: 8px;
+    margin-left: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 50%;
 }
 
 #news-links {
@@ -101,6 +109,8 @@
 .time {
     visibility: hidden;
 }
+
+/* 0.6: Subway Station */
 
 .count{
     position: absolute;
