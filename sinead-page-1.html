@@ -55,16 +55,36 @@
             <!--Script for opening overlay-->
             <script>
                 window.onmessage = function(e) {
-                    on();
+                    
                     s = e.data.toString();
                     simg = s.substring(0, 3);
                     semail = s.substring(0, 5);
+                    sbg = s.substring(0, 2);
                     console.log("simg: " + simg);
                     console.log("semail: " + semail);
                     if (simg=="img") {
+                        on();
                         s = s.charAt(3);
                         console.log(s);
                         document.getElementById("myImage").src = "images/sinead/img" + s + ".jpg";
+                    }
+                    else if (simg=="gif") {
+                        on();
+                        s = s.charAt(3);
+                        console.log(s);
+                        document.getElementById("myImage").src = "images/sinead/gif" + s + ".gif";
+                    }
+                    else if (sbg=="bg") {
+                        s = s.charAt(2);
+                        console.log("bg: " + s);
+                        var body = document.getElementById("story-body");
+                        if (s==1) {
+                            body.style.backgroundImage = "url('images/sinead/bg1.jpg')";
+                        }
+                        else if (s==2) {
+                            body.style.backgroundImage = "url('images/sinead/bg2.jpg')";
+                        }
+                        
                     }
                     else if (semail=="email") {
                         s = s.charAt(5);
@@ -74,6 +94,7 @@
                     
                 }
                 function on() {
+                    document.getElementById('email-1').style.display = "none";
                     document.getElementById('bg-modal').style.display = "block";
                     document.getElementById('modal-pic').style.display="block";
                 }
@@ -86,6 +107,7 @@
                 function emailOn(x) {
                     console.log("the email number " + x);
                     document.getElementById('email-1').style.display = "block";
+                    document.getElementById('bg-modal').style.display = "block";
                     document.getElementById('modal-pic').style.display="none";
                     if (x==1) {
                         document.getElementById('modal-email-text').innerHTML="From: Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
