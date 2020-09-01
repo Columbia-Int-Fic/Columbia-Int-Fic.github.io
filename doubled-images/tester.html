@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="ben-victoria.css"/> <!-- Custom Story CSS-->
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> <!-- Maven Pro Fontt-->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script> <!-- jQuery import-->
+    </head>
+    <body>
+
+        <div class="wechat">
+            <div class="wechat-static"><img src="iphone1.svg"></div>
+            <div class="wechat-button"><img src="translate.svg" class="wechat-button"></div>
+            <div class="wechat-static2"><img src="translated.svg" style="display:none" id="1-hidden"></div>
+        </div>
+
+        <div id="2-hidden" style="display:none"> 
+            It isn’t so easy to get to you anymore. Have you eaten? Ma, why stay up so late? 
+            
+            //duì bù qĭ//, I’m sorry. This’ll be left read at 5:04AM (and unreplied, for now)—I’m putting my phone down, my eyes are stinging that slow burn of fatigue. I did, Ma, I promise, but sometime real late last night and I’m not so hungry this morning. But these twelve hour shifts: I need to eat something.
+            
+            Glasses. Where are [[my glasses?-&gt;1. Stretching]]</div>
+        
+        <script type="text/javascript">
+            /* click to show second page */
+            $("div.wechat-button").click(function(){
+                    $("div.wechat-button").hide();
+                    $("div.wechat-static").hide();
+                    $("#1-hidden").fadeIn("slow");
+                    $("#2-hidden").fadeIn("slow");
+            });
+        </script>    
+    </body>
+</html>
