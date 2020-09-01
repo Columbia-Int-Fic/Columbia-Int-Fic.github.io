@@ -1,0 +1,47 @@
+/* logo up top */
+h3{
+    font-family: 'tt_blackitalic', sans-serif;
+    margin-top: 1rem;
+    line-height: 59px;
+    font-size: 40px;
+    color: #8F6565;
+}
+
+/* title */
+#story {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 130px;
+    line-height: 200px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 15px;
+    color: #8F6565;
+}
+  
+
+/* image */
+img {
+    margin-top: -13%;
+    margin-left: 20%;
+}
+
+/* Font Imports */
+@font-face {
+    font-family: 'tt_normsbold';
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_blackitalic';
+    src: url('fonts/ttnorms-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
