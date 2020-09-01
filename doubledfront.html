@@ -24,32 +24,35 @@
         </div>
 
         <!-- Modals -->
-        <button class="trigger">Click here to trigger the modal!</button>
         <div class="modal">
             <div class="modal-content">
                 <span class="close-button">×</span>
                 <h1>Hello, I am a modal!</h1>
+                <img src="/doubled-images/iphone1.svg">
             </div>
         </div>
-    
-        
-        <!-- Script for opening Modal-->
+
+        <!-- Script for opening Modal immediately on load -->
         <script>
             var modal = document.querySelector(".modal");
-            var trigger = document.querySelector(".trigger");
             var closeButton = document.querySelector(".close-button");
             
             function toggleModal() {
                 modal.classList.toggle("show-modal");
             }
             
+            window.onmessage = function(e){
+                s = e.data.toString();
+                if (s === "flyer") {
+                    toggleModal();
+                }
+            }
             function windowOnClick(event) {
                 if (event.target === modal) {
                     toggleModal();
                 }
             }
             
-            trigger.addEventListener("click", toggleModal);
             closeButton.addEventListener("click", toggleModal);
             window.addEventListener("click", windowOnClick);
         </script>

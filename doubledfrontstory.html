@@ -339,8 +339,13 @@ I do have some time to spare. And? Do I choose to be reminded of this burden? An
 [[Pause, take a look.-&gt;8.1. Pause, Read]]
 [[Briefly glance at it, walk past.-&gt;8.2. Pass, Ignore]]</tw-passagedata>
 
-<!-- Passage 8 Pause -->
+<!-- Passage 8.1 Pause -->
 <tw-passagedata pid="9" name="8.1. Pause, Read" tags="" position="137,514" size="100,100">
+
+&lt;script&gt;
+  	window.top.postMessage(&#39;flyer&#39;, &#39;*&#39;);
+  	console.log(&quot;flyer to appear&quot;);
+&lt;/script&gt;
 	
 Ah I see.
 
@@ -358,7 +363,8 @@ My breath feels even warmer on my face now. And it does feels nice—a hand on t
 
 </tw-passagedata>
 
-<tw-passagedata pid="10" name="8.2. Pass, Ignore" tags="" position="288,514" size="100,100">I slow my pace a bit, turning my chin slightly. I make out a few words, a graphic. (link-repeat: &quot;A glimpse.&quot;)[(open-url: &#39;https://www.facebook.com/photo.php?fbid=3556761544341027&amp;set=gm.10163722233095637&amp;type=3&amp;theater&amp;ifg=1&#39;)] It’s about hate crimes, attacks against those who look like me. I sense a part of me holding back. This selective vision. Maybe some wouldn’t understand. But I’ve known this all my life.
+<!-- Passage 8.2 Pass, Ignore -->
+<tw-passagedata pid="10" name="8.2. Pass, Ignore" tags="" position="288,514" size="100,100">I slow my pace a bit, turning my chin slightly. &lt;span class=&quot;appear&quot; id=&quot;flyer&quot;&gt;I make out a few words, a graphic.&lt;/span&gt;  It’s about hate crimes, attacks against those who look like me. I sense a part of me holding back. This selective vision. Maybe some wouldn’t understand. But I’ve known this all my life.
 
 I’m told that they’re just jokes: the eye-pulling—oh, is it called fox-eye now?—and c-word, Ling-Ling and Ching-Chong, my lunch deemed inedible, too foreign. 
 
@@ -370,7 +376,19 @@ There are things I know, there are things I don’t. But there’s one thing for
 
 Now, I need to devote myself to my patients. They deserve the best I can provide, and you bet I’ll give my absolute everything. This is unconditional. It’s unwavering. 
 
-[[Let&#39;s get going.-&gt;9. Hospital]]</tw-passagedata><tw-passagedata pid="11" name="9. Hospital" tags="" position="212,664" size="100,100">Overnight, he got worse. A lot worse. He’s young, actually probably my age. Yesterday he was still laughing, cracking jokes. It’s hard to smile visibly with a mask on, so I tried extra hard to show it. 
+[[Let&#39;s get going.-&gt;9. Hospital]]
+
+&lt;script&gt;
+	  var $1 = document.getElementById(&#39;flyer&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;img clicker 1 clicked!&quot;);
+		  window.top.postMessage(&#39;flyer&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;
+
+</tw-passagedata>
+
+<!-- Passage 9. Hospital -->
+<tw-passagedata pid="11" name="9. Hospital" tags="" position="212,664" size="100,100">Overnight, he got worse. A lot worse. He’s young, actually probably my age. Yesterday he was still laughing, cracking jokes. It’s hard to smile visibly with a mask on, so I tried extra hard to show it. 
 
 He’s in bed now, barely responsive. I think I’ll have to notify family soon to prepare.
 
@@ -380,7 +398,9 @@ I held that phone for her, poking my head to its side to make sure she was in fr
 
 I’ll check in with my team in a bit, and we’ll make the tough decisions: who gets what, who gets to live. I need to stay on my feet, on my feet, on my feet. I’m ready, and I’m scared.
 
-//For a more in-depth and accurate understanding of the experiences of frontline workers in hospitals during the COVID-19 pandemic, please refer to these first-hand testimonials. We respect the authorial integrity presented by these accounts and humbly defer to them, urging you to read through and then return to our narrative when ready. Once ready, [[continue through this story-&gt;10. Nighttime]]//</tw-passagedata><tw-passagedata pid="12" name="10. Nighttime" tags="" position="366,663" size="100,100">It’s nighttime, that kind of New York dark that still glows orangey. 
+//For a more in-depth and accurate understanding of the experiences of frontline workers in hospitals during the COVID-19 pandemic, please refer to these (link-repeat: &quot;first-hand testimonials&quot;)[(open-url: &#39;doubledvideos.html&#39;)] We respect the authorial integrity presented by these accounts and humbly defer to them, urging you to read through and then return to our narrative when ready. Once ready, [[continue through this story-&gt;10. Nighttime]]//</tw-passagedata>
+
+<tw-passagedata pid="12" name="10. Nighttime" tags="" position="366,663" size="100,100">It’s nighttime, that kind of New York dark that still glows orangey. 
 
 These feet. Damn. I wiggle my toes a bit and stretch my foot over the edge of the curb. There’s a rash developing along my cheek, following the imprint left by the masks I’ve worn today. 
 
