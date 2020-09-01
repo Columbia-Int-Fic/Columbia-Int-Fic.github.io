@@ -55,7 +55,6 @@
             <!--Script for opening overlay-->
             <script>
                 window.onmessage = function(e) {
-                    
                     s = e.data.toString();
                     simg = s.substring(0, 3);
                     semail = s.substring(0, 5);
@@ -84,7 +83,12 @@
                         else if (s==2) {
                             body.style.backgroundImage = "url('images/sinead/bg2.jpg')";
                         }
-                        
+                        else if (s==3) {
+                            body.style.backgroundImage = "url('images/sinead/bg3.jpg')";
+                        }
+                        else if (s=='a') {
+                            body.style.backgroundImage = "url('images/sinead/bg-a.jpg')";
+                        }
                     }
                     else if (semail=="email") {
                         s = s.charAt(5);
