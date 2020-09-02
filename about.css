@@ -50,6 +50,12 @@ body {
     margin-bottom: 10vh;
 }
 
+.icon {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    width: 70px;
+}
+
 /* navigation */
 .navbar {
     background-color: #F2E9DA;
@@ -92,6 +98,10 @@ body {
     .numbers {
         margin-bottom: 15vh;
     }
+
+    .icon {
+        width: 40px;
+    }
 }
 
 @media only screen and (max-width: 540px) { 
@@ -126,6 +136,10 @@ body {
         font-size: 15px;
         align-items: center;
         padding-bottom: 5vh;
+    }
+
+    .icon {
+        width: 20px;
     }
 }
 
