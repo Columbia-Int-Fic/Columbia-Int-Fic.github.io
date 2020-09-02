@@ -1,0 +1,162 @@
+body {
+    background-color: #F2E9DA;
+}
+
+/* image */
+.title{
+    width: 80%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+/* mission statement */
+.mission h4 {
+    font-family: Playfair Display;
+    font-size: 50px;
+    line-height: 67px;
+    align-items: center;
+    margin-bottom: 25vh;
+}
+
+/* numbers */
+.numbers {
+    margin-bottom: 25vh;
+}
+
+.digits h1 {
+    font-family: Maven Pro;
+    font-size: 150px;
+    line-height: 294px;
+    color: #8F6565;
+}
+
+.digits p {
+    font-family: Maven Pro;
+    font-size: 20px;
+
+    color: #8F6565;
+}
+
+/* more info  */
+.contact h4 {
+    font-family: Playfair Display;
+    font-size: 40px;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.contact {
+    margin-bottom: 10vh;
+}
+
+.icon {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    width: 70px;
+}
+
+/* navigation */
+.navbar {
+    background-color: #F2E9DA;
+}
+
+.nav-link {
+    font-family: Maven Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    color: #8F6565 !important;
+    margin-right: 3vw;
+}
+
+/* line under navigation */
+.current:after{
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 100%; /* Change this to whatever width you want. */
+    padding-top: 10px; /* This creates some space between the element and the border. */
+    border-bottom: 3px solid #8F6565; /* This creates the border. Replace black with whatever color you want. */
+}
+
+/* Change font sizes based on screen size: mobille & ipad */
+@media only screen and (max-width: 1024px) { 
+    .mission h4 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 15vh;
+    }
+
+    .contact h4 {
+        font-size: 25px;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+
+    .numbers {
+        margin-bottom: 15vh;
+    }
+
+    .icon {
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 540px) { 
+    .title{
+        width: 100%;
+    }
+
+    .mission h4 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 15vh;
+    }
+
+    .numbers {
+        margin-bottom: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .digits h1 {
+        font-size: 100px;
+        margin-bottom: -10vh;
+    }
+    
+    .digits p {
+        font-family: Maven Pro;
+        font-size: 15px;
+    }
+
+    .contact h4 {
+        font-size: 15px;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+
+    .icon {
+        width: 20px;
+    }
+}
+
+
+/* Font Imports */
+@font-face {
+    font-family: 'tt_normsbold';
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_blackitalic';
+    src: url('fonts/ttnorms-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
