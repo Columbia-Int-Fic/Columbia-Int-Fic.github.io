@@ -2,7 +2,6 @@ body {
     background-color: #F2E9DA;
 }
 
-
 /* image */
 .title{
     margin-top: 20vh;
@@ -24,6 +23,7 @@ body {
 .numbers {
     margin-bottom: 25vh;
 }
+
 .digits h1 {
     font-family: Maven Pro;
     font-size: 150px;
@@ -65,6 +65,7 @@ body {
     margin-right: 3vw;
 }
 
+/* line under navigation */
 .current:after{
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
@@ -75,6 +76,59 @@ body {
 }
 
 /* Change font sizes based on screen size: mobille & ipad */
+@media only screen and (max-width: 1024px) { 
+    .mission h4 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 15vh;
+    }
+
+    .contact h4 {
+        font-size: 25px;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+
+    .numbers {
+        margin-bottom: 15vh;
+    }
+}
+
+@media only screen and (max-width: 540px) { 
+    .title{
+        width: 100%;
+    }
+
+    .mission h4 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 15vh;
+    }
+
+    .numbers {
+        margin-bottom: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .digits h1 {
+        font-size: 100px;
+        margin-bottom: -10vh;
+    }
+    
+    .digits p {
+        font-family: Maven Pro;
+        font-size: 15px;
+    }
+
+    .contact h4 {
+        font-size: 15px;
+        align-items: center;
+        padding-bottom: 5vh;
+    }
+}
+
 
 /* Font Imports */
 @font-face {
