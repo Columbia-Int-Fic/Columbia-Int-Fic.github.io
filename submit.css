@@ -28,6 +28,10 @@ label {
     color: #8F6565;
 }
 
+textarea {
+    font-family: 'Maven Pro', sans-serif;
+}
+
 .btn {
     font-size: 1.2rem;
     font-weight: 300;
@@ -48,6 +52,15 @@ label {
     background: #F2E9DA;
     color: #000000;
     border: 0px;
+}
+
+.submit-logo {
+    height: 1.2rem;
+    margin-top: -2vh;
+}
+
+.submit-logo:hover {
+    cursor: pointer;
 }
 
 .required {
