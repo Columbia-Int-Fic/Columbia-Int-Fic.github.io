@@ -23,8 +23,6 @@
             <a href="index.html"><h2 class="story-pg-whatif">WHAT IF</h2></a>
             <h1 class="story-pg-title">Sinead and Louisa</h1>
         </header> -->
-        
-        <main class="story-main">
 
             <div class="sinead-splash">
                 <h1 class="sinead-txt-1">Sinead & Louisa</h1>
@@ -218,23 +216,5 @@
                     }
                 }
             </script>
-
-        </main>
-
-        <footer class="footer">
-            
-        </footer>
-
-        <!--Script triggered when exiting story-->
-        <script>
-            var back = document.getElementsByClassName('story-pg-whatif');
-
-            var warning = function (e) {
-                if (!confirm("Your game won't be saved. Are you sure?")) e.preventDefault();
-            };
-
-            back[0].addEventListener('click', warning, false);
-        </script>
-
     </body>
 </html>

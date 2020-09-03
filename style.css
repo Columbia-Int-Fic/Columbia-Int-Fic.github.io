@@ -8,7 +8,7 @@
 
 html, body{
 	height:100%;
-	overflow: auto;
+	overflow: hidden;
     font-family: 'Maven Pro', sans-serif;
 }
 
@@ -274,7 +274,77 @@ footer {
 
 }
 
-/* Styling for Sinead-Louisa story body */
+/* Styling for the green fullscreen button on the homepage */
+.fs-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    margin-top: 80vh;
+    margin-left: 3vh;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.fs-btn:focus {
+    outline: 0;
+}
+
+.fs-btn .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 110%;
+}
+
+.fs-btn:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+/* Styling for story template */
+
+#template-body {
+    background-color: #5D926E;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.template-head {
+    display: flex;
+    margin-top: -1.4vh;
+    margin-right: -1vh;
+    margin-left: -1vh;
+    
+}
+
+.story-pg-whatif {
+    padding-left: 8vh;
+    margin-top: 3vh;
+}
+
+.story-pg-title {
+    text-align: center;
+    font-size: 300%;
+    padding-left: 22%; /* try and put all padding in vh rather than px, for cross screen compatibility*/
+    margin-top: 2vh;
+    position: static;
+}
+
+/* Styling for Sinead-Louisa splash screen */
 .sinead-splash {
     position: fixed;
     top: 0;
@@ -302,8 +372,6 @@ footer {
     line-height: 10vh;
     transition: all 0.5s;
 }
-
-
 
 .sinead-txt-1 {
     font-size: 100px;
@@ -333,6 +401,8 @@ footer {
     margin-top: 10vh;
 }
 
+/* Styling for Sinead-Louisa webpage */
+
 #story-body {
     background-image:url("images/sinead/bg-a.png");
     background-color: black;    
@@ -342,62 +412,21 @@ footer {
     font-family: 'Merriweather', serif;
 }
 
-#template-body {
-    background-color: #5D926E;
-    font-family: 'Catamaran', sans-serif;
-}
-
-.story-head {
-    display: flex;
-    background-color: lightblue;
-    margin-top: -1.4vh;
-    margin-right: -1vh;
-    margin-left: -1vh;
-    
-}
-
-.template-head {
-    display: flex;
-    margin-top: -1.4vh;
-    margin-right: -1vh;
-    margin-left: -1vh;
-    
-}
-
-.story-pg-whatif {
-    padding-left: 8vh;
-    margin-top: 3vh;
-}
-
-.story-pg-title {
-    text-align: center;
-    font-size: 300%;
-    padding-left: 22%; /* try and put all padding in vh rather than px, for cross screen compatibility*/
-    margin-top: 2vh;
-    position: static;
-}
-
-.footer {
-    left: 0; 
-    bottom: 0; 
-    width: 100%;
-    text-align: center;
-}
-
 .story-txt {
     width: 65%;
     height: 65%;
-    position: fixed;
+    position: absolute;
     top: 20%;
     left: 25%;
     border: solid #000;
     border-width: 3px;
     margin: auto;
+    overflow: hidden;
 }
 
 /*CSS styling for Sinead and Louisa iframe */
 
-#bg-modal {
+ #bg-modal {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -410,8 +439,7 @@ footer {
     align-items: center;
     background-color: rgba(0,0,0,0.7); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-}
-
+} 
 
 #modal-pic {
     text-align: center;
