@@ -81,7 +81,7 @@ body {
     border-bottom: 3px solid #8F6565; /* This creates the border. Replace black with whatever color you want. */
 }
 
-/* Change font sizes based on screen size: mobille & ipad */
+/* Change font sizes based on screen size: mobile & ipad */
 @media only screen and (max-width: 1024px) { 
     .mission h4 {
         font-size: 40px;
