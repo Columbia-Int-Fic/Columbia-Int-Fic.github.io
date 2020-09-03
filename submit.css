@@ -5,51 +5,54 @@ body {
 /* title */
 .title{
     margin-top: 10vh;
+    margin-bottom: 7vh;
+}
+
+/* short paragraph */
+.short p {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 3px;
+    color: #000000;
     margin-bottom: 5vh;
 }
 
-.short p {
-    font-family: Maven Pro;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 4px;
-    color: #000000;
-}
-
-
-/* member block*/
-.member{
-    margin-bottom: 20vh;
-    margin-top: 10vh;
-    margin-right: 2vw;
-    margin-left: 2vw;
-}
-
-.memberIMG {
-    border-radius: 30px;
-}
-
-a {
-    color: #000000;
-    font-weight: 500;
-}
-
-a:hover {
-    color: #8F6565;
-    text-decoration: none;
-}
-
-.member h4, p{
+/* form */
+label {
     font-family: 'Maven Pro', sans-serif;
-    margin: 3vh 0 3vh 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 35px;
+    letter-spacing: 5px;
+    color: #8F6565;
 }
 
-.icon1 {
-    margin-right: 1vw;
+.btn {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    background: #F2E9DA;
+    color: #8F6565;
+    border: 0px;
 }
 
-.icon2 {
-    margin-top: -0.5vw;
+.btn:hover {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    background: #F2E9DA;
+    color: #000000;
+    border: 0px;
+}
+
+.required {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1rem;
 }
 
 /* navigation */
