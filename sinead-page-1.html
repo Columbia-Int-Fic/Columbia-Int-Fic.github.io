@@ -6,21 +6,40 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>what IF: Sinead & Louisa</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/white-logo.svg"/>
     </head>
     <body id="story-body">
         
         <!-- Ideally make the h2 and h1 as class so you can use
-        same CSS across different webpages for different stories. -->
-        <header class="story-head">
+        same CSS across different webpages for different stories. 
+         <header class="story-head">
             <a href="index.html"><h2 class="story-pg-whatif">WHAT IF</h2></a>
             <h1 class="story-pg-title">Sinead and Louisa</h1>
-        </header>
+        </header> -->
         
         <main class="story-main">
+
+            <div class="sinead-splash">
+                <h1 class="sinead-txt-1">Sinead & Louisa</h1>
+                <p class="sinead-txt-2">Written by: <br> Jane Loughman and Elisabeth McLaughlin</p>
+                <p class="sinead-txt-3">click to continue</p>
+                <script>
+                    const splash = document.querySelector('.sinead-splash');
+                    splash.onclick = function() {
+                        console.log("clicked to continue!");
+                        setTimeout(()=>{
+                            splash.classList.add('display-none');
+                        }, 0);
+                    }
+                </script>
+              </div>
 
             <div class="story-txt">
                 <iframe
@@ -45,7 +64,7 @@
 
                 <!--Picture overlay-->
                 <div id="modal-pic">
-                        <img height="400"
+                        <img height="600"
                         src=""
                         id="myImage"
                         onclick="off()"> 
@@ -63,13 +82,15 @@
                     console.log("semail: " + semail);
                     if (simg=="img") {
                         on();
-                        s = s.charAt(3);
+                        var num = s.replace('img','');
+                        s = num;
                         console.log(s);
                         document.getElementById("myImage").src = "images/sinead/img" + s + ".jpg";
                     }
                     else if (simg=="gif") {
                         on();
-                        s = s.charAt(3);
+                        var num = s.replace('gif','');
+                        s = num;
                         console.log(s);
                         document.getElementById("myImage").src = "images/sinead/gif" + s + ".gif";
                     }
@@ -92,14 +113,18 @@
                         else if (s==5) {
                             body.style.backgroundImage = "url('images/sinead/desktop.png')";
                         }
-                        else if (s=='a') {
-                            body.style.backgroundImage = "url('images/sinead/bg-a.jpg')";
+                        else if (s=='b') {
+                            body.style.backgroundImage = "url('images/sinead/bg-b.jpg')";
                         }
                     }
                     else if (semail=="email") {
-                        s = s.charAt(5);
+                        var num = s.replace('email','');
+                        s = num;
                         console.log(s);
                         emailOn(s);
+                    }
+                    else if (simg=="end") {
+                        window.location.href = "credits.html";
                     }
                     
                 }

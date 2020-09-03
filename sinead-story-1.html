@@ -11,9 +11,11 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="sinead-story-1" startnode="7" creator="Twine" creator-version="2.3.9" ifid="F9D9637C-FBA8-4102-897A-C51BC9D7C952" zoom="0.25" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+<tw-storydata name="sinead-story-1" startnode="14" creator="Twine" creator-version="2.3.9" ifid="F9D9637C-FBA8-4102-897A-C51BC9D7C952" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"';
+
+tw-story {
   background-color: white;
-  font-family: calibri;
+  font-family: 'Merriweather', serif;
   font-size: 140%;
   color: black;
 }
@@ -47,27 +49,7 @@ tw-icon.redo {
 
 tw-icon.undo {
   /* display:none;*/
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="dreams" color="red"></tw-tag>,<tw-tag name="Sinead-Email" color="red"></tw-tag>,<tw-tag name="Louisa-Email" color="purple"></tw-tag><tw-passagedata pid="1" name="Begin" tags="" position="1297.6666666666667,127.66666666666666" size="200,100">=&gt;&lt;=
-&lt;div class=&quot;clickers&quot; id=&quot;1&quot;&gt;[[You&#39;ve got mail!]]&lt;/div&gt;
-
-&lt;script&gt;
-  window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
-  console.log(&quot;email clicker 1 executed!&quot;);
-  
-	var $1 = document.getElementById(&#39;1&#39;).addEventListener(&quot;click&quot;, function() {
-		console.log(&quot;email clicker 1 clicked!&quot;);
-		window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);	
-	});
-&lt;/script&gt;
-
-
-&#96;&#96;(alert: &quot;From: Sinéad Murphy (shinnyshinny@cifmail.com) 
-To: Louisa ___ (______@cifmail.com) 
-Date: Fri, Mar 13, 11:07pm
-Subject: The world is ending??!&quot;)&#96;&#96;
-
-
-[[Open-&gt;Email1]]</tw-passagedata><tw-passagedata pid="2" name="Email1" tags="Sinead-Email" position="758,456.6666666666667" size="100,100">{
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Louisa-Email" color="purple"></tw-tag>,<tw-tag name="Sinead-Email" color="red"></tw-tag>,<tw-tag name="dreams" color="red"></tw-tag><tw-passagedata pid="1" name="Email1" tags="Sinead-Email" position="759,454" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 1 executed!&quot;); 
@@ -208,7 +190,7 @@ Subject: The world is ending??!&quot;)&#96;&#96;
 
 Are you still in school? Are things shutting down in your town? Are you okay? &lt;br /&gt;&lt;br /&gt;
 
-Lots and lots and lots of love,&lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;audio10&quot;&gt;Lots and lots and lots of love&lt;/span&gt;,&lt;br /&gt;
 &lt;span class=&quot;clickers&quot; id=&quot;x&quot;&gt;[[Sinead-&gt;Email2]]&lt;/span&gt;
 
 (click-append: ?txf5)[&lt;span class = &quot;reveal&quot;&gt; One I like is: &lt;span class = &quot;clickers&quot; id = &quot;audio9&quot;&gt;&quot;Ní neart go cur le chéile.&quot;&lt;/span&gt; It means, not literally, that it&#39;s better if we work together. &lt;/span&gt;
@@ -225,11 +207,17 @@ Lots and lots and lots of love,&lt;br /&gt;
 
 &lt;script&gt;
 	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;bg clicker a clicked!&quot;);
-		  window.top.postMessage(&#39;bga&#39;, &#39;*&#39;);	
+		  console.log(&quot;bg clicker b clicked!&quot;);
+		  window.top.postMessage(&#39;bgb&#39;, &#39;*&#39;);	
 	  });
+	var audio10 = document.createElement(&#39;audio&#39;);
+		audio10.src = &#39;sounds/sinead-end-1.m4a&#39;;
+		document.getElementById(&#39;audio10&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio10.play();
+		});
 &lt;/script&gt;]
-}</tw-passagedata><tw-passagedata pid="3" name="Email2" tags="Louisa-Email" position="970.6666666666667,454" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="2" name="Email2" tags="Louisa-Email" position="971,451" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email2&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 2 executed!&quot;); 
@@ -296,7 +284,7 @@ Lots and lots and lots of love,&lt;br /&gt;
 
 |p6)[Jane and I always make &lt;span class = &quot;clickers&quot; id = &quot;3&quot;&gt;French toast&lt;/span&gt; for Mom whenever school’s cancelled, so this month will be quite the test. &lt;br /&gt;&lt;br /&gt;
 
-Sending warmth (you know we have too much of that anyway)! &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;Sending warmth&lt;/span&gt; (you know we have too much of that anyway)! &lt;br /&gt;
 [[— Louisa-&gt;Email3]]
 
 &lt;script&gt;
@@ -304,9 +292,15 @@ Sending warmth (you know we have too much of that anyway)! &lt;br /&gt;
 		  console.log(&quot;img clicker 3 clicked!&quot;);
 		  window.top.postMessage(&#39;img3&#39;, &#39;*&#39;);	
 	  });
+	var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/louisa-1.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
 &lt;/script&gt;
 ]
-}</tw-passagedata><tw-passagedata pid="4" name="Email3" tags="Sinead-Email" position="1213.3333333333328,448.99999999999966" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="3" name="Email3" tags="Sinead-Email" position="1217,445" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email3&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 3 executed!&quot;); 
@@ -405,20 +399,29 @@ var $11 = document.getElementById(&#39;11&#39;).addEventListener(&quot;click&quo
 |p6)[Seanfhocal of the day: |txf1&gt;[&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;“Ní heolas go haontíos,”&lt;/span&gt;
 
 &lt;script&gt;
-	var audio = document.createElement(&#39;audio&#39;);
-		audio.src = &#39;sounds/irishproverb2.m4a&#39;;
+	var audio2 = document.createElement(&#39;audio&#39;);
+		audio2.src = &#39;sounds/irishproverb2.m4a&#39;;
 		document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
 		console.log(&quot;audio played!&quot;);
-		audio.play();
+		audio2.play();
 		});
-&lt;/script&gt;] &lt;br /&gt;&lt;br /&gt;
+&lt;/script&gt;] How’s quarantine for you?&lt;br /&gt;&lt;br /&gt;
 
 Stay safe and well, &lt;br /&gt;
-Lots and lots of love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;Lots and lots of love&lt;/span&gt;, &lt;br /&gt;
 [[Sinéad x-&gt;Email4]]
 
-(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt;meaning you must live with someone to know them well. How’s quarantine for you?&lt;/span&gt;]]
-}</tw-passagedata><tw-passagedata pid="5" name="Email4" tags="Louisa-Email" position="1453,426.33333333333303" size="100,100">{
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt;meaning you must live with someone to know them well. &lt;/span&gt;]
+
+&lt;script&gt;
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/sinead-end-2.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="4" name="Email4" tags="Louisa-Email" position="1440,454" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email4&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 4 executed!&quot;); 
@@ -441,7 +444,7 @@ Lots and lots of love, &lt;br /&gt;
 |p1)[Since the virus emerged, Mom’s been glued to the television. Every night, light’s are out, but the box on. At this rate, she’s fixin’ to sleep on the couch. People are scared. Well, except Jane. She thinks the virus is a bunch of humbo jumbo, overblown by the media. I just think she’s upset that her high school dance was cancelled and that we have to share the laptop now. Even without school, she’s gone all day. I love Mom but every time I touch a &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;light switch&lt;/span&gt;, she swoops in and wipes it with a Clorox wipe. And every time I itch my nose, she yelps. Lately, Jane’s been nice enough to let me join her drives.
 
 &lt;script&gt;
-		var audio2 = document.createElement(&#39;audio&#39;);
+	var audio2 = document.createElement(&#39;audio&#39;);
 	  audio2.src = &#39;sounds/light-switch.mp3&#39;;
 	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
 	  console.log(&quot;audio 2 played!&quot;);
@@ -493,7 +496,7 @@ Write soon,&lt;br /&gt;
 &lt;script&gt;
 
 &lt;/script&gt;]
-}</tw-passagedata><tw-passagedata pid="6" name="Email5" tags="Sinead-Email" position="575.9999999999997,639.3333333333337" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="5" name="Email5" tags="Sinead-Email" position="574,639" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email5&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 5 executed!&quot;); 
@@ -578,56 +581,26 @@ Write soon,&lt;br /&gt;
 		});
 &lt;/script&gt;] I’m here for you. &lt;br /&gt;&lt;br /&gt;
 
-Stay safe and well, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;Stay safe and well,&lt;/span&gt; &lt;br /&gt;
 Lots and lots of love, &lt;br /&gt;
 [[Sinéad x-&gt;Email6]]
 
-(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt;It means a friend is known in hard times. I’m really appreciating these emails.&lt;/span&gt; ]]
-}</tw-passagedata><tw-passagedata pid="7" name="Start" tags="" position="562.6666666666666,444" size="100,100">
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt;It means a friend is known in hard times. I’m really appreciating these emails.&lt;/span&gt; ]
+
+&lt;script&gt;
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/sinead-end-3.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="562,444" size="100,100">
 
 =&gt;&lt;=
-**Sinead and Louisa**
-
-Written by Jane Loughman and Elisabeth McLaughlin
 
 [[Begin-&gt;Email1]]
-</tw-passagedata><tw-passagedata pid="8" name="test" tags="" position="270,225" size="100,100">
-
-&lt;div class=&quot;clickers&quot; id=&quot;1&quot;&gt;Click me for image 1&lt;/div&gt;
-
-&lt;div class=&quot;clickers&quot; id=&quot;2&quot;&gt;Click me for image 2&lt;/div&gt;
-
-&lt;script&gt;
-	  var $1 = document.getElementById(&#39;1&#39;);
-	  $1.onclick = function() {
-		  console.log(&quot;img clicker 1 clicked!&quot;);
-		  window.top.postMessage(&#39;1&#39;, &#39;*&#39;);
-	  }
-	  var $2 = document.getElementById(&#39;2&#39;);
-	  $2.addEventListener(&quot;click&quot;, function() {
-	  	console.log(&quot;img clicker 2 clicked!&quot;);
-		});
-&lt;/script&gt;
-
-</tw-passagedata><tw-passagedata pid="9" name="You&#39;ve got mail!" tags="" position="1625.6666666666667,219.33333333333331" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="teste" tags="" position="664.6666666666666,160" size="100,100">My routine is pretty mad - it doesn’t really exist to be fair. Sometimes I wake up at &lt;span class=&quot;clickers&quot; id=&quot;1&quot;&gt;10 am&lt;/span&gt; and every now and then I wake up at &lt;span class=&quot;clickers&quot; id=&quot;2&quot;&gt;2pm!&lt;/span&gt; I get distracted by TikTok often - Mam is taking my phone away earlier in the evening now. At least I&#39;m not stuck in the little area of [[2 or 5km]] around me anymore. I’ll probably still be spending a lot of time at home anyway since school isn’t on. There might be summer camps though…
-
-[[Continue15]]
-
-&lt;script&gt;
-	  var $1 = document.getElementById(&#39;1&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;bg clicker 1 clicked!&quot;);
-		  window.top.postMessage(&#39;bg1&#39;, &#39;*&#39;);	
-	  });
-	  var $2 = document.getElementById(&#39;2&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;bg clicker 2 clicked!&quot;);
-		  window.top.postMessage(&#39;bg2&#39;, &#39;*&#39;);
-	  });
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="header" tags="header" position="468,188" size="100,100">{
-(print: &quot;&lt;script&gt;$(&#39;html&#39;).removeClass(\)&lt;/script&gt;&quot;)
-(if: (passage:)&#39;s tags&#39;s length &gt; 0)[
-(print: &quot;&lt;script&gt;$(&#39;html&#39;).addClass(&#39;&quot; + (passage:)&#39;s tags.join(&#39; &#39;) + &quot;&#39;\)&lt;/script&gt;&quot;)
-]
-}</tw-passagedata><tw-passagedata pid="12" name="pier" tags="" position="273.3333333333328,493.99999999999966" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Email6" tags="Louisa-Email" position="761.333333333333,640.666666666667" size="100,100">{
+</tw-passagedata><tw-passagedata pid="7" name="pier" tags="" position="273,493" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Email6" tags="Louisa-Email" position="764,640" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email6&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 6 executed!&quot;); 
@@ -696,7 +669,7 @@ Mom’s back at the restaurant, but they&#39;re only offering take-out. Everyone
 
 |p5)[Mom says this is worse than &lt;span class = &quot;clickers&quot; id = &quot;7&quot;&gt;Katrina…&lt;/span&gt; not knowing what to do, not moving shoulder-to-shoulder in the kitchen, not being able to come together around a table. After she comes home, showers, and scrubs, she just falls asleep on the couch. The trash bin by the front door is blue with &lt;span class = &quot;clickers&quot; id = &quot;8&quot;&gt;gloves&lt;/span&gt;. &lt;br /&gt;&lt;br /&gt;
 
-I hope things are brighter where you are. &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;I hope things are brighter where you are.&lt;/span&gt; &lt;br /&gt;
 [[— Louisa-&gt;Email7 ]]
 
 &lt;script&gt;
@@ -708,8 +681,14 @@ I hope things are brighter where you are. &lt;br /&gt;
 			  console.log(&quot;img clicker 8 clicked!&quot;);
 			  window.top.postMessage(&#39;img8&#39;, &#39;*&#39;);	
 		  });
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/louisa-2.mp3&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
 &lt;/script&gt;]
-}</tw-passagedata><tw-passagedata pid="14" name="Email7 " tags="Sinead-Email" position="985.6666666666663,627.3333333333337" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="9" name="Email7 " tags="Sinead-Email" position="986,626" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email7&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 7 executed!&quot;); 
@@ -806,7 +785,7 @@ Lots and lots of love, &lt;br /&gt;
 [[Sinéad x-&gt;Email8]]
 
 (click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt; What hurts the heart must be washed away with tears. &lt;/span&gt; ]]
-}</tw-passagedata><tw-passagedata pid="15" name="Email8" tags="Louisa-Email" position="1201.6666666666663,617.3333333333337" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="10" name="Email8" tags="Louisa-Email" position="1201,616" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email8&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 8 executed!&quot;); 
@@ -879,7 +858,7 @@ Love, &lt;br /&gt;
 [[ Louisa-&gt;Email9 ]]
 
 (click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt; - &quot;Ní neart go cur le chéile.&quot;&lt;/span&gt;]]
-}</tw-passagedata><tw-passagedata pid="16" name="Email9 " tags="Sinead-Email" position="1428.6666666666663,631.3333333333337" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="11" name="Email9 " tags="Sinead-Email" position="1433,629" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email9&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 9 executed!&quot;); 
@@ -961,7 +940,7 @@ Lots and lots and lots of love, &lt;br /&gt;
 [[Sinéad :)-&gt;Email10]]
 
 (click-append: ?txf2)[&lt;span class = &quot;reveal&quot;&gt; which means the day of rain is not the day of children. &lt;/span&gt;]]
-}</tw-passagedata><tw-passagedata pid="17" name="Email10" tags="Louisa-Email" position="577.3333333333328,847.3333333333339" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="12" name="Email10" tags="Louisa-Email" position="577,847" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email10&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 10 executed!&quot;); 
@@ -1025,7 +1004,7 @@ Please pray for her for me. &lt;br /&gt;&lt;br /&gt;
 
 So much love, &lt;br /&gt;
 [[Louisa-&gt;Email11]]]
-}</tw-passagedata><tw-passagedata pid="18" name="Email11" tags="Sinead-Email" position="779.6666666666663,841.3333333333339" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="13" name="Email11" tags="Sinead-Email" position="779,842" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email11&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 11 executed!&quot;); 
@@ -1119,7 +1098,7 @@ Lots and lots and lots of love, &lt;br /&gt;
 [[Sinéad :)-&gt;Email12]]
 
 (click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt; — there’s no place like home. &lt;/span&gt;]]
-}</tw-passagedata><tw-passagedata pid="19" name="Email12" tags="Louisa-Email" position="1010.6666666666663,851.3333333333339" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="14" name="Email12" tags="Louisa-Email" position="1011,852" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email12&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 12 executed!&quot;); 
@@ -1192,16 +1171,26 @@ Lunch is outside on the &lt;span class = &quot;clickers&quot; id = &quot;17&quot
 
 Maybe we should FaceTime one of these days. Soon? &lt;br /&gt;&lt;br /&gt;
 
-Sending love, &lt;br /&gt;
-[[Louisa-&gt;End]]
+&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;Sending love,&lt;/span&gt; &lt;br /&gt;
+&lt;span id = &quot;end&quot;&gt;[[Louisa-&gt;Start]]&lt;/span&gt;
 
 &lt;script&gt;
 	var $18 = document.getElementById(&#39;18&#39;).addEventListener(&quot;click&quot;, function() {
 			  console.log(&quot;img clicker 18 clicked!&quot;);
 			  window.top.postMessage(&#39;img18&#39;, &#39;*&#39;);	
 		  });
+	var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/louisa-3.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+	var $end = document.getElementById(&#39;end&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;story ended!&quot;);
+			  window.top.postMessage(&#39;end&#39;, &#39;*&#39;);	
+		  });
 &lt;/script&gt;]
-}</tw-passagedata><tw-passagedata pid="20" name="End" tags="" position="1210.6666666666663,865.3333333333339" size="100,100">Fin.
+}</tw-passagedata><tw-passagedata pid="15" name="End" tags="" position="1207,851" size="100,100">Fin.
 
 &lt;script&gt;
     window.top.postMessage(&#39;end&#39;, &#39;*&#39;);
