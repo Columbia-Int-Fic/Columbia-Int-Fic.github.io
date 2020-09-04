@@ -404,11 +404,11 @@ footer {
 /* Styling for Sinead-Louisa webpage */
 
 #story-body {
-    background-image:url("images/sinead/bg-a.png");
+    background-image:url("images/sinead/bg-1.jpg");
     background-color: black;    
-    background-position: 0vh 0vh;
+    background-position: 6vh 0vh;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 93%;
     font-family: 'Merriweather', serif;
 }
 
@@ -416,8 +416,8 @@ footer {
     width: 65%;
     height: 65%;
     position: absolute;
-    top: 20%;
-    left: 25%;
+    top: 16%;
+    left: 7%;
     border: solid #000;
     border-width: 3px;
     margin: auto;
