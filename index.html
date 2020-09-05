@@ -52,7 +52,9 @@
   
           <!-- JS for pop-ups and buttons. Each button is labeled-->
           <!-- Story One -->
-          <div class="popup" onclick="myFunction()"><p><u><a href="#story1" class="Button story1"></a></u></p><span class="popuptext" id="myPopup1"> 
+          <div class="popup" onclick="myFunction()"><p><u><a href="#story1" onMouseOver="return changeImage()" onMouseOut= "return changeImageBack()" ><img
+name="jsbutton" src="images/unclicked.svg" width="42" height="42" border="0"
+alt="javascript button" class="img-fluid" id="story1"></a></u></p><span class="popuptext" id="myPopup1"> 
             <h1>A Doubled Front</h1>
             <p>This is story number one. It's awesome. (Should be on New York)<br>
               <a href="doubledfrontstory.html" class="enterButton">enter</a>
@@ -60,7 +62,9 @@
           </span></div> 
   
           <!-- Story Two -->
-          <div class="popup" onclick="myFunction2()"><p><u><a href="#story2" class="Button story2"></a></u></p><span class="popuptext" id="myPopup2"> 
+          <div class="popup" onclick="myFunction2()"><p><u><a href="#story2" onMouseOver="return changeImage2()" onMouseOut= "return changeImageBack2()" ><img
+name="jsbutton2" src="images/unclicked.svg" width="42" height="42" border="0"
+alt="javascript button" class="img-fluid" id="story2"></a></u></p><span class="popuptext" id="myPopup2"> 
             <h1>Digital Sex Crimes in South Korea</h1>
             <p>This is story number three. It's awesome. (Should be over South Korea. This placement might be tricky)<br>
           <a href="SallyLaurenDraft2.html" class="enterButton">enter</a>
@@ -68,15 +72,19 @@
           </span></div> 
 
           <!-- Story Three -->
-          <div class="popup" onclick="myFunction3()"><p><u><a href="#story3" class="Button story3"></a></u></p><span class="popuptext" id="myPopup3"> 
+          <div class="popup" onclick="myFunction3()"><p><u><a href="#story3" onMouseOver="return changeImage3()" onMouseOut= "return changeImageBack3()" ><img
+name="jsbutton3" src="images/unclicked.svg" width="42" height="42" border="0"
+alt="javascript button" class="img-fluid" id="story3"></a></u></p><span class="popuptext" id="myPopup3"> 
             <h1>I See You</h1>
             <p>This is story number three. It's awesome. (Should be over Philly-ish. This placement might be tricky)<br>
           <a href="i-see-you-1.html" class="enterButton">enter</a>
             </p>
           </span></div> 
   
-          <!-- Story Three -->
-          <div class="popup" onclick="myFunction4()"><p><u><a href="#story4" class="Button story4"></a></u></p><span class="popuptext" id="myPopup4"> 
+          <!-- Story Four -->
+          <div class="popup" onclick="myFunction4()"><p><u><a href="#story4" onMouseOver="return changeImage4()" onMouseOut= "return changeImageBack4()" ><img
+name="jsbutton4" src="images/unclicked.svg" width="42" height="42" border="0"
+alt="javascript button" class="img-fluid" id="story4"></a></u></p><span class="popuptext" id="myPopup4"> 
             <h1>Sinead & Louisa</h1>
             <p>This is story number four. It's awesome. (This should be over Ireland, though the story also occurs in New Orleans)
                 <br><a href="sinead-page-1.html" class="enterButton">enter</a>
@@ -106,7 +114,65 @@
         </div>
     </main>
   
-    <script src="index.js"></script>   
+    <script src="index.js"></script>  
+        
+    <script>
+        // js functions, tells the button what images to use when. Different for each button. 
+        
+        //Story 1//
+        var myimgobj = document.images["jsbutton"];
+        
+        function changeImage()
+{
+document.images["jsbutton"].src= "images/clicked.svg";
+return true;
+}
+function changeImageBack()
+{
+ document.images["jsbutton"].src = "images/unclicked.svg";
+ return true;
+}
+        //Story 2//
+        var myimgobj = document.images["jsbutton2"];
+        
+        function changeImage2()
+{
+document.images["jsbutton2"].src= "images/clicked.svg";
+return true;
+}
+function changeImageBack2()
+{
+ document.images["jsbutton2"].src = "images/unclicked.svg";
+ return true;
+}
+            //Story 3//
+        var myimgobj = document.images["jsbutton3"];
+        
+        function changeImage3()
+{
+document.images["jsbutton3"].src= "images/clicked.svg";
+return true;
+}
+function changeImageBack3()
+{
+ document.images["jsbutton3"].src = "images/unclicked.svg";
+ return true;
+}
+                //Story 4//
+        var myimgobj = document.images["jsbutton4"];
+        
+        function changeImage4()
+{
+document.images["jsbutton4"].src= "images/clicked.svg";
+return true;
+}
+function changeImageBack4()
+{
+ document.images["jsbutton4"].src = "images/unclicked.svg";
+ return true;
+}
+        
+    </script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
