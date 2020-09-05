@@ -44,11 +44,11 @@ html.dreams {
 }
 
 tw-icon.redo {
-  /* display:none; */
+  display:none;
 }
 
 tw-icon.undo {
-  /* display:none;*/
+  display:none;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Louisa-Email" color="purple"></tw-tag>,<tw-tag name="Sinead-Email" color="red"></tw-tag>,<tw-tag name="dreams" color="red"></tw-tag><tw-passagedata pid="1" name="Email1" tags="Sinead-Email" position="758,453" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
@@ -655,12 +655,16 @@ Mom’s back at the restaurant, but they&#39;re only offering take-out. Everyone
 {
 |l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
 
-|p5)[Mom says this is worse than Katrina… not knowing what to do, not moving shoulder-to-shoulder in the kitchen, not being able to come together around a table. After she comes home, showers, and scrubs, she just falls asleep on the couch. The trash bin by the front door is blue with gloves. &lt;br /&gt;&lt;br /&gt;
+|p5)[Mom says this is worse than Katrina… not knowing what to do, not moving shoulder-to-shoulder in the kitchen, not being able to come together around a table. After she comes home, showers, and scrubs, she just falls asleep on the couch. The trash bin by the front door is blue with &lt;span class = &quot;clickers&quot; id = &quot;b&quot;&gt;gloves.&lt;/span&gt; &lt;br /&gt;&lt;br /&gt;
 
 &lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;I hope things are brighter where you are.&lt;/span&gt; &lt;br /&gt;
 &lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[— Louisa-&gt;Email7 ]]&lt;/span&gt;
 
 &lt;script&gt;
+	var $b = document.getElementById(&#39;b&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;img clicker b clicked!&quot;);
+		  window.top.postMessage(&#39;imgb&#39;, &#39;*&#39;);	
+	  });
 	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
 		  console.log(&quot;bg clicker 7 clicked!&quot;);
 		  window.top.postMessage(&#39;bg7&#39;, &#39;*&#39;);	
@@ -672,7 +676,7 @@ Mom’s back at the restaurant, but they&#39;re only offering take-out. Everyone
 		audio3.play();
 		});
 &lt;/script&gt;]
-}</tw-passagedata><tw-passagedata pid="9" name="Email7 " tags="Sinead-Email" position="981,626" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="9" name="Email7 " tags="Sinead-Email" position="981,625" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email7&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 7 executed!&quot;); 
@@ -818,7 +822,7 @@ Jane held my hand the whole time. You know I don’t like crying in public.
 {
 |l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
 
-|p3)[Since the library’s closed, my English teacher dropped off a &lt;span class = &quot;clickers&quot; id = &quot;11&quot;&gt;small box of books&lt;/span&gt; at the restaurant for me. I just started &lt;span class = &quot;clickers&quot; id = &quot;12&quot;&gt;//Tuck Everlasting.//&lt;/span&gt; The girl, she’s your age, tells her troubles to a toad. The &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;frogs are so loud&lt;/span&gt; here now that I’m almost crazy enough to try it. Jane can’t stand the sound. Mom can’t stand the fact that she can still hear the highway… 
+|p3)[Since the library’s closed, my English teacher dropped off a small box of books at the restaurant for me. I just started //Tuck Everlasting.// The girl, she’s your age, tells her troubles to a toad. The &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;frogs are so loud&lt;/span&gt; here now that I’m almost crazy enough to try it. Jane can’t stand the sound. Mom can’t stand the fact that she can still hear the highway… 
 
 &lt;script&gt;
 	var audio2 = document.createElement(&#39;audio&#39;);
