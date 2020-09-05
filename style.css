@@ -419,9 +419,14 @@ footer {
     top: 16%;
     left: 7%;
     border: solid #000;
-    border-width: 3px;
+    border-width: 1px;
     margin: auto;
     overflow: hidden;
+}
+
+.iframe-ui {
+    margin-top: 0;
+    margin-bottom: -0.7vh;
 }
 
 /*CSS styling for Sinead and Louisa iframe */
@@ -447,18 +452,6 @@ footer {
     cursor: pointer;
 }
 
-#open-btn {
-    background-color: lightblue;
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 .modal-email {
     width: 50%;
     height: 50%;
@@ -472,11 +465,33 @@ footer {
     justify-content: center;
     line-height: 6.5vh;
     text-align: center;
+    border-radius: 4%;
 }
 
-.modal-email-text {
+#notif {
+    padding-top: 4vh;
+}
+
+#modal-email-text {
     margin-top: 0vh;
     display: inline-block;
     vertical-align: middle;
-    line-height: normal;
+    line-height: 5vh;
+}
+
+#ui-1 {
+    width: 100%;
+}
+
+#open-btn {
+    content: url(images/sinead/open.svg);
+    width: 15%;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
