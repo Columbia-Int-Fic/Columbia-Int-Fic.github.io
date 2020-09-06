@@ -1,0 +1,88 @@
+body {
+    background-color: #F2E9DA;
+}
+
+/* title */
+.title{
+    width: 80%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+/* member block*/
+.member{
+    margin-bottom: 20vh;
+    margin-top: 10vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.memberIMG {
+    border-radius: 30px;
+}
+
+a {
+    color: #000000;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #8F6565;
+    text-decoration: none;
+}
+
+.member h4, p{
+    font-family: 'Maven Pro', sans-serif;
+    margin: 3vh 0 3vh 0;
+}
+
+.icon1 {
+    margin-right: 1vw;
+}
+
+.icon2 {
+    margin-top: -0.5vw;
+}
+
+/* navigation */
+.navbar {
+    background-color: #F2E9DA;
+}
+
+.nav-link {
+    font-family: Maven Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    color: #8F6565 !important;
+    margin-right: 3vw;
+}
+
+/* line under navigation */
+.current:after{
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 100%; /* Change this to whatever width you want. */
+    padding-top: 10px; /* This creates some space between the element and the border. */
+    border-bottom: 3px solid #8F6565; /* This creates the border. Replace black with whatever color you want. */
+}
+
+/* Font Imports */
+@font-face {
+    font-family: 'tt_normsbold';
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_blackitalic';
+    src: url('fonts/ttnorms-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="submit.css"/>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="images/white-logo.svg"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"> <!-- Playfair font-->
+        
+    <title>Columbia Int Fic: what IF</title>
+  </head>
+
+  <body>
+      <div class="container-fluid">
+        <!-- Title -->
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-6 mxml-5">
+              <img src="images/submit.svg" class="img-fluid mx-auto d-block title" alt="Responsive image">
+            </div>
+        </div>
+        <!-- Short paragraph -->
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-6 mxml-5 text-justify short">
+              <p>Feel free to send us a msg with your story concept, and we'll reach out to take it further (if we like it)</p>
+            </div>
+        </div>
+        <!-- Submit Form -->
+        <form id="contact-form" method="post" action="contact-2.php" role="form">
+            <div class="messages"></div>
+            <div class="controls">
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-6">
+                        <div class="form-group">
+                            <label for="form_name">Your Name *</label>
+                            <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Your name is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-6">
+                        <div class="form-group">
+                            <label for="form_email">Your Email *</label>
+                            <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-6">
+                        <div class="form-group">
+                            <label for="form_message">Your Message *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Share with us your wildest dreams, and let's go to the lakes" rows="4" required="required" data-error="Patiently awaiting your message "></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-6">
+                        <input type="submit" class="button" value="SEND"><img src="/images/sendButton.svg" class="submit-logo">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-6 required">
+                        <p class="text-muted"><strong>*</strong> These fields are required. </p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+        <!-- Navigation Bar-->
+        <nav class="navbar navbar-custom navbar-expand-lg navbar-light fixed-bottom">
+            <a class="navbar-brand" href="/index.html"><img src="images/favicon_io/maroon-logo.png" style="width:40px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="about.html">about </a>
+                <a class="nav-link" href="team.html">meet the team<span class="sr-only">(current)</span></a>
+                <a class="nav-link active current" href="submit.html">submit a story<span class="sr-only">(current)</span></a>
+            </div>
+            </div>
+        </nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+    <script src="contact.js"></script>
+ </body>
+</html>
+
