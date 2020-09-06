@@ -11,11 +11,21 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="sinead-story-1" startnode="158" creator="Twine" creator-version="2.3.9" ifid="F9D9637C-FBA8-4102-897A-C51BC9D7C952" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+<tw-storydata name="sinead-story-1" startnode="6" creator="Twine" creator-version="2.3.9" ifid="F9D9637C-FBA8-4102-897A-C51BC9D7C952" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"';
+
+tw-story {
   background-color: white;
-  font-family: calibri;
+  font-family: 'Merriweather', serif;
   font-size: 140%;
   color: black;
+}
+
+html {
+  background-color: white;
+}
+
+html.dreams {
+  background-color: black;
 }
 
 .clickers {
@@ -24,59 +34,49 @@
   cursor: pointer;
 }
 
+.reveal {
+  color: #ddaeeb;
+  font-weight: bold;
+}
+
+#tiny {
+  font-size: 50%;
+}
+
 tw-icon.redo {
   display:none;
 }
 
 tw-icon.undo {
   display:none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="834,141" size="200,100">=&gt;&lt;=
-&lt;div class=&quot;clickers&quot; id=&quot;1&quot;&gt;[[You&#39;ve got mail!]]&lt;/div&gt;
-
-&lt;script&gt;
-  window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
-  console.log(&quot;email clicker 1 executed!&quot;);
-  
-	var $1 = document.getElementById(&#39;1&#39;).addEventListener(&quot;click&quot;, function() {
-		console.log(&quot;email clicker 1 clicked!&quot;);
-		window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);	
-	});
-&lt;/script&gt;
-
-
-&#96;&#96;(alert: &quot;From: Sinéad Murphy (shinnyshinny@cifmail.com) 
-To: Louisa ___ (______@cifmail.com) 
-Date: Fri, Mar 13, 11:07pm
-Subject: The world is ending??!&quot;)&#96;&#96;
-
-
-[[Open-&gt;Open1]]</tw-passagedata><tw-passagedata pid="2" name="Open1" tags="Sinead-Email" position="615,417" size="100,100">{
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Louisa-Email" color="purple"></tw-tag>,<tw-tag name="Sinead-Email" color="red"></tw-tag>,<tw-tag name="dreams" color="red"></tw-tag><tw-passagedata pid="1" name="Email1" tags="Sinead-Email" position="758,453" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 1 executed!&quot;); 
   &lt;/script&gt; 
+  
   |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Louisa&lt;/span&gt;]
   [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
-}
+
   &lt;script&gt;
 	  var audio = document.createElement(&#39;audio&#39;);
-	  audio.src = &#39;sounds/dear-louisa.mp3&#39;;
+	  audio.src = &#39;sounds/dear-louisa.m4a&#39;;
 	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
 	  console.log(&quot;audio played!&quot;);
 	  audio.play();
 	  });
   &lt;/script&gt;
+}
+
 {
-|p1)[How are you? I hope you&#39;re well, and safe! Doesn’t it feel like we&#39;re in a film? Like one of those scary &lt;span class=&quot;clickers&quot; id=&quot;1&quot;&gt;zombie end-of-the-world&lt;/span&gt; kind of films that Mam wouldn’t let me watch (but I&#39;ve seen the trailers of.) When the news said that the coronavirus was a pandemic, I didn&#39;t even know what that meant - apparently it means that the virus is everywhere. &lt;span class= &quot;clickers&quot;  id=&quot;2&quot;&gt;Everywhere!&lt;/span&gt; So I do particularly hope you&#39;re okay, even if most of the cases are in Italy.
+|p1)[Doesn’t it feel like we&#39;re in a film? Like one of those scary &lt;span class=&quot;clickers&quot; id=&quot;1&quot;&gt;zombie end-of-the-world&lt;/span&gt; kind of films that Mam wouldn’t let me watch (but I&#39;ve seen the trailers of.) When the news said that the coronavirus was a pandemic, I didn&#39;t even know what that meant - apparently it means that the virus is |txf1&gt;[everywhere.] So I do particularly hope you&#39;re okay, even if most of the cases are in Italy.
+
+(click-append: ?txf1)[(text-style: &quot;expand&quot;)+(text-style: &quot;bold&quot;)+(text-color: red)[ EVERYWHERE!]]
 
 &lt;script&gt;
 	  var $1 = document.getElementById(&#39;1&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;img clicker 1 clicked!&quot;);
-		  window.top.postMessage(&#39;img1&#39;, &#39;*&#39;);	
-	  });
-	  var $2 = document.getElementById(&#39;2&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;img clicker 2 clicked!&quot;);
-		  window.top.postMessage(&#39;img2&#39;, &#39;*&#39;);
+		  console.log(&quot;gif clicker 1 clicked!&quot;);
+		  window.top.postMessage(&#39;gif1&#39;, &#39;*&#39;);	
 	  });
 &lt;/script&gt;]
 }
@@ -84,24 +84,14 @@ Subject: The world is ending??!&quot;)&#96;&#96;
 {
 |l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
 
-|p2)[So yesterday was crazy. And I mean CRAY-ZEE. I went to &lt;span class=&quot;clickers&quot; id=&quot;3&quot;&gt;school&lt;/span&gt; and everything was pretty normal. Well as normal as things could be. &lt;span class= &quot;clickers&quot;  id=&quot;4&quot;&gt;Mam and Dad&lt;/span&gt; had told me that a school nearby had closed that week because the virus spread in it. They said I should be careful and not hug my friends or do my &lt;span class= &quot;clickers&quot;  id=&quot;5&quot;&gt;handshakes&lt;/span&gt; with them in case someone had it. It was really awkward when Niamh came up to me to do our handshake and I had to step back and say I didn&#39;t want to. She asked me &#39;why?&#39; So I just said I wasn&#39;t in the mood. I was afraid if I told her what Mam and Dad said she&#39;d think that I thought she had the virus, which I don&#39;t. But it&#39;s hard to know isn’t it? I heard that you can carry the virus but not be coughing or have a high temperature. Also in case she&#39;d make fun of me or &lt;span class= &quot;clickers&quot;  id=&quot;6&quot;&gt;cough&lt;/span&gt; in my face - some kids have done that in my class, and sometimes Niamh can copy others. It was fine though, I think she forgot about the handshake when we went to sit down.
+|p2)[So yesterday was crazy. And I mean CRAY-ZEE. I went to &lt;span class=&quot;clickers&quot; id=&quot;2&quot;&gt;school&lt;/span&gt;, and everything was pretty normal. Well, as normal as things could be. Mam and Dad had told Liam and I that a school nearby had closed that week because the virus spread in it. They said we should be careful and not hug our friends or do any |txf2&gt;[handshakes] with them in case someone had it. Liam laughed, and Mam gave him a look. 
+
+(click-replace: ?txf2)[(t8n: &quot;rumble&quot;)[handshakes]]
 
   &lt;script&gt;
-	  var $3 = document.getElementById(&#39;3&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;img clicker 3 clicked!&quot;);
-		  window.top.postMessage(&#39;img3&#39;, &#39;*&#39;);	
-	  });
-	  var $4 = document.getElementById(&#39;4&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;img clicker 4 clicked!&quot;);
-		  window.top.postMessage(&#39;img4&#39;, &#39;*&#39;);
-	  });
-	  var $5 = document.getElementById(&#39;5&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;img clicker 5 clicked!&quot;);
-		  window.top.postMessage(&#39;img5&#39;, &#39;*&#39;);
-	  });
-	  var $6 = document.getElementById(&#39;6&#39;).addEventListener(&quot;click&quot;, function() {
-		  console.log(&quot;img clicker 6 clicked!&quot;);
-		  window.top.postMessage(&#39;img6&#39;, &#39;*&#39;);
+	  var $2 = document.getElementById(&#39;2&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;gif clicker 2 clicked!&quot;);
+		  window.top.postMessage(&#39;gif2&#39;, &#39;*&#39;);	
 	  });
   &lt;/script&gt;]
 }
@@ -109,168 +99,1099 @@ Subject: The world is ending??!&quot;)&#96;&#96;
 {
 |l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
 
-|p3)[Every morning we go over the [[maths homework]], which is nice to get out of the way. [[Múinteoir Ní Connaire]] was writing a sum on the board when [[An Príomhoide]], came by and said 5th and 6th class were to come to the hall for an assembly. We all went in, confused since it wasn&#39;t Friday, and An Príomhoide told us school was closing. [[The Taoiseach]] had announced on the news that schools were gonna close for like 3 weeks or so. I looked around at everyone and literally everyone&#39;s mouth was [[wide open]]. Some giggled and then an Príomhoide gave out to them - said it was a serious issue. She is right I guess - I wasn&#39;t able to see Granny and Granddad on Sunday for our [[Sunday roast dinner]]. Apparently the virus can really harm older people. But yeah, I remember a few of us were mouthing &#39;Yay&#39; to each other in the hall because we thought we were about to have a 3 week holiday. But then An Príomhoide said we&#39;d be doing school work at home. I glanced at Niamh and Ellen and they [[rolled their eyes.]]]
+|p3)[It was really awkward when Niamh came up to me to do our handshake, and I had to step back and say I didn&#39;t want to. She asked me &#39;why?&#39; So I just said I wasn&#39;t in the mood. I was afraid if I told her what Mam and Dad said she&#39;d think that I thought she had the virus, which I don&#39;t. But it&#39;s hard to know, isn’t it? I heard that you can carry the virus but not be coughing or have a high temperature. What if she made fun of me or coughed in my face! Some kids have done that in my class, and sometimes Niamh copies others. It was fine though, I think she forgot about the handshake when we went to sit down.]
 }
 
 {
 |l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
 
-|p4)[Back to yesterday. We went home early that afternoon, and I had trouble with the [[hug]] thing again. We were all saying goodbye to each other and hugging and I just had to hug my friends. I felt really bad, and I haven&#39;t told my parents, but if I said no to hugging, it would look really mean. I hope I&#39;m not [[carrying the virus]] now. I&#39;m sure it&#39;ll be okay.]
+|p4)[&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;|txf3&gt;[Múinteoir Ní Dorcháin]&lt;/span&gt; was writing a maths sum on the board when &lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;|txf4&gt;[An Príomhoide]&lt;/span&gt; came by and said 5th and 6th class were to come to the hall for an assembly. We all went in, confused since it wasn&#39;t Friday, and An Príomhoide told us that &lt;span class = &quot;clickers&quot; id = &quot;3&quot;&gt;|txfx&gt;[The Taoiseach]&lt;/span&gt; had announced on the news that schools were gonna close for like 3 weeks or so. 
+
+(click-append: ?txf3)[,&lt;span class=&quot;reveal&quot;&gt; my teacher&lt;/span&gt;,]
+(click-append: ?txf4)[,&lt;span class=&quot;reveal&quot;&gt; the school principal&lt;/span&gt;,]
+(click-append: ?txfx)[,&lt;span class=&quot;reveal&quot;&gt; the prime minister&lt;/span&gt;,]
+
+&lt;script&gt;
+	  var $3 = document.getElementById(&#39;3&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;gif clicker 3 clicked!&quot;);
+		  window.top.postMessage(&#39;gif3&#39;, &#39;*&#39;);	
+	  });
+  var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/muinteoir.m4a&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+	var audio3 = document.createElement(&#39;audio&#39;);
+	  audio3.src = &#39;sounds/priomhoide.m4a&#39;;
+	  document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio3.play();
+	  });
+&lt;/script&gt;]
 }
 
 {
 |l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)(t8n: &quot;dissolve&quot;)(show: ?l5)]]
 
-|p5)[Mam and Dad think that the country might go on [[lockdown]] - another thing that sounds like it’s from a film. I live in a town-y kind of house, so I don&#39;t have a very big garden to practice [[hockey]] tricks (field, not ice, which I&#39;m sure you know haha). [[Liam]] will probably want to hog the garden for working out since the gyms will be closing. Liam’s in a weird situation actually since he should be in school preparing for his [[Junior Cert]] exams, but now we’re all at home doing school over Zoom, which is like Facetime but on Dad’s laptop. Mam’s a bit too worried about what’ll happen to the exams, but I agree with Liam that at least it’s not the [[Leaving Cert exams]], which are the ones you do when you’re leaving school and going to college. ‘The Junior Cert’s a practice,’ Liam has said, ‘I don’t need the practice.’]
+|p5)[Literally everyone&#39;s mouth was wide open. Some giggled, and then an Príomhoide gave out to them - said it was a serious issue. She is right, I guess. I wasn&#39;t able to see Granny and Granddad on Sunday for our &lt;span class = &quot;clickers&quot; id = &quot;4&quot;&gt;Sunday roast dinner&lt;/span&gt;. Apparently the virus can really harm older people. I remember &lt;span class = &quot;clickers&quot; id = &quot;audio4&quot;&gt;Saoirse&lt;/span&gt; who was sitting in front of me whispered ‘does that mean a three week holiday?’ to &lt;span class = &quot;clickers&quot; id = &quot;audio5&quot;&gt;Aoife&lt;/span&gt;. Right at that moment, An Príomhoide said we&#39;d be doing school work at home. I glanced at &lt;span class = &quot;clickers&quot; id = &quot;audio6&quot;&gt;Niamh&lt;/span&gt; and &lt;span class = &quot;clickers&quot; id = &quot;audio7&quot;&gt;Caoimhe&lt;/span&gt; beside me, and they rolled their eyes.
+
+&lt;script&gt;
+	  var $4 = document.getElementById(&#39;4&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;gif clicker 4 clicked!&quot;);
+		  window.top.postMessage(&#39;gif4&#39;, &#39;*&#39;);	
+	  });
+	 var audio4 = document.createElement(&#39;audio&#39;);
+	  audio4.src = &#39;sounds/saoirse.m4a&#39;;
+	  document.getElementById(&#39;audio4&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio4.play();
+	  });
+	var audio5 = document.createElement(&#39;audio&#39;);
+	  audio5.src = &#39;sounds/aoife.m4a&#39;;
+	  document.getElementById(&#39;audio5&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio5.play();
+	  });
+	var audio6 = document.createElement(&#39;audio&#39;);
+	  audio6.src = &#39;sounds/niamh.m4a&#39;;
+	  document.getElementById(&#39;audio6&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio6.play();
+	  });
+	var audio7 = document.createElement(&#39;audio&#39;);
+	  audio7.src = &#39;sounds/caoimhe.m4a&#39;;
+	  document.getElementById(&#39;audio7&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio7.play();
+	  });
+&lt;/script&gt;]
 }
 
 {
-|l5)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p6)(set: $show6 to 1)]]
+|l5)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p6)(t8n: &quot;dissolve&quot;)(show: ?l6)]]
 
-|p6)[Whatever happens, I hope this doesn&#39;t last long. I&#39;m sure if we all work together to protect each other everything will be okay. I&#39;d say I mentioned it before but my Mam teaches Irish and there&#39;s a nice [[seanfhocal]] I like that she tells me: [[&quot;Ní neart go cur le chéile.&quot;]] which means, not literally, that it&#39;s better if we work together.
-Are you still in school? Are things shutting down in your town? Are you okay?
-
-  
-[[Lots and lots and lots of love,]]
-[[Sinéad-&gt;Open2]]]
+|p6)[Going home, I had trouble with the hug thing again. We were all saying goodbye to each other and hugging, and I just //had// to hug my friends. I felt really bad, and I haven&#39;t told my parents, but if I said no to hugging, it would look really mean. I hope I&#39;m not carrying the virus now.]
 }
-</tw-passagedata><tw-passagedata pid="3" name="zombie end-of-the-world" tags="" position="464,714" size="100,100">Image</tw-passagedata><tw-passagedata pid="4" name="Everywhere!" tags="" position="615,714" size="100,100">Image</tw-passagedata><tw-passagedata pid="5" name="school" tags="" position="538,863" size="100,100">Image</tw-passagedata><tw-passagedata pid="6" name="handshakes" tags="" position="688,863" size="100,100">Image</tw-passagedata><tw-passagedata pid="7" name="cough" tags="" position="836,862" size="100,100">Image</tw-passagedata><tw-passagedata pid="8" name="maths homework" tags="" position="440,1012" size="100,100">Image</tw-passagedata><tw-passagedata pid="9" name="Múinteoir Ní Connaire" tags="" position="595,1012" size="100,100">Múinteoir = teacher</tw-passagedata><tw-passagedata pid="10" name="An Príomhoide" tags="" position="744,1012" size="100,100">Our principal</tw-passagedata><tw-passagedata pid="11" name="The Taoiseach" tags="" position="892,1012" size="100,100">Our prime minister (Leo Varadkar - picture?)</tw-passagedata><tw-passagedata pid="12" name="wide open" tags="" position="1045,1012" size="100,100">Image</tw-passagedata><tw-passagedata pid="13" name="Sunday roast dinner" tags="" position="1195,1012" size="100,100">Image</tw-passagedata><tw-passagedata pid="14" name="rolled their eyes." tags="" position="1345,1012" size="100,100">Image</tw-passagedata><tw-passagedata pid="15" name="hug" tags="" position="1420,1162" size="100,100">image</tw-passagedata><tw-passagedata pid="16" name="carrying the virus" tags="" position="1570,1161" size="100,100">image</tw-passagedata><tw-passagedata pid="17" name="lockdown" tags="" position="1398,1313" size="100,100">image</tw-passagedata><tw-passagedata pid="18" name="hockey" tags="" position="1550,1313" size="100,100">image</tw-passagedata><tw-passagedata pid="19" name="Liam" tags="" position="1681,1314" size="100,100">image</tw-passagedata><tw-passagedata pid="20" name="Junior Cert" tags="" position="1801,1313" size="100,100">image</tw-passagedata><tw-passagedata pid="21" name="seanfhocal" tags="" position="1999,1463" size="100,100">An Irish proverb</tw-passagedata><tw-passagedata pid="22" name="&quot;Ní neart go cur le chéile.&quot;" tags="" position="1831,1464" size="100,100">cursive text</tw-passagedata><tw-passagedata pid="23" name="Sinéad" tags="" position="2307,1446" size="100,100">From: Louisa ___ (______@cifmail.com) 
-To: Sinéad Murphy (shinnyshinny@cifmail.com) 
-Date: __, Mar __, __
-Subject: __
 
-[[Open2]]</tw-passagedata><tw-passagedata pid="24" name="Mam and Dad" tags="" position="392,862" size="100,100">image</tw-passagedata><tw-passagedata pid="25" name="Open2" tags="" position="2523,1424" size="100,100">&lt;script&gt;
+{
+|l6)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p7)]]
+
+|p7)[Whatever happens, I hope this doesn&#39;t last long. Since Mam teaches Irish, she knows lots of |txf5&gt;[&lt;span class = &quot;clickers&quot; id = &quot;audio8&quot;&gt;seanfhocal&lt;/span&gt;.
+
+&lt;script&gt;
+  var audio8 = document.createElement(&#39;audio&#39;);
+		audio8.src = &#39;sounds/seanfhocal.m4a&#39;;
+		document.getElementById(&#39;audio8&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio8.play();
+		});
+&lt;/script&gt;
+]
+
+Are you still in school? Are things shutting down in your town? Are you okay? &lt;br /&gt;&lt;br /&gt;
+
+&lt;span class = &quot;clickers&quot; id = &quot;audio10&quot;&gt;Lots and lots and lots of love&lt;/span&gt;,&lt;br /&gt;
+&lt;span class=&quot;clickers&quot; id=&quot;x&quot;&gt;[[Sinead-&gt;Email2]]&lt;/span&gt;
+
+(click-append: ?txf5)[&lt;span class = &quot;reveal&quot;&gt; One I like is: &lt;span class = &quot;clickers&quot; id = &quot;audio9&quot;&gt;&quot;Ní neart go cur le chéile.&quot;&lt;/span&gt; It means, not literally, that it&#39;s better if we work together. &lt;/span&gt;
+
+&lt;script&gt;
+  var audio9 = document.createElement(&#39;audio&#39;);
+		audio9.src = &#39;sounds/irishproverb1.m4a&#39;;
+		document.getElementById(&#39;audio9&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio9.play();
+		});
+&lt;/script&gt;
+]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 2 clicked!&quot;);
+		  window.top.postMessage(&#39;bg2&#39;, &#39;*&#39;);	
+	  });
+	var audio10 = document.createElement(&#39;audio&#39;);
+		audio10.src = &#39;sounds/sinead-end-1.m4a&#39;;
+		document.getElementById(&#39;audio10&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio10.play();
+		});
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="2" name="Email2" tags="Louisa-Email" position="972,450" size="100,100">{
+  &lt;script&gt;
 	window.top.postMessage(&#39;email2&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 2 executed!&quot;); 
-&lt;/script&gt;
-
-&lt;span class=&quot;clickers&quot; id=&quot;audio2&quot;&gt;Dear [[Sinead]]&lt;/span&gt;
-
-Sound &quot;Dear Sinead&quot;
-
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Sinéad&lt;/span&gt;],
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
 
   &lt;script&gt;
 	  var audio = document.createElement(&#39;audio&#39;);
 	  audio.src = &#39;sounds/dear-sinead.mp3&#39;;
-	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
 	  console.log(&quot;audio played!&quot;);
 	  audio.play();
 	  });
   &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="26" name="Lots and lots and lots of love" tags="" position="2153,1463" size="100,100">Image</tw-passagedata><tw-passagedata pid="27" name="Sinead" tags="" position="2271,1747" size="100,100">Eight hundred people live in my town. You’d think the [[Piggly Wiggly]] would have never seen so many people at once but Saturday’s grocery run felt like some sort of town hall. Everyone was there — my old Sunday School teacher Mrs. Julie, Jane’s ex-boyfriend Porter, even my fourth-grade English teacher Mrs. Cromwell (she’s the one who’d always drop off home-baked [[bread]]). Ever since the Governor’s declaration, people have been pulling in and out of the grocery’s lot like [[flies]]. Mama parked across the street just to avoid the accident waiting to happen. Since dad’s back-to-back car wrecks, we can’t afford another tap. Something about the insurance.
+}
 
-[[Continue6]]</tw-passagedata><tw-passagedata pid="28" name="Piggly Wiggly" tags="" position="2121,1897" size="100,100">location</tw-passagedata><tw-passagedata pid="29" name="bread" tags="" position="2268,1896" size="100,100">image</tw-passagedata><tw-passagedata pid="30" name="flies" tags="" position="2421,1897" size="100,100">image</tw-passagedata><tw-passagedata pid="31" name="Leaving Cert exams" tags="" position="1924,1314" size="100,100">image</tw-passagedata><tw-passagedata pid="32" name="Continue6" tags="" position="2607,1914" size="100,100">Anyway, since the [[mystery virus]] emerged, Mom’s been glued to the television. People are scared. Well, except Jane. She thinks the virus is a bunch of humbo jumbo, exaggerated by the media. I just think she’s upset that her high school dance was cancelled and the fact that we have to share the laptop now. Even without school, she’s gone all day. She drives and sometimes she’s nice enough to let me join her. We’ve got a new rhythm down. If the sun’s out, we go to the [[pepper stand that now sells peaches on Bayou De Zaire.]] If the moon’s up, we stop by [[Butterkrisp]] (that 24hour diner that I always mention). [[Peach juice and donut glaze.]] I can’t tell if the car is sticky because of us or because of the humidity.
-
-[[Continue7]]</tw-passagedata><tw-passagedata pid="33" name="mystery virus" tags="" position="2307,2064" size="100,100">image</tw-passagedata><tw-passagedata pid="34" name="pepper stand that now sells peaches on Bayou De Zaire." tags="" position="2456,2064" size="100,100">image</tw-passagedata><tw-passagedata pid="35" name="Butterkrisp" tags="" position="2607,2064" size="100,100">location</tw-passagedata><tw-passagedata pid="36" name="Peach juice and donut glaze." tags="" position="2756,2064" size="100,100">image</tw-passagedata><tw-passagedata pid="37" name="Continue7" tags="" position="2907,2064" size="100,100">Of course, I’m washing my hands and keeping tabs on what I touch, who I see. There’s constant talk. You have to be careful. One of my friends had a cold after Mardi Gras, and now the whole seventh grade thinks she has the coronavirus. Supposedly my parish has only three cases though. Mom is worried about grandma and the chemo. She keeps reminding me to pray to God. Everytime I hear about gathering restrictions, I imagine the number of people that fill up a [[church.]] I think it’s hard for people to visualize these numbers. Sometimes I feel untouchable, but then I think of Mardi Gras and know the virus must be everywhere. 
-
-[[Continue8]]</tw-passagedata><tw-passagedata pid="38" name="church." tags="" position="2832,2214" size="100,100">image</tw-passagedata><tw-passagedata pid="39" name="Continue8" tags="" position="2982,2213" size="100,100">I remember watching the crowds pool late-February. Walking down [[St. Charles]] was like [[walking through color.]] Trolleys were packed. Jane left me at the corner of [[Poydras]] so I bought cotton candy off of one of the rolling grocery carts in the street and made friends with a woman painting faces. She had these amazing [[sparkling-green fish-scale leggings]] that flashed in the sun and a thick drawl. [[Darling, now what do you want?]] I told her something almost extinct. Within minutes, an image of a [[bald eagle]] materialized across my face. I felt majestic. Powerful. But also weak. My plastic sneakers created these [[huge, angry blisters.]] My ankles were bright red. The next day it was as if they were injected with goo. So I walked around in my socks for the rest of the night. Mom was really upset. She said how in the world am I gonna wash out this [[tar.]] She did not know about the glitter in my hair.
-
-[[Continue9]]</tw-passagedata><tw-passagedata pid="40" name="St. Charles" tags="" position="2455,2362" size="100,100">location</tw-passagedata><tw-passagedata pid="41" name="walking through color." tags="" position="2605,2363" size="100,100">image</tw-passagedata><tw-passagedata pid="42" name="Poydras" tags="" position="2754,2362" size="100,100">location</tw-passagedata><tw-passagedata pid="43" name="sparkling-green fish-scale leggings" tags="" position="2905,2362" size="100,100">image</tw-passagedata><tw-passagedata pid="44" name="Darling, now what do you want?" tags="" position="3054,2363" size="100,100">image</tw-passagedata><tw-passagedata pid="45" name="bald eagle" tags="" position="3206,2363" size="100,100">image</tw-passagedata><tw-passagedata pid="46" name="huge, angry blisters." tags="" position="3357,2363" size="100,100">image</tw-passagedata><tw-passagedata pid="47" name="tar." tags="" position="3506,2362" size="100,100">image</tw-passagedata><tw-passagedata pid="48" name="Continue9" tags="" position="3648,2362" size="100,100">It’s strange not having anything to look forward to but school. I remember this winter whenever the temperature dropped below thirty, Jane and her friends would [[tweet]] our parish’s superintendent begging for a day off. Now, all Jane wants is to be with her friends. I do too. I love Mom but every time I touch a [[light switch,]] she swoops in and wipes it with a Clorox wipe. And every time I itch my nose, she yelps. I guess I’ll hold up in my room for a while.
-
-It’s wild how quickly things change… are you quarantined at home? … 
-
-Sending warmth (you know we have too much of that anyway)! 
-[[— Louisa]]
-</tw-passagedata><tw-passagedata pid="49" name="tweet" tags="" position="3498,2512" size="100,100">image</tw-passagedata><tw-passagedata pid="50" name="light switch," tags="" position="3647,2511" size="100,100">image</tw-passagedata><tw-passagedata pid="51" name="— Louisa" tags="" position="3796,2511" size="100,100">From: Sinéad Murphy (shinnyshinny@cifmail.com) 
-To: Louisa ___ (______@cifmail.com) 
-Date: Mon, Jun 15, 19:32pm
-Subject: zoom school, shops open and recommendations!!
-
-[[Open3]]</tw-passagedata><tw-passagedata pid="52" name="Open3" tags="" position="3796,2661" size="100,100">Dear [[Louisa,]]</tw-passagedata><tw-passagedata pid="53" name="Louisa," tags="" position="3796,2811" size="100,100">Hello hello! Hope all is well. Really enjoyed our FaceTime call the other [[night.]]</tw-passagedata><tw-passagedata pid="54" name="night." tags="" position="3796,2961" size="100,100">Ireland has just entered Phase 2 of reopening, which means we can [[travel 20km]] from home and some shops are open. Dad&#39;s [[bookshop]] is open again - it&#39;s a little one off [[Grafton street]] so with all the restrictions in place he can&#39;t have many in the shop at the one time. I went with him to work on Saturday and it was weird seeing all these [[yellow lines]] on the ground marking out where people can stand and the [[clear barrier]] between dad and a customer. Would you believe it was my first time back in the [[city centre]] since March? I&#39;ve been out and around [[Dún Laoghaire]] on cycles and walks with Liam but I haven&#39;t even been in a shop since lockdown began. In Dad&#39;s shop I wore a [[mask]] - one of those blue ones that makes me look like a nurse or a doctor doing an operation. 
-
-[[Continue10]]</tw-passagedata><tw-passagedata pid="55" name="travel 20km" tags="" position="3196,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="56" name="bookshop" tags="" position="3346,3111" size="100,100">image
-</tw-passagedata><tw-passagedata pid="57" name="Grafton street" tags="" position="3498,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="58" name="yellow lines" tags="" position="3646,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="59" name="clear barrier" tags="" position="3796,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="60" name="city centre" tags="" position="3944,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="61" name="Dún Laoghaire" tags="" position="4096,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="62" name="mask" tags="" position="4246,3111" size="100,100">image</tw-passagedata><tw-passagedata pid="63" name="Continue10" tags="" position="4395,3111" size="100,100">Some people came into the shop without a mask, which I thought was quite silly - even if they don&#39;t have one they should at least try and use a [[scarf]] or something. What if they suddenly cough or sneeze? Luckily the people that came in without masks didn&#39;t cough or sneeze, but still. Dad even offered some of them masks, but they refused (they couldn’t all have asthma).
-
-[[Continue11]]</tw-passagedata><tw-passagedata pid="64" name="scarf" tags="" position="4320,3261" size="100,100">image</tw-passagedata><tw-passagedata pid="65" name="Continue11" tags="" position="4471,3261" size="100,100">Mam says in the supermarkets lots of people don&#39;t wear them - she thinks it&#39;s down to people forgetting and the government not making it a rule yet. Sure I&#39;d forget - walking around town felt so normal, and no one really gives you [[2 metre space]] when they walk past you. I got an [[Oreo ice cream]] from Gino&#39;s and walked with Dad around [[Stephen&#39;s Green]] on lunch break. The weather was really nice, and it hasn’t been so for a lot of June. Maybe the sun is coming back for the summer, and you&#39;ve sent the Louisiana sun our way.
-
-[[Continue12]]</tw-passagedata><tw-passagedata pid="66" name="2 metre space" tags="" position="4233,3410" size="100,100">image</tw-passagedata><tw-passagedata pid="67" name="Oreo ice cream" tags="" position="4368,3409" size="100,100">image</tw-passagedata><tw-passagedata pid="68" name="Continue12" tags="" position="4621,3412" size="100,100">I don&#39;t know if you’re finished school or anything, but I still have work to do. Next week would have been my graduation from primary school. The ceremony is obviously not happening, which I&#39;ve kind of accepted at this stage. Maybe we&#39;ll do something to celebrate in the future in person. I can travel 20km so maybe I can meet Ellen and Niamh at the beach for a catch up. Over the past while we&#39;ve been doing [[Zoom calls]] together to do homework. I wouldn&#39;t usually have company for doing homework, so it&#39;s nice, but it can be distracting. We don&#39;t do it all the time.
-
-[[Continue13]]</tw-passagedata><tw-passagedata pid="69" name="Stephen&#39;s Green" tags="" position="4504,3411" size="100,100">image</tw-passagedata><tw-passagedata pid="70" name="Zoom calls" tags="" position="4546,3562" size="100,100">image</tw-passagedata><tw-passagedata pid="71" name="Continue13" tags="" position="4696,3563" size="100,100">It&#39;s crazy to think I haven&#39;t seen them in person since March. I was looking at my email to you from then and I can&#39;t believe I thought this &#39;break&#39; from school would only last 3 weeks. I feel like I&#39;m still not used to doing [[school at home.]] Múinteoir Ní Connaire sometimes gives too little work or too much work, and I wish she was there to help me with my maths. She sends these [[videos]] of her doing examples, but they only help sometimes. 
-
-[[Continue14]]</tw-passagedata><tw-passagedata pid="72" name="school at home." tags="" position="4621,3713" size="100,100">image</tw-passagedata><tw-passagedata pid="73" name="videos" tags="" position="4770,3713" size="100,100">image</tw-passagedata><tw-passagedata pid="74" name="Continue14" tags="" position="4892,3715" size="100,100">My routine is pretty mad - it doesn’t really exist to be fair. Sometimes I wake up at [[10 am]] and every now and then I wake up at [[2pm!]] I get distracted by TikTok often - Mam is taking my phone away earlier in the evening now. At least I&#39;m not stuck in the little area of [[2 or 5km]] around me anymore. I’ll probably still be spending a lot of time at home anyway since school isn’t on. There might be summer camps though…
-
-[[Continue15]]</tw-passagedata><tw-passagedata pid="75" name="10 am" tags="" position="4667,3865" size="100,100">image</tw-passagedata><tw-passagedata pid="76" name="2pm!" tags="" position="4817,3865" size="100,100">image</tw-passagedata><tw-passagedata pid="77" name="2 or 5km" tags="" position="4967,3865" size="100,100">image</tw-passagedata><tw-passagedata pid="78" name="Continue15" tags="" position="5117,3865" size="100,100">Actually, I heard my parents talking about [[George Floyd’s death]] and all the protests happening in the States. It’s heartbreaking seeing the awful things police are doing over there while people are [[peacefully protesting.]] I’ve heard some of the protests are turning into riots: I hope you and your family are okay. I remember learning about the Civil Rights movement in the 60s earlier this year and the bus boycott that was started by [[Rosa Parks.]] It’s crazy to think that happened so long ago and that people today are still fighting against racism. I hope that things change soon - not just in America, but here in [[Ireland]] too. I’ve heard a few stories on the news; our country is not innocent. Please stay safe!!
-
-[[Continue16]]</tw-passagedata><tw-passagedata pid="79" name="George Floyd’s death" tags="" position="4817,4015" size="100,100">image</tw-passagedata><tw-passagedata pid="80" name="peacefully protesting." tags="" position="4965,4015" size="100,100">image</tw-passagedata><tw-passagedata pid="81" name="Rosa Parks." tags="" position="5117,4014" size="100,100">image</tw-passagedata><tw-passagedata pid="82" name="Ireland" tags="" position="5266,4016" size="100,100">image</tw-passagedata><tw-passagedata pid="83" name="Continue16" tags="" position="5416,4015" size="100,100">Recommendations!!
-I thought I’d recommend some things I did during lockdown:
-1. [[Cycling!!]]
-2. [[TikTok dances]]
-3. [[Baking vanilla cupcakes]]
-4. Playing [[Catan]] - a board game kind of like Monopoly but better!
-5. Reading - I recently read [[Under the Hawthorn Tree]] by Marita Conlon-McKenna, which is about three kids during the Great famine in Ireland - it’s really interesting.
-
-[[Continue17]]</tw-passagedata><tw-passagedata pid="84" name="Cycling!!" tags="" position="5041,4166" size="100,100">image</tw-passagedata><tw-passagedata pid="85" name="TikTok dances" tags="" position="5191,4164" size="100,100">image</tw-passagedata><tw-passagedata pid="86" name="Baking vanilla cupcakes" tags="" position="5341,4164" size="100,100">image</tw-passagedata><tw-passagedata pid="87" name="Catan" tags="" position="5491,4165" size="100,100">image</tw-passagedata><tw-passagedata pid="88" name="Under the Hawthorn Tree" tags="" position="5640,4165" size="100,100">image</tw-passagedata><tw-passagedata pid="89" name="Continue17" tags="" position="5791,4164" size="100,100">How has staying at home been for you? How are Jane and your mam? Your town? Is your mam’s restaurant open again?
-
-Stay safe and well, 
-Lots and lots of love,
-[[Sinéad x]]</tw-passagedata><tw-passagedata pid="90" name="Sinéad x" tags="" position="5791,4313" size="100,100">From: Louisa ___ (______@cifmail.com) 
-To: Sinéad Murphy (shinnyshinny@cifmail.com) 
-Date: __, Jun __, __
-Subject: __
-
-[[Open4]]</tw-passagedata><tw-passagedata pid="91" name="Open4" tags="" position="5791,4463" size="100,100">Dear [[Sinead,]]</tw-passagedata><tw-passagedata pid="92" name="Sinead," tags="" position="5791,4613" size="100,100">Now that the school year’s over, it’s so quiet. It’s too hot to bike outside so now all I do is float in the neighbor’s [[above-ground pool.]] Jane can’t stand the [[frogs.]] Mom just fixates on the fact that she can still hear the highway. Everyday is the same now. I don’t know if it’s because I wear the same set of clothes day-after-day or because my sleep schedule is also so messed up. I did [[laundry]] for the first time in eight weeks. I know, bad. But it was all pajamas anyway.
-
-[[Continue18]]</tw-passagedata><tw-passagedata pid="93" name="above-ground pool." tags="" position="5566,4763" size="100,100">image</tw-passagedata><tw-passagedata pid="94" name="frogs." tags="" position="5717,4763" size="100,100">image</tw-passagedata><tw-passagedata pid="95" name="laundry" tags="" position="5867,4763" size="100,100">image</tw-passagedata><tw-passagedata pid="96" name="Continue18" tags="" position="6016,4763" size="100,100">In the beginning, seeing my classmates through FaceTime kept me going but now it’s my daily drive with Jane. Picking up [[sweet tea]] gives us something to do. Reminds us of dad. Not having final tests was a relief but kind of scary at the same time. I do keep having the strangest [[dreams.]] Always this one where I know I left something important, who knows what, in Ms. Day’s classroom, and they won’t let me into the school. I think I just miss my friends.
-
-[[Continue19]]</tw-passagedata><tw-passagedata pid="97" name="sweet tea" tags="" position="5866,4912" size="100,100">image</tw-passagedata><tw-passagedata pid="98" name="dreams." tags="" position="6016,4913" size="100,100">image</tw-passagedata><tw-passagedata pid="99" name="Continue19" tags="" position="6166,4912" size="100,100">When they sent us home in March, I didn’t really understand what was going on. The catastrophe didn’t register. Like you, I just thought we would have two weeks to do whatever we wanted, like an early summer. A week after the first case was announced, Mom had to close the [[restaurant.]] She used to say it&#39;s worse than [[Katrina]]… not knowing what to do, not moving [[shoulder-to-shoulder]] in the kitchen, not being able to even hug. Mom’s back at the restaurant but they&#39;re only offering take-out. People text in their orders. Each ding is a little party. The [[Krewe of Red Beans]] bought a ton of food to deliver to front line workers so that’s helped. After she comes home and showers, she just falls asleep on the couch. There’s a trash bin by the front door full of [[purple disposable gloves. ]]
-
-[[Continue20]]</tw-passagedata><tw-passagedata pid="100" name="restaurant." tags="" position="5866,5063" size="100,100">image</tw-passagedata><tw-passagedata pid="101" name="Katrina" tags="" position="6015,5064" size="100,100">image</tw-passagedata><tw-passagedata pid="102" name="shoulder-to-shoulder" tags="" position="6166,5063" size="100,100">image</tw-passagedata><tw-passagedata pid="103" name="Krewe of Red Beans" tags="" position="6315,5063" size="100,100">link</tw-passagedata><tw-passagedata pid="104" name="purple disposable gloves. " tags="" position="6466,5063" size="100,100">image</tw-passagedata><tw-passagedata pid="105" name="Continue20" tags="" position="6586,5068" size="100,100">Jane and I have been delivering food to our neighbors. I can’t help tiptoeing up the drive and jumping back when I drop the [[bags]] on the front door step. I still forget that people [[can’t see me smiling]] with my mask. My [[tennis shoes]] are still damp from two days ago. Jane’s car died when we were dropping off groceries so we had to walk all the way home in the rain.
-
-[[Continue21]]</tw-passagedata><tw-passagedata pid="106" name="bags" tags="" position="6361,5218" size="100,100">image</tw-passagedata><tw-passagedata pid="107" name="can’t see me smiling" tags="" position="6511,5219" size="100,100">image</tw-passagedata><tw-passagedata pid="108" name="tennis shoes" tags="" position="6662,5218" size="100,100">image</tw-passagedata><tw-passagedata pid="109" name="Continue21" tags="" position="6811,5218" size="100,100">This is our worst week since April (I didn’t even realize it was already June.) With Phase 2 continuing, people are in cahoots. Supposedly, a bunch of government people had a [[big photo op on the capitol steps]] without masks. Mom says they’re setting a bad example. I agree. All people are talking about right now are adults. Not like our parents&#39; age but people like a little older than Jane. She says they’re gonna shut down the bars again. Just last week, Mom pulled out her [[old photo albums]] from LSU. Jane said she was a hypocrite because Mom was holding [[beer cans]] in like five photos from [[Tigerland.]] I was excited to see it because it&#39;s been all over the news. Something like a hundred people got the virus from there. I guess people are lonely.
-
-[[Continue22]]</tw-passagedata><tw-passagedata pid="110" name="big photo op on the capitol steps" tags="" position="6511,5368" size="100,100">photo / link</tw-passagedata><tw-passagedata pid="111" name="old photo albums" tags="" position="6661,5368" size="100,100">image</tw-passagedata><tw-passagedata pid="112" name="beer cans" tags="" position="6811,5367" size="100,100">image</tw-passagedata><tw-passagedata pid="113" name="Tigerland." tags="" position="6960,5367" size="100,100">image</tw-passagedata><tw-passagedata pid="114" name="Continue22" tags="" position="7111,5368" size="100,100">I didn’t really know a lot of people who were sick in the earlier stages, but now everyone is texting about so-and-so.  If I were to get the virus, my chances of death would be very low. But it’s hard watching Mom leave every morning. 
-
-[[Continue23]]</tw-passagedata><tw-passagedata pid="115" name="Continue23" tags="" position="7111,5517" size="100,100">Since the library is closed, my English teacher dropped off a [[small box of books.]] I just started [[Tuck Everlasting.]] The girl, she’s your age, tells her troubles to a [[toad.]] The frogs are so loud here now that I’m almost crazy enough to try it. I keep thinking about life and family. What I would do if I could live forever like Tuck. It’s hard knowing what are the good choices, the safe choices, the right and wrong choices right now. I keep thinking about the [[proverb]] you sent. It really is better if we work together.
-
-[[Continue24]]</tw-passagedata><tw-passagedata pid="116" name="small box of books." tags="" position="6811,5667" size="100,100">image</tw-passagedata><tw-passagedata pid="117" name="Tuck Everlasting." tags="" position="6960,5668" size="100,100">image</tw-passagedata><tw-passagedata pid="118" name="toad." tags="" position="7111,5667" size="100,100">image</tw-passagedata><tw-passagedata pid="119" name="proverb" tags="" position="7262,5667" size="100,100">image</tw-passagedata><tw-passagedata pid="120" name="Continue24" tags="" position="7410,5667" size="100,100">How are your grandparents? Are you still seeing Niamh and Ellen? I hope things are [[brighter]] where you are.
-[[— Louisa ]]</tw-passagedata><tw-passagedata pid="121" name="brighter" tags="" position="7335,5814" size="100,100">image</tw-passagedata><tw-passagedata pid="122" name="— Louisa " tags="" position="7483,5817" size="100,100">From: Sinéad Murphy (shinnyshinny@cifmail.com) 
-To: Louisa ___ (______@cifmail.com) 
-Date: Wed, Aug 26, 20:46pm
-Subject: Back to school season looks different
-
-[[Open5]]</tw-passagedata><tw-passagedata pid="123" name="Open5" tags="" position="7483,5967" size="100,100">Dear [[Louisa, ]]</tw-passagedata><tw-passagedata pid="124" name="Louisa, " tags="" position="7482,6117" size="100,100">The summer went by so fast. I’m starting [[secondary school]] next week, which is absolutely mad. I’m sure I would have been nervous anyway but with all the Covid stuff it’s even weirder. Mam works at the secondary school I’m going to so she’s been in on the meetings about how things are gonna go. Class sizes for first year students will be smaller than what they would have been, and we’re mainly gonna be in [[one side of the school building.]] We won’t have to wear face masks or anything like that but we have to keep apart and not share [[pens and snacks.]] I’m going to this school on my own, as none of my friends from primary school are going, so it’ll be hard to make friends as easily with all the social distancing. Mam has reassured me that the girls are usually nice at [[St. Joan&#39;s.]] Usually.
-
-[[Continue25]]</tw-passagedata><tw-passagedata pid="125" name="secondary school" tags="" position="7181,6267" size="100,100">image</tw-passagedata><tw-passagedata pid="126" name="one side of the school building." tags="" position="7332,6267" size="100,100">image</tw-passagedata><tw-passagedata pid="127" name="pens and snacks." tags="" position="7482,6268" size="100,100">image</tw-passagedata><tw-passagedata pid="128" name="St. Joan&#39;s." tags="" position="7633,6267" size="100,100">image</tw-passagedata><tw-passagedata pid="129" name="Continue25" tags="" position="7782,6267" size="100,100">For the past week I was in the [[West of Ireland in Connemara]] with my family - we’re just back. We got this holiday home that was about a five minute walk to the beach, and the [[beach]] was so pretty. It was so great to get out of the house in Dublin and go somewhere new for a change. Dad had booked a holiday to [[Portugal]] for us back in February that would have happened last week. We were going to go to a huge water park and everything, but Dad cancelled it a long time ago. I don’t mind since I’ve had a nice summer anyway.
-
-[[Continue26]]</tw-passagedata><tw-passagedata pid="130" name="West of Ireland in Connemara" tags="" position="7557,6417" size="100,100">image</tw-passagedata><tw-passagedata pid="131" name="beach" tags="" position="7706,6417" size="100,100">image</tw-passagedata><tw-passagedata pid="132" name="Portugal" tags="" position="7856,6418" size="100,100">image</tw-passagedata><tw-passagedata pid="133" name="Continue26" tags="" position="8007,6417" size="100,100">Before Connemara, I did this online summer camp with [[Fighting Words.]] It’s this writing centre in Dublin that my school went to this year for a day for a workshop. Mam thought I should have a go at the online Fiction writing camp since I enjoyed that school trip and have loved writing these emails to you. During that week-long camp I did a modern spin on the Irish myth of [[Tir na nOg]]. I was actually a little inspired by Tuck Everlasting too after I read it - let me know if you’ve any more book recommendations. The original story of Tir na nOg  is set in ancient Ireland and is about this guy called Oisin who is offered by this [[magical woman on a horse]] called Niamh to go to “Tir na nOg” the Land of Youth, where he could live forever. Niamh was in love with Oisin too (from afar I guess, since they never met. Like me and [[Joshua Bassett…]]) They go to Tir na nOg and live a happy life, but eventually Oisin wants to go back home and see his family. Niamh warns him if he gets off his horse when back home that he’d become old again and not be able to return to Tir na nOg. So he goes back, and, as you’d expect, all who he knew are gone. He falls off the horse when he tries to help some men lift a [[rock,]] and he becomes old. Pretty sad story, as a lot of Irish myths and tales are - there’s usually some kind of moral message in them. I thought I’d set my version about [[50 years ago]], so my character would eventually returnn home the same age, but it&#39;s 2020. I thought it’d be cool to have a funny spin on the story instead of dwelling too much on the virus and all the bad stuff, like my character Frankie is like ‘what is that [[tiny computer]] in your hand??’ It’d be cool to have the chance to live forever wouldn’t it? But not when you think about losing those around you. Would you like to read my story? I can send you the link in my next email. 
-
-[[Continue27]]</tw-passagedata><tw-passagedata pid="134" name="Fighting Words." tags="" position="7482,6567" size="100,100">link</tw-passagedata><tw-passagedata pid="135" name="Tir na nOg" tags="" position="7632,6567" size="100,100">image // &quot;Land of the Young&quot;</tw-passagedata><tw-passagedata pid="136" name="magical woman on a horse" tags="" position="7782,6567" size="100,100">image</tw-passagedata><tw-passagedata pid="137" name="Joshua Bassett…" tags="" position="7932,6567" size="100,100">image</tw-passagedata><tw-passagedata pid="138" name="rock," tags="" position="8082,6567" size="100,100">image</tw-passagedata><tw-passagedata pid="139" name="50 years ago" tags="" position="8232,6567" size="100,100">image</tw-passagedata><tw-passagedata pid="140" name="tiny computer" tags="" position="8382,6567" size="100,100">image</tw-passagedata><tw-passagedata pid="141" name="Continue27" tags="" position="8530,6564" size="100,100">I did a little hockey camp with Niamh and Ellen - it was fun to play again, but I was really bad because I hadn’t played in so long. Ellen was, somehow, amazing as usual with her [[reverse hitting and aerial tricks.]] Apparently, it’s a secret but Ellen has gone off to the [[south of France]] for a week with her mam and dad and brothers. I’ve been told not to tell Niamh when I overheard Mam and Dad talking about it - they weren’t very pleased about Ellen’s family going. ‘Deirdre (Ellen’s mam) told me she’s minding her mother and all, and there’s no one else who can, so it doesn&#39;t look like she’ll be quarantining when she returns from her holiday,’ Mam said. Ellen didn’t share anything on her Instagram or TikTok. She probably wasn’t allowed to.
-
-[[Continue28]]</tw-passagedata><tw-passagedata pid="142" name="reverse hitting and aerial tricks." tags="" position="8488,6712" size="100,100">image</tw-passagedata><tw-passagedata pid="143" name="south of France" tags="" position="8606,6715" size="100,100">image</tw-passagedata><tw-passagedata pid="144" name="Continue28" tags="" position="8729,6716" size="100,100">In Connemara, it felt like coronavirus didn’t exist. Not that people were breaking the rules or anything, not at all. In Dublin there are just [[signs everywhere]] and more people wearing masks outside, since there are more cases there. But in the rural part of Galway, you wouldn&#39;t think of the pandemic until you pop in to the newsagent wearing your mask to buy some [[sweets.]] We spent most of our time on the beaches [[body boarding.]] We had a fun game of jumping over the [[waves]] but once I got big fright as one of the waves was much taller than me and I got [[caught under it.]] Liam picked me up out of it but it was kinda scary (and gross - I had swallowed a bunch of seawater.) 
-
-[[Continue29]]</tw-passagedata><tw-passagedata pid="145" name="signs everywhere" tags="" position="8409,6867" size="100,100">image</tw-passagedata><tw-passagedata pid="146" name="sweets." tags="" position="8558,6864" size="100,100">image</tw-passagedata><tw-passagedata pid="147" name="body boarding." tags="" position="8806,6868" size="100,100">image</tw-passagedata><tw-passagedata pid="148" name="caught under it." tags="" position="8954,6866" size="100,100">image</tw-passagedata><tw-passagedata pid="149" name="Continue29" tags="" position="9084,6866" size="100,100">Liam and I also tried out paddle boarding, which was so fun but, we did it less after we heard on the news that two girls [[drifted out to sea in Galway]] while paddle boarding. They were rescued after a [[night at sea,]] thank goodness, but Dad said ‘No way’ when Liam and I asked if we could paddle board again. At least we had the body boards and the beach was wavy.
-
-[[Continue30]]</tw-passagedata><tw-passagedata pid="150" name="waves" tags="" position="8687,6867" size="100,100">image</tw-passagedata><tw-passagedata pid="151" name="drifted out to sea in Galway" tags="" position="8932,7016" size="100,100">link / image</tw-passagedata><tw-passagedata pid="152" name="night at sea," tags="" position="9084,7016" size="100,100">image</tw-passagedata><tw-passagedata pid="153" name="Continue30" tags="" position="9234,7014" size="100,100">We sometimes went out for dinner since restaurants are open and going about things safely but we mainly [[ate at home.]] We kept to ourselves, which was the best way. The trip made me appreciate Ireland a little more - there are really pretty parts of the [[country.]]
-
-[[Continue31]]</tw-passagedata><tw-passagedata pid="154" name="ate at home." tags="" position="9083,7164" size="100,100">image</tw-passagedata><tw-passagedata pid="155" name="country." tags="" position="9234,7164" size="100,100">image</tw-passagedata><tw-passagedata pid="156" name="Continue31" tags="" position="9384,7164" size="100,100">Are you back to school yet? America usually starts a bit earlier right? 
-
-Lots and lots and lots of love,
-[[Sinead :)]]</tw-passagedata><tw-passagedata pid="157" name="Sinead :)" tags="" position="9384,7314" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="158" name="Start" tags="" position="662,120" size="100,100">=&gt;&lt;=
-
-**Sinead and Louisa**
-
-Written by Jane Loughman and Elisabeth McLaughlin
-
-[[Begin-&gt;Open1]]
-</tw-passagedata><tw-passagedata pid="159" name="[Sinéad" tags="" position="733,565" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="160" name="Lots and lots and lots of love," tags="" position="613,594" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="161" name="[zombie end-of-the-world" tags="" position="853,565" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="162" name="test" tags="" position="262,185" size="100,100">
-
-&lt;div class=&quot;clickers&quot; id=&quot;1&quot;&gt;Click me for image 1&lt;/div&gt;
-
-&lt;div class=&quot;clickers&quot; id=&quot;2&quot;&gt;Click me for image 2&lt;/div&gt;
+{
+|p1)[Eight hundred people live in my town. You’d think the &lt;span class = &quot;clickers&quot; id = &quot;1&quot;&gt;Piggly Wiggly&lt;/span&gt; would have never seen so many people at once, but Saturday’s grocery run felt like some sort of town hall. Everyone was there — my old Sunday school teacher Mrs. Davis, Jane’s ex-boyfriend Frankie, even my fourth-grade English teacher Ms. Cromwell (she’s the one who always drops off those lemon pralines). Ever since the governor’s declaration, people have been wheeling in and out of the grocery’s parking lot like flies. Mama parked across the street just to avoid the accident waiting to happen. Since Dad’s back-to-back car wrecks, we can’t afford another tap — something about the insurance.
 
 &lt;script&gt;
-	  var $1 = document.getElementById(&#39;1&#39;);
-	  $1.onclick = function() {
+	  var $1 = document.getElementById(&#39;1&#39;).addEventListener(&quot;click&quot;, function() {
 		  console.log(&quot;img clicker 1 clicked!&quot;);
-		  window.top.postMessage(&#39;1&#39;, &#39;*&#39;);
-	  }
-	  var $2 = document.getElementById(&#39;2&#39;);
-	  $2.addEventListener(&quot;click&quot;, function() {
-	  	console.log(&quot;img clicker 2 clicked!&quot;);
+		  window.top.postMessage(&#39;img1&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[Three bags to each arm, Jane and I swayed across the parking lot as Mama chatted with Uncle Wayne. We all think he’s had the virus. When Mom called to check on him last month, he was shaking on the couch even in three winter jackets. He wrote it off as a bad flu. But I will say, when Uncle Wayne’s drinking water, you know something’s up.]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[You have to be really careful now. There’s constant talk. One of my friends was sniffling and coughing in class on Wednesday, and now the whole seventh grade thinks she has the mystery virus. Supposedly, our parish has only three cases, but can that be right?]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[I remember watching the crowds in late-February during &lt;span class = &quot;clickers&quot; id = &quot;a&quot;&gt;Mardi Gras&lt;/span&gt;. Walking down St. Charles was like walking through color. Trolleys were jam-packed. Jane got off at Poydras to buy booze, so I bought cotton candy off a grocery cart vendor and made friends with a woman painting faces on the banquette. Oh Sinéad, she had the most amazing sparkling-green fish-scale leggings! The conversation began with a //Cher, where y’at?// and ended with the head of a bald eagle painted across my face. I told her I wanted something almost extinct. I felt majestic, powerful, but also weak. I laughed so hard my stomach hurt. You know how brushes tickle.
+
+&lt;script&gt;
+	var $a = document.getElementById(&#39;a&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;img clicker a clicked!&quot;);
+		  window.top.postMessage(&#39;imga&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;
+]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)(t8n: &quot;dissolve&quot;)(show: ?l5)]]
+
+|p5)[At that point, my plastic sneakers had created these lady-bug like blood blisters. The next day, it was as if they were injected with hot goo from the sun. So, I walked around in my socks for the rest of the night. I remember ‘cause Mom was really upset. She said, “How in the world am I gonna wash out this asphalt.”  She did not know about all the gold glitter in my hair.]
+}
+
+{
+|l5)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p6)(t8n: &quot;dissolve&quot;)(show: ?l6)]]
+
+|p6)[Jane and I always make French toast for Mom whenever school’s cancelled, so this month will be quite the test. &lt;br /&gt;&lt;br /&gt;
+
+&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;Sending warmth&lt;/span&gt; (you know we have too much of that anyway)! &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[— Louisa-&gt;Email3]]&lt;/span&gt;
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 3 clicked!&quot;);
+		  window.top.postMessage(&#39;bg3&#39;, &#39;*&#39;);	
+	  });
+	var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/louisa-1.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+&lt;/script&gt;
+]
+}</tw-passagedata><tw-passagedata pid="3" name="Email3" tags="Sinead-Email" position="1218,444" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email3&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 3 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Louisa&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-louisa.m4a&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[Was kind of hoping to wake up today and see on the news that Covid was one big April Fool’s joke, but nope! This is still real life! &lt;br /&gt;&lt;br /&gt;
+
+I think it’s been under a week since Ireland went on full lockdown mode. I haven’t left the house once. I know that’s pretty standard now, and everyone is doing the same, but I don’t think I’ve spent this much time here since I was probably four years old. Normally I’d be at school and out all the time at the weekend, &lt;span class = &quot;clickers&quot; id = &quot;6&quot;&gt;playing hockey&lt;/span&gt; or going to Granny’s. In the summer, I’d be away or doing summer camps, not stuck at home. Maybe I should go for a cycle soon. Mam said I can only go as far as the &lt;span class = &quot;clickers&quot; id = &quot;7&quot;&gt;pier&lt;/span&gt;.
+
+&lt;script&gt;
+	var $6 = document.getElementById(&#39;6&#39;).addEventListener(&quot;click&quot;, function() {
+			console.log(&quot;gif clicker 6 clicked!&quot;);
+			window.top.postMessage(&#39;gif6&#39;, &#39;*&#39;);	
 		});
+	var $7 = document.getElementById(&#39;7&#39;).addEventListener(&quot;click&quot;, function() {
+			console.log(&quot;gif clicker 7 clicked!&quot;);
+			window.top.postMessage(&#39;gif7&#39;, &#39;*&#39;);	
+		});
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[School has been weird — I’m still not used to it. Múinteoir Ní Dorcháin sometimes gives too little work or too much work, and I wish she was there to help me with my maths. She sends these videos of her doing examples, but they only help sometimes. I haven’t used Dad’s laptop this much since I was obsessed with making music videos on iMovie. I’m really bad at typing. What’s nice though is that I zoom call Niamh and Caoimhe sometimes to do homework together. I miss seeing them.
+
+&lt;script&gt;
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[I think Dad has been a bit worried about the bookshop. Only ‘essential’ shops are allowed open. ‘Books //are// essential, to get us through this mess,’ he muttered at dinner when lockdown began. He doesn’t seem like his usual happy self, so I give him updates on the books I’m reading or on my schoolwork. It cheers him up most of the time.]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[Liam spends a lot of time playing Fortnite or FIFA or whatever on the Playstation, or just blaring music in his room - “studying.” You know how he is. A few nights ago, I went into the living room to ask him if he could help me bake &lt;span class = &quot;clickers&quot; id = &quot;10&quot;&gt;vanilla cupcakes&lt;/span&gt;. He said he didn’t want to. I asked again, with an extra please, but he just told me to go away. He kind of said that in a way that made me upset. Mam saw my tears and went in to Liam to make him say sorry, and to tell him to bake the cupcakes. I said, ‘it’s okay, he doesn’t need to help me,’ but Mam insisted. He sulked, and joined me in the kitchen, texting on his phone. I told him that he could go back to the game, but he looked up and said, ‘nah, it’s grand, I wasn’t even online with the lads.’ He put down his phone, then clapped his hands and smiled, saying ‘let’s bake.’ We’ve been baking, playing &lt;span class = &quot;clickers&quot; id = &quot;11&quot;&gt;Catan&lt;/span&gt; or Tik Tok dancing everyday since. 
+
+&lt;script&gt;
+var $10 = document.getElementById(&#39;10&#39;).addEventListener(&quot;click&quot;, function() {
+			console.log(&quot;gif clicker 10 clicked!&quot;);
+			window.top.postMessage(&#39;gif10&#39;, &#39;*&#39;);	
+		});
+var $11 = document.getElementById(&#39;11&#39;).addEventListener(&quot;click&quot;, function() {
+			console.log(&quot;gif clicker 11 clicked!&quot;);
+			window.top.postMessage(&#39;gif11&#39;, &#39;*&#39;);	
+		});
+&lt;/script&gt;]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)(t8n: &quot;dissolve&quot;)(show: ?l5)]]
+
+|p5)[The book I’m reading at the moment, //Under the Hawthorn Tree// by Marita Conlon-McKenna, is really good. You should check it out! It’s quite sad though, since it’s about three kids during the Great Famine in Ireland. You know, sometimes I think things are looking pretty awful, but then I remember that at least I have a roof over my head, a full stomach, and my parents and brother.
+
+&lt;script&gt;
+&lt;/script&gt;]
+}
+
+{
+|l5)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p6)(t8n: &quot;dissolve&quot;)(show: ?l6)]]
+
+|p6)[Seanfhocal of the day: |txf1&gt;[&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;“Ní heolas go haontíos,”&lt;/span&gt;
+
+&lt;script&gt;
+	var audio2 = document.createElement(&#39;audio&#39;);
+		audio2.src = &#39;sounds/irishproverb2.m4a&#39;;
+		document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio2.play();
+		});
+&lt;/script&gt;] How’s quarantine for you?&lt;br /&gt;&lt;br /&gt;
+
+Stay safe and well, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;Lots and lots of love&lt;/span&gt;, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Sinéad x-&gt;Email4]]&lt;/span&gt;
+
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt;meaning you must live with someone to know them well. &lt;/span&gt;]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 4 clicked!&quot;);
+		  window.top.postMessage(&#39;bg4&#39;, &#39;*&#39;);	
+	  });
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/sinead-end-2.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="4" name="Email4" tags="Louisa-Email" position="1440,456" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email4&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 4 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Sinéad&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-sinead.mp3&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[Since the virus emerged, Mom’s been glued to the television. Every night, light’s are out, but the box on. At this rate, she’s fixin’ to sleep on the couch. People are scared. Well, except Jane. She thinks the virus is a bunch of humbo jumbo, overblown by the media. I just think she’s upset that her high school dance was cancelled and that we have to share the laptop now. Even without school, she’s gone all day. I love Mom but every time I touch a &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;light switch&lt;/span&gt;, she swoops in and wipes it with a Clorox wipe. And every time I itch my nose, she yelps. Lately, Jane’s been nice enough to let me join her drives.
+
+&lt;script&gt;
+	var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/light-switch.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio 2 played!&quot;);
+	  audio2.play();
+	  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[We’ve got a new routine down. If the sun’s out, we stop at the &lt;span class = &quot;clickers&quot; id = &quot;4&quot;&gt;creole tomato stand&lt;/span&gt; that sells strawberries on |txf1&gt;[Bayou DeZaire] in the spring. If the moon’s up, we drive through Butterkrisp (I swear the only other place open besides the hospital at that hour). &lt;span class = &quot;clickers&quot; id = &quot;5&quot;&gt;Strawberry juice and donut glaze.&lt;/span&gt; I can’t tell if the car is sticky because of us or because of the humidity. We’re just waitin’ for peach season, but July is a long way away.
+
+(click-append: ?txf1)[ - &lt;span class = &quot;reveal&quot;&gt;A stillwater refuge from the choppy waves of Lake Pontchartrain&lt;/span&gt; - ]
+
+&lt;script&gt;
+  var $4 = document.getElementById(&#39;4&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 4 clicked!&quot;);
+			  window.top.postMessage(&#39;img4&#39;, &#39;*&#39;);	
+		  });
+	 var $5 = document.getElementById(&#39;5&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 5 clicked!&quot;);
+			  window.top.postMessage(&#39;img5&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[It’s strange not having anything to look forward to (except fruit) now that school’s cancelled for good. Mom says at least it’s cool enough to sit on the front porch. I think it’s funny that whenever the temperature dropped below thirty in January, Jane and her friends would mass tweet the superintendent begging for a day off. Now, all Jane wants is to be at school and with her friends. I do, too. Our teachers host optional zoom classes and post assignments, but it’s hard to feel //there//. Ms. Babette, my math teacher, says it’s like we’re the Brady Bunch now, but I’ve never seen it.]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[Mom is worried about Grandma and the chemo. Without church, she’s taken to her own communion of Ritz crackers and cranberry juice. Whenever I hear about gathering restrictions, I just think about the number of people that must fill up a church. Two-fifty to fifty. It’s like going from filling that Baptist auditorium on Bricker Drive to the century-old clapboard Episocopal church off Pine Drive. Gran’s really torn up about Jazz Fest. The party brings in family from across the country. A dozen folding chairs, five quilts, two ice chests — our camp on the grounds is a sight! Mom and I dropped off homemade crawfish bread at Gran’s door (even though she’s not too hungry) with a note that next year will simply be bigger and better. ]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[It’s wild how quickly things change… do you ever leave the house? I’m sinking into my mattress. &lt;br /&gt; &lt;br /&gt;
+
+Write soon,&lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Louisa-&gt;Email5]]&lt;/span&gt;
+
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 5 clicked!&quot;);
+		  window.top.postMessage(&#39;bg5&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="5" name="Email5" tags="Sinead-Email" position="574,637" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email5&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 5 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Louisa&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-louisa.m4a&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[My routine is all over the place - it doesn’t really exist to be fair. Sometimes I wake up at &lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;10 am&lt;/span&gt; and every now and then I wake up at &lt;span class = &quot;clickers&quot; id = &quot;y&quot;&gt;2 pm!&lt;/span&gt; Today was a 2 pm start. I literally woke up twenty minutes ago. 
+
+&lt;script&gt;
+	  var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker x clicked!&quot;);
+		  window.top.postMessage(&#39;bgx&#39;, &#39;*&#39;);	
+	  });
+	  var $y = document.getElementById(&#39;y&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker y clicked!&quot;);
+		  window.top.postMessage(&#39;bgy&#39;, &#39;*&#39;);
+	  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[I think I’m not sleeping well because sometimes I wake up in the middle of the night from nightmares. I wouldn’t remember them usually, but recently, when snapped out of the dream, I’m remembering more. In one I had a few nights ago, I was actually back in New Orleans, with you, eating at your restaurant. It seemed like everything was fine, like last summer. But then I heard sirens outside, and people were screaming - we were all confused. There were people walking around slowly and I realised that they were &lt;span class = &quot;clickers&quot; id = &quot;13&quot;&gt;zombies&lt;/span&gt;. I screamed, grabbed your hand, and we ran. But one of the zombies caught me, and his face got up real close to me and before he could take a bite, I jumped up from my bed, awake. I told Liam the next morning and he told me it’s probably because we watched //The Dark Knight// before I went to bed. Yeah, yeah, not a zombie movie, but I think he’s right because Harvey’s burnt face scared me a lot.
+
+&lt;script&gt;
+	var $13 = document.getElementById(&#39;13&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;gif clicker 13 clicked!&quot;);
+			  window.top.postMessage(&#39;gif1&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[Thank you for the birthday card!! I had a lovely day on Saturday. I had been planning my 12th birthday for months - I was hoping to bring everyone in 6th class to Jumpzone, which is a place full of trampolines. My cousin Aileen did it for her 10th birthday, and it was so fun. But, of course, I couldn’t do that anymore. So, I was at home! Surprise, surprise. Liam, Mam, Dad and I went on a cycle, made toasties for lunch, watched a few Harry Potter films since it started lashing rain, then had a Thai takeaway. I sometimes find parties a bit stressful anyway, so this was nice. 
+
+&lt;script&gt;
+&lt;/script&gt;]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[I have a feeling that one of my grandparents may have symptoms. This morning, I heard Mam talking to Granny on the phone and she sounded worried, but I of course couldn’t hear the other end. I hope your Gran is doing okay. 
+]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[Seanfhocal of the day: |txf1&gt;[&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;“Aithnítear cara i gcruatán.”&lt;/span&gt;
+
+&lt;script&gt;
+	var audio2 = document.createElement(&#39;audio&#39;);
+		audio2.src = &#39;sounds/irishproverb3.m4a&#39;;
+		document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio2.play();
+		});
+&lt;/script&gt;] I’m here for you. &lt;br /&gt;&lt;br /&gt;
+
+&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;Stay safe and well,&lt;/span&gt; &lt;br /&gt;
+Lots and lots of love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Sinéad x-&gt;Email6]]&lt;/span&gt;
+
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt;It means a friend is known in hard times. I’m really appreciating these emails.&lt;/span&gt; ]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 6 clicked!&quot;);
+		  window.top.postMessage(&#39;bg6&#39;, &#39;*&#39;);	
+	  });
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/sinead-end-3.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="562,444" size="100,100">
+
+=&gt;&lt;=
+
+[[Begin-&gt;Email1]]
+</tw-passagedata><tw-passagedata pid="7" name="pier" tags="" position="273,493" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Email6" tags="Louisa-Email" position="764,640" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email6&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 6 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Sinéad&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-sinead.mp3&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[I wish the wind would blow away the heat. It’s too hot to ride my bike now. I just float in the neighbor’s &lt;span class = &quot;clickers&quot; id = &quot;6&quot;&gt;above-ground pool&lt;/span&gt; while Jane fries on my towel. Standing up is like roller skating in water - slippery. The water’s blooming green with algae, but I don’t mind.&lt;br /&gt;&lt;br /&gt;
+
+Everyday is the same now. I don’t know if it’s because I stay in my sleep shirts or because my sleep schedule is so messed up. I did do laundry yesterday - first time in eight weeks. I know, //bad//, but it’s all pajamas anyway. 
+
+&lt;script&gt;
+	var $6= document.getElementById(&#39;6&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 6 clicked!&quot;);
+			  window.top.postMessage(&#39;img6&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[If this were a normal year, school would’ve let out about now. Can you believe it? When they sent us home in March, I didn’t really understand what was going on. The catastrophe didn’t register. Like you, I just thought we would have two weeks to do whatever we wanted. Like an early break. Not //this//. Time feels different. I keep asking Jane what eighth grade is supposed to look like because I don’t know what to look to. I think I just miss my friends.]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[I also keep having the strangest dreams! Especially this one where I’ve left something important, who knows what, in Ms. Day’s classroom, and they won’t let me into the school. I’m bangin’ against the glass, and it’s like no one can hear or see me.&lt;br /&gt;&lt;br /&gt;
+
+I just can’t shake what Ms. Day said in our final zoom class on Friday. Supposedly, any number over fifty the human brain cannot imagine. Over fifty! So what is it to say we’re trying to make sense of this crisis? 2,382 is so abstract, so cold, so (text-style: &#39;bold&#39;)[heavy].
+]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[I didn’t really know anyone who was sick in the early stages, but now everyone is texting about so-and-so which is //real// scary. If I were to get the virus, my chances of death would be very low, but it’s hard watching Mom leave every morning. &lt;br /&gt;
+
+Mom’s back at the restaurant, but they&#39;re only offering take-out. Everyone’s got her number so they just text in their order. Each &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;ding&lt;/span&gt; is a little party. A little weight lifted. The community center bought a ton of food to deliver to workers so that’s helped. 
+
+&lt;script&gt;
+	var audio2 = document.createElement(&#39;audio&#39;);
+		audio2.src = &#39;sounds/ding.mp3&#39;;
+		document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio2.play();
+		});
+&lt;/script&gt;]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[Mom says this is worse than Katrina… not knowing what to do, not moving shoulder-to-shoulder in the kitchen, not being able to come together around a table. After she comes home, showers, and scrubs, she just falls asleep on the couch. The trash bin by the front door is blue with &lt;span class = &quot;clickers&quot; id = &quot;b&quot;&gt;gloves.&lt;/span&gt; &lt;br /&gt;&lt;br /&gt;
+
+&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;I hope things are brighter where you are.&lt;/span&gt; &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[— Louisa-&gt;Email7 ]]&lt;/span&gt;
+
+&lt;script&gt;
+	var $b = document.getElementById(&#39;b&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;img clicker b clicked!&quot;);
+		  window.top.postMessage(&#39;imgb&#39;, &#39;*&#39;);	
+	  });
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 7 clicked!&quot;);
+		  window.top.postMessage(&#39;bg7&#39;, &#39;*&#39;);	
+	  });
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/louisa-2.mp3&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="9" name="Email7 " tags="Sinead-Email" position="981,625" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email7&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 7 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Louisa&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-louisa.m4a&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[Hello hello! Really enjoyed our FaceTime call the other night.&lt;br /&gt;
+
+You know how I told you we would soon be able to travel further and more shops would open? Well, today’s that day - Dad’s bookshop opened again! I went in for the afternoon to help him set up, mainly because I’ve been dying to see more things other than &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;Dún Laoghaire&lt;/span&gt;. I’ve been cycling around lots with Liam since it’s been so sunny. I can imagine that’s the Louisiana sun coming our way. 
+
+&lt;script&gt;
+	  var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/dun-laoghaire.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[Dad’s shop is off &lt;span class = &quot;clickers&quot; id = &quot;16&quot;&gt;Grafton street&lt;/span&gt;, which is the busiest shopping street in Dublin, and, gosh, was it packed today. People were clearly dying to go out and about. There were queues to go into most places, including Dad’s shop - he was chuffed about the demand. With all the restrictions in place, he can&#39;t have many in the shop at the one time. It was weird seeing all these yellow lines on the ground marking out where people can stand and the clear barrier between dad and a customer. I wore a mask - one of those blue ones that makes me look like a nurse or a doctor doing an operation. 
+
+&lt;script&gt;
+	var $16 = document.getElementById(&#39;16&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;gif clicker 16 clicked!&quot;);
+			  window.top.postMessage(&#39;gif16&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[Walking around town today felt so normal, and no one really gives you 2 metre space when they walk past you. At lunch break, I got an Oreo ice cream from Gino&#39;s and strolled with Dad around &lt;span class = &quot;clickers&quot; id = &quot;18&quot;&gt;Stephen&#39;s Green&lt;/span&gt;. We were approaching the exit when a boy bumped into me. He briefly said ‘sorry,’ then continued to walk on with his big group of friends, who were clearly not social distancing. He made me spill a bit of ice cream on my shirt, but I didn’t mind that too much. I was frustrated I had to throw away the rest of it into the nearest bin. Dad said he got close, so there was a chance he touched it. Better safe than sorry. 
+
+&lt;script&gt;
+	var $18 = document.getElementById(&#39;18&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;gif clicker 18 clicked!&quot;);
+			  window.top.postMessage(&#39;gif18&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[There was a big protest for Black Lives Matter near the US Embassy on Saturday. I saw it on TV. Big crowds of people, most wearing masks, but not much distance between them. Still, it was great to see. I remember learning about the Civil Rights Movement in school, and I felt like I was transported back in time to then when I watched the crowds walk down the street with signs saying ‘I can’t breathe.’ There were other signs saying (link-repeat: &quot;&#39;End Direct Provision,&#39;&quot;)[(open-url: &quot;https://www.masi.ie/&quot;)] which I asked Dad about -  he told me it’s where refugees stay when they come to Ireland. They’re in a bad way apparently. Ireland isn’t so innocent, I guess.
+
+&lt;script&gt;
+&lt;/script&gt;]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[I’ve heard some of the protests in the States can become pretty violent. Please stay safe! &lt;br /&gt;&lt;br /&gt;
+
+Seanfhocal of the day: |txf1&gt;[&lt;span clickers = &quot;clickers&quot; id = &quot;audio3&quot;&gt;“An rud a ghoilleas ar an gcroí caithfidh an t-súil é a shileas,”&lt;/span&gt;
+
+&lt;script&gt;
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/irishproverb4.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;]  &lt;br /&gt;&lt;br /&gt;
+
+Lots and lots of love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Sinéad x-&gt;Email8]]&lt;/span&gt;
+
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt; What hurts the heart must be washed away with tears. &lt;/span&gt; ]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 8 clicked!&quot;);
+		  window.top.postMessage(&#39;bg8&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="10" name="Email8" tags="Louisa-Email" position="1198,617" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email8&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 8 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Sinéad&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-sinead.mp3&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[In the beginning, seeing my friends through FaceTime kept me going, but now it’s &lt;span class = &quot;clickers&quot; id = &quot;8&quot;&gt;my daily drive with Jane&lt;/span&gt;. Picking up &lt;span class = &quot;clickers&quot; id = &quot;9&quot;&gt;root beer&lt;/span&gt; from Abita gives us something to do I guess. Reminds us of Dad. That black licorice smell. Acidic and sweet. 
+
+&lt;script&gt;
+	var $8= document.getElementById(&#39;8&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 8 clicked!&quot;);
+			  window.top.postMessage(&#39;img8&#39;, &#39;*&#39;);	
+		  });
+	var $9= document.getElementById(&#39;9&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 9 clicked!&quot;);
+			  window.top.postMessage(&#39;img9&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[Uncle Wayne brought Jane and me to the day protests last week. No violence. No arrests. No tear gas. We marched down Esplanade Avenue to the First District Police Station. The final stop was at the Hard Rock Hotel on Canal Street that collapsed last year. Only two weeks ago a young man who’d worked there was shot by a Jefferson Parish policeman for having a cellphone in his hand. 
+
+(Many of the large protests in the evening were organized by (link-repeat: &quot;Take Em&#39; Down Nola&quot;)[(open-url: &quot;https://www.facebook.com/TakeEmDownNOLA/&quot;)]. Saturday&#39;s was organized by a youth group called (link-repeat: &quot;Rays of Love&quot;)[(open-url: &quot;https://twitter.com/raysoflovemarch?lang=en&quot;)].)
+
+Jane held my hand the whole time. You know I don’t like crying in public.
+
+&lt;script&gt;
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[Since the library’s closed, my English teacher dropped off a small box of books at the restaurant for me. I just started //Tuck Everlasting.// The girl, she’s your age, tells her troubles to a toad. The &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;frogs are so loud&lt;/span&gt; here now that I’m almost crazy enough to try it. Jane can’t stand the sound. Mom can’t stand the fact that she can still hear the highway… 
+
+&lt;script&gt;
+	var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/frog-sounds.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+&lt;/script&gt;]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[I keep thinking about life and family. What I would do if I could live forever like Tuck. It’s hard knowing what are the good choices, the safe choices, the right and wrong choices right now. I keep thinking about one of the |txf1&gt;[&lt;span class = &quot;clickers&quot;&gt;proverbs you sent.&lt;/span&gt;] It really is better if we work together. &lt;br /&gt;&lt;br /&gt;
+
+Thank you for always being there for me and making me smile! &lt;br /&gt;&lt;br /&gt;
+
+Love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[ Louisa-&gt;Email9 ]]&lt;/span&gt;
+
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt; - &quot;Ní neart go cur le chéile.&quot;&lt;/span&gt;]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 9 clicked!&quot;);
+		  window.top.postMessage(&#39;bg9&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="11" name="Email9 " tags="Sinead-Email" position="1433,628" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email9&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 9 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Louisa&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-louisa.m4a&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[I’ve been loving writing these emails so much I did a playwriting summer camp! &lt;br /&gt;
+
+An online one, to be exact. It was with (link-repeat: &quot;Fighting Words&quot;)[(open-url: &quot;https://www.fightingwords.ie&quot;)], this writing centre in Dublin that my school went to this year for a workshop. During that week-long camp, I did a modern twist on the Irish myth of &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;//Tír na nÓg//&lt;/span&gt;. I was actually a little inspired by //Tuck Everlasting// too after I read it - let me know if you’ve any more book recommendations. 
+
+&lt;script&gt;
+	  var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/tir-na-nog.m4a&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[The original story of //Tir na nOg// is set in ancient Ireland and is about this guy called &lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;Oisín&lt;/span&gt; who is offered by this magical woman on a horse called Niamh to go to “Tír na nÓg,” the Land of Youth, where he could live forever. Niamh was in love with Oisín too (from afar I guess, since they had never met before. Like me and &lt;span class = &quot;clickers&quot; id = &quot;20&quot;&gt;Joshua Bassett&lt;/span&gt;...) They go to Tír na nÓg for many, many years and live a happy life, but eventually Oisin wants to go back home and see his family. Niamh warns him ‘if you get off your horse when back home, you’ll become old again and not be able to return to Tír na nÓg.’ So he goes back, and, as you’d expect, all who he knew are gone. He falls off the horse when he tries to help some men lift a rock, and he becomes old. Pretty sad story, as a lot of Irish myths and tales are - there’s usually some kind of moral message in them. 
+
+
+&lt;script&gt;
+	var $20 = document.getElementById(&#39;20&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;gif clicker 20 clicked!&quot;);
+			  window.top.postMessage(&#39;gif20&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[I thought I’d set my play about 50 years ago, so my character would eventually return home the same age, but it&#39;s 2020. I thought it’d be cool to have a funny spin on the story instead of dwelling too much on the virus and all the bad stuff, like my character Frankie is like ‘what is that |txf1&gt;[tiny computer] in your hand??’ It’d be cool to have the chance to live forever wouldn’t it? But not when you think about losing those around you. Would you like to read my story? I can send you the link in my next email. 
+
+(click-replace: ?txf1)[&lt;span class=&quot;reveal&quot; id=&quot;tiny&quot;&gt;tiny computer&lt;/span&gt;]]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[Apparently it’s a secret, but Caoimhe has gone off to the south of France for a week with her mam and dad and brothers. I’ve been told not to tell Niamh when I overheard Mam and Dad talking about it - they weren’t very pleased about Caoimhe’s family going. ‘Sharon (Caoimhe’s mam) told me she’s minding her mother and all, and there’s no one else who can, so it doesn&#39;t look like she’ll be quarantining when she returns from her holiday,&#39; Mam said, rolling her eyes. Caoimhe hasn’t shared anything on her Instagram or TikTok. She probably wasn’t allowed to.]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[Seanfhocal of the day: |txf2&gt;[&lt;span class = &quot;clickers&quot; id = &quot;audio4&quot;&gt;“Ní hé lá na báistí lá na bpáistí,”&lt;/span&gt;
+
+&lt;script&gt;
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/irishproverb5.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;] It’s hailing rain outside. &lt;br /&gt;&lt;br /&gt;
+
+How’s the restaurant? &lt;br /&gt;&lt;br /&gt;
+
+Lots and lots and lots of love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Sinéad :)-&gt;Email10]]&lt;/span&gt;
+
+(click-append: ?txf2)[&lt;span class = &quot;reveal&quot;&gt; which means the day of rain is not the day of children. &lt;/span&gt;]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 10 clicked!&quot;);
+		  window.top.postMessage(&#39;bg10&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="12" name="Email10" tags="Louisa-Email" position="577,846" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email10&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 10 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Sinéad&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-sinead.mp3&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[Dad came back from rehab two weeks ago. It’s been really nice to have him home. He seems better. It’s hard to tell with him and his humor. He’s been gone for so long that I forget that we don’t share the same memories.]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[I like telling him what it was like in the beginning, pulling him into those moments, making him a part of them as if he weren’t gone. Jane still can’t talk about it. She just calls it that place. Jane stopped coming home late last month. She’s really trying not to drink. I think she’s scared she’ll end up like him.]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[July’s been the hardest month. Mom almost had to close down the restaurant again. Business is still slow, but we’re hoping that when the heat subsides more people will eat outside. So many places are &lt;span class = &quot;clickers&quot; id = &quot;11&quot;&gt;shuttering&lt;/span&gt;. I can’t tell what is temporarily closed or simply gone. Mom knows, but I don’t wanna ask. She is really stressed out all the time. 
+
+&lt;script&gt;
+	var $11 = document.getElementById(&#39;11&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 11 clicked!&quot;);
+			  window.top.postMessage(&#39;img11&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[We have one of those tents set up that sprays water. I sit underneath ‘til I’m dripping cool. I help at the restaurant all the time now. Wrapping to-go orders, making family-meal trays, and melting like the &lt;span class = &quot;clickers&quot; id = &quot;12&quot;&gt;butter in the kitchen&lt;/span&gt;. Jane’s school has gone remote, so she’s working full-time behind Mama. I like being with them, feeling so close to them.
+
+&lt;script&gt;
+	var $12 = document.getElementById(&#39;12&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 12 clicked!&quot;);
+			  window.top.postMessage(&#39;img12&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[You might have seen the posts, but Aunt Sharon is in the hospital. She tested positive and has been on a ventilator since Thursday. Now, she’s in a medically induced coma. I can’t sleep - I just hear her voice through the receiver telling mom how she was having trouble breathing. Sharon’s like the mother hen of the restaurant — knows everyone’s name but calls us all “Honey.” Whenever Mom couldn&#39;t pick me up from school, she&#39;d be there — windows down, purple eyeshadow, red lipstick, and blasting Ella. &lt;br /&gt;&lt;br /&gt;
+
+Please pray for her for me. &lt;br /&gt;&lt;br /&gt;
+
+So much love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Louisa-&gt;Email11]]&lt;/span&gt;
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 11 clicked!&quot;);
+		  window.top.postMessage(&#39;bg11&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="13" name="Email11" tags="Sinead-Email" position="775,841" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email11&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 11 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Louisa&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-louisa.m4a&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[The summer went by so fast. I’m starting &lt;span class = &quot;clickers&quot; id = &quot;21&quot;&gt;secondary school&lt;/span&gt; in less than three weeks, which is absolutely mad. I’m sure I would have been nervous anyway, but with all the Covid stuff, it’s even weirder. Mam works at the school I’m going to, so she’s told me some plans they’ve made. First years will be staying in one side of the building, in the same classrooms. The teachers will be moving around more than us, which is handy since I won’t have the risk of getting lost! We have assigned desks, and we’ll be sitting one metre apart. We can’t share pens, snacks, or hugs, and have to wear masks. I bought a floral one from SuperValu recently. It’ll be weird not seeing other girls’ faces when I first meet them - will have to practice smiling with my eyes. I’m hoping they’ll be nice — Mam said they are usually. //Usually//.
+
+&lt;script&gt;
+	  var $21 = document.getElementById(&#39;21&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;gif clicker 21 clicked!&quot;);
+			  window.top.postMessage(&#39;gif21&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[I’m just back from a week-long holiday in the West of Ireland with Mam, Dad and Liam. We were in this area that’s in the back end of nowhere called Ballyconneely in Connemara. We got this holiday home that was about a five minute walk to a really pretty &lt;span class = &quot;clickers&quot; id = &quot;24&quot;&gt;beach&lt;/span&gt;. I spent most of my time there. I’ve started writing a story about a girl who meets a mermaid at one of the Connemara beaches. I have lots of photos and videos of the sea for inspiration.
+
+&lt;script&gt;
+	var $24 = document.getElementById(&#39;24&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;gif clicker 24 clicked!&quot;);
+			  window.top.postMessage(&#39;gif24&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[In Connemara, it felt like coronavirus didn’t exist. Not that people were breaking the rules or anything, not at all. In Dublin, there are just signs everywhere and more people wearing masks outside, since there are more cases there. But in the rural part of Galway, you wouldn&#39;t think of the pandemic until you pop in to the newsagent wearing your mask to buy some &lt;span class = &quot;clickers&quot; id = &quot;13&quot;&gt;sweets&lt;/span&gt;.
+
+(click-replace: ?txf1)[&lt;span class=&quot;reveal&quot; id=&quot;tiny&quot;&gt;tiny computer&lt;/span&gt;]
+
+&lt;script&gt;
+	var $13 = document.getElementById(&#39;13&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 13 clicked!&quot;);
+			  window.top.postMessage(&#39;img13&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[When Liam wasn’t golfing with Dad, we spent most of our time on the beach bodyboarding. We had a fun game of jumping over the &lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;waves&lt;/span&gt;, but once I got big fright as one of the waves was much taller than me, and I got caught under it. Everything happened really slowly at that moment - it felt like I was under for way longer when I was, struggling to get above the wave. Liam picked me up out of it, and after I coughed and spit out some salty water, I was fine. ]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[Liam and I also paddle boarded sometimes. I loved it, and found it calming. Now as I think about paddling along the water, I shudder a little, because yesterday we heard on the news that two girls (link-repeat: &quot;drifed out to sea in Galway&quot;)[(open-url: &quot;https://www.irishtimes.com/news/ireland/irish-news/it-was-pitch-black-rescued-teenager-describes-night-afloat-with-her-cousin-in-galway-bay-1.4330185&quot;)] while paddle boarding. They were missing all night, but were found this morning. I tried to imagine Liam and I drifting off - what would we do? I feel like Liam would know. I keep thinking back to getting caught under the wave and I’m trying to distract myself by unpacking. 
+
+Seanfhocal of the day: |txf1&gt;[&lt;span class = &quot;clickers&quot; id = &quot;audio3&quot;&gt;“Níl aon tinteán mar do thinteán féin,”&lt;/span&gt;
+
+&lt;script&gt;
+	var audio3 = document.createElement(&#39;audio&#39;);
+		audio3.src = &#39;sounds/irishproverb6.m4a&#39;;
+		document.getElementById(&#39;audio3&#39;).addEventListener(&quot;click&quot;, function() {
+		console.log(&quot;audio played!&quot;);
+		audio3.play();
+		});
+&lt;/script&gt;] Yep, what Dorothy said. &lt;br /&gt;&lt;br /&gt;
+
+Are you back to school yet? &lt;br /&gt;&lt;br /&gt;
+
+Lots and lots and lots of love, &lt;br /&gt;
+&lt;span class = &quot;clickers&quot; id = &quot;x&quot;&gt;[[Sinéad :)-&gt;Email12]]&lt;/span&gt;
+
+(click-append: ?txf1)[&lt;span class = &quot;reveal&quot;&gt; — there’s no place like home. &lt;/span&gt;]
+
+&lt;script&gt;
+	var $x = document.getElementById(&#39;x&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;bg clicker 12 clicked!&quot;);
+		  window.top.postMessage(&#39;bg12&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="14" name="Email12" tags="Louisa-Email" position="1013,851" size="100,100">{
+  &lt;script&gt;
+	window.top.postMessage(&#39;email12&#39;, &#39;*&#39;);
+	console.log(&quot;email clicker 12 executed!&quot;); 
+  &lt;/script&gt; 
+  
+  |p0&gt;[&lt;span class=&quot;clickers&quot; id=&quot;audio1&quot;&gt;Dear Sinéad&lt;/span&gt;]
+  [(click: ?p0)[(event: when time &gt; 3s)[(t8n: &quot;dissolve&quot;)(show: ?p1)(t8n: &quot;dissolve&quot;)(show: ?l1)]]]
+
+  &lt;script&gt;
+	  var audio = document.createElement(&#39;audio&#39;);
+	  audio.src = &#39;sounds/dear-sinead.mp3&#39;;
+	  document.getElementById(&#39;audio1&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio.play();
+	  });
+  &lt;/script&gt;
+}
+
+{
+|p1)[Yesterday was our first day of school.  Strangely, somehow the familiar school day feels… familiar? Of course, Jane woke up early to lay down her baby hairs. I had to inhale my granola bar so she wouldn’t yell at me for spilling crumbs in her car. Running late, I sprinted to my homeroom.]
+}
+
+{
+|l1)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)(t8n: &quot;dissolve&quot;)(show: ?l2)]]
+
+|p2)[The night before last, our principal sent out a huge email - detailed like a &lt;span class = &quot;clickers&quot; id = &quot;14&quot;&gt;roadmap&lt;/span&gt; - with the school&#39;s new safety protocols. No congregating. No sharing. Masks on. Water fountains off. There’s even a system down for the bathroom. Since only two people can go in at a time, you have to tap this light-up button with your elbow whenever you walk in or out just so people know. We all have assigned seats now, too. Alphabetical. It’s almost like we’re back in kindergarten again to be honest. It’s reassuring though knowing that it’ll make contact tracing easier. 
+
+&lt;script&gt;
+	var $14 = document.getElementById(&#39;14&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 14 clicked!&quot;);
+			  window.top.postMessage(&#39;img14&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l2)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p3)(t8n: &quot;dissolve&quot;)(show: ?l3)]]
+
+|p3)[Now that Gabby and I can’t pass notes, we dramatically glance at each other across the room. I’d say we’ve gotten good at reading each other’s eyes and cheek bones, but I think we’re just telepathic. She lost her grandpa to the virus so I’ve been trying to cheer her up. Be there. Near. &lt;br /&gt;&lt;br /&gt;
+
+Lunch is outside on the &lt;span class = &quot;clickers&quot; id = &quot;17&quot;&gt;picnic tables&lt;/span&gt; for now. They painted these huge yellow xs on the green rotten wood so we’d follow protocol. It’s like sitting on a target. We’re only allowed to sit four to a table which is definitely gonna start drama. 
+
+
+&lt;script&gt;
+	var $17 = document.getElementById(&#39;17&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;img clicker 17 clicked!&quot;);
+			  window.top.postMessage(&#39;img17&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}
+
+{
+|l3)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p4)(t8n: &quot;dissolve&quot;)(show: ?l4)]]
+
+|p4)[Since the summer sun killed what was left of the grass, they filled up the lawn with gravel. It only takes a quarter of an hour to sweat through your shirt and cover your shoes with chalky dust. I ate my boiled eggs half-asleep. I miss giving my pepper jelly ham sandwiches to Jules. We always switched brown bags - our ritual. I like to think of us like those double popsicles - always together but now split in half. She&#39;s been quarantining since her brother came home. His immune system attacks his body, so her family has to be extra careful.]
+}
+
+{
+|l4)[(link: &quot;Read more&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p5)]]
+
+|p5)[Wearing masks in class was a bigger topic of conversation, but everyone mostly behaved with the rules. The teachers were really on top of it. I heard a good bit of, “I don&#39;t really want to, but I will.” Otherwise, it was pretty smooth for our first day. Unlike in March, everyone knows the virus is a real thing now. My mask feels like it has both absorbed into my skin and become something vital like a third arm. I think we just need to take things slow. Mom and Dad have been stressing about how careful Jane and I need to be as school reopens. Part of me knows that “in-person” at school can’t last, but it’s nice following a pattern again. &lt;br /&gt;&lt;br /&gt;
+
+Maybe we should FaceTime one of these days. Soon? &lt;br /&gt;&lt;br /&gt;
+
+&lt;span class = &quot;clickers&quot; id = &quot;audio2&quot;&gt;Sending love,&lt;/span&gt; &lt;br /&gt;
+&lt;span id = &quot;end&quot;&gt;[[Louisa-&gt;Start]]&lt;/span&gt;
+
+&lt;script&gt;
+	var audio2 = document.createElement(&#39;audio&#39;);
+	  audio2.src = &#39;sounds/louisa-3.mp3&#39;;
+	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
+	  console.log(&quot;audio played!&quot;);
+	  audio2.play();
+	  });
+	var $end = document.getElementById(&#39;end&#39;).addEventListener(&quot;click&quot;, function() {
+			  console.log(&quot;story ended!&quot;);
+			  window.top.postMessage(&#39;end&#39;, &#39;*&#39;);	
+		  });
+&lt;/script&gt;]
+}</tw-passagedata><tw-passagedata pid="15" name="End" tags="" position="1207,851" size="100,100">Fin.
+
+&lt;script&gt;
+    window.top.postMessage(&#39;end&#39;, &#39;*&#39;);
 &lt;/script&gt;
 
-</tw-passagedata><tw-passagedata pid="163" name="You&#39;ve got mail!" tags="" position="901,310" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(reload:)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.

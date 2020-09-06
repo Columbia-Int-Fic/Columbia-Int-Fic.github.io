@@ -8,7 +8,7 @@
 
 html, body{
 	height:100%;
-	overflow: auto;
+	overflow: hidden;
     font-family: 'Maven Pro', sans-serif;
 }
 
@@ -116,7 +116,10 @@ footer {
 
 /* Splash screen text fade in keyframe function */
 @keyframes fadeIn{
-    to{
+    from {
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
 }
@@ -237,18 +240,17 @@ footer {
 }
 
 .enterButton {
-	background-color:#80c0ad;
+	background-color:#BAD1E5;
 	display:inline-block;
 	cursor:pointer;
-	color:#000000;
-    font-family: "Maven Pro", sans-serif;
-    font-size:28px;
+	color: white;
+	font-family: "Maven Pro", sans-serif;
+	font-size:28px;
 	padding:13px 49px;
-	text-decoration:none;
+	text-decoration: none;
 }
-
 .enterButton:hover {
-	background-color:#6abda4;
+	background-color:#BAD1E5; /*could have it change colors on hover by changing this*/
 }
 .enterButton:active {
 	position:relative;
@@ -272,27 +274,53 @@ footer {
 
 }
 
-/* Styling for Sinead-Louisa story body */
-#story-body {
-    background-image:url("images/sinead/desktop.png");
-    background-position: 0vh 0vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-family: 'Catamaran', sans-serif;
+/* Styling for the green fullscreen button on the homepage */
+.fs-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    margin-top: 80vh;
+    margin-left: 3vh;
+    position: relative;
+    display: inline-block;
+    outline: none;
 }
+
+.fs-btn:focus {
+    outline: 0;
+}
+
+.fs-btn .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 110%;
+}
+
+.fs-btn:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+/* Styling for story template */
 
 #template-body {
     background-color: #5D926E;
     font-family: 'Catamaran', sans-serif;
-}
-
-.story-head {
-    display: flex;
-    background-color: lightblue;
-    margin-top: -1.4vh;
-    margin-right: -1vh;
-    margin-left: -1vh;
-    
 }
 
 .template-head {
@@ -316,27 +344,94 @@ footer {
     position: static;
 }
 
-.footer {
-    left: 0; 
-    bottom: 0; 
+/* Styling for Sinead-Louisa splash screen */
+.sinead-splash {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);   
+    z-index: 200;
+    color: white;
     text-align: center;
+    line-height: 5vh;
+    cursor: pointer;
+}
+
+.sinead-splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 10vh;
+    transition: all 0.5s;
+}
+
+.sinead-txt-1 {
+    font-size: 100px;
+    font-family: 'Cedarville Cursive', cursive;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    margin-top: 40vh;
+}
+
+.sinead-txt-2 {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 150%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1s;
+    cursor: pointer;
+    margin-top: 10vh;
+}
+
+.sinead-txt-3 {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 100%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+    cursor: pointer;
+    margin-top: 10vh;
+}
+
+/* Styling for Sinead-Louisa webpage */
+
+#story-body {
+    background-image:url("images/sinead/bg-1.jpg");
+    background-color: black;    
+    background-position: 6vh 0vh;
+    background-repeat: no-repeat;
+    background-size: 93%;
+    font-family: 'Merriweather', serif;
 }
 
 .story-txt {
     width: 65%;
     height: 65%;
-    position: fixed;
-    top: 20%;
-    left: 25%;
+    position: absolute;
+    top: 16%;
+    left: 7%;
     border: solid #000;
-    border-width: 3px;
+    border-width: 1px;
     margin: auto;
+    overflow: hidden;
+}
+
+.iframe-ui {
+    margin-top: 0;
+    margin-bottom: -0.7vh;
 }
 
 /*CSS styling for Sinead and Louisa iframe */
 
-#bg-modal {
+ #bg-modal {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -349,23 +444,11 @@ footer {
     align-items: center;
     background-color: rgba(0,0,0,0.7); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-}
+} 
 
 #modal-pic {
     text-align: center;
-    padding-top: 25vh;
-    cursor: pointer;
-}
-
-#open-btn {
-    background-color: lightblue;
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    padding-top: 7vh;
     cursor: pointer;
 }
 
@@ -382,11 +465,33 @@ footer {
     justify-content: center;
     line-height: 6.5vh;
     text-align: center;
+    border-radius: 4%;
 }
 
-.modal-email-text {
+#notif {
+    padding-top: 4vh;
+}
+
+#modal-email-text {
     margin-top: 0vh;
     display: inline-block;
     vertical-align: middle;
-    line-height: normal;
+    line-height: 5vh;
+}
+
+#ui-1 {
+    width: 100%;
+}
+
+#open-btn {
+    content: url(images/sinead/open.svg);
+    width: 15%;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
