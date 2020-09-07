@@ -13,8 +13,8 @@ body {
 /* mission statement */
 .mission h4 {
     font-family: Playfair Display;
-    font-size: 50px;
-    line-height: 67px;
+    font-size: 30px;
+    line-height: 45px;
     align-items: center;
     margin-bottom: 25vh;
 }
@@ -41,9 +41,10 @@ body {
 /* more info  */
 .contact h4 {
     font-family: Playfair Display;
-    font-size: 40px;
+    font-size: 30px;
     align-items: center;
-    padding-bottom: 5vh;
+    padding-top: 3vh;
+    margin-bottom: 6vh;
 }
 
 .contact {
@@ -54,6 +55,14 @@ body {
     margin-top: 1vh;
     margin-bottom: 5vh;
     width: 70px;
+    height: 70px;
+}
+
+a {
+    color: black;
+}
+a:hover {
+    color: #4d4d4d;
 }
 
 /* navigation */
@@ -84,8 +93,8 @@ body {
 /* Change font sizes based on screen size: mobile & ipad */
 @media only screen and (max-width: 1024px) { 
     .mission h4 {
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 25px;
+        line-height: 3x;
         margin-bottom: 15vh;
     }
 
@@ -101,6 +110,7 @@ body {
 
     .icon {
         width: 40px;
+        height: 40px;
     }
 }
 
@@ -110,8 +120,8 @@ body {
     }
 
     .mission h4 {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 15px;
+        line-height: 25px;
         margin-bottom: 15vh;
     }
 
@@ -140,6 +150,7 @@ body {
 
     .icon {
         width: 20px;
+        height: 20px;
     }
 }
 
