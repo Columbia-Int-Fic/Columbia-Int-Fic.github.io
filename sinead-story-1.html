@@ -49,7 +49,18 @@ tw-icon.redo {
 
 tw-icon.undo {
   display:none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Louisa-Email" color="purple"></tw-tag>,<tw-tag name="Sinead-Email" color="red"></tw-tag>,<tw-tag name="dreams" color="red"></tw-tag><tw-passagedata pid="1" name="Email1" tags="Sinead-Email" position="758,453" size="100,100">{
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.hacks = window.hacks || {
+	_engine : Engine
+};
+
+hacks.goto = hacks._engine.showPassage;
+
+
+window.onmessage = function(e) {
+	if (e.data.toString()=="reload") {
+		hacks.goto('Start');
+	}
+}</script><tw-tag name="Louisa-Email" color="purple"></tw-tag>,<tw-tag name="Sinead-Email" color="red"></tw-tag>,<tw-tag name="dreams" color="red"></tw-tag><tw-passagedata pid="1" name="Email1" tags="Sinead-Email" position="758,453" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 1 executed!&quot;); 

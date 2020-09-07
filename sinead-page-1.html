@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="images/white-logo.svg"/>
     </head>
-    <body id="story-body">
+    <body id="story-body" onload="reload()">
         
         <!-- Ideally make the h2 and h1 as class so you can use
         same CSS across different webpages for different stories. 
@@ -236,6 +236,16 @@
                         <b>Subject:</b> School, safety, and shared excitement<br>";
                     }
                 }
+
+                function reload() {
+                    var x = document.getElementById('twine-embed').contentWindow;
+                    x.postMessage('reload', '*');
+                }
+
+                window.onbeforeunload = function(){
+                     return 'Your progress will not be saved!';
+                };
+
             </script>
     </body>
 </html>
