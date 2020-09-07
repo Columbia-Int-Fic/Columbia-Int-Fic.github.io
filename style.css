@@ -33,32 +33,16 @@ html, body{
 ISSUES: should we add mini-logo?
 */
 
-.navigation {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-family: "Maven Pro", sans-serif;
-    font-weight: 700;
+/* navigation */
+
+.nav-link {
+    font-family: Maven Pro;
+    font-style: normal;
+    font-weight: bold;
     font-size: 20px;
-    color: white;
-    text-align-last: right;
-    padding-bottom: 15px;
-    display: inline-block;
+    line-height: 35px;
+    margin-right: 3vw;
 }
-
-/* Need to style nav links in white */
-
-nav a:link{
-    color: black;
-    text-decoration:none;
-    padding-right: 30px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 
 /* general links appearance*/
 
