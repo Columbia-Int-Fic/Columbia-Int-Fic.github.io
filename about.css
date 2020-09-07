@@ -16,7 +16,11 @@ body {
     font-size: 30px;
     line-height: 45px;
     align-items: center;
-    margin-bottom: 25vh;
+    margin-bottom: 10vh;
+}
+
+.mission {
+    margin-bottom: 15vh;
 }
 
 /* numbers */
