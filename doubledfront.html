@@ -23,37 +23,52 @@
             </iframe>
         </div>
 
-        <!-- Modals -->
+        <!-- Modals One -->
         <div class="modal">
             <div class="modal-content">
-                <span class="close-button">×</span>
-                <h1>Hello, I am a modal!</h1>
-                <img src="/doubled-images/iphone1.svg">
+                <img src="/doubled-images/flyer.jpg">
+            </div>
+        </div>
+
+        <!-- Modals Two -->
+        <div class="modal2">
+            <div class="modal-content">
+                <img src="/doubled-images/flyer2.jpg">
+                <h2><i>Corona Virus spread by Chinese immigration.</i></h2>
             </div>
         </div>
 
         <!-- Script for opening Modal immediately on load -->
         <script>
             var modal = document.querySelector(".modal");
-            var closeButton = document.querySelector(".close-button");
+            var modal2 = document.querySelector(".modal2");
             
             function toggleModal() {
                 modal.classList.toggle("show-modal");
             }
-            
+            function toggleModal2() {
+                modal2.classList.toggle("show-modal");
+            }
+
             window.onmessage = function(e){
                 s = e.data.toString();
                 if (s === "flyer") {
                     toggleModal();
                 }
+                if (s === "flyer2") {
+                    toggleModal2();
+                }
             }
+
             function windowOnClick(event) {
                 if (event.target === modal) {
                     toggleModal();
                 }
+                if (event.target === modal2) {
+                    toggleModal2();
+                }
             }
             
-            closeButton.addEventListener("click", toggleModal);
             window.addEventListener("click", windowOnClick);
         </script>
 
