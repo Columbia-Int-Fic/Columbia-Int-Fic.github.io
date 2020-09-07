@@ -19,14 +19,6 @@ html, body{
     background-repeat: no-repeat;
     background-size: 95%;
     width: 100%;
-    
-/* can't figure out the figma dimensions, but here they are whenever I figure it out
-    position: absolute;
-    width: 1920px;
-    height: 1323.64px;
-    left: -6px;
-    top: 1px;
-*/
 }
 
 /*nav info, including link specs
@@ -48,26 +40,15 @@ ISSUES: should we add mini-logo?
 
 a:link {color: #000000; text-decoration: none; 
 } 
-a:visited {color: mediumaquamarine; 
+a:visited {color: #000000; 
 } 
 a:focus {color: #000000; 
 } 
 a:hover {
-    color: aquamarine; 
+    color: #6396B3; 
 } 
 a:active {color: blue; 
 } 
-
-/*start footer*/
-
-/*
-footer {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-*/
 
 /* CSS styling for splash screen */
 .splash {
