@@ -1,0 +1,16 @@
+body {
+    background-color: #055B94;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+form {
+    align-content: center;
+}

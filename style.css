@@ -125,7 +125,9 @@ a:active {color: blue;
 
   
 /*Button
-    There's the general button code and then each button also gets its own code for placement purposes.
+    There's CSS button code and then each button also gets its own code for placement purposes.
+
+    CAN BE DELETED AFTER JS BUTTON IS SORTED
 */
 
 .Button {
@@ -148,28 +150,28 @@ a:active {color: blue;
 }
 
 /* story 1 (New York) */
-.story1 {
+#story1 {
     margin-left: 850%;
-    margin-bottom: -625%;
+    margin-bottom: -1100%;
 }
 
 
 /* story 2 (South Korea) */
-.story2 {
-    margin-left: 2500%;
-    margin-bottom: -750%;
+#story2 {
+    margin-left: 2570%;
+    margin-bottom: -1300%;
 }
 
 /* story 3 (Philadelphia) */
-.story3 {
+#story3 {
     margin-left: 600%;
-    margin-bottom: -725%;
+    margin-bottom: -1300%;
 }
 
 /* story 4 (Ireland/New Orleans) */
-.story4 {
-    margin-left: 1050%;
-    margin-bottom: -580%;
+#story4 {
+    margin-left: 1100%;
+    margin-bottom: -850%;
 }
 
 /*javascript pop-up*/
@@ -220,6 +222,21 @@ a:active {color: blue;
 .enterButton:active {
 	position:relative;
 	top:1px;
+}
+
+/* clode button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @font-face {

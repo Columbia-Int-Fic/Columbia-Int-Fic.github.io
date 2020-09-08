@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>09.18.20</title>
+  <meta name="description" content="09.18.20">
+
+  <link rel="stylesheet" href="countdown.css">
+
+</head>
+
+<body>
+    
+    <h1>09.18.20</h1>
+    
+    <!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sept 18, 2020 24:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // When the count down is finished, the party emoji shows up
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "&#x1F973;";
+  }
+}, 1000);
+    
+    //Password protection
+
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please Enter The Password',' ');
+while (testV < 3) {
+if (!pass1)
+history.go(-1);
+if (pass1.toLowerCase() == "gcc2020") {
+alert('Welcome to the soft-launch of Columbia Int Fic: What IF!');
+window.open('index.html',"_self");
+break;
+}
+testV+=1;
+var pass1 =
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3)
+history.go(-1);
+return " ";
+}  
+
+</script>
+    
+    <!-- button -->
+<form>
+<input type="button" value="Enter Protected Area" onClick="passWord()">
+</form>
+  
+</body>
+</html>
