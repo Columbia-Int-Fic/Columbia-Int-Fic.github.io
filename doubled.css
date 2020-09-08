@@ -172,3 +172,12 @@
 .popup .show {
     visibility: visible;
 }
+
+/* 0.12: group chat */
+.imessage {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+}

@@ -22,7 +22,7 @@
 
 tw-story {
   font-family: 'Maven Pro', sans-serif;
-  font-size:100%;
+  font-size: 20px;
   background-color: #F3E9D2;
 }
  
@@ -420,17 +420,17 @@ Now, I need to devote myself to my patients. They deserve the best I can provide
 
 <!-- Passage 9. Hospital -->
 <tw-passagedata pid="11" name="9. Hospital" tags="" position="212,664" size="100,100">
-Overnight, he got worse. A lot worse. He’s young, actually probably my age. Yesterday he was still laughing, cracking jokes. It’s hard to smile visibly with a mask on, so I tried extra hard to show it. 
+	(link-repeat: &quot;Overnight, he got worse. &quot;)[(show:?p1)]|p1)[A lot worse. He’s young, actually probably my age. Yesterday he was still laughing, cracking jokes. It’s hard to smile visibly with a mask on, so I tried extra hard to show it. 
 
-He’s in bed now, barely responsive. I think I’ll have to notify family soon to prepare.
-
-And as for her, that lovely lady a few beds down from him, I’m glad I spoke with her family yesterday. She was in that bed over there, one of the extra ones we converted for this ward’s emergency use. She was so, so weak. I saw her tremble with each exerted motion. 
-
-I held that phone for her, poking my head to its side to make sure she was in frame. And I saw her family: her son, maybe, daughters; a grandchild, too young to really know. They had all gathered together for a last call, a virtual visit, with her. My arm was sore, but the soreness became a stiffness that made it easier to prop up, not too close, not too far. It was that innate refusal to lower my arm that left me holding the phone there for a moment after the call ended, after they had said their goodbyes, and I realized that I hadn’t really said goodbye yet. Today, it’s already too late.
-
-I’ll check in with my team in a bit, and we’ll make the tough decisions: who gets what, who gets to live. I need to stay on my feet, on my feet, on my feet. I’m ready, and I’m scared.
-
-//For a more in-depth and accurate understanding of the experiences of frontline workers in hospitals during the COVID-19 pandemic, please refer to these (link-repeat: &quot;first-hand testimonials&quot;)[(open-url: &#39;doubledvideos.html&#39;)] We respect the authorial integrity presented by these accounts and humbly defer to them, urging you to read through and then return to our narrative when ready. Once ready, [[continue through this story-&gt;10. Nighttime]]//
+	He’s in bed now, barely responsive. I think I’ll have to notify family soon to prepare.
+	
+	And as for her, that lovely lady a few beds down from him, I’m glad I spoke with her family yesterday. She was in that bed over there, one of the extra ones we converted for this ward’s emergency use. She was so, so weak. I saw her tremble with each exerted motion. 
+	
+	(link-repeat: &quot;I held that phone for her, &quot;)[(show:?p2)]]|p2)[poking my head to its side to make sure she was in frame. And I saw her family: her son, maybe, daughters; a grandchild, too young to really know. They had all gathered together for a last call, a virtual visit, with her. My arm was sore, but the soreness became a stiffness that made it easier to prop up, not too close, not too far. It was that innate refusal to lower my arm that left me holding the phone there for a moment after the call ended, after they had said their goodbyes, and I realized that I hadn’t really said goodbye yet. Today, it’s already too late.
+	
+	(link-repeat: &quot;I’ll check in &quot;)[(show: ?p3)]] |p3)[with my team in a bit, and we’ll make the tough decisions: who gets what, who gets to live. I need to stay on my feet, on my feet, on my feet. [[I’m ready, and I’m scared.-&gt;10. Nighttime]]
+	
+	//For a more in-depth and accurate understanding of the experiences of frontline workers in hospitals during the COVID-19 pandemic, please refer to these (link-repeat: &quot;first-hand testimonials.&quot;)[(open-url: &quot;doubledvideos.html&quot;)] We respect the authorial integrity presented by these accounts and humbly defer to them, urging you to read through and then return to our narrative when ready.//]
 </tw-passagedata>
 
 <!-- 10. Nighttime-->
@@ -459,9 +459,9 @@ It’s already 7:36pm, and I imagine by now you’ve stored the leftovers away i
 
 Do you have enough food at home? I know you can’t make it too far for groceries with that knee. Do you have enough masks? Hand sanitizer? 
 
-How are you?
+(link-repeat: &quot;How are you?&quot;)[(show: ?p1)]
 
-Ma, if I told you that our elders were under attack, what would you say? Would you tell me that it’s always been okay for you, that it would never happen to you just as it hasn’t happened to you before? 
+|p1)[Ma, if I told you that our elders were under attack, what would you say? Would you tell me that it’s always been okay for you, that it would never happen to you just as it hasn’t happened to you before? 
 
 An old lady was slapped and set on fire in Brooklyn, Ma. (link-repeat: &quot;Why did she deserve this?&quot;)[(open-url: &#39;https://abc7ny.com/woman-set-on-fire-elderly-attack-89-year-old-attacked-bensonhurst-crime/6333749/&#39;)]&lt;span class=&quot;appear&quot; id=&quot;flyer2&quot;&gt; And there were fliers posted in Bay Ridge telling us Chinese to get out. &lt;/span&gt;
 
@@ -469,7 +469,7 @@ You and I; us, this Chinese immigration. They say we are the reason, Ma. When wa
 
 The big news channels don’t really cover this kind of stuff, Ma. The police don’t really care either. Where are you getting your news from? From WeChat? From the Chinese newspapers?
 
-(link-repeat: &quot;Ma, how are you?&quot;)[(show: ?p2)]
+(link-repeat: &quot;Ma, how are you?&quot;)[(show: ?p2)]]
 
 |p2)[I wish I could see you again. As I walk to the subway station, I imagine I can take this line straight to your stop, Ma. But you and I both know we shouldn’t, we can’t. I can’t risk your health like this. So let’s call sometime this weekend—you remember what I taught you about FaceTime, right? 
 
@@ -516,7 +516,7 @@ Instant noodles. Microwavable rice. Pickled vegetables. Leftover black pepper be
 <!-- 12 Group Chat-->
 <tw-passagedata pid="14" name="12. Group Chat" tags="" position="844,658" size="100,100">Oh wow. Someone decided to revive the old college group chat. When was the last time anyone sent a message in there? I guess this is a nice surprise, I haven’t talked to them in a while. I haven’t talked to many people, really, in a while. There’s a strange twist in my stomach–a nervousness in dealing with something that used to be normal, but somehow now is anything but. 
 
-// INSERT IMAGE, DELAY 3 SECONDS AFTER EACH MESSAGE OVERLAY // 
+<div><img class="imessage" src="/doubled-images/imessage.gif"><a href="https://www.instagram.com/litarnes" class="imessage">Icon Credit</a></div>
 
 Just seeing their messages brings their voices to life. I feel nostalgic about those college years, which, in reality, were only some years ago. I want to respond with a yes. I want to see my friends. Should I?
 
@@ -540,9 +540,12 @@ Almost midnight now, [[but the sky still glows.-&gt;Fin.]]
 </tw-passagedata>
 
 <!-- Fin.-->
-<tw-passagedata pid="15" name="Fin." tags="" position="681,801" size="100,100">Tomorrow morning you’ll see this text and smile, and I will remember to eat. I will be strong. You’ve eaten. The city sleeps, for now, and now I sleep too. 
+<tw-passagedata pid="15" name="Fin." tags="" position="681,801" size="100,100">
+	<div class="wechat wechat-static"><img src="doubled-images/wechat-last.svg"></div>
 
-[[A Message from the Authors-&gt;Final Message]]
+	Tomorrow morning you’ll see this text and smile, and I will remember to eat. I will be strong. You’ve eaten. The city sleeps, for now, and now I sleep too. 
+
+	[[A Message from the Authors-&gt;Final Message]]	
 </tw-passagedata>
 
 <!-- Final Message -->
