@@ -96,7 +96,8 @@
                         document.getElementById("myImage").src = "images/sinead/gif" + s + ".gif";
                     }
                     else if (sbg=="bg") {
-                        s = s.charAt(2);
+                        var num = s.replace('bg','');
+                        s = num;
                         console.log("bg: " + s);
                         var body = document.getElementById("story-body");
                         if (s==1) {
@@ -237,10 +238,11 @@
                     }
                 }
 
+                /*
                 function reload() {
                     var x = document.getElementById('twine-embed').contentWindow;
                     x.postMessage('reload', '*');
-                }
+                } */
 
                 window.onbeforeunload = function(){
                      return 'Your progress will not be saved!';
