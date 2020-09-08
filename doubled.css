@@ -176,8 +176,21 @@
 /* 0.12: group chat */
 .imessage {
     display: block;
-    width: 40%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     font-size: 13px;
+}
+
+a.end{
+    color: #680808;
+    font-style: italic;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+a.end:hover{
+    color: #974747;
 }
