@@ -55,21 +55,30 @@
 }
 
 /* 0.3: Groceries */
-#groceries {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: 2px solid #0D1F2D;
-    border-radius: 8px;
-    margin-left: 30%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.grocery {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
 }
 
 #news-links {
     letter-spacing: 3px;
     line-height: 1.3;
+}
+
+.main-street {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: -20%;
+    margin-bottom: -20%;
+}
+
+.mask-hat {
+    display: block;
+    width: 120%;
 }
 
 /* 0.35: Daily Report Alert*/
@@ -135,6 +144,23 @@
 
 .subwayText {
     display: none;
+}
+
+/* 0.6 & 0.10 images */
+.subway, .auntie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* 0.7: Flyer */ 
+.hospital{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: -10%;
 }
 
 /* 0.8: Pause */
