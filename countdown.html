@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>091820</title>
+  <meta name="description" content="091820">
+    <!-- Logo link -->
+        <link rel="shortcut icon" href="images/white-logo.svg"/>
+
+  <link rel="stylesheet" href="countdown.css">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-176737183-2');
+    </script>
+</head>
+
+<body>
+    <img src="images/CIFlogo.png" width=25% alt="CIF logo">
+    <h1>what IF?</h1>
+
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">seconds</div>
+  </div>
+</div>
+
+
+<script>
+function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const daysSpan = clock.querySelector('.days');
+  const hoursSpan = clock.querySelector('.hours');
+  const minutesSpan = clock.querySelector('.minutes');
+  const secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+
+//const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+
+    const deadline = 'September 18 2020 10:00:00 GMT-0400';
+    
+initializeClock('clockdiv', deadline);
+</script>
+    
+    
+</body>
+</html>

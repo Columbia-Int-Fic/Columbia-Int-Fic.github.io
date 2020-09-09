@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>what IF: Sinead & Louisa</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/white-logo.svg"/>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-176737183-2');
+        </script>
+    </head>
+    <body id="story-body" onload="reload()">
+        
+        <!-- Ideally make the h2 and h1 as class so you can use
+        same CSS across different webpages for different stories. 
+         <header class="story-head">
+            <a href="index.html"><h2 class="story-pg-whatif">WHAT IF</h2></a>
+            <h1 class="story-pg-title">Sinead and Louisa</h1>
+        </header> -->
+
+            <div class="sinead-splash">
+                <h1 class="sinead-txt-1">Sinead & Louisa</h1>
+                <p class="sinead-txt-2">Written by: <br> Jane Loughman and Elisabeth McLaughlin</p>
+                <p class="sinead-txt-3">click to continue</p>
+                <script>
+                    const splash = document.querySelector('.sinead-splash');
+                    splash.onclick = function() {
+                        console.log("clicked to continue!");
+                        setTimeout(()=>{
+                            splash.classList.add('display-none');
+                        }, 0);
+                    }
+                </script>
+              </div>
+
+            <div class="story-txt">
+                <div class = "iframe-ui">
+                    <img src = "images/sinead/UI-1.svg" alt = "iFrame UI" id="ui-1"> 
+                </div>
+                <iframe
+                    mozallowfullscreen="true"
+                    src="sinead-story-1.html"
+                    frameborder="0"
+                    width="100%" height="100%"
+                    id="twine-embed">
+                </iframe>
+            </div>
+
+            <!--Overlay that appears on top of the page-->
+            <div id="bg-modal">
+
+                <!--Email notification overlay-->
+                <div class="modal-email" id="email-1">
+                    <h2 id="notif">You've got mail!</h2>
+                    <p id="modal-email-text">
+                    </p> <br>
+                    <btn id="open-btn" onclick="off()">OPEN</btn>
+                </div>
+
+                <!--Picture overlay-->
+                <div id="modal-pic">
+                        <img height="500"
+                        src=""
+                        id="myImage"
+                        onclick="off()"> 
+                </div>
+            </div>
+
+            <!--Script for opening overlay-->
+            <script>
+                window.onmessage = function(e) {
+                    s = e.data.toString();
+                    simg = s.substring(0, 3);
+                    semail = s.substring(0, 5);
+                    sbg = s.substring(0, 2);
+                    console.log("simg: " + simg);
+                    console.log("semail: " + semail);
+                    if (simg=="img") {
+                        on();
+                        var num = s.replace('img','');
+                        s = num;
+                        console.log(s);
+                        document.getElementById("myImage").src = "images/sinead/img" + s + ".jpg";
+                    }
+                    else if (simg=="gif") {
+                        on();
+                        var num = s.replace('gif','');
+                        s = num;
+                        console.log(s);
+                        document.getElementById("myImage").src = "images/sinead/gif" + s + ".gif";
+                    }
+                    else if (sbg=="bg") {
+                        var num = s.replace('bg','');
+                        s = num;
+                        console.log("bg: " + s);
+                        var body = document.getElementById("story-body");
+                        if (s==1) {
+                            body.style.backgroundImage = "url('images/sinead/bg-1.jpg')";
+                        }
+                        else if (s==2) {
+                            body.style.backgroundImage = "url('images/sinead/bg-2.jpg')";
+                        }
+                        else if (s==3) {
+                            body.style.backgroundImage = "url('images/sinead/bg-3.jpg')";
+                        }
+                        else if (s==4) {
+                            body.style.backgroundImage = "url('images/sinead/bg-4.jpg')";
+                        }
+                        else if (s==5) {
+                            body.style.backgroundImage = "url('images/sinead/bg-5.jpg')";
+                        }
+                        else if (s==6) {
+                            body.style.backgroundImage = "url('images/sinead/bg-6.jpg')";
+                        }
+                        else if (s==7) {
+                            body.style.backgroundImage = "url('images/sinead/bg-7.jpg')";
+                        }
+                        else if (s==8) {
+                            body.style.backgroundImage = "url('images/sinead/bg-8.jpg')";
+                        }
+                        else if (s==9) {
+                            body.style.backgroundImage = "url('images/sinead/bg-9.jpg')";
+                        }
+                        else if (s==10) {
+                            body.style.backgroundImage = "url('images/sinead/bg-10.jpg')";
+                        }
+                        else if (s==11) {
+                            body.style.backgroundImage = "url('images/sinead/bg-11.jpg')";
+                        }
+                        else if (s==12) {
+                            body.style.backgroundImage = "url('images/sinead/bg-12.jpg')";
+                        }
+                    }
+                    else if (semail=="email") {
+                        var num = s.replace('email','');
+                        s = num;
+                        console.log(s);
+                        emailOn(s);
+                    }
+                    else if (simg=="end") {
+                        window.location.href = "credits.html";
+                    }
+                    
+                }
+                function on() {
+                    document.getElementById('email-1').style.display = "none";
+                    document.getElementById('bg-modal').style.display = "block";
+                    document.getElementById('modal-pic').style.display="block";
+                }
+                function off() {
+                    document.getElementById('bg-modal').style.display = "none";
+                    document.getElementById('email-1').style.display="none";
+                    document.getElementById('modal-pic').style.display="none";
+                }
+
+                function emailOn(x) {
+                    console.log("the email number " + x);
+                    document.getElementById('email-1').style.display = "block";
+                    document.getElementById('bg-modal').style.display = "block";
+                    document.getElementById('modal-pic').style.display="none";
+                    if (x==1) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>To:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>Date:</b> Fri, Mar 13, 10:07pm<br>\
+                        <b>Subject:</b> The world is ending??!<br>";
+                    }
+                    if (x==2) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>To:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>Date:</b> Sunday, March 15, 5:36pm<br>\
+                        <b>Subject:</b> February, festival, and french toast<br>";
+                    }
+                    if (x==3) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>To:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>Date:</b> Wed, Apr 1, 7:32pm<br>\
+                        <b>Subject:</b> Lockdown fun!<br>";
+                    }
+                    if (x==4) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>To:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>Date:</b> Sunday, April 17, 4:36 pm<br>\
+                        <b>Subject:</b> Sheltering, sun, and sugar<br>";
+                    }
+                    if (x==5) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>To:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>Date:</b> Mon, May 13, 2:26pm<br>\
+                        <b>Subject:</b> Nightmares and birthdays!<br>";
+                    }
+                    if (x==6) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>To:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>Date:</b> Sunday, May 17, 12:23pm<br>\
+                        <b>Subject:</b> Floating, fever dreams, and final classes<br>";
+                    }
+                    if (x==7) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>To:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>Date:</b> Mon, Jun 8, 19:32pm<br>\
+                        <b>Subject:</b> Protests and shop openings<br>";
+                    }
+                    if (x==8) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>To:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>Date:</b> Monday, June 8, 12:03 pm<br>\
+                        <b>Subject:</b> Rallying, root beer, and what’s right<br>";
+                    }
+                    if (x==9) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>To:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>Date:</b> Monday, July 20, 8:46pm<br>\
+                        <b>Subject:</b> Writing camps and travel rumours<br>";
+                    }
+                    if (x==10) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>To:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>Date:</b> Friday, July 23, 7:54pm<br>\
+                        <b>Subject:</b> Home, heat, and hospital calls<br>";
+                    }
+                    if (x==11) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>To:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>Date:</b> Fri, Aug 14, 1:46pm<br>\
+                        <b>Subject:</b> Connemara adventures and secondary school soon!<br>";
+                    }
+                    if (x==12) {
+                        document.getElementById('modal-email-text').innerHTML="<b>From:</b> Louisa Jones (louisianajones@cifmail.com)<br>\
+                        <b>To:</b> Sinéad Murphy (shinnyshinny@cifmail.com)<br>\
+                        <b>Date:</b> Friday, August 14, 7:54pm<br>\
+                        <b>Subject:</b> School, safety, and shared excitement<br>";
+                    }
+                }
+
+                /*
+                function reload() {
+                    var x = document.getElementById('twine-embed').contentWindow;
+                    x.postMessage('reload', '*');
+                } */
+
+                window.onbeforeunload = function(){
+                     return 'Your progress will not be saved!';
+                };
+
+            </script>
+    </body>
+</html>

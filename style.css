@@ -1,123 +1,54 @@
-/*broken fonts yay
-@font-face {
-    font-family: "Roboto";
-    src: url("Roboto-Regular.ttf")
+:root {
+    --dark: #000000; 
+	--light: #FFFFFF; 
+	--blocks: #99B3C6;
+    --transition: all 0.3s ease 0s; 
+    /* all variables above */
 }
-*/
 
-body {
-        font-family: 'Roboto', serif;
-      }
+html, body{
+	height:100%;
+	overflow: hidden;
+    font-family: 'Maven Pro', sans-serif;
+}
 
 #home-body {
-    background-image: url(images/Group.svg);
-    background-color: #2B2D35;
-    height: 800px; /*it'd be best to use percents, that way it's more accessible to different screen sizes. Should come back and fix it later. */
+    background-image: url(images/bluemap.svg);
+    background-color: #EEEEEE;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    
-/* can't figure out the figma dimensions, but here they are whenever I figure it out
-    position: absolute;
-    width: 1920px;
-    height: 1323.64px;
-    left: -6px;
-    top: 1px;
-*/
+    background-size: 95%;
+    width: 100%;
 }
 
 /*nav info, including link specs
 ISSUES: should we add mini-logo?
 */
 
-.navigation {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-family: "Roboto-Regular", sans-serif; 
-    font-size: 20pt;
-    color: white;
-    background-color: #2B2D35;
-    text-align-last: right;
-    padding: 30% -40%; /*fix padding on right side, why won't it workkkk*/
-    display: inline-block;
+/* navigation */
+
+.nav-link {
+    font-family: Maven Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    margin-right: 3vw;
 }
-
-/* Need to style nav links in white */
-
-nav a:link{
-    font-family: "Roboto-Regular", "Roboto", sans-serif;
-    color: white;
-    text-decoration:none;
-}
-
-nav a:hover {
-    color: aquamarine;
-    text-decoration: underline;
-}
-
 
 /* general links appearance*/
 
-a:link {color: #000000; text-decoration: none; font-family: "Roboto-Regular", sans-serif;
+a:link {color: #000000; text-decoration: none; 
 } 
-a:visited {color: mediumaquamarine; 
+a:visited {color: #000000; 
 } 
 a:focus {color: #000000; 
 } 
-a:hover {color: aquamarine; 
+a:hover {
+    color: #6396B3; 
 } 
 a:active {color: blue; 
 } 
-
-/*start footer*/
-
-/*
-footer {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-*/
-
-
-#story-body {
-    background-color: #5D926E;
-    font-family: 'Catamaran', sans-serif;
-}
-
-.head {
-    display: flex;
-}
-
-.story-pg-whatif {
-    padding-left: 50px;
-}
-
-.story-pg-title {
-    text-align: center;
-    font-size: 400%;
-    padding-left: 315px;
-    margin-top: 0px;
-}
-
-.footer {
-    left: 0; 
-    bottom: 0; 
-    width: 100%;
-    text-align: center;
-}
-
-.story-txt {
-    width: 95%;
-    height: 100vh;
-    border: solid #000;
-    border-width: 3px;
-    background-color: #8EC29F;
-    margin: auto;
-}
 
 /* CSS styling for splash screen */
 .splash {
@@ -125,12 +56,13 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(43,45,53,0.6);
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 91, 148, 0.8) 0%, rgba(5, 91, 148, 0.44) 100%);    
     z-index: 200;
     color: white;
     text-align: center;
     line-height: 30vh;
+    cursor: pointer;
 }
 
 .splash.display-none {
@@ -143,13 +75,16 @@ footer {
     z-index: -10;
     color: white;
     text-align: center;
-    line-height: 30vh;
+    line-height: 20vh;
     transition: all 0.5s;
 }
 
 /* Splash screen text fade in keyframe function */
 @keyframes fadeIn{
-    to{
+    from {
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
 }
@@ -160,11 +95,11 @@ footer {
     animation: fadeIn 1s ease-in forwards;
     display: block;
     margin: 0 auto;
-    max-width: 230px;
-    max-height: 95px;
+    max-width: 150px;
+    max-height: 150px;
     width: auto;
     height: auto;
-    padding-top: 70px;
+    margin-top: 10%;
     top: 0;
     left: 0;
     z-index: 200;
@@ -173,36 +108,39 @@ footer {
 }
 
 .splash-txt-1 {
-    font-size: 500%;
-    font-family: 'Catamaran', sans-serif;
+    font-size: 100px;
+    font-family: 'tt_blackitalic', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 1s;
 }
 
 .splash-txt-2 {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 2s;
+    cursor: pointer;
 }
 
   
 /*Button
-    There's the general button code and then each button also gets its own code for placement purposes.
+    There's CSS button code and then each button also gets its own code for placement purposes.
+
+    CAN BE DELETED AFTER JS BUTTON IS SORTED
 */
 
 .Button {
-	background-color:#000000;
-	border-radius:42px;
-	border:8px solid #ffffff;
+    background: #D69898;
+    border-radius:42px;
+	border:5px solid #ffffff;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	padding:14px 14px;
 	text-decoration:none;
-
 }
+
 .Button:hover {
 	background-color:#ffffff;
 }
@@ -212,28 +150,28 @@ footer {
 }
 
 /* story 1 (New York) */
-.story1 {
+#story1 {
     margin-left: 850%;
-    margin-bottom: -625%;
+    margin-bottom: -1100%;
 }
 
 
 /* story 2 (South Korea) */
-.story2 {
-    margin-left: 2500%;
-    margin-bottom: -750%;
+#story2 {
+    margin-left: 2570%;
+    margin-bottom: -1300%;
 }
 
 /* story 3 (Philadelphia) */
-.story3 {
+#story3 {
     margin-left: 600%;
-    margin-bottom: -725%;
+    margin-bottom: -1300%;
 }
 
 /* story 4 (Ireland/New Orleans) */
-.story4 {
-    margin-left: 1050%;
-    margin-bottom: -580%;
+#story4 {
+    margin-left: 1100%;
+    margin-bottom: -850%;
 }
 
 /*javascript pop-up*/
@@ -260,7 +198,7 @@ footer {
     left: 20%;
     right: 20%;
     z-index: 10000;
-    font-family: "Roboto-Regular", sans-serif; 
+    font-family: "Maven Pro", sans-serif;
     border: 4px solid black;
 }
 
@@ -269,19 +207,273 @@ footer {
 }
 
 .enterButton {
-	background-color:#80c0ad;
+	background-color:#BAD1E5;
 	display:inline-block;
 	cursor:pointer;
-	color:#000000;
-	font-family: "Roboto", sans-serif;
+	color: white;
+	font-family: "Maven Pro", sans-serif;
 	font-size:28px;
 	padding:13px 49px;
-	text-decoration:none;
+	text-decoration: none;
 }
 .enterButton:hover {
-	background-color:#6abda4;
+	background-color:#BAD1E5; /*could have it change colors on hover by changing this*/
 }
 .enterButton:active {
 	position:relative;
 	top:1px;
+}
+
+/* clode button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@font-face {
+    font-family: 'tt_normsbold';
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_blackitalic';
+    src: url('fonts/ttnorms-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Styling for the green fullscreen button on the homepage */
+.fs-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    margin-top: 80vh;
+    margin-left: 3vh;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.fs-btn:focus {
+    outline: 0;
+}
+
+.fs-btn .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 110%;
+}
+
+.fs-btn:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+/* Styling for story template */
+
+#template-body {
+    background-color: #5D926E;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.template-head {
+    display: flex;
+    margin-top: -1.4vh;
+    margin-right: -1vh;
+    margin-left: -1vh;
+    
+}
+
+.story-pg-whatif {
+    padding-left: 8vh;
+    margin-top: 3vh;
+}
+
+.story-pg-title {
+    text-align: center;
+    font-size: 300%;
+    padding-left: 22%; /* try and put all padding in vh rather than px, for cross screen compatibility*/
+    margin-top: 2vh;
+    position: static;
+}
+
+/* Styling for Sinead-Louisa splash screen */
+.sinead-splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);   
+    z-index: 200;
+    color: white;
+    text-align: center;
+    line-height: 5vh;
+    cursor: pointer;
+}
+
+.sinead-splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 10vh;
+    transition: all 0.5s;
+}
+
+.sinead-txt-1 {
+    font-size: 100px;
+    font-family: 'Cedarville Cursive', cursive;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    margin-top: 40vh;
+}
+
+.sinead-txt-2 {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 150%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1s;
+    cursor: pointer;
+    margin-top: 10vh;
+}
+
+.sinead-txt-3 {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 100%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+    cursor: pointer;
+    margin-top: 10vh;
+}
+
+/* Styling for Sinead-Louisa webpage */
+
+#story-body {
+    background-image:url("images/sinead/bg-1.jpg");
+    background-color: #172740;    
+    background-position: 7vh 0vh;
+    background-repeat: no-repeat;
+    background-size: 93%;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.story-txt {
+    width: 65%;
+    height: 65%;
+    position: absolute;
+    top: 16%;
+    left: 7%;
+    border: solid #000;
+    border-width: 1px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.iframe-ui {
+    margin-top: 0;
+    margin-bottom: -0.7vh;
+}
+
+/*CSS styling for Sinead and Louisa iframe */
+
+ #bg-modal {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+} 
+
+#modal-pic {
+    text-align: center;
+    padding-top: 5%;
+    cursor: pointer;
+}
+
+.modal-email {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 4px;
+    display: none;
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 6.5vh;
+    text-align: center;
+    border-radius: 4%;
+}
+
+#notif {
+    padding-top: 4vh;
+}
+
+#modal-email-text {
+    margin-top: 0vh;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 5vh;
+}
+
+#ui-1 {
+    width: 100%;
+}
+
+#open-btn {
+    content: url(images/sinead/open.svg);
+    width: 15%;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
