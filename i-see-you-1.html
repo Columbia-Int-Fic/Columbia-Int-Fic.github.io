@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="i-see-you-1" startnode="18" creator="Twine" creator-version="2.3.9" ifid="1F4298A5-98CE-4D4C-808B-9AD3C35DE62F" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"';
+<tw-storydata name="i-see-you-1" startnode="18" creator="Twine" creator-version="2.3.9" ifid="1F4298A5-98CE-4D4C-808B-9AD3C35DE62F" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"';
 
 tw-story {
   font-family: 'Playfair Display', serif;
@@ -30,7 +30,6 @@ tw-link:hover {
 }
 
 img {
-  border: 5px solid #000000;
 }
 
 tw-icon.redo {
@@ -39,13 +38,14 @@ tw-icon.redo {
 
 tw-icon.undo {
   display:none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="640,236.33333333333334" size="200,100">|p1&gt;[The sun is just beginning to peek through the curtains. You wipe your eyes in a groggy haze and pick up your phone. It’s been a tireless night of helping your eldest daughter with her college applications and assisting your youngest with her algebra homework. Your &lt;u&gt;microwave&lt;/u&gt; is out of service and won’t be fixed anytime soon.
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="641.6666666666666,236" size="200,100">|p1&gt;[The sun is just beginning to peek through the curtains. You wipe your eyes in a groggy haze and pick up your phone. It’s been a tireless night of helping your eldest daughter with her college applications and assisting your youngest with her algebra homework.
 
-(link: &quot;Continue&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)]
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/1.jpg&quot; height=&quot;400&quot; alt=&quot;kitchen scene&quot;&gt; &lt;/center&gt;
 
-&lt;center&gt; &lt;img src=&quot;images/i-see-you/1.jpg&quot; height=&quot;400&quot; alt=&quot;kitchen scene&quot;&gt; &lt;/center&gt;]
+(link: &quot;Continue&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)]]
 
-|p2)[Weather reports suggest a large storm with hurricane-level winds will hit later on in the week. Your mind is clouded with tasks you need to complete and your phone grows heavy in your hand. 
+|p2)[Your &lt;u&gt;microwave&lt;/u&gt; is out of service and won’t be fixed anytime soon. Weather reports suggest a large storm with hurricane-level winds will hit later on in the week. Your mind is clouded with tasks you need to complete and your phone grows heavy in your hand. 
 
 [[Wake up]]
 
@@ -55,7 +55,24 @@ tw-icon.undo {
 
 &lt;center&gt; &lt;img src=&quot;images/i-see-you/2.jpg&quot; height=&quot;400&quot; alt=&quot;breakfast&quot;&gt; &lt;/center&gt;</tw-passagedata><tw-passagedata pid="3" name="Snooze until 7:00AM, you need another hour" tags="" position="769,391" size="100,100">You need just one more hour of sleep. You have time to pick up a coffee on the way to work and that’s all––but at least you’ll have one more hour. It’ll be tight but you might just make in time as the OR opens at 7:30AM.
 
-[[Continue-&gt;Arrival2]]</tw-passagedata><tw-passagedata pid="4" name="Arrival" tags="" position="602,520" size="100,100">At the hospital entrance, the nurse gives you a mandatory questionnaire to fill out. It&#39;s to ensure that you don&#39;t have any symptoms of the virus. 
+[[Continue-&gt;Arrival2]]</tw-passagedata><tw-passagedata pid="4" name="Arrival" tags="" position="602,525" size="100,100">At the hospital entrance, the nurse gives you a mandatory questionnaire to fill out. It&#39;s to ensure that you don&#39;t have any symptoms of the virus. 
+
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/3.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
+
+{
+&lt;input type=&quot;checkbox&quot; id=&quot;symptom1&quot; value=&quot;fever&quot;&gt;
+	&lt;label for=&quot;vehicle1&quot;&gt; Fever &lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;symptom2&quot; value=&quot;cough&quot;&gt;
+	&lt;label for=&quot;vehicle2&quot;&gt; Dry Cough &lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;symptom3&quot; value=&quot;tired&quot;&gt;
+	&lt;label for=&quot;vehicle3&quot;&gt; Tiredness &lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;symptom4&quot; value=&quot;none&quot;&gt;
+	&lt;label for=&quot;vehicle3&quot;&gt; No symptoms &lt;/label&gt;&lt;br&gt;
+	
+&lt;script&gt;
+
+&lt;/script&gt;
+}
 
 [[You have been feeling slightly feverish...-&gt;Symptoms]]
 
@@ -65,15 +82,19 @@ tw-icon.undo {
 
 (link: &quot;Continue&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)]]
 
-|p2)[It reads (text-color: #4a8540)[98.6ºF]. She motions for you to further enter the hospital[[...-&gt;Entry]]]</tw-passagedata><tw-passagedata pid="7" name="Gloves" tags="" position="545,974" size="100,100">|p1&gt;[You’re already equipped with your protective equipment. The N95 mask and face shield moistens with a combination of coffee breath and sweat. You’ve been instructed that gloves aren’t mandatory if you wash your hands regularly. But the bunches of blue latex surgical gloves are in your vicinity. You reach to slap on a pair.
+|p2)[It reads (text-color: #4a8540)[98.6ºF]. She motions for you to further enter the hospital.
+
+[[Continue-&gt;Entry]]]</tw-passagedata><tw-passagedata pid="7" name="Gloves" tags="" position="546.6666666666666,972.3333333333334" size="100,100">|p1&gt;[You’re already equipped with your protective equipment. The N95 mask and face shield moistens with a combination of coffee breath and sweat. You’ve been instructed that gloves aren’t mandatory if you wash your hands regularly. But the bunches of blue latex surgical gloves are in your vicinity. You reach to slap on a pair.
 
 (link: &quot;Continue&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)]
 
-&lt;center&gt; &lt;img src=&quot;images/i-see-you/4.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;]
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/TEST4.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;]
 
 |p2)[You finally enter the room your patient is waiting in. 
 
 “Hi Mr. Jones, how are you doing today?” You say.
+	
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/6.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
 	
 His eyes crease into small crescents, and you think he’s smiling, but it’s hard to tell due to the N95 mask obscuring his mouth. He has already been spoken to about the surgery and has reconfirmed his consent. Once you complete your pre-operative note, it’s time to decide what type of anesthesia your patient will be receiving.
 	
@@ -89,20 +110,27 @@ You pump some antimicrobial soap onto the palm of your hand and start timing. Fi
 	
 “Hi Mr. Jones, how are you doing today?” You say.
 	
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/6.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
+	
 His eyes crease into small crescents, and you think he’s smiling, but it’s hard to tell due to the N95 mask obscuring his mouth. He has already been spoken to about the surgery and has reconfirmed his consent. Once you complete your pre-operative note, it’s time to decide what type of anesthesia your patient will be receiving.
 
 [[Stick with block anesthesia-&gt;Block anesthesia]]
 
 [[Let&#39;s try intubation-&gt;Intubation]]]</tw-passagedata><tw-passagedata pid="9" name="Block anesthesia" tags="" position="601,1142" size="100,100">It’s standard procedure. The anesthesiologist, Dr. Carter, enters the room and you inform him that you have opted for epidural anesthesia to sedate the area—rendering the nerve impulses from the lower spinal segments numb and blocking pain in your patient. Dr. Carter uses an ultrasound machine to identify the major nerves and proceeds to inject lidocaine into them. He briefly removes Mr. Jones’ N95 mask and places a nasal cannula over his nose and mouth. With your patient’s leg becoming more numb by the second, he is now ready for surgery.
 
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/7.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
 
 [[Continue-&gt;block1]]</tw-passagedata><tw-passagedata pid="10" name="Intubation" tags="" position="770,1144" size="100,100">The anesthesiologist, Dr. Carter, enters the room and you inform him that you have opted for intubation. He nods and removes the patient’s N95 mask. Vigorously yet tactfully, Dr. Carter inserts the rubber tube into the depths of your patient’s trachea. You peer down into Mr. Jones’ face. With his mask removed, he looks much older. You see the spattered sun spots resting on his cheeks, the wrinkles traversing across his chin, and the silvered nose hairs peeking out.
 
-[[Continue-&gt;intubation1]]</tw-passagedata><tw-passagedata pid="11" name="block1" tags="" position="610.6666666666666,1289" size="100,100">You’re ready to perform your femur fracture repair on your patient. 
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/7-5.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
 
-(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: red)[on]. (show: ?p1)] |p1)[(link: &quot;Additional mask?&quot;)[Additional mask: (text-color: red)[on]. (show: ?p2)]] |p2)[(link: &quot;Full-face shield?&quot;)[Full-face shield: (text-color: red)[on]. (show: ?p3)]] |p3)[(link: &quot;Lead apron for x-rays?&quot;)[Lead apron for x-rays: (text-color: red)[on]. (show: ?p4)]]
+[[Continue-&gt;intubation1]]</tw-passagedata><tw-passagedata pid="11" name="block1" tags="" position="610,1289" size="100,100">You’re ready to perform your femur fracture repair on your patient. 
 
-|p4)[As we say in the medical field, donning your PPE during surgery is like preparing for war. You begin to scrub for the case, lathering every crevice of your hands with antimicrobial soap.
+(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: red)[on]. (show: ?p1)] |p1)[(link: &quot;Additional mask?&quot;)[Additional mask: (text-color: red)[on]. (show: ?p2)]] |p2)[(link: &quot;Full-face shield?&quot;)[Full-face shield: (text-color: red)[on]. (show: ?p3)]] |p3)[(link: &quot;Lead apron for x-rays?&quot;)[Lead apron for x-rays: (text-color: red)[on]. (t8n: &quot;dissolve&quot;)(show: ?p4)]]
+
+|p4)[&lt;center&gt; &lt;img src=&quot;images/i-see-you/4.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
+
+As we say in the medical field, donning your PPE during surgery is like preparing for war. You begin to scrub for the case, lathering every crevice of your hands with antimicrobial soap.
 
 [[Continue-&gt;block2]]]</tw-passagedata><tw-passagedata pid="12" name="block2" tags="" position="614,1438" size="100,100">Mr. Jones rests on the operating table as the nurses position his legs and prep him in a sterile manner. Femur fractures were always one of your favorite procedures. You don’t even need to recount the steps; somehow your hands remember the method:
 
@@ -118,23 +146,28 @@ His eyes crease into small crescents, and you think he’s smiling, but it’s h
 	10.	Wounds are closed.
 	11.	Dressing is placed.
 	
-[[Wrap up the procedure-&gt;block3]] </tw-passagedata><tw-passagedata pid="13" name="block3" tags="" position="613.3333333333334,1590.6666666666667" size="100,100">Mr. Jones is carted to the recovery room; sunlight floods the room and warms the sage hue of the walls. You hand your patient over to one of the most charming residents, Dr. Schaus, as he finalizes the paperwork. The patient can’t go home quite yet. The next few hours will be a laundry list of antibiotics, best practices, dietary recommendations and uninvited dad jokes.You call the family to provide updates on Mr. Jones’ surgery since Methodist still doesn’t accept visitors. It’s all in constant limbo as to when we can return to normal.  
+[[Wrap up the procedure-&gt;block3]] </tw-passagedata><tw-passagedata pid="13" name="block3" tags="" position="613,1590" size="100,100">Mr. Jones is carted to the recovery room; sunlight floods the room and warms the sage hue of the walls. You hand your patient over to one of the most charming residents, Dr. Schaus, as he finalizes the paperwork. The patient can’t go home quite yet. The next few hours will be a laundry list of antibiotics, best practices, dietary recommendations and uninvited dad jokes.You call the family to provide updates on Mr. Jones’ surgery since Methodist still doesn’t accept visitors. It’s all in constant limbo as to when we can return to normal.  
 
 But at least for today, your work is done. Your laser focus lessens and everything grows heavy: the bags under your eyes, the tension in your right shoulder and the soreness in your feet from excessive standing.
 
-(link: &quot;Face shield?&quot;)[Face shield: (text-color: red)[off]. (show: ?p1)] |p1)[(link: &quot;Outer mask?&quot;)[Outer mask: (text-color: red)[off]. (show: ?p2)]] |p2)[(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: #40B251)[still on]. (show: ?p3)]] |p3)[(link: &quot;Scrubs?&quot;)[Scrubs: (text-color: #45C9B9)[dirty hamper.] (show: ?p4)]]
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/8.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
+
+(link: &quot;Face shield?&quot;)[Face shield: (text-color: red)[off]. (show: ?p1)] |p1)[(link: &quot;Outer mask?&quot;)[Outer mask: (text-color: red)[off]. (show: ?p2)]] |p2)[(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: #40B251)[still on]. (show: ?p3)]] |p3)[(link: &quot;Scrubs?&quot;)[Scrubs: (text-color: #45C9B9)[dirty hamper.] (t8n: &quot;dissolve&quot;)(show: ?p4)]]
 
 |p4)[For you, there’s always been an instant gratification to orthopedic surgery. Your patient came in this morning and couldn’t walk. In about 6 to 12 weeks, he’ll be able to. Everything feels so concrete. Sprains, fractures, tears are all within your scope of repair. COVID-19 looms heavy over all us, even with particle matter of just 125 nanometers. But we keep telling ourselves to fix what we can. Despite the decrease in the number of COVID-19 positive patients, there’s certainly still a risk. But it was just like the 90s with the HIV/AID pandemic. Our duty has never wavered. 
 
 Today’s job is done. Now, to call about that damn microwave.
 
-&lt;center&gt; &lt;img src=&quot;images/i-see-you/5.jpg&quot; height=&quot;400&quot; alt=&quot;that damn microwave&quot;&gt; &lt;/center&gt;
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/9.jpg&quot; height=&quot;400&quot; alt=&quot;that damn microwave&quot;&gt; &lt;/center&gt;
 
-[[Continue-&gt;End]]]</tw-passagedata><tw-passagedata pid="14" name="intubation1" tags="" position="765.6666666666666,1285" size="100,100">You’re ready to perform your femur fracture repair on your patient. 
+[[Continue-&gt;End]]]</tw-passagedata><tw-passagedata pid="14" name="intubation1" tags="" position="765,1285" size="100,100">You’re ready to perform your femur fracture repair on your patient. 
 
-(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: red)[on]. (show: ?p1)] |p1)[(link: &quot;Additional mask?&quot;)[Additional mask: (text-color: red)[on]. (show: ?p2)]] |p2)[(link: &quot;Full-face shield?&quot;)[Full-face shield: (text-color: red)[on]. (show: ?p3)]] |p3)[(link: &quot;Lead apron for x-rays?&quot;)[Lead apron for x-rays: (text-color: red)[on]. (show: ?p4)]]
+(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: red)[on]. (show: ?p1)] |p1)[(link: &quot;Additional mask?&quot;)[Additional mask: (text-color: red)[on]. (show: ?p2)]] |p2)[(link: &quot;Full-face shield?&quot;)[Full-face shield: (text-color: red)[on]. (show: ?p3)]] |p3)[(link: &quot;Lead apron for x-rays?&quot;)[Lead apron for x-rays: (text-color: red)[on]. (t8n: &quot;dissolve&quot;)(show: ?p4)]]
 
-|p4)[As we say in the medical field, donning your PPE during surgery is like preparing for war. You begin to scrub for the case, lathering every crevice of your hands with antimicrobial soap.
+|p4)[
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/4.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
+
+As we say in the medical field, donning your PPE during surgery is like preparing for war. You begin to scrub for the case, lathering every crevice of your hands with antimicrobial soap.
 
 [[Continue-&gt;intubation2]]]</tw-passagedata><tw-passagedata pid="15" name="intubation2" tags="" position="761,1436" size="100,100">Mr. Jones lies dormant in the operating room, as the nurses position his legs and prep him in a sterile manner. Femur fractures were always one of your favorite procedures. You don’t even need to recount the steps; somehow your hands remember the method:
 
@@ -150,38 +183,42 @@ Today’s job is done. Now, to call about that damn microwave.
 	10.	Wounds are closed.
 	11.	Dressing is placed.
 	
-[[Wrap up the procedure-&gt;intubation3]] </tw-passagedata><tw-passagedata pid="16" name="intubation3" tags="" position="761,1585.3333333333333" size="100,100">Dr. Carter hovers over Mr. Jones’ body. He is unable to be extubated. The atmosphere in the room is grim, and you bite your lip from under your face masks. None of you are entirely sure how COVID-19 works. Sometimes you believe a patient is doing okay, but they suddenly take a turn for the worse. All you know is that the disease has affected Mr. Jones’ lungs and breathing. He is in a temporary coma and you don’t know when or if he will awake. Mr. Jones is carted to the ICU and hooked up to a ventilator. Now for the worst part. You hate having to this, but it’s part of your job; your fingers slowly hover over the buttons before you dial the number of Mr. Jones’ family. Detached, you explain that there were complications and he won’t be coming home. All his wife can do is sob into the phone––Methodist still doesn’t accept visitors.
+[[Wrap up the procedure-&gt;intubation3]] </tw-passagedata><tw-passagedata pid="16" name="intubation3" tags="" position="761,1585" size="100,100">Dr. Carter hovers over Mr. Jones’ body. He is unable to be extubated. The atmosphere in the room is grim, and you bite your lip from under your face masks. None of you are entirely sure how COVID-19 works. Sometimes you believe a patient is doing okay, but they suddenly take a turn for the worse. All you know is that the disease has affected Mr. Jones’ lungs and breathing. He is in a temporary coma and you don’t know when or if he will awake. Mr. Jones is carted to the ICU and hooked up to a ventilator. Now for the worst part. You hate having to this, but it’s part of your job; your fingers slowly hover over the buttons before you dial the number of Mr. Jones’ family. Detached, you explain that there were complications and he won’t be coming home. All his wife can do is sob into the phone––Methodist still doesn’t accept visitors.
 
 Once the phone call ends, you realize how exhausted you are. Your laser focus lessens and everything grows heavy: the bags under your eyes, the tension in your right shoulder and the soreness in your feet from excessive standing. The feeling of potentially losing a patient is a distant pain in your chest. 
 
-(link: &quot;Face shield?&quot;)[Face shield: (text-color: red)[off]. (show: ?p1)] |p1)[(link: &quot;Outer mask?&quot;)[Outer mask: (text-color: red)[off]. (show: ?p2)]] |p2)[(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: #40B251)[still on]. (show: ?p3)]] |p3)[(link: &quot;Scrubs?&quot;)[Scrubs: (text-color: #45C9B9)[dirty hamper.] (show: ?p4)]]
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/8.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
+
+(link: &quot;Face shield?&quot;)[Face shield: (text-color: red)[off]. (show: ?p1)] |p1)[(link: &quot;Outer mask?&quot;)[Outer mask: (text-color: red)[off]. (show: ?p2)]] |p2)[(link: &quot;N95 mask?&quot;)[N95 mask: (text-color: #40B251)[still on]. (show: ?p3)]] |p3)[(link: &quot;Scrubs?&quot;)[Scrubs: (text-color: #45C9B9)[dirty hamper.] (t8n: &quot;dissolve&quot;)(show: ?p4)]]
 
 |p4)[For you, there’s always been an instant gratification to orthopedic surgery. Your patient came in this morning and couldn’t walk. In about 6 to 12 weeks, he’ll be able to. Everything feels so concrete. Sprains, fractures, tears are all within your scope of repair. COVID-19 looms heavy over all us, even with particle matter of just 125 nanometers. But we keep telling ourselves to fix what we can. Despite the decrease in the number of COVID-19 positive patients, there’s certainly still a risk. But it was just like the 90s with the HIV/AID pandemic. Our duty has never wavered. 
 
 Today’s job is done. Now, to call about that damn microwave.
 
-&lt;center&gt; &lt;img src=&quot;images/i-see-you/5.jpg&quot; height=&quot;400&quot; alt=&quot;that damn microwave&quot;&gt; &lt;/center&gt;
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/9.jpg&quot; height=&quot;400&quot; alt=&quot;that damn microwave&quot;&gt; &lt;/center&gt;
 
-[[Continue-&gt;End]]]</tw-passagedata><tw-passagedata pid="17" name="Entry" tags="" position="687,853" size="100,100">|p1&gt;[You walk through the hospital and make your way over to the pre-operative area where your patient is waiting for surgery. Only one case today, a femur fracture, and then you can get home and see if you can call someone for the microwave. The patient is in a separate room with the door closed––he has tested positive for COVID-19. You grab a N95 mask and a pair of goggles so that your eyes can be covered. You pause for a second at the glove box…
+[[Continue-&gt;End]]]</tw-passagedata><tw-passagedata pid="17" name="Entry" tags="" position="687,853" size="100,100">|p1&gt;[You walk through the hospital and make your way over to the pre-operative area where your patient is waiting for surgery. Only one case today, a femur fracture, and then you can get home and see if you can call someone for the microwave. The patient is in a separate room with the door closed––he has tested positive for COVID-19. You grab a pair of goggles so that your eyes can be covered. 
 
-(link: &quot;Continue&quot;)[(t8n: &quot;dissolve&quot;)(show: ?p2)]
+You pause for a second at the glove box…
 
-&lt;center&gt; &lt;img src=&quot;images/i-see-you/3.jpg&quot; height=&quot;400&quot; alt=&quot;glove box&quot;&gt; &lt;/center&gt;]
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/5.jpg&quot; height=&quot;400&quot; alt=&quot;glove box&quot;&gt; &lt;/center&gt;]
 
-|p2)[
-[[Gloves, always-&gt;Gloves]]
+|p2&gt;[[[Gloves, always-&gt;Gloves]]
 
-[[No need for gloves today-&gt;No gloves]]
-]</tw-passagedata><tw-passagedata pid="18" name="Title" tags="" position="693,82" size="100,100">
+[[No need for gloves today-&gt;No gloves]]]</tw-passagedata><tw-passagedata pid="18" name="Title" tags="" position="693,82" size="100,100">
 &lt;center&gt; &lt;img src=&quot;images/i-see-you/title.gif&quot; width=&quot;400&quot; height=&quot;400&quot; alt=&quot;cover image&quot;&gt; &lt;/center&gt;
 =&gt;&lt;=
-[[Begin-&gt;Introduction]]</tw-passagedata><tw-passagedata pid="19" name="Arrival2" tags="" position="765,525" size="100,100">At the hospital entrance, the nurse gives you a mandatory questionnaire to fill out. It&#39;s to ensure that you don&#39;t have any symptoms of the virus. 
+[[Begin-&gt;Introduction]]</tw-passagedata><tw-passagedata pid="19" name="Arrival2" tags="" position="765,525" size="100,100">At the hospital entrance, the nurse gives you a mandatory questionnaire to fill out. It&#39;s to ensure that you don&#39;t have any symptoms of the virus.
+
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/3.jpg&quot; height=&quot;400&quot; alt=&quot;wearing gloves&quot;&gt; &lt;/center&gt;
 
 [[You have been feeling slightly feverish...-&gt;Symptoms]]
 
-[[Nothing more than the usual sleep deprivation...-&gt;No Symptoms2]]</tw-passagedata><tw-passagedata pid="20" name="No Symptoms2" tags="" position="763,682" size="100,100">After filling out the questionnaire, you walk over to the nurse’s station to have your temperature checked. A masked woman points a scanner at your forehead and it reads (text-color: #4a8540)[98.6ºF]. She motions for you to further enter the hospital. 
+[[Nothing more than the usual sleep deprivation...-&gt;No Symptoms2]]</tw-passagedata><tw-passagedata pid="20" name="No Symptoms2" tags="" position="766.3333333333334,680.3333333333334" size="100,100">After filling out the questionnaire, you walk over to the nurse’s station to have your temperature checked. A masked woman points a scanner at your forehead and it reads (text-color: #4a8540)[98.6ºF]. She motions for you to further enter the hospital. 
 
 As you enter the hospital, Dr. Monroe, an attending physician, glares at you as you pass him in the lobby. Your lateness has delayed his surgical case by a few hours.
+
+&lt;center&gt; &lt;img src=&quot;images/i-see-you/3-5.jpg&quot; height=&quot;400&quot; alt=&quot;breakfast&quot;&gt; &lt;/center&gt;
 
 [[Continue-&gt;Entry]]</tw-passagedata><tw-passagedata pid="21" name="2weeks" tags="" position="306,619" size="100,100">You quarantine in your bedroom and rest for 2 weeks... 
 
@@ -189,7 +226,7 @@ You now feel better and ready to go back to work. You reach the hospital. Nothin
 
 [[&quot;Much better, thanks...&quot;-&gt;NoSymptoms3]]</tw-passagedata><tw-passagedata pid="22" name="NoSymptoms3" tags="" position="307,782" size="100,100">After filling out the questionnaire, you walk over to the nurse’s station to have your temperature checked. A masked woman points a scanner at your forehead and it reads (text-color: #4a8540)[98.6ºF]. She motions for you to further enter the hospital, &quot;Glad to have you back.&quot;
 
-[[Continue-&gt;Entry]]</tw-passagedata><tw-passagedata pid="23" name="End" tags="" position="693.3333333333333,1757.3333333333333" size="100,100">=&gt;&lt;=
+[[Continue-&gt;Entry]]</tw-passagedata><tw-passagedata pid="23" name="End" tags="" position="693,1757" size="100,100">=&gt;&lt;=
 {
 (event: when time &gt; 1s)[(t8n: &quot;dissolve&quot;)(show: ?p1)]
 (event: when time &gt; 2s)[(t8n: &quot;dissolve&quot;)(show: ?p2)]
