@@ -399,7 +399,7 @@ a:active {color: blue;
 
 #story-body {
     background-image:url("images/sinead/bg-1.jpg");
-    background-color: #172740;    
+    background-color: #172740;/*#541211;   */
     background-position: 7vh 0vh;
     background-repeat: no-repeat;
     background-size: 93%;
