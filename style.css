@@ -182,7 +182,7 @@ a:active {color: blue;
     cursor: pointer;
     user-select: none;
 }
-/* The popup matches our style for the most part.*/
+/* The popup matches our style for the most part. */
 .popup .popuptext {
     visibility: hidden;
     background-color: #ffffff;
@@ -195,11 +195,22 @@ a:active {color: blue;
     position: fixed;
     top: auto;
     bottom: auto;
-    left: 20%;
+    left: 30%;
     right: 20%;
     z-index: 10000;
     font-family: "Maven Pro", sans-serif;
     border: 4px solid black;
+}
+
+.popuptext img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.popuptext h1{
+    color: #184876
 }
 
 .popup .show {
@@ -210,7 +221,7 @@ a:active {color: blue;
 	background-color:#BAD1E5;
 	display:inline-block;
 	cursor:pointer;
-	color: white;
+    font-weight: 500;
 	font-family: "Maven Pro", sans-serif;
 	font-size:28px;
 	padding:13px 49px;
@@ -223,6 +234,7 @@ a:active {color: blue;
 	position:relative;
 	top:1px;
 }
+
 
 /* clode button */
 .close {

@@ -22,7 +22,7 @@
 
 tw-story {
   font-family: 'Maven Pro', sans-serif;
-  font-size:100%;
+  font-size: 20px;
   background-color: #F3E9D2;
 }
  
@@ -70,7 +70,7 @@ open-url:visited
 
 </style>
 
-<!-- Story JS -->
+<!-- Story JS Jquery Import-->
 <script role="script" id="twine-user-script" type="text/twine-javascript"> /* twine-user-script #1: "UserScript" */
 	/* import jQuery UI library. */
 	$(function () {
@@ -80,11 +80,20 @@ open-url:visited
 		}
 	  );
 	});
-  </script>
+</script>
 
-<!-- Passage 1 Intro: Awaken-->
+<!-- Preface -->
+<tw-passagedata pid="16" name="Preface" tags="" position="0,43" size="100,100">
+	//Please be aware that this narrative features anxieties regarding racism, discrimination, identity, and death. Links are provided throughout to articles and resources related to our content.//
+
+	<b>(align: "=><=")[A Note to the Reader]</b>
+	This day-in-the-life does not take place on a specified date during the pandemic. Referenced statistics and incidents span a months-long time frame encompassing the height of the pandemic in NYC. This is done to holistically communicate a complex reality documented by evidence recorded and publicized at a pace not reflective of lived experience.
+
+	[[Now, let’s begin.-&gt;Intro: Awaken]]
+</tw-passagedata>
+
+<!-- Passage 0 Intro: Awaken-->
 <tw-passagedata pid="1" name="Intro: Awaken" tags="" position="112,211" size="100,100">
-
 <!-- Passage 1 CSS -->
 &lt;style&gt;
   tw-story
@@ -102,18 +111,20 @@ open-url:visited
   	color: #F3E9D2;
   }
 &lt;/style&gt;
-
 <div class="wechat">
 	<div class="wechat-static"><img src="/doubled-images/iphone1.svg"></div>
 	<div class="wechat-button"><img src="/doubled-images/translate.svg"></div>
 	<div class="wechat-hidden"><img src="/doubled-images/translated.svg"></div>
   </div>
-  
   <!-- Once user clicks on translate, the below appears -->
   <div class="wechat-hidden"> 
   It isn’t so easy to get to you anymore. Have you eaten? Ma, why stay up so late? 
   
-  //duì bù qĭ//, I’m sorry. This’ll be left read at 5:04AM (and unreplied, for now)—I’m putting my phone down, my eyes are stinging that slow burn of fatigue. I did, Ma, I promise, but sometime real late last night and I’m not so hungry this morning. But these twelve hour shifts: I need to eat something.
+  对不起 
+  //duì bù qĭ// 
+   I’m sorry. 
+   
+   This’ll be left read at 5:04AM (and unreplied, for now)—I’m putting my phone down, my eyes are stinging that slow burn of fatigue. I did, Ma, I promise, but sometime real late last night and I’m not so hungry this morning. But these twelve hour shifts: I need to eat something.
   
   Glasses. Where are [[my glasses?-&gt;1. Stretching]]</div>
   
@@ -128,7 +139,7 @@ open-url:visited
 
 </tw-passagedata>
 
-<!-- Passage 2 Stretching-->
+<!-- Passage 1 Stretching-->
 <tw-passagedata pid="2" name="1. Stretching" tags="" position="269,201" size="100,100">
 	
 &lt;style&gt;
@@ -151,32 +162,41 @@ open-url:visited
 The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. [[Let&#39;s outdo the sun.-&gt;1.05 Stretch]]
 </tw-passagedata>
 
-<!-- Passage 3 Groceries-->
+<!-- Passage 1.05 Stretch-->
+<tw-passagedata pid="22" name="1.05 Stretch" tags="" position="407,200" size="100,100">&lt;style&gt;
+	#count{
+		text-align: center;
+		font-size:25px;
+	}
+&lt;/style&gt;
+
+The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. &#39;&#39;Let&#39;s outdo the sun.&#39;&#39;
+
+I’m on the edge of the bed now, straightening out my limbs and snow-angeling the mattress. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting (link-repeat: &quot;ready.&quot;)[(show: ?num)]
+
+|num)[&lt;div id=&quot;count&quot;&gt;(live:1s)[1  (stop:)] (live:2s)[2  (stop:)] (live:3s)[3  (stop:)] (live:4s) [4  (stop:)] (live:5s)[[[5... -&gt;1.1 Meditation]](stop:)]&lt;/div&gt;]
+</tw-passagedata>
+
+<!-- 1.1 Meditation-->
+<tw-passagedata pid="17" name="1.1 Meditation" tags="" position="530,215" size="100,100">
+	As I stretch, I am suddenly conscious of my breath, the inhale, pause, exhale. I’m meditating, I realize, and I savor it. These moments before the chaos of the day—remembering myself, feeling.
+
+	So, so much loss. For a moment, the calls of Code 3s ring. They ring in my ears, in my head. They //become// time, marking every half hour or so: death tracks my day. 
+
+	Breathe. This isn't really meditating, is it? I'm supposed to be thoughtless, at peace, or something like that. Okay. At peace...
+
+	For now, it’s just me. It is quiet. I’m stretching out and reminding me of this place I occupy, this body I inherit, and I am grateful for it. I want to be there to care for my patients, so I make sure I’m ready to do so.
+
+	And what this means is that right now I make a promise. I promise to provide the care that my patients deserve. Maybe this means that I have to restrain myself, lessen the emotional connection I feel with each of them. For the sake of efficiency, for the sake of being the best professional I can be, I must distance myself from all that loss, even the possibility of it. 
+	Breathe in. Breathe out.
+
+	[[Promise.-&gt;2. Groceries]]
+</tw-passagedata>
+
+<!-- Passage 2 Groceries-->
 <tw-passagedata pid="3" name="2. Groceries" tags="" position="678,217" size="100,100">&lt;style&gt;
 li {
 	line-height: 1.2;
-}
-
-#blur {
-	color: transparent;
-	text-shadow: 0 0 8px #000;
-	line-height: 20px;
-	letter-spacing: 2px;
-}	
-
-a {
-	color: transparent;
-	text-shadow: 0 0 8px #000;
-}
-
-a:hover{
-	color: #0D1F2D;
-	text-shadow: 0 0 0 #000;
-}
-
-#blur:hover {
-	color: #0D1F2D;
-	text-shadow: 0 0 0 #000;
 }
 
 a:visited{
@@ -191,92 +211,84 @@ And all is done. I’ve brushed my teeth, washed my face, dressed (and maybe I�
 
 Something quick, easy. I have that box of cereal and maybe—yes!—some milk left. I’ll need to get more soon. 
 
-<div id="groceries">
-(css: &quot;font-size: 20px&quot;)[''//Grocery List://'']
-(live: 3s)[- Lao Gan Ma(stop:)]
-(live: 4s)[- Fuji Apples(stop:)]
-(live: 5s)[- Doritos(stop:)]
-(live: 6s)[- Frozen veggie mix(stop:)]
-(live: 7s)[- Sesame oil(stop:)]
-(live: 8s)[- (link-repeat: &quot;Milk&quot;)[(show: ?p2)](stop:)]
-</div>
+<img src="/doubled-images/grocery.gif" alt="Grocery List" class="grocery">
 
-|p2)[I guess I can go to that corner grocer a few blocks down, say hi to the cat while I’m there. 
+I guess I can go to that corner grocer a few blocks down, say hi to the cat while I’m there. 
 
 Actually, no—
 
 I’ll go to the Chinese mart. Make it out to Main Street (if only the 7 were faster). There, they’re handing out gloves and enforcing mask wear, the workers are in full hazmat suits. Real dystopian, huh. And at least there, I won’t get those stares. Or maybe not as many (I’ll take what I can get). If I’m in my scrubs, maybe that’s a given, regardless. Of course they’d be scared of the scrubs. 
 
+<img src="doubled-images/main-street.png" class="main-street">
+
 (link-repeat: &quot;But there’s that other scared too.&quot;)[(t8n:&quot;dissolve&quot;)(show:?links)]
 
-|links)[&lt;span class=&quot;1&quot; id=&quot;blur&quot;&gt;&lt;a href=&quot;https://www.kxan.com/news/crime/report-sams-club-stabbing-suspect-thought-family-was-chinese-infecting-people-with-coronavirus/&quot; target=&quot;_blank&quot;&gt;What about that  Asian American family stabbed somewhere down South—was it Texas?—at a Sam’s Club.&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;2&quot; id=&quot;blur&quot;&gt;And &lt;a href=&quot;https://www.wpr.org/police-wisconsin-man-harassed-asian-americans-wearing-masks-grocery-store&quot; target=&quot;_blank&quot;&gt;those grocery store shoppers, multiple, in the Midwest harassed for wearing masks while Asian.&lt;/a&gt; I suppose it&#39;s everywhere, really. &lt;/span&gt;&lt;span class=&quot;3&quot; id=&quot;blur&quot;&gt;&lt;a href=&quot;https://www.nbcnews.com/news/asian-america/man-blames-asians-coronavirus-racist-rant-n-y-c-7-n1231444&quot; target=&quot;_blank&quot;&gt;Even here, in NYC, at a 7/11.&lt;/a&gt; Even here.&lt;/span&gt;
+|links)[&lt;span class=&quot;1&quot; &gt;&lt;a href=&quot;https://www.kxan.com/news/crime/report-sams-club-stabbing-suspect-thought-family-was-chinese-infecting-people-with-coronavirus/&quot; target=&quot;_blank&quot;&gt;What about that  Asian American family stabbed somewhere down South—was it Texas?—at a Sam’s Club.&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;2&quot; &gt;And &lt;a href=&quot;https://www.wpr.org/police-wisconsin-man-harassed-asian-americans-wearing-masks-grocery-store&quot; target=&quot;_blank&quot;&gt;those grocery store shoppers, multiple, in the Midwest harassed for wearing masks while Asian.&lt;/a&gt; I suppose it&#39;s everywhere, really. &lt;/span&gt;&lt;span class=&quot;3&quot; &gt;&lt;a href=&quot;https://www.nbcnews.com/news/asian-america/man-blames-asians-coronavirus-racist-rant-n-y-c-7-n1231444&quot; target=&quot;_blank&quot;&gt;Even here, in NYC, at a 7/11.&lt;/a&gt; Even here.&lt;/span&gt;
 
 Damn. Some milk. Just some milk. I need to eat. Have you eaten? Ma, have you eaten?
 
-<!-- Email Modal trigger-->
-<span id="emailButton">(text-style: &quot;fade-in-out&quot;)[[Notification: Email-&gt;Daily Report Alert]]]]</span>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-	<!-- Modal content -->
-	<div class="modal-content">
-	  <span class="close">&times;</span>
-	  <p>Some text in the Modal..</p>
-	</div>
-</div>
-
-<script>
-	// Get the modal
-	var modal = document.getElementById("myModal");
-	
-	// Get the button that opens the modal
-	var btn = document.getElementById("emailButton");
-	
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-	
-	// When the user clicks the button, open the modal 
-	btn.onclick = function() {
-	  modal.style.display = "block";
-	}
-	
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-	  modal.style.display = "none";
-	}
-	
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	  if (event.target == modal) {
-		modal.style.display = "none";
-	  }
-	}
-</script>
+(text-style: &quot;fade-in-out&quot;)[[Notification: Email-&gt;Daily Report Alert]]]
 
 </tw-passagedata>
 
-<!-- Daily Report-->
-<tw-passagedata pid="4" name="3. Daily Report" tags="" position="838,373" size="100,100">(css: &quot;font-size: 100px&quot;)+(align:&quot;=&gt;&lt;=&quot;)[6,131]
+<!-- Passage 3 Daily Report-->
+<tw-passagedata pid="4" name="3. Daily Report" tags="" position="838,373" size="100,100">
 
+<div id="dailyNum"><h1><span class="firstNum">6,13</span><span class="changeNum">1</span></h1></div>
+<div class="p00">
 It’s the daily report. 
 
 Yesterday, six thousand one hundred thirty one more New York City residents were diagnosed with this virus. Over three hundred died. 
 
 These are people. (link-repeat: &quot;You, me, them, us.&quot;)[(open-url: &#39;https://projects.thecity.nyc/covid-19-deaths/&#39;)]
 
-People. These are neighbors. Auntie’s friend, just last week—mooncake master, quick to hug. And Ma has always had that cough, bone-dry, deep. I used to mock it when I was younger. That cough. What if this was it—if she was it—[[that last digit?-&gt;4. Mask]]</tw-passagedata><tw-passagedata pid="5" name="4. Mask" tags="" position="676,365" size="100,100">It’s time to head out. Better safe than sorry, now that the subway is so unpredictable. 
+People. These are neighbors. Auntie’s friend, just last week—mooncake master, quick to hug. And Ma has always had that cough, bone-dry, deep. I used to mock it when I was younger. That cough. What if this was it—if she was it— |p0&gt;[&lt;span class=&quot;lastDigit&quot;&gt;the last digit?&lt;/span&gt;]
+[(click: ?p0)[(live: 2s)[(t8n: &quot;dissolve&quot;)(show: ?p1)]]]
+</div>
+
+|p1)[It’s time to head out. Better safe than sorry, now that the subway is so unpredictable. 
 
 Here’s a mask. Surgical, of course. We need to ration the N95s as best as possible. This— PPE—I realize, is everything. For me, it’s life. And with these shortages: what is there left to do but try? 
 
+|== 
 I’m reaching for the mask and I subtly flinch, the kind that arrests your breath and shutters your eyes. It’s not unfamiliar, not in any way. 
 
 No. It’s not its foreignness to me, but its foreignness to others. To be visibly East Asian and wear a mask is to dig into the peril I embody, to wear it like an affront to those who see me, this Oriental threat. (link-repeat: &quot;Somehow, I become a threat.&quot;)[(open-url: &#39;https://www.straitstimes.com/world/united-states/fake-flyers-and-face-mask-fear-california-fights-coronavirus-discrimination&#39;)]
 
 I wonder if I should wear sunglasses today. It’s not slated to be that sunny, to be honest, but a part of me—I’m slightly ashamed to admit—is scared, wants to hide. To hide perhaps the most visibly East Asian, one of the most ridiculed, features of my appearance. Maybe a hat too: my black hair is distinctive, I suppose. To reduce the area my body encompasses becomes a statistical game. Today, will I be discriminated against for the visibility of my identity? 
+==|
+<img src="/doubled-images/mask-hat.png" alt="Mask and hat" class="mask-hat">
+|==|
 
 Agh. I know better. I know, I know. And I can’t be late.
 
-Mask-on (link-repeat: &quot;(the right way, of course)&quot;)[(open-url: &#39;https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html&#39;)]: [[let’s go.-&gt;5. Walking]]</tw-passagedata><tw-passagedata pid="6" name="5. Walking" tags="" position="518,364" size="100,100">&lt;style&gt;
+Mask-on (link-repeat: &quot;(the right way, of course):&quot;)[(open-url: &#39;https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/diy-cloth-face-coverings.html&#39;)] [[let’s go.-&gt;5. Walking]]]
+
+<script>
+	/* Replace 1 with 0, replace text*/
+	$(document).ready(function(){
+		$(".lastDigit").click(function(){
+			$(".changeNum").replaceWith("0");
+			$(".p00").delay(2000).fadeOut(0).queue(function(){
+				$(".firstNum").replaceWith("05:3");
+			});
+		});
+	});
+</script>
+
+</tw-passagedata>
+
+<!-- Passage 3.5 Daily Report Alert-->
+<tw-passagedata pid="23" name="Daily Report Alert" tags="" position="849,212" size="100,100">
+
+	<div class="email">
+	&lt;h1&gt;Subject: Daily COVID-19 Cases, New York City&lt;/h1&gt;
+	&lt;button&gt;[[Open -&gt;3. Daily Report]]&lt;/button&gt;</div>
+	
+</tw-passagedata>
+
+<!-- Passage 5 Walking -->
+<tw-passagedata pid="6" name="5. Walking" tags="" position="518,364" size="100,100">&lt;style&gt;
 	#count{
 		text-align: center;
 		font-size:25px;
@@ -285,7 +297,7 @@ Mask-on (link-repeat: &quot;(the right way, of course)&quot;)[(open-url: &#39;ht
 
 It’s a stubborn kind of brisk out today. The foggy warmth from the mask (I usually despise it) is comforting. It’s a reminder, really, that I am here, that I am breathing. Thank God.
 
-And it’s a lonely walk today, as with most days. It’s too early, and it seems the city has broken its oath: it actually can sleep. I hope it knows me, that my footsteps, though muted—I feel like footsteps are quieter this early in the morning, no?—match a rhythm, a rhythm of redemption, of goodness, that I know the city has always beat. 
+And it’s a lonely walk today, as with most days. It’s too early, and it seems the city has broken its oath: it actually can sleep. I hope it knows me, that my footsteps, though muted—I feel like footsteps are quieter this early in the morning, no?—match a rhythm, a rhythm of redemption, of goodness, that I know the city has always beat.  
 
 It’s a loving place, yes. I can’t wait for the 7pm applause today. To feel: I am doing something, I am here to help, let me help you. Yesterday, a patient finally came off of the ventilators. God bless. I prayed with a woman who didn’t speak much English, who held her hands together so tight I saw a rekindled strength. God bless. 
 
@@ -305,25 +317,50 @@ Was the latter even considered as a hate crime? Why not? Though I wouldn’t be 
 
 |thoughts)[(live:1s)[That I am here for the good fight, the right fight?] (live:3s)[Just last week, calling with my friends, we all had stories to share: stare-downs, the c-word, the wad of spit you can mistake for a leaky A.C. ] (live: 5s)[Daily occurrences left unreported. Why? Because who cares, really? ] (live:7s)[Who can we trust to take these seriously, to see these reports through? ] (live:9s)[Who do I tell, yell at, cry to, to tell them that this is real, that it is broken? I am here for the good fight, and I am not the enemy. ]
 
-(live: 11s)[I need to (link-repeat: &quot;breathe.&quot;)[(show: ?num)]]
+(live: 11s)[I need to [[breathe.-&gt;6. Subway Station]]]]</tw-passagedata>
 
-|num)[&lt;div id=&quot;count&quot;&gt;(live:1s)[5  (stop:)] (live:2s)[4  (stop:)] (live:3s)[3  (stop:)] (live:4s) [2  (stop:)] (live:5s)[[[1 -&gt;6. Subway Station]](stop:)]&lt;/div&gt;]]</tw-passagedata><tw-passagedata pid="7" name="6. Subway Station" tags="" position="371,364" size="100,100">I’m here at the station. The subway’s running a bit late, though all this tardiness is relative to a pretty much absent timetable. I check the time. I’ll make it, no doubt. 
+<!-- Passage 6 Subway Station -->
+<tw-passagedata pid="7" name="6. Subway Station" tags="" position="371,364" size="100,100">
+	
+<div class="count">
+(live:1s)[5  (stop:)] (live:2s)[4  (stop:)] (live:3s)[3  (stop:)] (live:4s) [2  (stop:)] (live:5s) [1  (stop:)]</div>
+<div class="subwayText">
+|==
+<img src="/doubled-images/subway.png" alt="subway station" class="subway">
+=||
+
+
+I’m here at the station. The subway’s running a bit late, though all this tardiness is relative to a pretty much absent timetable. I check the time. I’ll make it, no doubt. 
 
 Down here, the wind is a mechanical sort, the kind that’s generated by friction and carries noise like thunder. That distant screeching, resistance against angles in track: I’ll never forget it. It’s therapeutic, maybe.
 
-Now I think I see someone down at the end of the platform. There aren’t many people around now. I feel it again. That hesitation to be. 
-(link-repeat: &quot;I’ve heard of other nurses being attacked on the subway on their way to work, to the hospital.&quot;)[(open-url: &#39;https://www.insider.com/man-forcibly-remove-asian-nurse-nyc-subway-cops-say-2020-5&#39;)] (link-repeat: &quot;More than once, actually.&quot;)[(open-url: &#39;https://www.washingtonpost.com/business/2020/05/19/asian-american-discrimination/&#39;)] 
-Nurses like me.
+|==|
+Now I think I see someone down at the end of the platform. There aren’t many people around now. I feel it again. That hesitation to be. (link-repeat: &quot;I’ve heard of other nurses being attacked on the subway on their way to work, to the hospital.&quot;)[(open-url: &#39;https://www.insider.com/man-forcibly-remove-asian-nurse-nyc-subway-cops-say-2020-5&#39;)] (link-repeat: &quot;More than once, actually.&quot;)[(open-url: &#39;https://www.washingtonpost.com/business/2020/05/19/asian-american-discrimination/&#39;)] Nurses like me.
 
 In those moments, they must have reckoned: with news of their patients, those who made it and those who didn’t, new faces and lost; with shortages of PPE, with use-anything-you-can-find prayers, high exposure, vulnerability; and with this. All of this. 
 
-//Why are you killing us?//
+(align: "=><==")[//Why are you killing us?//]
 
-//Killing us with your Chinese virus?//
+(align: "==><=")[//Killing us with your Chinese virus?//]
 
 These are the things they say.
 
-I guess scrubs can only lend you so much seeming legitimacy, belonging. I’m okay. It’s okay. There are bigger things, bigger needs, [[something we’re all working towards.-&gt;7. Flyer]] </tw-passagedata><tw-passagedata pid="8" name="7. Flyer" tags="" position="216,356" size="100,100">I’m almost at the hospital now, just a few blocks now. The subway car was totally empty this morning and smelled so heavily of disinfectant my nose stung.
+I guess scrubs can only lend you so much seeming legitimacy, belonging. I’m okay. It’s okay. There are bigger things, bigger needs, [[something we’re all working towards.-&gt;7. Flyer]]
+</div>
+
+<script>
+	/* countdown fade out and text fade in*/
+	$(document).ready(function(){
+		$(".count").delay(6000).fadeOut(300).queue(function(){
+			$(".subwayText").delay(500).fadeIn(300);
+		})
+	})
+</script>
+</tw-passagedata>
+
+<!-- Passage 7 Flyer -->
+<tw-passagedata pid="8" name="7. Flyer" tags="" position="216,356" size="100,100"><img src="/doubled-images/hospital.png" alt="hospital" class="hospital">
+I’m almost at the hospital now, just a few blocks now. The subway car was totally empty this morning and smelled so heavily of disinfectant my nose stung.
 
 An ambulance drives by. It’s quiet, no sirens, and its silence almost owes itself to a perceived slowness. For a moment, it seems in near rest. And down the block rounding the corner now is another ambulance, sirens on. There is someone in there, someone there. Maybe I’ll meet them today.
 
@@ -334,39 +371,76 @@ Oh, a flyer. I think I can make it out from here—it’s about Asian identity, 
 I do have some time to spare. And? Do I choose to be reminded of this burden? And now with all of this, this pandemic too—can I sacrifice my energy for anything else? Is it really only as valid as I myself give it attention?
 
 [[Pause, take a look.-&gt;8.1. Pause, Read]]
-[[Briefly glance at it, walk past.-&gt;8.2. Pass, Ignore]]</tw-passagedata><tw-passagedata pid="9" name="8.1. Pause, Read" tags="" position="137,514" size="100,100">Ah, I see. It’s about hate crimes against individuals of East Asian descent, reminding victims and bystanders to report hate crimes to the authorities.
+[[Briefly glance at it, walk past.-&gt;8.2. Pass, Ignore]]
+</tw-passagedata>
+
+<!-- Passage 8.1 Pause -->
+<tw-passagedata pid="9" name="8.1. Pause, Read" tags="" position="137,514" size="100,100">
+
+&lt;script&gt;
+  	window.top.postMessage(&#39;flyer&#39;, &#39;*&#39;);
+  	console.log(&quot;flyer to appear&quot;);
+&lt;/script&gt;
+	
+Ah I see.
+
+It’s about hate crimes against individuals of East Asian descent, reminding victims and bystanders to report hate crimes to the authorities.
 
 //Hate is also a virus, but together we can fight this too.//
 	
-Hate—another frontline. It’s an invisible threat. And how difficult, how daunting: to fight something that’s invisible until it’s right in front of you, an unavoidable reality. All my life, it’s been this way: the eye-pulling—oh, is it called fox-eye now?—and c-word, Ling-Ling and Ching-Chong, my lunch deemed inedible, too foreign (all just harmless jokes, I have explained to me). I wonder, what do we inherit now: Vincent Chin, the Chinese Massacre of 1871? What do we forget? When does it become too much, but just real enough?
+Hate—another frontline. It’s an invisible threat. And how difficult, how daunting: to fight something that’s invisible until it’s right in front of you, an unavoidable reality. All my life, it’s been this way: the eye-pulling—oh, is it called fox-eye now?—and c-word, Ling-Ling and Ching-Chong, my lunch deemed inedible, too foreign (all just harmless jokes, I have explained to me). I wonder, what do we inherit now: (link-repeat: &quot;Vincent Chin,&quot;)[(open-url: &#39;https://www.google.com/url?q=https://www.history.com/news/vincent-chin-murder-asian-american-rights&sa=D&ust=1599513664180000&usg=AFQjCNF0ppMoazh6CJPKpU0gAwQ8bfomAA&#39;)] the (link-repeat: &quot;Chinese Massacre of 1871?&quot;)[(open-url: &#39;https://www.google.com/url?q=https://www.lapl.org/collections-resources/blogs/lapl/chinese-massacre-1871&sa=D&ust=1599513664180000&usg=AFQjCNHnOgUl9L8-sL0cFr3g548ECG_1qw&#39;)] What do we forget? When does it become too much, but just real enough?
 
 Now, I need to devote myself to my patients. They deserve the best I can provide, and you bet I’ll give my absolute everything. This is unconditional. It’s unwavering.
 
 My breath feels even warmer on my face now. And it does feels nice—a hand on the shoulder—to be validated, to know that there are people listening.
 
-[[Let&#39;s get going.-&gt;9. Hospital]]</tw-passagedata><tw-passagedata pid="10" name="8.2. Pass, Ignore" tags="" position="288,514" size="100,100">I slow my pace a bit, turning my chin slightly. I make out a few words, a graphic. (link-repeat: &quot;A glimpse.&quot;)[(open-url: &#39;https://www.facebook.com/photo.php?fbid=3556761544341027&amp;set=gm.10163722233095637&amp;type=3&amp;theater&amp;ifg=1&#39;)] It’s about hate crimes, attacks against those who look like me. I sense a part of me holding back. This selective vision. Maybe some wouldn’t understand. But I’ve known this all my life.
+[[Let&#39;s get going.-&gt;9. Hospital]]
+
+</tw-passagedata>
+
+<!-- Passage 8.2 Pass, Ignore -->
+<tw-passagedata pid="10" name="8.2. Pass, Ignore" tags="" position="288,514" size="100,100">
+I slow my pace a bit, turning my chin slightly. &lt;span class=&quot;appear&quot; id=&quot;flyer&quot;&gt;I make out a few words, a graphic.&lt;/span&gt;  It’s about hate crimes, attacks against those who look like me. I sense a part of me holding back. This selective vision. Maybe some wouldn’t understand. But I’ve known this all my life.
 
 I’m told that they’re just jokes: the eye-pulling—oh, is it called fox-eye now?—and c-word, Ling-Ling and Ching-Chong, my lunch deemed inedible, too foreign. 
 
 When does it become real?
 
-I took a class in Asian American history once. It was a small class; the professor had to fight hard during the course’s first inception, barely convincing administration that this history: these stories, these lives and bodies—that they were important. We learned about Vincent Chin, about the massacre, mass-lynching in Los Angeles. Often times, it feels that the American consciousness has already left these memories behind, as if they are uninherited today.
+I took a class in Asian American history once. It was a small class; the professor had to fight hard during the course’s first inception, barely convincing administration that this history: these stories, these lives and bodies—that they were important. We learned about (link-repeat: &quot;Vincent Chin,&quot;)[(open-url: &#39;https://www.google.com/url?q=https://www.history.com/news/vincent-chin-murder-asian-american-rights&sa=D&ust=1599513664180000&usg=AFQjCNF0ppMoazh6CJPKpU0gAwQ8bfomAA&#39;)] about the massacre, (link-repeat: &quot;mass-lynching in Los Angeles&quot;)[(open-url: &#39;https://www.google.com/url?q=https://www.lapl.org/collections-resources/blogs/lapl/chinese-massacre-1871&sa=D&ust=1599513664180000&usg=AFQjCNHnOgUl9L8-sL0cFr3g548ECG_1qw&#39;)]. Often times, it feels that the American consciousness has already left these memories behind, as if they are uninherited today.
 
 There are things I know, there are things I don’t. But there’s one thing for sure.
 
 Now, I need to devote myself to my patients. They deserve the best I can provide, and you bet I’ll give my absolute everything. This is unconditional. It’s unwavering. 
 
-[[Let&#39;s get going.-&gt;9. Hospital]]</tw-passagedata><tw-passagedata pid="11" name="9. Hospital" tags="" position="212,664" size="100,100">Overnight, he got worse. A lot worse. He’s young, actually probably my age. Yesterday he was still laughing, cracking jokes. It’s hard to smile visibly with a mask on, so I tried extra hard to show it. 
+[[Let&#39;s get going.-&gt;9. Hospital]]
 
-He’s in bed now, barely responsive. I think I’ll have to notify family soon to prepare.
+&lt;script&gt;
+	  var $1 = document.getElementById(&#39;flyer&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;img clicker 1 clicked!&quot;);
+		  window.top.postMessage(&#39;flyer&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;
 
-And as for her, that lovely lady a few beds down from him, I’m glad I spoke with her family yesterday. She was in that bed over there, one of the extra ones we converted for this ward’s emergency use. She was so, so weak. I saw her tremble with each exerted motion. 
+</tw-passagedata>
 
-I held that phone for her, poking my head to its side to make sure she was in frame. And I saw her family: her son, maybe, daughters; a grandchild, too young to really know. They had all gathered together for a last call, a virtual visit, with her. My arm was sore, but the soreness became a stiffness that made it easier to prop up, not too close, not too far. It was that innate refusal to lower my arm that left me holding the phone there for a moment after the call ended, after they had said their goodbyes, and I realized that I hadn’t really said goodbye yet. Today, it’s already too late.
+<!-- Passage 9. Hospital -->
+<tw-passagedata pid="11" name="9. Hospital" tags="" position="212,664" size="100,100">
+	(link-repeat: &quot;Overnight, he got worse. &quot;)[(show:?p1)]|p1)[A lot worse. He’s young, actually probably my age. Yesterday he was still laughing, cracking jokes. It’s hard to smile visibly with a mask on, so I tried extra hard to show it. 
 
-I’ll check in with my team in a bit, and we’ll make the tough decisions: who gets what, who gets to live. I need to stay on my feet, on my feet, on my feet. I’m ready, and I’m scared.
+	He’s in bed now, barely responsive. I think I’ll have to notify family soon to prepare.
+	
+	And as for her, that lovely lady a few beds down from him, I’m glad I spoke with her family yesterday. She was in that bed over there, one of the extra ones we converted for this ward’s emergency use. She was so, so weak. I saw her tremble with each exerted motion. 
+	
+	(link-repeat: &quot;I held that phone for her, &quot;)[(show:?p2)]]|p2)[poking my head to its side to make sure she was in frame. And I saw her family: her son, maybe, daughters; a grandchild, too young to really know. They had all gathered together for a last call, a virtual visit, with her. My arm was sore, but the soreness became a stiffness that made it easier to prop up, not too close, not too far. It was that innate refusal to lower my arm that left me holding the phone there for a moment after the call ended, after they had said their goodbyes, and I realized that I hadn’t really said goodbye yet. Today, it’s already too late.
+	
+	(link-repeat: &quot;I’ll check in &quot;)[(show: ?p3)]] |p3)[with my team in a bit, and we’ll make the tough decisions: who gets what, who gets to live. I need to stay on my feet, on my feet, on my feet. [[I’m ready, and I’m scared.-&gt;10. Nighttime]]
+	
+	//For a more in-depth and accurate understanding of the experiences of frontline workers in hospitals during the COVID-19 pandemic, please refer to these (link-repeat: &quot;first-hand testimonials.&quot;)[(open-url: &quot;doubledvideos.html&quot;)] We respect the authorial integrity presented by these accounts and humbly defer to them, urging you to read through and then return to our narrative when ready.//]
+</tw-passagedata>
 
-//For a more in-depth and accurate understanding of the experiences of frontline workers in hospitals during the COVID-19 pandemic, please refer to these first-hand testimonials. We respect the authorial integrity presented by these accounts and humbly defer to them, urging you to read through and then return to our narrative when ready. Once ready, [[continue through this story-&gt;10. Nighttime]]//</tw-passagedata><tw-passagedata pid="12" name="10. Nighttime" tags="" position="366,663" size="100,100">It’s nighttime, that kind of New York dark that still glows orangey. 
+<!-- 10. Nighttime-->
+<tw-passagedata pid="12" name="10. Nighttime" tags="" position="366,663" size="100,100">
+It’s nighttime, that kind of New York dark that still glows orangey. 
 
 These feet. Damn. I wiggle my toes a bit and stretch my foot over the edge of the curb. There’s a rash developing along my cheek, following the imprint left by the masks I’ve worn today. 
 
@@ -378,28 +452,83 @@ We’re closer now, closer than ever before. I’ve met other physicians from al
 
 I think I heard the 7pm clap today. Maybe. And even if I didn’t, I know it was there, and that’s comforting enough.
 
-So don’t worry, Ma. I ate. Don’t worry, I did. Have you eaten?
+&lt;i&gt;So don’t worry&lt;/i&gt;, Ma. I ate. Don’t worry, I did. Have you eaten?
+|==
+<img src="doubled-images/auntie-large.png" alt="Auntie" class="auntie">
+==||
 
-I’m on my way to the station now, heading home. I notice someone a block down, rummaging through the trash cans, looking for bottles. Reminds me of home: the ladies with their pushcarts and sunhats, looking for recyclables. Working so hard to make a living. //xīn kǔ.// The bitterness of a heart that’s giving everything it’s got for something greater, something better.
+
+I’m on my way to the station now, heading home. I notice someone a block down, rummaging through the trash cans, looking for bottles. Reminds me of home: the ladies with their pushcarts and sunhats, looking for recyclables. Working so hard to make a living. 辛苦 &lt;i&gt;xīn kǔ.&lt;/i&gt; The bitterness of a heart that’s giving everything it’s got for something greater, something better.
 
 [[I’ll text you later, okay?-&gt;10.1 Our Elders]]
-</tw-passagedata><tw-passagedata pid="13" name="11. Ritual" tags="" position="682,658" size="100,100">Finally, home again. Now begins the nightly ritual. Mask off. Breathe. Disinfect everything. Everything. Take off my shoes. Everything into the laundry bin. Twelve hours straight. A shower to feel clean.
+</tw-passagedata>
+
+<!-- 10.1 Our Elders -->
+<tw-passagedata pid="18" name="10.1 Our Elders" tags="" position="514,660" size="100,100">
+It’s already 7:36pm, and I imagine by now you’ve stored the leftovers away in the fridge in some takeout containers, sliced up some fruits. Not anything, of course, that would conflict with your inner bodily heat—you were always so adamant about that, the true reason for colds and illness.
+
+Do you have enough food at home? I know you can’t make it too far for groceries with that knee. Do you have enough masks? Hand sanitizer? 
+
+(link-repeat: &quot;How are you?&quot;)[(show: ?p1)]
+
+|p1)[Ma, if I told you that our elders were under attack, what would you say? Would you tell me that it’s always been okay for you, that it would never happen to you just as it hasn’t happened to you before? 
+
+An old lady was slapped and set on fire in Brooklyn, Ma. (link-repeat: &quot;Why did she deserve this?&quot;)[(open-url: &#39;https://abc7ny.com/woman-set-on-fire-elderly-attack-89-year-old-attacked-bensonhurst-crime/6333749/&#39;)]&lt;span class=&quot;appear&quot; id=&quot;flyer2&quot;&gt; And there were fliers posted in Bay Ridge telling us Chinese to get out. &lt;/span&gt;
+
+You and I; us, this Chinese immigration. They say we are the reason, Ma. When was the last time you took me back to China? It must have been when I was 5 or 6. Listen to my broken Mandarin, Ma, and you’d know. And now, I am fighting this virus. If they say I am the reason for the virus, is my frontline fight just a battle against myself?
+
+The big news channels don’t really cover this kind of stuff, Ma. The police don’t really care either. Where are you getting your news from? From WeChat? From the Chinese newspapers?
+
+(link-repeat: &quot;Ma, how are you?&quot;)[(show: ?p2)]]
+
+|p2)[I wish I could see you again. As I walk to the subway station, I imagine I can take this line straight to your stop, Ma. But you and I both know we shouldn’t, we can’t. I can’t risk your health like this. So let’s call sometime this weekend—you remember what I taught you about FaceTime, right? 
+
+Almost at the station now. I need to decompress, some screeching-rail therapy. I need to take care of myself so I can take care of them: those children and parents and grandparents and friends there in the ICU, waiting, praying. [[I need to breathe.-&gt;10.2 Facebook]]]
+
+&lt;script&gt;
+	  var $1 = document.getElementById(&#39;flyer2&#39;).addEventListener(&quot;click&quot;, function() {
+		  console.log(&quot;flyer 2 clicked!&quot;);
+		  window.top.postMessage(&#39;flyer2&#39;, &#39;*&#39;);	
+	  });
+&lt;/script&gt;
+
+</tw-passagedata>
+
+<!-- 10.2 Facebook -->
+<tw-passagedata pid="20" name="10.2 Facebook" tags="" position="597,540" size="100,100">
+I’m on the subway back home now. The car is near empty. I briefly look around: everyone’s either overanalyzing their shoes or pinned to phone screens. There was a furtive glance up to me as I sat down in my scrubs. At this point, it’s something I’ve gotten used to. 
+
+I take out my phone, following suit, and for a moment I’m just another person riding the subway at the end of a long day. Naturally, I scroll through social media feeds. I’m on Facebook when the headline from a post by a fellow nurse at a neighboring New York hospital catches my eye.
+
+&lt;h2&gt;(align: "=><=")[//Nurses and Doctors Speaking Out on Safety Now Risk Their Job//]&lt;/h2&gt;
+
+(link-repeat: &quot;I take a closer look at the article.&quot;)[(open-url: &#39;https://www.nytimes.com/2020/04/09/business/coronavirus-health-workers-speak-out.html&#39;)] Hospitals are threatening employees that expose the shortcomings of institutional policy. I’m familiar: we’d been warned too about the consequences of taking our grievances about our wellbeing, medical practices, to the public. 
+
+This reminds me. I’d heard from a friend about a resident at another NYC hospital who was forced to do rounds in COVID floors with no knowledge or skills to give proper treatment. She wanted to help, of course, but administration expected her, a resident psychiatrist, to understand caring for COVID patients and fully meet their needs.
+
+I hear my stop on the speaker, though it&#39;s more of a mangled buzzing from down the car. [[I bookmark the post for later.-&gt;11. Ritual]] 
+</tw-passagedata>
+
+<!--11 Ritual -->
+<tw-passagedata pid="13" name="11. Ritual" tags="" position="682,658" size="100,100">Finally, home again. Now begins the nightly ritual. Mask off. 
+
+(text-style: &quot;expand&quot;)[Breathe] 
+
+Disinfect everything. Everything. Take off my shoes. Everything into the laundry bin. Twelve hours straight. A shower to feel clean.
 
 It’s 8:37PM. A fridge raid. Do I have enough to throw together a meal? 
 
 Instant noodles. Microwavable rice. Pickled vegetables. Leftover black pepper beef takeout. I’ll make sure to go grocery shopping another day. Yes, another day.
 
-//[[1 New Message-&gt;12. Group Chat]]//</tw-passagedata><tw-passagedata pid="14" name="12. Group Chat" tags="" position="844,658" size="100,100">Oh wow. Someone decided to revive the old college group chat. When was the last time anyone sent a message in there? I guess this is a nice surprise, I haven’t talked to my friends in a while. I haven’t talked to anyone, really, in a while. There’s a strange twist in my stomach–a nervousness in dealing with something that used to be normal, but somehow now is anything but. 
+(text-style: &quot;fade-in-out&quot;)[//[[1 New Message-&gt;12. Group Chat]]//]
+</tw-passagedata>
 
-“Hey guys, long time no talk. I’ve been really missing our college adventures these days, and I thought that it’d be nice to have a socially distanced get-together. Maybe a picnic at Central Park? BYOB (bring your own blanket!)”
+<!-- 12 Group Chat-->
+<tw-passagedata pid="14" name="12. Group Chat" tags="" position="844,658" size="100,100">Oh wow. Someone decided to revive the old college group chat. When was the last time anyone sent a message in there? I guess this is a nice surprise, I haven’t talked to them in a while. I haven’t talked to many people, really, in a while. There’s a strange twist in my stomach–a nervousness in dealing with something that used to be normal, but somehow now is anything but. 
 
-“Yes!!”
+<div><img class="imessage" src="/doubled-images/imessage.gif"><a href="https://www.instagram.com/litarnes" class="imessage">Icon Credit</a></div>
 
-“Crazy how it’s been almost a year since we all hung out”
-
-“Can’t wait to catch up with you all!” 
-
-Just seeing their messages brings their voices to life. I feel nostalgic about those college years, which, in reality, were only three years ago. I want to respond with a yes. I want to see my friends. I wish I was ignorant enough to say yes to the invite. Should I?
+Just seeing their messages brings their voices to life. I feel nostalgic about those college years, which, in reality, were only some years ago. I want to respond with a yes. I want to see my friends. Should I?
 
 No.
 
@@ -407,86 +536,75 @@ No I can’t. I can’t for them, for me, for those I’ll be seeing and caring 
 
 So I’ll send a polite decline and maybe a brief explanation, wishing them all well and fun. 
 
-The journey there would be too much, [[anyways.-&gt;13. Reflection]]</tw-passagedata><tw-passagedata pid="15" name="Fin." tags="" position="681,801" size="100,100">Tomorrow morning you’ll see this text and smile, and I will remember to eat. I will be strong. You’ve eaten. The city sleeps, for now, and now I sleep too. </tw-passagedata><tw-passagedata pid="16" name="Preface" tags="" position="0,43" size="100,100">//Disclaimer: Before reading, please be aware that the story will heavily feature anxieties regarding racism, discrimination, identity, and death. There will be links provided throughout to articles and resources related to our content.//
+The journey there would be too much, [[anyway.-&gt;13. Reflection]]
+</tw-passagedata>
 
-Our narrative does not take place on a specified date during the pandemic. Readers will find that referenced statistics and reported events span a months-long time frame encompassing the height of the pandemic in NYC. This was done to holistically communicate a complex reality supported by evidence which is recorded/publicized at a pace not reflective of lived experience. This narrative follows a day in the life of a registered nurse living and working in NYC who identifies as Asian American.
-
-While there are moments throughout the plot that are directly hyperlinked to relevant articles and sources, in no way does the body of provided resources in its entirety represent the wealth of information regarding the pandemic and anti-Asian racism fuelled by the pandemic. We recognize that many incidents of discrimination and hate are unreported due to fears of retaliation, gaslighting, and/or law enforcement and media apathy. We hope that what we have gathered here can serve as a foundation for further research and insight into the true scope of the issues we discuss.
-
-Moreover, we do not intend to in any capacity speak for all Asian American healthcare workers. Our story focuses on the day-in-the-life of one fictionalized individual experiencing a reality based on facts, reports, as and first-hand testimonials. In this way, the character presented is an amalgamation of many various accounts of the Asian American experience, specifically the East Asian American experience, during this pandemic. We also recognize that the term &quot;Asian American&quot; is vastly broad, and that the impacts of COVID-19 have been disproportionately manifested amongst various subgroups within the monolithic grouping &quot;Asian American.&quot; 
-
-[[Let&#39;s Begin-&gt;Intro: Awaken]]</tw-passagedata><tw-passagedata pid="17" name="1.1 Meditation" tags="" position="530,215" size="100,100">As I stretch, I am suddenly conscious of my breath, the inhale, pause, exhale. I’m meditating, I realize, and I savor it. These moments before the chaos of the day—remembering myself, feeling.
-
-So, so much loss. For a moment, the calls of Code 3s ring. They ring in my ears, in my head. They become time, marking every half hour or so: death tracks my day. And as I left for the day yesterday, there were still dozens of patients waiting for a bed on the floor; waiting, getting sicker. Sickness. How do I feel today? Do I have any symptoms? I need to check, hold myself accountable. If I become infected, I put countless others at risk, my patients included. And how are my colleagues? Are they still alright?
-
-The risk is ever-present. The risk is made worse by these shortages—of PPE, of tests, ventilators... This risk is a sacrifice I need to make.
-
-But for now, it&#39;s just me. It&#39;s quiet. I’m stretching out and reminding myself of this place I occupy, this body I inherit, and I am grateful for it. I want to be there to care for my patients, so I make sure I am ready to do so.
-
-And what this means is that right now I make a promise. I promise to provide the care that my patients deserve. Maybe this means that I have to restrain myself, lessen the emotional connection I feel with each of them. For the sake of efficiency, for the sake of being the best medical professional I can be, I must distance myself from all that loss, even the possibility of it. 
-
-Breathe in. Breathe out. [[Promise.-&gt;2. Groceries]]</tw-passagedata><tw-passagedata pid="18" name="10.1 Our Elders" tags="" position="514,660" size="100,100">It’s already 7:36pm, and I imagine by now you’ve stored the leftovers away in the fridge in some takeout containers, sliced up some fruits. Not anything, of course, that would conflict with your inner bodily heat—you were always so adamant about that, the true reason for colds and illness.
-
-Do you have enough food at home? I know you can’t make it too far for groceries with that knee. Do you have enough masks? Hand sanitizer? 
-
-How are you?
-
-Ma, if I told you that our elders were under attack, what would you say? Would you tell me that it’s always been okay for you, that it would never happen to you just as it hasn’t happened to you before? 
-
-An old lady was slapped and set on fire in Brooklyn, Ma. (link-repeat: &quot;Why did she deserve this?&quot;)[(open-url: &#39;https://abc7ny.com/woman-set-on-fire-elderly-attack-89-year-old-attacked-bensonhurst-crime/6333749/&#39;)]
-
-And there were fliers posted in Bay Ridge telling us Chinese to get out. (link-repeat: &quot;But really, what&#39;s new?&quot;)[(open-url: &#39;https://gothamist.com/news/racist-anti-chinese-flyers-bay-ridge-are-countered-messages-inclusivity&#39;)]
-
-//Corona Virus spread by Chinese immigration.//
-
-You and I; us, this Chinese immigration. They say we are the reason, Ma. When was the last time you took me back to China? It must have been when I was 5 or 6. Listen to my broken Mandarin, Ma, and you’d know. And now, I am fighting this virus. If they say I am the reason for the virus, is my frontline fight just a battle against myself?
-
-The big news channels don’t really cover this kind of stuff, Ma. The police don’t really care either. Where are you getting your news from? From WeChat? From the Chinese newspapers?
-
-Ma, how are you?
-
-I wish I could see you again. As I walk to the subway station, I imagine I can take this line straight to your stop, Ma. But you and I both know we shouldn’t, we can’t. I can’t risk your health like this. So let’s call sometime this weekend—you remember what I taught you about FaceTime, right? 
-
-Almost at the station now. I need to decompress, some screeching-rail therapy. I need to take care of myself so I can take care of them: those children and parents and grandparents and friends there in the ICU, waiting, praying. [[I need to breathe.-&gt;10.2 Facebook]]</tw-passagedata><tw-passagedata pid="19" name="13. Reflection" tags="" position="844,808" size="100,100">I’m sitting on my bed again, all ready to head to sleep. This is a time to myself; it seems that the streetlamps outside hum just for me, a lullaby. I’m thinking of all those people today. I’m numb, maybe. I’m thinking about all those codes again. Those phone calls. Last goodbyes. Who did I last see today? Who did I last talk to? Will they make it to the morning? Are they already gone?
+<!-- 13 Reflection -->
+<tw-passagedata pid="19" name="13. Reflection" tags="" position="844,808" size="100,100">I’m sitting on my bed again, all ready to head to sleep. This is a time to myself; it seems that the streetlamps outside hum just for me, a lullaby. I’m thinking of all those people today. I’m numb, maybe. I’m thinking about all those codes again. Those phone calls. Last goodbyes. Who did I last see today? Who did I last talk to? Will they make it to the morning? Are they already gone?
 
 Here I am. Sitting here. Another day in this pandemic has passed. Today, lives were lost, lives were saved. I’m here, and I’m ready. Tomorrow I’ll head to the hospital, get ready, and fight the good fight. I’ll be more mindful at 7pm and listen out for that clap.
 
-We’re stronger together. And we are–no matter what, we are here and we are here to stay. The strength of NYC has always been its diversity. We’re tested, but we will emerge stronger, ever more present and aware of how and why we belong. New York tough.
+We’re stronger together. And we are–no matter what, we are here and we are here to stay. The strength of NYC has always been its diversity. We’re tested, but we will emerge stronger, ever more present and aware of how and why we belong. 
+
+New York tough. 
+坚强的纽约 
+//jiān qiáng de niǔ yuē//. 
+
+I&#39;ll memorize this and say it the next time I call Ma. 
 
 Almost midnight now, [[but the sky still glows.-&gt;Fin.]]
-</tw-passagedata><tw-passagedata pid="20" name="10.2 Facebook" tags="" position="597,540" size="100,100">I’m on the subway back home now. The car is near empty. I briefly look around: everyone’s either overanalyzing their shoes or pinned to phone screens. There was a furtive glance up to me as I sat down in my scrubs. At this point, it’s something I’ve gotten used to. 
-
-I take out my phone, following suit, and for a moment I’m just another person riding the subway at the end of a long day. Naturally, I scroll through social media feeds. I’m on Facebook when the headline from a post by a fellow nurse at a neighboring New York hospital catches my eye.
-
-//Nurses and Doctors Speaking Out on Safety Now Risk Their Job//
-
-(link-repeat: &quot;I take a closer look at the article.&quot;)[(open-url: &#39;https://www.nytimes.com/2020/04/09/business/coronavirus-health-workers-speak-out.html&#39;)] Hospitals are threatening employees that expose the shortcomings of institutional policy. I’d heard about this: we’d been warned too about the consequences of taking our grievances about our wellbeing, medical practices, to the public. 
-
-This reminds me. I’d heard from a friend about how a resident at another NYC hospital was forced to do rounds in COVID floors when she had absolutely no knowledge of or skills to give proper treatment. She wanted to help, but her hospital’s administration expected her, a resident psychiatrist, to understand caring for COVID patients and fully meet their needs.
-
-I hear my stop on the speaker. [[I bookmark the post for later.-&gt;11. Ritual]] 
-</tw-passagedata><tw-passagedata pid="22" name="1.05 Stretch" tags="" position="407,200" size="100,100">&lt;style&gt;
-	#count{
-		text-align: center;
-		font-size:25px;
-	}
-&lt;/style&gt;
-
-The darkness, I realize, is a dawn that hasn’t quite settled in yet. My glasses can only do so much now. &#39;&#39;Let&#39;s outdo the sun.&#39;&#39;
-
-I’m on the edge of the bed now, straightening out my limbs and snow-angeling the bed. Did these sheets feel this soft last night? My feet are killing me. These half-days in the hospital—all on feet. On edge. I’ll do a little stretching, paddling the air with the heels of my feet, before getting (link-repeat: &quot;ready.&quot;)[(show: ?num)]
-
-|num)[&lt;div id=&quot;count&quot;&gt;(live:1s)[1  (stop:)] (live:2s)[2  (stop:)] (live:3s)[3  (stop:)] (live:4s) [4  (stop:)] (live:5s)[[[5... -&gt;1.1 Meditation]](stop:)]&lt;/div&gt;]
 </tw-passagedata>
 
-<!-- Daily Report Alert-->
-<tw-passagedata pid="23" name="Daily Report Alert" tags="" position="849,212" size="100,100">
+<!-- Fin.-->
+<tw-passagedata pid="15" name="Fin." tags="" position="681,801" size="100,100">
+	<div class="wechat wechat-static"><img src="doubled-images/wechat-last.svg"></div>
 
-<div class="email">
-&lt;h1&gt;Subject: Daily COVID-19 Cases, New York City&lt;/h1&gt;
-&lt;button&gt;[[Open -&gt;3. Daily Report]]&lt;/button&gt;</div>
+	Tomorrow morning you’ll see this text and smile, and I will remember to eat. I will be strong. You’ve eaten. The city sleeps, for now, and now I sleep too. 
 
+	[[A Message from the Authors-&gt;Final Message]]	
 </tw-passagedata>
+
+<!-- Final Message -->
+<tw-passagedata pid="24" name="Final Message" tags="" position="681,951" size="100,100">
+	Thank you for joining us and living a day distilled into a progression of scenes, questions and triumphs materialized in words on your screen. For many, us included, the conflict in belonging embodied in the Asian American identity is one which loans itself to uncertainty about who we are, who we are meant to be, what we can be. This internal conflict is especially bolstered this time of societal reckoning with race and racism. We’d like to echo a sentiment which appears in the story you’ve read: we are here and we are here to stay. 
+
+	In concluding our narrative, we’d like you to take note of two points regarding what you’ve read before continuing on to a page of resources.
+
+	The body of referenced articles and resources does not represent the wealth of information regarding healthcare work during the pandemic and current anti-Asian racism in its entirety. We recognize that many incidents of Anti-Asian discrimination and hate are unreported due to fears of retaliation, gaslighting, and/or law enforcement and media apathy. We hope that what we have gathered here can serve as a foundation for further research and insight into the true scope of these issues.
+
+	We also do not intend to represent the experiences of all Asian American healthcare workers in any capacity. Our story focuses on the day-in-the-life of one fictionalized individual experiencing a reality based on reports and first-hand testimonials. In this way, the character you meet is an amalgamation of many various accounts of the Asian American experience, specifically the East Asian American experience during this pandemic. We also recognize that the term &quot;Asian American&quot; is vastly broad, and that the impacts of COVID-19 have been disproportionately manifested amongst various subgroups within the monolithic grouping &quot;Asian American.&quot; 
+
+	[[Please read through and engage with the resources we’ve provided here.-&gt;Resources Page]]
+</tw-passagedata>
+
+<!-- Resources Page -->
+<tw-passagedata pid="25" name="Resources Page" tags="" position="681,1101" size="100,100">
+	(link-repeat: &quot;To report anti-Asian hate incidents (available in multiple languages)&quot;)[(open-url: &quot;http://www.asianpacificpolicyandplanningcouncil.org/stop-aapi-hate/?fbclid=IwAR14WhI_D-8harRJKDpfbwrlZzpcS89TGBS4hDeDd1Jb415daEkMbyhbOIQ&quot;)]
+
+	(link-repeat: &quot;Petition: End Hate Crimes Against Asian Americans&quot;)[open-url:&quot;https://www.change.org/p/governor-andrew-cuomo-end-hate-crimes-against-asian-americans?fbclid=IwAR0innhzvIgMYJdmnuAwZogcEP1SjR_o0kizN1yHq3wcMTtsQmA1LPuJISg&quot;)]
+	
+	(link-repeat: &quot;About #Hateisavirus&quot;)[(open-url: &quot;https://hateisavirus.org/&quot;)]
+	
+	(link-repeat: &quot;To complete the 2020 census&quot;)[(open-url: &quot;https://2020census.gov/en.html?fbclid=IwAR11rbgBaha8HyqneG2ZvnBFqU9E7-b3IrZLx_-ibN7AFDhVGLpew67vFQE&quot;)]
+	
+	(link-repeat: &quot;Anti-Asian Violence: Know Your Rights&quot;)[(open-url: &quot;https://www.youtube.com/watch?v=6CZrC4lu8J0&amp;feature=youtu.be&amp;fbclid=IwAR2kZbPgcgeLGLeoqNUq2Q6aNx0KpecuEdoFAzQ0z_TA8mMRi2IWnebMgRs&quot;)]
+	
+	To read about incidents of anti-Asian hate and other Asian diasporic identity-related news: (link-repeat: &quot;NextShark&quot;)[(open-url: &quot;https://nextshark.com/&quot;)] and (link-repeat: &quot;AsAm News&quot;)[(open-url: &quot;https://asamnews.com/&quot;)]
+	
+	Support Chinatown: (link-repeat: &quot;Welcome to Chinatown&quot;)[(open-url: &quot;https://www.welcometochinatown.com/&quot;)] and (link-repeat: &quot;Heart of Dinner&quot;)[(open-url: &quot;campsite.bio/heartofdinner&quot;)]
+	
+	Local groups that have taken action in response to the surge in anti-Asian hate:
+	(link-repeat: &quot;Concerned AsAm Citizens of NYC&quot;)[(open-url: &quot;https://www.facebook.com/CAACNYC/&quot;)]
+	(link-repeat: &quot;The Guardian Angels&quot;)[(open-url: &quot;http://guardianangels.org/&quot;)]
+	(link-repeat: &quot;Article on the Guardian Angels&quot;)[(open-url: &quot;https://asamnews.com/2020/07/15/chinese-american-recruits-join-guardian-angels-as-group-expands-into-chinatown/?fbclid=IwAR39uGHZ5LOFI9g7ER4e9UFGKHhad55mVjerAS_KKH_ZLNadonffXtqlzDc&quot;)]
+	(link-repeat: &quot;NYC-Based Asian American Organizations&quot;)[(open-url: &quot;http://www.awib.org/index.cfm?fuseaction=page.viewPage&amp;pageID=859&amp;nodeID=1&quot;)]	
+	(link-repeat: &quot;Asian American Advocacy Groups Around the United States&quot;)[(open-url: &quot;http://www.awib.org/index.cfm?fuseaction=page.viewpage&amp;pageid=816&quot;)]
+
+
+
+	(align:"=><=")[<a class="end" href="credits.html">Fin.</a>]
+</tw-passagedata>
+
 </tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
