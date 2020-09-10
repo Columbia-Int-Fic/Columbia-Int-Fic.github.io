@@ -91,7 +91,10 @@
                     sbg = s.substring(0, 2);
                     console.log("simg: " + simg);
                     console.log("semail: " + semail);
-                    if (simg=="img") {
+                    if (simg == "sta") {
+                        off();
+                    }
+                    else if (simg=="img") {
                         on();
                         var num = s.replace('img','');
                         s = num;
