@@ -13,6 +13,7 @@
 /* 0.0: WeChat SVGs */
 .wechat { /* WeChat DIV */
     position: relative;
+    margin-bottom: -50px;
 }
 
 .wechat-static, .wechat-hidden { /* WeChat background image */

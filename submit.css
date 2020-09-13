@@ -19,6 +19,9 @@ body {
 }
 
 /* form */
+form {
+    margin-bottom: 7vh;
+}
 label {
     font-family: 'Maven Pro', sans-serif;
     text-transform: uppercase;
