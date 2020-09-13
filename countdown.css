@@ -5,9 +5,6 @@ body {
     text-align: center;
     margin: 20px;
     font-family: 'Maven Pro', sans-serif;
-    border-left: 70px solid white;
-    border-right: 70px solid white;
-    
     height: 100%;
     display: table-cell;
     vertical-align: middle;
