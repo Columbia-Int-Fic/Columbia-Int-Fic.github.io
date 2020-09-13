@@ -37,7 +37,7 @@ body {
 
 .digits p {
     font-family: Maven Pro;
-    font-size: 20px;
+    font-size: 30px;
 
     color: #8F6565;
 }
@@ -51,15 +51,18 @@ body {
     margin-bottom: 6vh;
 }
 
+.contact-head {
+    margin-bottom: 10vh;
+}
+
 .contact {
     margin-bottom: 10vh;
 }
 
 .icon {
-    margin-top: 1vh;
-    margin-bottom: 5vh;
-    width: 70px;
-    height: 70px;
+    margin: 1vh 4vh 5vh 4vh;
+    width: 50px;
+    height: 50px;
 }
 
 a {
@@ -112,9 +115,13 @@ a:hover {
         margin-bottom: 15vh;
     }
 
+    .digits p{
+        font-size: 30px;
+    }
+
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -126,24 +133,24 @@ a:hover {
     .mission h4 {
         font-size: 15px;
         line-height: 25px;
-        margin-bottom: 15vh;
+        margin-bottom: 3vh;
     }
 
     .numbers {
-        margin-bottom: 15vh;
+        margin-bottom: 10vh;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .digits h1 {
-        font-size: 100px;
-        margin-bottom: -10vh;
+        font-size: 70px;
     }
     
     .digits p {
         font-family: Maven Pro;
         font-size: 15px;
+        margin-bottom: 2vh;
     }
 
     .contact h4 {
@@ -153,8 +160,8 @@ a:hover {
     }
 
     .icon {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 }
 
