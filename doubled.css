@@ -10,6 +10,18 @@
     margin: auto;
 }
 
+/* ALL HIDDEN ELEMENTS TO APPEAR ON ALL PAGES */
+.hidden {
+    display: none;
+}
+
+/* ALL CLICKABLE ELEMENTS TO PROMPT HIDDEN TEXT */
+.appear, .appear2 {
+    font-style: italic;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 /* 0.0: WeChat SVGs */
 .wechat { /* WeChat DIV */
     position: relative;
@@ -43,16 +55,12 @@
     display: none;
 }
 
-/* ALL HIDDEN ELEMENTS TO APPEAR ON ALL PAGES */
-.hidden {
-    display: none;
-}
-
-/* ALL CLICKABLE ELEMENTS TO PROMPT HIDDEN TEXT */
-.appear, .appear2 {
-    font-style: italic;
-    font-weight: 700;
-    cursor: pointer;
+/* 0.1: Lamp */
+.lamp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 
 /* 0.3: Groceries */
