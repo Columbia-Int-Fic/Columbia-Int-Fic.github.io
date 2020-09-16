@@ -17,7 +17,8 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 95%;
-    width: 100%;
+    width: 94%;
+    overflow: hidden;
 }
 
 body {
