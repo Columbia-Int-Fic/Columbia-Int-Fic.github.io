@@ -6,14 +6,13 @@
     /* all variables above */
 }
 
-html, body{
-	height:100%;
-	overflow: hidden;
+html {
+    color: black;
+    text-align: center;
     font-family: 'Maven Pro', sans-serif;
 }
 
 #home-body {
-    background-image: url(images/bluemap.svg);
     background-color: #EEEEEE;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,9 +20,22 @@ html, body{
     width: 100%;
 }
 
-/*nav info, including link specs
-ISSUES: should we add mini-logo?
-*/
+body {
+  margin: 20px auto;
+  padding: 0 100px;
+  overflow-x: hidden;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto;
+  color: black;
+}
+
+div, img, footer {
+  position: relative;
+  box-sizing: border-box;
+}
 
 /* navigation */
 
@@ -123,112 +135,74 @@ a:active {color: blue;
     cursor: pointer;
 }
 
-  
-/*Button
-    There's CSS button code and then each button also gets its own code for placement purposes.
+/* template's settings
 
-    CAN BE DELETED AFTER JS BUTTON IS SORTED
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 36pt;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+h4 {
+  font-size: 16pt;
+}
+
+h5 {
+  font-size: 14pt;
+}
+
+h6 {
+  font-size: 12pt;
+}
+
+p {
+  font-size: 12pt;
+  margin-bottom: 12pt;
+}
+
+strong {
+  font-weight: 900;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  color: black;
+}
+
+a {
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #dff3fd;
+}
+a:visited {
+  color: #dff3fd;
+}
+li.active a, a:hover, a:active {
+  color: #e5e5e5;
+}
 */
 
-.Button {
-    background: #D69898;
-    border-radius:42px;
-	border:5px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	padding:14px 14px;
-	text-decoration:none;
-}
-
-.Button:hover {
-	background-color:#ffffff;
-}
-.Button:active {
-	position:relative;
-	top:1px;
-}
-
-/* story 1 (New York) */
-#story1 {
-    margin-left: 850%;
-    margin-bottom: -1100%;
-}
-
-
-/* story 2 (South Korea) */
-#story2 {
-    margin-left: 2570%;
-    margin-bottom: -1300%;
-}
-
-/* story 3 (Philadelphia) */
-#story3 {
-    margin-left: 600%;
-    margin-bottom: -1300%;
-}
-
-/* story 4 (Ireland/New Orleans) */
-#story4 {
-    margin-left: 1100%;
-    margin-bottom: -850%;
-}
-
-/*javascript pop-up*/
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-}
-/* The popup matches our style for the most part. */
-.popup .popuptext {
-    visibility: hidden;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    border-radius: 0%;
-    padding: 3%; 
-    height: 50%;
-    width: 50%;
-    position: fixed;
-    top: auto;
-    bottom: auto;
-    left: 25%;
-    right: 20%;
-    z-index: 10000;
-    font-family: "Maven Pro", sans-serif;
-    border: 4px solid black;
-}
-
-.popuptext img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-}
-
-.popuptext h1{
-    color: #184876
-}
-
-.popup .show {
-    visibility: visible;
-}
-
-#myPopup3 {
-    height: 80%;
-}
-
+/* popup */
 .enterButton {
 	background-color:#BAD1E5;
 	display:inline-block;
 	cursor:pointer;
-    font-weight: 500;
-	font-family: "Maven Pro", sans-serif;
-	font-size:28px;
-	padding:13px 49px;
+  font-weight: 500;
+	font-size: 1em;
+	padding:8px 30px;
 	text-decoration: none;
 }
 .enterButton:hover {
@@ -238,21 +212,108 @@ a:active {color: blue;
 	position:relative;
 	top:1px;
 }
-
-
-/* clode button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.content h2{
+  color: #184876
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+/* map */
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.centered-y {
+  position: absolute;
+  margin-left: 5%;
+  width: 90%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.distribution-map {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.distribution-map > img {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.distribution-map .map-point {
   cursor: pointer;
+  outline: none;
+  z-index: 0;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  /*opacity: 0.8;*/
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
+  -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
+  -webkit-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  background: #D69898;
+  border: 7px solid #ffffff;
+}
+.distribution-map .map-point .content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  overflow: overlay;
+  font-family: "Maven Pro", sans-serif;
+
+}
+.distribution-map .map-point:active, .distribution-map .map-point:focus {
+  margin: 0;
+  padding: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  width: 750px;
+  height: 500px;
+  color: black;
+  z-index: 1;
+  -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+}
+.distribution-map .map-point:active .content, .distribution-map .map-point:focus .content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+  -webkit-transition-delay: 0.25s, 0s, 0s;
+  -webkit-transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out 0.25s, height 0.25s ease-in-out, overflow 0.25s ease-in-out;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.distribution-map .map-point:hover {
+    background-color:#ffffff;    
+    }
+
+.distribution-map .map-point:active .content a:hover, .distribution-map .map-point:active .content a:active, .distribution-map .map-point:focus .content a:hover, .distribution-map .map-point:focus .content a:active {
+  color: #afe1fa;
 }
 
 @font-face {
@@ -272,224 +333,183 @@ a:active {color: blue;
 
 }
 
-/* Styling for the green fullscreen button on the homepage */
-.fs-btn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 50%;
-    margin-top: 80vh;
-    margin-left: 3vh;
-    position: relative;
-    display: inline-block;
-    outline: none;
-}
-
-.fs-btn:focus {
-    outline: 0;
-}
-
-.fs-btn .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-    top: -20px;
-    left: 110%;
-}
-
-.fs-btn:hover .tooltiptext {
-    visibility: visible;
-    opacity: 0.5;
-}
-
 /* Styling for story template */
 
 #template-body {
-    background-color: #5D926E;
-    font-family: 'Catamaran', sans-serif;
+  background-color: #5D926E;
+  font-family: 'Catamaran', sans-serif;
 }
 
 .template-head {
-    display: flex;
-    margin-top: -1.4vh;
-    margin-right: -1vh;
-    margin-left: -1vh;
-    
+  display: flex;
+  margin-top: -1.4vh;
+  margin-right: -1vh;
+  margin-left: -1vh;
+  
 }
 
 .story-pg-whatif {
-    padding-left: 8vh;
-    margin-top: 3vh;
+  padding-left: 8vh;
+  margin-top: 3vh;
 }
 
 .story-pg-title {
-    text-align: center;
-    font-size: 300%;
-    padding-left: 22%; /* try and put all padding in vh rather than px, for cross screen compatibility*/
-    margin-top: 2vh;
-    position: static;
+  text-align: center;
+  font-size: 300%;
+  padding-left: 22%; /* try and put all padding in vh rather than px, for cross screen compatibility*/
+  margin-top: 2vh;
+  position: static;
 }
 
 /* Styling for Sinead-Louisa splash screen */
 .sinead-splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);   
-    z-index: 200;
-    color: white;
-    text-align: center;
-    line-height: 5vh;
-    cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);   
+  z-index: 200;
+  color: white;
+  text-align: center;
+  line-height: 5vh;
 }
 
 .sinead-splash.display-none {
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -10;
-    color: white;
-    text-align: center;
-    line-height: 10vh;
-    transition: all 0.5s;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  color: white;
+  text-align: center;
+  line-height: 10vh;
+  transition: all 0.5s;
 }
 
 .sinead-txt-1 {
-    font-size: 100px;
-    font-family: 'Cedarville Cursive', cursive;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    margin-top: 40vh;
+  font-size: 100px;
+  font-family: 'Cedarville Cursive', cursive;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  margin-top: 40vh;
 }
 
 .sinead-txt-2 {
-    font-family: "Maven Pro", sans-serif;
-    font-size: 150%;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 1s;
-    cursor: pointer;
-    margin-top: 10vh;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 150%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 1s;
+  cursor: pointer;
+  margin-top: 10vh;
 }
 
 .sinead-txt-3 {
-    font-family: "Maven Pro", sans-serif;
-    font-size: 100%;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 2s;
-    cursor: pointer;
-    margin-top: 10vh;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 2s;
+  cursor: pointer;
+  margin-top: 10vh;
 }
 
 /* Styling for Sinead-Louisa webpage */
 
 #story-body {
-    background-image:url("images/sinead/bg-1.jpg");
-    background-color: #172740;
-    background-position: 7vh 0vh;
-    background-repeat: no-repeat;
-    background-size: 93%;
-    font-family: 'Helvetica', sans-serif;
+  background-image:url("images/sinead/bg-1.jpg");
+  background-color: #172740;
+  background-position: 7vh 0vh;
+  background-repeat: no-repeat;
+  background-size: 93%;
+  font-family: 'Helvetica', sans-serif;
+  cursor: default;
+  z-index: 2000;
 }
 
 .story-txt {
-    width: 65%;
-    height: 65%;
-    position: absolute;
-    top: 16%;
-    left: 7%;
-    border: solid #000;
-    border-width: 1px;
-    margin: auto;
-    overflow: hidden;
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 16%;
+  left: 7%;
+  border: solid #000;
+  border-width: 1px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .iframe-ui {
-    margin-top: 0;
-    margin-bottom: -0.7vh;
+  margin-top: 0;
+  margin-bottom: -0.7vh;
 }
 
 /*CSS styling for Sinead and Louisa iframe */
 
- #bg-modal {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+#bg-modal {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 } 
 
 #modal-pic {
-    text-align: center;
-    padding-top: 5%;
-    cursor: pointer;
+  text-align: center;
+  padding-top: 5%;
+  cursor: pointer;
 }
 
 .modal-email {
-    width: 50%;
-    height: 50%;
-    background-color: white;
-    border-radius: 4px;
-    display: none;
-    margin: auto;
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 6.5vh;
-    text-align: center;
-    border-radius: 4%;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 4px;
+  display: none;
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 6.5vh;
+  text-align: center;
+  border-radius: 4%;
 }
 
 #notif {
-    padding-top: 4vh;
+  padding-top: 4vh;
 }
 
 #modal-email-text {
-    margin-top: 0vh;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 5vh;
+  margin-top: 0vh;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 5vh;
 }
 
 #ui-1 {
-    width: 100%;
+  width: 101%;
 }
 
 #open-btn {
-    content: url(images/sinead/open.svg);
-    width: 15%;
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+  content: url(images/sinead/open.svg);
+  width: 15%;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
