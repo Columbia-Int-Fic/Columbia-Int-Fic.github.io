@@ -229,3 +229,10 @@ a.end{
 a.end:hover{
     color: #974747;
 }
+
+.nyc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
