@@ -130,6 +130,7 @@ a:active {color: blue;
 
 .splash-txt-2 {
     font-family: 'Maven Pro', sans-serif;
+    font-size: 30px;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 2s;
