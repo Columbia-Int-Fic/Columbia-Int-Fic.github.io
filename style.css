@@ -260,7 +260,7 @@ li.active a, a:hover, a:active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   /*opacity: 0.8;*/
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -35%);
   -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
   -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
   -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
@@ -270,6 +270,7 @@ li.active a, a:hover, a:active {
   background: #D69898;
   border: 7px solid #ffffff;
 }
+
 .distribution-map .map-point .content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -290,7 +291,7 @@ li.active a, a:hover, a:active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   width: 750px;
-  height: 500px;
+  height: 550px;
   color: black;
   z-index: 1;
   -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
@@ -422,7 +423,7 @@ li.active a, a:hover, a:active {
 
 #story-body {
   background-image:url("images/sinead/bg-1.jpg");
-  background-color: #172740;
+  background-color: #541211;
   background-position: 7vh 0vh;
   background-repeat: no-repeat;
   background-size: 93%;
