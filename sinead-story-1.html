@@ -115,12 +115,23 @@ Last Thursday, I went into &lt;span class=&quot;clickers&quot; id=&quot;2&quot;&
 		  console.log(&quot;gif clicker 3 clicked!&quot;);
 		  window.top.postMessage(&#39;gif3&#39;, &#39;*&#39;);	
 	  });
+	  
 	var audio6 = document.createElement(&#39;audio&#39;);
-	  audio6.src = &#39;sounds/aoife.m4a&#39;;
+	  audio6.src = &#39;sounds/aoife.mp3&#39;;
 	  document.getElementById(&#39;audio6&#39;).addEventListener(&quot;click&quot;, function() {
 	  console.log(&quot;audio played!&quot;);
 	  audio6.play();
 	  });
+	  
+	  /*
+	  var playPromise = document.querySelector(&#39;audio6&#39;).play();
+	  if (playPromise !== undefined) {
+  			playPromise.then(function() {
+  			}).catch(function(error) {
+  		});
+		}
+	*/
+	  
   var audio2 = document.createElement(&#39;audio&#39;);
 	  audio2.src = &#39;sounds/muinteoir.m4a&#39;;
 	  document.getElementById(&#39;audio2&#39;).addEventListener(&quot;click&quot;, function() {
@@ -219,8 +230,7 @@ You know how Mam teaches Irish? She knows lots of |txfy&gt;[&lt;span class = &qu
 		audio10.play();
 		});
 &lt;/script&gt;]
-}
-</tw-passagedata><tw-passagedata pid="2" name="Email1" tags="Louisa-Email" position="759,462" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="2" name="Email1" tags="Louisa-Email" position="759,462" size="100,100">{
   &lt;script&gt;
 	window.top.postMessage(&#39;email1&#39;, &#39;*&#39;);
 	console.log(&quot;email clicker 1 executed!&quot;); 
