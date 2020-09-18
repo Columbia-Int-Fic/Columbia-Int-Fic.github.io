@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>what IF: I See You</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/white-logo.svg"/>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-176737183-1');
+        </script>
+    </head>
+
+    <body id="story-body-2" onload="reload()">
+        
+        <div class="story-txt-2">
+            <iframe
+                mozallowfullscreen="true"
+                src="i-see-you-1.html"
+                frameborder="0"
+                width="100%" height="100%"
+                id="twine-embed-2">
+            </iframe>
+        </div>
+
+        <script>
+            function reload() {
+                var x = document.getElementById('twine-embed-2').contentWindow;
+                x.postMessage('reload', '*');
+            } 
+
+            window.onbeforeunload = function(){
+                    return 'Your progress will not be saved!';
+            };
+        </script>
+    </body>
+</html>
