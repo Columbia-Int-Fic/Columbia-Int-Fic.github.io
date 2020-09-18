@@ -260,8 +260,8 @@ li.active a, a:hover, a:active {
   border-radius: 20px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   /*opacity: 0.8;*/
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -35%);
+  -webkit-transform: translate(-50%, -39%);
+  transform: translate(-50%, -39%);
   -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
   -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
   -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
