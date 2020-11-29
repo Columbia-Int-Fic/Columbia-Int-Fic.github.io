@@ -1,0 +1,184 @@
+:root {
+    --dark: #000000; 
+	--light: #FFFFFF; 
+	--blocks: #99B3C6;
+    --transition: all 0.3s ease 0s; 
+    /* all variables above */
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	overflow: auto;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+body{
+	display:flex; 
+	flex-direction:column;
+	background-color: #FCFCFC;
+}
+
+p, a, h3, h4, h1 {
+	color: var(--light);
+	text-decoration: none;
+}
+
+main {
+	height: 90%;
+	display: grid;
+	flex:1 0 auto;
+	padding:20px;
+	grid-template-columns: minmax(60px, 1fr) repeat(3, minmax(50px, 380px)) minmax(60px, 1fr); 
+}
+
+/* continue button */
+.space-bar{
+	grid-column: 1 / span 5;
+	height: 50px;
+	margin-top: 50px 0 0 0;
+	padding-top: 20px;
+	cursor: pointer;
+	text-align: center;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 30px;
+	color: #9DC0E8;
+}
+/* project credits */
+.project-credits { /* span across entire screen */
+    display: inline-block;
+    grid-column: 1 / span 5;
+    text-align: center;
+	margin-top: 70px;
+	font-size: 18px;
+	overflow: scroll;
+}
+
+.project-credits h1 { /* span across entire screen */
+    font-family: 'Playfair Display', serif;
+	padding: 10px;
+	font-size: 80px;
+	word-spacing: 50px;
+}
+
+.creds-rolling h4 { /* span across entire screen */
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 20px
+}
+
+.creds-rolling p {
+	font-family: 'Maven Pro', sans-serif;
+	letter-spacing: 1px;
+}
+
+/* footer, constant through two pages*/
+footer{
+	flex-shrink:0;
+	align-self: end;
+	height: 10%;
+	background: linear-gradient(270deg, #FFBBB1 0%, #FFDB9C 100%);
+	color: var(--light);
+	text-align: center;
+	font-family: 'Maven Pro', sans-serif;
+	width:100%;
+}
+
+footer img {
+	float: left;
+	height: 60px;
+	margin: 15px;
+}
+
+footer h2 {
+	text-align: center;
+	padding-top: 30px;
+	font-size: 30px;
+}
+
+footer a {
+	padding-right: 50px;
+	float: right;
+}
+
+/* media query */
+@media only screen and (max-width: 650px) { /*if hits this pixels or smaller, override styles above*/
+	.counter-block {
+		height: 300px;
+		padding: 25px 50px 20px 50px;
+	}
+
+	.counter-block p {
+		font-size: 16px;
+	}
+	
+	.counter-block h3{	
+		font-size:50px;
+	}
+
+	.space-bar{
+		height: 100px;
+		margin-top: 25px 0 0 0;
+		padding-top: 20px;
+	}
+
+	.space-text {
+		font-size: 25px;
+	}
+	
+	footer {
+		height: 75px;
+	}
+
+	footer img {
+		display: none;
+	}
+
+	footer h2 {
+		padding: 10px;
+		font-size: 20px;
+	}
+}
+
+/* font info */
+
+@font-face {
+    font-family: 'tt_normsbold';
+    src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_normsthin_italic';
+    src: url('fonts/ttnorms-thinitalic-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_normslight';
+    src: url('fonts/ttnorms-light-webfont.woff2') format('woff2'),
+         url('fonts/ttnorms-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mermaid_swash';
+    src: url('fonts/mermaid_swash_caps-webfont.woff2') format('woff2'),
+         url('fonts/mermaid_swash_caps-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
