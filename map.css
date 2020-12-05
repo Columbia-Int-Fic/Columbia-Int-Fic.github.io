@@ -20,7 +20,7 @@ html, body{
 body{
 	display:flex; 
 	flex-direction:column;
-	background-color: #FCFCFC;
+	background-color: #ffeae7;
 }
 
 p, a, h3, h4, h1 {
