@@ -1,148 +1,53 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-<!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <!-- Current CSS -->
-        <link rel="stylesheet" href="style.css"/>
-        <!-- Logo link -->
-        <link rel="shortcut icon" href="images/white-logo.svg" type="image/x-icon"/>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"> <!-- Playfair font-->
-    
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-2"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-            gtag('config', 'UA-176737183-1');
-          </script>
-        
-<title>Columbia Int Fic: what IF - Home</title> 
-    </head>
-<body>
-           <body id="home-body">
+    <!-- Current CSS -->
+    <link rel="stylesheet" href="style.css"/>
 
+    <!-- Logo link -->
+    <link rel="shortcut icon" href="images/white-logo.svg" type="image/x-icon"/>
 
-        <div class="container-fluid">
-          <div class="splash">
-            <img width="1200" src="images/white-logo.svg" class="splash-logo" alt="Columbia Int Fic Logo">
-            <h1 class="splash-txt-1">what IF</h1>
-            <p class="splash-txt-2">click to continue</p>
-          </div>
-            
-<div class="distribution-map">
-    <!-- This was broken for a while because image hosts are annoying, so now it's a data uri. Sorry :( -->
-    <img src="images/bluemap.svg" alt="Columbia Int Fic interactive world map" />
-    <!--In the original application, these points are injected with Javascript, but ideally, they'd be injected with a haml loop. Because I'm hardcoding content, I'm presenting this as prerendered HTML-->
-    <button class="map-point" style="top:38%;left:28%">
-        <div class="content">
-            <div class="centered-y">
-                <h2>A Doubled Front</h2>
-                <img src="doubled-images/cover.gif" alt="A Doubled Front Interactive Fiction" style="width:350px;margin-top:-30px"><br>
-                <p>A day-in-the-life of a Chinese American healthcare worker reconciling duty and selfless service with questions of identity and belonging in the wake of surging anti-Asian hate. <br><br>
-                    <b>Writers:</b> Benjamine Mo and Victoria Geh<br>
-                    <b>Tech:</b> Victoria Geh<br>
-                    <b>Visuals:</b> Benjamine Mo<br><br>
-                    <b><u>Estimated reading time:</u></b> 15 mins <br><br>
-                <a href="doubledfront.html" class="enterButton">enter</a>
-              </p>
-            </div>
-        </div>
-    </button>
-    <button class="map-point" style="top:30%;left:45%">
-        <div class="content">
-            <div class="centered-y">
-                    <h2>Sinéad & Louisa</h2>
-                    <img src="images/sinead/cover.jpg" alt="Sinead & Louisa Interactive Fiction" style="width:230px;"><br>
-                    <p> Two young girls, one in Ireland and the other in Louisiana, rapidly adjust to the struggles (and joys) of virtual learning and staying at home. <br><br>
-                        <b>Writers:</b> Jane Loughman and Elisabeth McLaughlin<br>
-                        <b>Tech:</b> Rishi Chhapolia<br>
-                        <b>Visuals:</b> Elisabeth McLaughlin<br><br>
-                        <b><u>Estimated reading time:</u></b> 30 mins <br>
-                    <br><a href="sinead-page-1.html" class="enterButton">enter</a><br>
-                    </p>
-            </div>
-        </div>
-    </button>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"> <!-- Playfair font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> <!-- Open Sans font-->
 
-    <button class="map-point" style="top:43%;left:81%">
-        <div class="content">
-            <div class="centered-y">
-                <h2>From Bystander to Activist</h2>
-                <img src="SLimages/storycover.JPG" alt="Sinead & Louisa Interactive Fiction" style="width:230px;"><br>
-                <p>As South Korea confronts a crisis of sexual abuse, from widespread spycam crimes to the Nth room, citizens face a world of unjust realities. This piece tells the story of one such person and asks, “What does it mean to be a bystander?”<br><br>
-                    <b>Writers:</b> Sally Jee and Lauren Alcindor<br>
-                    <b>Tech:</b> Lauren Alcindor<br>
-                    <b>Visuals:</b> Katherine Bibilouri<br><br>
-                    <b><u>Estimated reading time:</u></b> 30 mins <br><br>
-                <a href="SLstoryfinal.html" class="enterButton">enter</a>
-                </p>
-            </div>
-        </div>
-    </button>
+    <!--mapbox-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 
-    <button class="map-point" style="top:42%;left:25%">
-        <div class="content">
-            <div class="centered-y">
-                <h2>I See You</h2>
-                <img src="images/i-see-you/title-1.gif" alt="I See You Interactive Fiction" style="width:280px;margin-bottom:10px"><br>
-                <p>Step into the shoes and gloves of an ICU surgeon. You are Dr. Sabrina Kelly as she prepares for her newly adjusted surgical routine during COVID-19. <br><br>
-                    <b>Writers:</b> Payton Geller and Arina Karkhanis<br>
-                    <b>Tech:</b> Rishi Chhapolia<br>
-                    <b>Visuals:</b> Celia Lê<br><br>
-                    <b><u>Estimated reading time:</u></b> 5-10 mins <br><br>
-                <a href="i-see-you-page.html" class="enterButton">enter</a><br>
-                </p> 
-            </div>
-        </div>
-    </button>
-    
-    <!-- extra buttons
-    <button class="map-point" style="top:60%;left:53%">
-        <div class="content">
-            <div class="centered-y">
-                <h2>Toto</h2>
-                <p>I bless the rains</p>
-            </div>
-        </div>
-    </button>
-    <button class="map-point" style="top:25%;left:70%">
-        <div class="content">
-            <div class="centered-y">
-                <h2>With Love</h2>
-                <p>&mdash; 007</p>
-            </div>
-        </div>
-    </button>-->
-</div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <!-- Nav Bar-->
-  <nav class="navbar navbar-custom navbar-expand-lg navbar-light fixed-bottom">
-    <a class="navbar-brand" href="/index.html"><!-- <img src="images/favicon_io/maroon-logo.png" style="width:40px"> --></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="about.html">about <span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="team.html">meet the team</a>
-        <a class="nav-link" href="submit.html">submit a story</a>
-      </div>
+      gtag('config', 'UA-176737183-1');
+    </script>
+
+    <title>Columbia Int Fic: what IF - Home</title> 
+</head>
+
+<body id="home-body">
+
+    <div class="container-fluid">
+        <div class="splash">
+          <img width="1200" src="images/white-logo.svg" class="splash-logo" alt="Columbia Int Fic Logo">
+          <h1 class="splash-txt-1">what IF</h1>
+          <p class="splash-txt-2">click to continue</p>
     </div>
-  </nav>
+    
+<div id='map'></div>
 
-    
-      <script src="index.js"></script>  
-    
-    </body>
+<script src="index.js"></script>
+
+</body>
 </html>
