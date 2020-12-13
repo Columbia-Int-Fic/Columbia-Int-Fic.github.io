@@ -186,3 +186,178 @@ p {
  position:relative;
  top:1px;
 }
+
+/* Styling for Sinead-Louisa splash screen */
+.sinead-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);   
+  z-index: 200;
+  color: white;
+  text-align: center;
+  line-height: 5vh;
+}
+
+.sinead-splash.display-none {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  color: white;
+  text-align: center;
+  line-height: 10vh;
+  transition: all 0.5s;
+}
+
+.sinead-txt-1 {
+  font-size: 100px;
+  font-family: 'Cedarville Cursive', cursive;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  margin-top: 40vh;
+}
+
+.sinead-txt-2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 150%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 1s;
+  cursor: pointer;
+  margin-top: 10vh;
+}
+
+.sinead-txt-3 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 2s;
+  cursor: pointer;
+  margin-top: 10vh;
+}
+
+/* Styling for Sinead-Louisa webpage */
+
+#story-body {
+  background-image:url("images/sinead/bg-1.jpg");
+  background-color: #541211;
+  background-position: 7vh 0vh;
+  background-repeat: no-repeat;
+  background-size: 93%;
+  font-family: 'Helvetica', sans-serif;
+  cursor: default;
+  z-index: 2000;
+}
+
+#story-body-2 {
+  background-color: #541211;
+  background-position: 0vh 0vh;
+  margin: 0;
+  padding: 0;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  cursor: default;
+  z-index: 2000;
+}
+
+.story-txt {
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 16%;
+  left: 7%;
+  border: solid #000;
+  border-width: 1px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.story-txt-2 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F3E9D2;
+  margin: auto;
+  overflow: hidden;
+}
+
+.iframe-ui {
+  margin-top: 0;
+  margin-bottom: -0.7vh;
+}
+
+/*CSS styling for Sinead and Louisa iframe */
+
+#bg-modal {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+} 
+
+#modal-pic {
+  text-align: center;
+  padding-top: 5%;
+  cursor: pointer;
+}
+
+.modal-email {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 4px;
+  display: none;
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 6.5vh;
+  text-align: center;
+  border-radius: 4%;
+}
+
+#notif {
+  padding-top: 4vh;
+}
+
+#modal-email-text {
+  margin-top: 0vh;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 5vh;
+}
+
+#ui-1 {
+  width: 101%;
+}
+
+#open-btn {
+  content: url(images/sinead/open.svg);
+  width: 15%;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
