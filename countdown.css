@@ -1,5 +1,6 @@
 body {
-    background-color: #055B94;
+    /*background-color: #055B94; if solid color */
+    background-image: linear-gradient(#f48787, #8CCB95);
     color: white;
     font-size: 20px;
     text-align: center;
