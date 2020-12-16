@@ -1,6 +1,6 @@
 body {
-    /*background-color: #055B94; if solid color */
-    background-image: linear-gradient(#f48787, #8CCB95);
+    /*background-color: #620000; /*if solid color */
+    background-image: linear-gradient(#620000, #FFFFFF); /* if gradient*/ 
     color: white;
     font-size: 20px;
     text-align: center;
