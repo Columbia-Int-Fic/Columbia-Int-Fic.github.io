@@ -1,947 +1,0 @@
-(dp0
-S'buildDestination'
-p1
-VC:\u005cUsers\u005cTim\u005cprojects\u005csmstwine.html
-p2
-sS'saveDestination'
-p3
-S'C:\\Users\\Tim\\Downloads\\SMStwine.tws'
-p4
-sS'metadata'
-p5
-(dp6
-sS'target'
-p7
-S'jonah'
-p8
-sS'storyPanel'
-p9
-(dp10
-S'widgets'
-p11
-(lp12
-(dp13
-S'selected'
-p14
-I00
-sS'pos'
-p15
-(lp16
-F325.99999999999807
-aF106.6666666666666
-asS'passage'
-p17
-(itiddlywiki
-Tiddler
-p18
-(dp20
-S'text'
-p21
-V<<nobr>>\u000a/%\u000aEVERY PASSAGE NEEDS TO OPEN AND CLOSE WITH <<nobr>> <<endnobr>>\u000a\u000aREMOVES ALL HTML <BR> ELEMENTS\u000a%/\u000a\u000a\u000a<link style ="height: 0px" href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">\u000a\u000a\u000a/%\u000aset src=<filename> of the music you want to loop.\u000aJust delete this part if you don't want music in the game.\u000a%/\u000a\u000a/%\u000aaudio src="smssounds/music.mp3" loop autoplay></audio>--->\u000amusic\u000a%/\u000a\u000a/%\u000aDialog begins here\u000aWrap your dialog macros around \u000a<<timedreplace [seconds]>>\u000a<<endtimedreplace>>\u000a\u000aNot wrapping will have the dialog appear instantly\u000a\u000aNot adding a timestamp will omit it from the text box. Time stamps are optional. \u000a%/\u000a\u000a<<player_char "hey" "2:05pm">> \u000a\u000a\u000a<<timedreplace 1s>> \u000a<<friend_char "Yo" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 3s>> \u000a<<player_char "Trying to think of a sample story for this twine texting thing" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 5s>> \u000a<<player_char "But can't flesh out anything interesting" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 7s>> \u000a<<friend_char "I mean if you just want to release this thing" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 9s>> \u000a<<friend_char "Why not a few example lines of text and then a choice that doesn't resolve to any branches" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a\u000a\u000a<<timedreplace 11s>> \u000a<<choice [[Like this?|SecondPassage]]>>\u000a<<choice [[Or like this?|SecondPassage]]>>\u000a<<endtimedreplace>>\u000a\u000a\u000a\u000a\u000a\u000a<<endnobr>>\u000a
-p22
-sS'title'
-p23
-VStart
-p24
-sS'modified'
-p25
-ctime
-struct_time
-p26
-((I2017
-I4
-I14
-I0
-I15
-I14
-I4
-I104
-I1
-tp27
-(dp28
-tp29
-Rp30
-sS'tags'
-p31
-(lp32
-sS'created'
-p33
-g26
-((I2017
-I3
-I29
-I1
-I0
-I4
-I2
-I88
-I1
-tp34
-(dp35
-tp36
-Rp37
-sbsa(dp38
-g14
-I00
-sg15
-(lp39
-F524.3333333333323
-aF104.00000000000037
-asg17
-(itiddlywiki
-Tiddler
-p40
-(dp41
-g21
-V<<nobr>>\u000a\u000a<<cleartexthistory>>\u000a\u000a<<player_char "So like this?" "2:05pm">> \u000a\u000a<<timedreplace 2s>> \u000a<<friend_char "Exactly." "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a\u000a<<timedreplace 4s>> \u000a<<friend_char "Just to show the player they can click buttons" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 6s>> \u000a<<player_char "I don't want to feel like I'm just phoning it in" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 8s>> \u000a<<player_char "Kind of looking for more substance" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 11s>> \u000a<<friend_char "What if like texting" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 13s>> \u000a<<friend_char "but in space" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 15s>> \u000a<<player_char "???" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 17s>> \u000a<<friend_char "Like these two people text each other" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 18s>> \u000a<<friend_char "But one is in space" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 20s>> \u000a<<friend_char "And every time they go deeper into space" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 23s>> \u000a<<friend_char "it takes longer" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 26s>> \u000a<<friend_char "to recieve texts" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 30s>> \u000a<<friend_char "because physics" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 32s>> \u000a<<friend_char "and you can show off that the game supports varying delays between texts" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 35s>> \u000a<<choice [[Like in the anime movie Voices of a Distant Star?|DistantStar]]>>\u000a<<choice [[Like in the movie Interstellar?|Interstellar]]>>\u000a<<endtimedreplace>>\u000a\u000a\u000a\u000a\u000a\u000a<<endnobr>>\u000a
-p42
-sg23
-VSecondPassage
-p43
-sg25
-g26
-((I2017
-I5
-I23
-I19
-I31
-I47
-I1
-I143
-I1
-tp44
-(dp45
-tp46
-Rp47
-sg31
-(lp48
-sg33
-g26
-((I2017
-I3
-I29
-I1
-I0
-I21
-I2
-I88
-I1
-tp49
-(dp50
-tp51
-Rp52
-sbsa(dp53
-g14
-I00
-sg15
-(lp54
-F82.33333333333388
-aF1256.6666666666658
-asg17
-(itiddlywiki
-Tiddler
-p55
-(dp56
-g21
-V/* INSERT CUSTOM COLORS FOR BUBBLES BELOW */\u000a\u000a#SharkChar{\u000abackground-color: red; /* BUBBLE */\u000a}\u000a#SharkChar::after{\u000a  border-color: red transparent transparent transparent; /* BUBBLE TRIANGLE */\u000a}\u000a\u000a/* Your story will use the CSS in this passage to style the page.\u000aGive this passage more tags, and it will only affect passages with those tags.\u000aExample selectors: */\u000a\u000adiv .title {\u000avisibility: hidden;\u000aheight: 0px;\u000a}\u000a\u000ah1{\u000a    position: absolute;\u000a    top: 0px;\u000a    padding-top: 30px;\u000a    width: 438px;\u000a    z-index: 2;\u000a    padding-bottom: 30px;\u000a    background-color: #f8f8f8;\u000a}\u000a@media (max-width: 375px){\u000ah1 {\u000a\u000a    position: fixed;\u000a    width: 100%;\u000a    z-index: 1;\u000a    margin: 0px;\u000a    top: 0px;\u000a}\u000a}\u000a@media (max-width: 414px){\u000ah1 {\u000a\u000a    position: fixed;\u000a    width: 100%;\u000a    z-index: 2;\u000a    margin: 0px;\u000a    top: 0px;\u000a}\u000a}\u000a\u000a\u000a\u000ah2{\u000aposition: absolute;\u000atop: 80px;\u000awidth: 438px;\u000az-index: 2;\u000abackground-color: #f8f8f8;\u000a}\u000a@media (max-width: 375px){\u000ah2 {\u000a    position: fixed;\u000a    width: 100%;\u000a    z-index: 2;\u000a    top: 70px;\u000a}\u000a}\u000a@media (max-width: 414px){\u000ah2 {\u000a    position: fixed;\u000a    width: 100%;\u000a    z-index: 2;\u000a    top: 70px;\u000a}\u000a}\u000a\u000a\u000ah3{\u000aposition: absolute;\u000atop: 130px;\u000awidth: 438px;\u000amargin: 0px;\u000apadding-bottom:20px;\u000aborder-bottom: 1px solid;\u000amargin-bottom: 20px;\u000az-index: 2;\u000abackground-color: #f8f8f8;\u000a\u000a}\u000a@media (max-width: 375px){\u000ah3 {\u000a     position: fixed;\u000a    width: 100%;\u000a    z-index: 2;\u000a    top: 80px;\u000a    background-color: #f8f8f8;\u000a    border-bottom: 1px solid;\u000a}\u000a}\u000a@media (max-width: 414px){\u000ah3 {\u000a     position: fixed;\u000a    width: 100%;\u000a    z-index: 2;\u000a    top: 80px;\u000a    background-color: #f8f8f8;\u000a    border-bottom: 1px solid;\u000a}\u000a}\u000a\u000a.toolbar {\u000avisibility: hidden;\u000a}\u000a\u000a.passage:hover .toolbar {\u000a	visibility: hidden;\u000a}\u000a\u000abody {\u000a	/* This affects the entire page */\u000a    position: relative;\u000a\u000a    width: 477px;\u000a\u000aleft: 37%;\u000a\u000a     background-color: #f8f8f8;\u000a  font-family: 'Roboto', sans-serif;"\u000a\u000a\u000a\u000a}\u000a\u000a@media (max-width: 414px){\u000abody {\u000aleft: 0px;\u000a    width: 100%;\u000a\u000a}\u000a\u000a\u000a}\u000a\u000a\u000a/* no idea why its content2 lol */\u000a#content1 {\u000a\u000abackground-color: #f8f8f8;\u000aborder: 1px solid;\u000a/*min-height: 1136px;*/\u000a    background-color: #f8f8f8;\u000a    border: 1px solid;\u000a    border-radius: 25px;\u000a    border-left-width: 20px;\u000a    border-right-width: 20px;\u000a    border-top-width: 45px;\u000a    border-bottom-width: 55px;\u000aheight: 720px;\u000a    overflow: scroll;\u000a    overflow-x: hidden;\u000amargin: 0px;\u000amargin-top: 5%;\u000a\u000a\u000a}\u000a\u000a\u000a@media (max-width: 375px){\u000a#content1 {\u000a\u000aborder: 0px;\u000aborder-radius: 0px;\u000aheight: 100%;\u000awidth: 100%;\u000amargin: 0px;\u000aoverflow-y: hidden;\u000a\u000a\u000a}\u000a}\u000a@media (max-width: 414px){\u000a#content1 {\u000a\u000aborder: 0px;\u000aborder-radius: 0px;\u000aheight: 100%;\u000awidth: 100%;\u000amargin: 0px;\u000aoverflow-y: hidden;\u000a\u000a\u000a}\u000a}\u000a\u000a#content2 {\u000a\u000a\u000aheight: 720px;\u000apadding-bottom: 0px;\u000adisplay: table-cell;\u000avertical-align: bottom;\u000a\u000a}\u000a@media (max-width: 375px){\u000a#content2{\u000aheight: 100%\u000a}\u000a}\u000a\u000a\u000a\u000a#passages{\u000apadding-bottom: 0px;\u000apadding-top: 150px;\u000a\u000a}\u000a\u000a.passage {\u000awidth: 640px\u000abackground: none;\u000amargin: 0px;\u000a\u000a	/* This only affects passages */\u000a	\u000a	\u000a}\u000a\u000a.passage:not(:last-child):not(:hover) {\u000a     opacity: 1;\u000a   /* transition: 0.5s;*/\u000a    /* -webkit-transition: 0.5s; */\u000a}\u000a.passage a {\u000a	/* This affects passage links */\u000a	color:white;\u000a\u000a}\u000a\u000a	\u000a}\u000a\u000a.talk-bubble.player.decision{\u000awidth: 400px;\u000a}\u000a\u000a.choice {\u000a    font-size: 1.4em;\u000a    padding: 10px;\u000a    text-align: left;\u000a    line-height: 1.2em;\u000a    width: 300px;\u000a    border: 5px #1ca0d5 solid;\u000a    border-radius: 25px;\u000a    background-color: #1ca0d5;\u000a    margin-bottom: 10px;\u000a    left: 40px;\u000a    position: relative;\u000a    top: 10px;\u000adisplay: block;\u000a\u000a\u000a\u000aanimation-duration: 0.20s; animation-name: slidein_choice;}\u000a@keyframes slidein_choice\u000a{ \u000afrom \u000a{ opacity: 0; top: 25px;  } to \u000a{ opacity: 1; top: 10px; }\u000a}\u000a\u000a@media (max-width: 375px){\u000a.choice {\u000az-index: 1;\u000awidth: 200px;\u000a\u000a}\u000a}\u000a\u000a\u000a\u000a.disabled{\u000adisplay: none;\u000a}\u000a\u000a.content a {\u000afont-weight: normal;\u000atext-decoration: underline;\u000a}\u000a.passage a:hover {\u000a	/* This affects links while the cursor is over them */\u000a	color: white;\u000a	}\u000a\u000a.pos-right{\u000a float:right;\u000a}\u000a\u000a.pos-left{\u000a position: fixed;\u000a left: 50px;\u000a}\u000a\u000a\u000a/* General CSS Setup */\u000abody{\u000a\u000a}\u000a\u000a\u000a\u000a/* portraits */\u000a\u000aimg.portrait {\u000a    width: 50px;\u000a    height: 50px;\u000a    display: block;\u000a    position: relative;\u000a    float: left;\u000a    /*left: -20;\u000a    top: -40px;*/\u000a    bottom: 25px;\u000a    margin: 0;\u000a    display: inline-block;\u000a    padding: 0;\u000a}\u000a\u000aimg.player-portrait {\u000a    width: 50px;\u000a    height: 50px;\u000a    display: block;\u000a    position: relative;\u000a    float: right;\u000a    right: 10px;\u000a    bottom: 20px;\u000a    margin: 0;\u000a    display: inline-block;\u000a    padding: 0;\u000a}\u000a\u000a#char2b{\u000a   background-image: url("smsportraits/2b.png");\u000a    width: 50px;\u000a    height: 50px;\u000a    display: block;\u000a    position: relative;\u000a    float: left;\u000a    /*left: -20;\u000a    top: -40px;*/\u000a    bottom: 25px;\u000a    margin: 0;\u000a    display: inline-block;\u000a    padding: 0;\u000a}\u000a\u000a.text-object{\u000adisplay: block;\u000awidth: 425px;\u000aposition: relative;\u000a/*margin-bottom: 60px;*/\u000a/*margin-top: -100px;*/\u000a\u000a\u000a/*animation-duration: 3s; animation-name: slidein;}\u000a@keyframes slidein \u000a{ \u000afrom \u000a{ margin-left: 100%; height: 300%; } to \u000a{ margin-left: 0%; height: 100%; }*/\u000a\u000aanimation-duration: 0.50s; animation-name: slidein;}\u000a@keyframes slidein \u000a{ \u000afrom \u000a{ opacity: 0;  top: 25px;  } to \u000a{ opacity: 1; top: 0px; }\u000a}\u000a\u000a@media (max-width: 375px){\u000a.text-object {\u000a\u000a    width: 320px;\u000a\u000a}\u000a\u000a\u000a}\u000a\u000a\u000a.text-object.player\u000a{\u000atext-align: right;\u000a}\u000a\u000a@media (max-width: 375px){\u000a.text-object.player {\u000a\u000awidth: 320px;\u000a\u000a\u000a}\u000a}\u000a\u000a.bubble-object{\u000adisplay: inline-block;\u000a/*float: left; */\u000aposition: relative;\u000aleft: 25px;\u000a/*bottom: 20px;\u000aleft: 10px;*/\u000a}\u000a@media (max-width: 375px){\u000a.bubble-object {\u000a\u000awidth: 200px;\u000a\u000a\u000a}\u000a}\u000a\u000a\u000a.bubble-object.player{\u000aleft: -25px;\u000a/*display: inline-block;\u000afloat: right;\u000aposition: relative;\u000abottom: 20px;\u000aright: 10px; trying to fix style today */\u000a}\u000a\u000a.talk-bubble.player > .talktext > p{\u000apadding-right: 1em\u000a}\u000a\u000a#char9s{\u000a   background-image: url("smsportraits/9s.png");\u000a    width: 50px;\u000a    height: 50px;\u000a    display: block;\u000a    position: relative;\u000a    float: right;\u000a    right: 10px;\u000a    bottom: 20px;\u000a    margin: 0;\u000a    display: inline-block;\u000a    padding: 0;\u000a}\u000a\u000a.timestamp{\u000a    padding: 1em;\u000a    font-size: 0.8em;\u000a    opacity: 0.75;\u000a    display: block;\u000a    margin-bottom: -55px;\u000a}\u000a\u000adiv.player > .talktext > span.timestamp{\u000a\u000a    font-weight: bold;\u000a    opacity: 0.50\u000a}\u000a\u000a/* container */\u000a.container {\u000a  padding: 5% 5%;\u000a}\u000a\u000a/* CSS talk bubble */\u000a.talk-bubble {\u000a  display: inline-block;\u000a  position: relative;\u000a	min-width: 150px;\u000a	height: auto;\u000a	background-color: orange;\u000acolor: white;\u000afont-size: 12pt;\u000a}\u000a\u000a.talk-bubble.player {\u000abackground-color: #1ca0d5;\u000a/*color: black;*/\u000a}\u000a@media (max-width: 375px){\u000a.talk-bubble.player {\u000a\u000awidth: 200px;\u000a\u000a\u000a}\u000a}\u000a\u000a\u000a.border{\u000a  border: 8px solid #666;\u000a}\u000a.round{\u000a  border-radius: 30px;\u000a	-webkit-border-radius: 30px;\u000a	-moz-border-radius: 30px;\u000a\u000a}\u000a\u000a\u000a\u000a/* Right triangle placed top left flush. */\u000a.tri-right.border.left-top:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: -40px;\u000a	right: auto;\u000a  top: -8px;\u000a	bottom: auto;\u000a	border: 32px solid;\u000a	border-color: orange transparent transparent transparent;\u000a}\u000a.tri-right.left-top:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: -15px;\u000a	right: auto;\u000a  top: 0px;\u000a	bottom: auto;\u000a	border: 22px solid;\u000a	border-color: orange transparent transparent transparent;\u000a}\u000a\u000a/* Right triangle, left side slightly down */\u000a.tri-right.border.left-in:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: -40px;\u000a	right: auto;\u000a  top: 30px;\u000a	bottom: auto;\u000a	border: 20px solid;\u000a	border-color: #666 #666 transparent transparent;\u000a}\u000a.tri-right.left-in:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: -20px;\u000a	right: auto;\u000a  top: 38px;\u000a	bottom: auto;\u000a	border: 12px solid;\u000a	border-color: lightyellow lightyellow transparent transparent;\u000a}\u000a\u000a/*Right triangle, placed bottom left side slightly in*/\u000a.tri-right.border.btm-left:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a	left: -8px;\u000a  right: auto;\u000a  top: auto;\u000a	bottom: -40px;\u000a	border: 32px solid;\u000a	border-color: transparent transparent transparent #666;\u000a}\u000a.tri-right.btm-left:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a	left: 0px;\u000a  right: auto;\u000a  top: auto;\u000a	bottom: -20px;\u000a	border: 22px solid;\u000a	border-color: transparent transparent transparent lightyellow;\u000a}\u000a\u000a/*Right triangle, placed bottom left side slightly in*/\u000a.tri-right.border.btm-left-in:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a	left: 30px;\u000a  right: auto;\u000a  top: auto;\u000a	bottom: -40px;\u000a	border: 20px solid;\u000a	border-color: #666 transparent transparent #666;\u000a}\u000a.tri-right.btm-left-in:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a	left: 38px;\u000a  right: auto;\u000a  top: auto;\u000a	bottom: -20px;\u000a	border: 12px solid;\u000a	border-color: lightyellow transparent transparent lightyellow;\u000a}\u000a\u000a/*Right triangle, placed bottom right side slightly in*/\u000a.tri-right.border.btm-right-in:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: 30px;\u000a	bottom: -40px;\u000a	border: 20px solid;\u000a	border-color: #666 #666 transparent transparent;\u000a}\u000a.tri-right.btm-right-in:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: 38px;\u000a	bottom: -20px;\u000a	border: 12px solid;\u000a	border-color: lightyellow lightyellow transparent transparent;\u000a}\u000a/*\u000a	left: -8px;\u000a  right: auto;\u000a  top: auto;\u000a	bottom: -40px;\u000a	border: 32px solid;\u000a	border-color: transparent transparent transparent #666;\u000a	left: 0px;\u000a  right: auto;\u000a  top: auto;\u000a	bottom: -20px;\u000a	border: 22px solid;\u000a	border-color: transparent transparent transparent lightyellow;\u000a\u000a/*Right triangle, placed bottom right side slightly in*/\u000a.tri-right.border.btm-right:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: -8px;\u000a	bottom: -40px;\u000a	border: 20px solid;\u000a	border-color: #666 #666 transparent transparent;\u000a}\u000a.tri-right.btm-right:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: 0px;\u000a	bottom: -20px;\u000a	border: 12px solid;\u000a	border-color: lightyellow lightyellow transparent transparent;\u000a}\u000a\u000a/* Right triangle, right side slightly down*/\u000a.tri-right.border.right-in:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: -40px;\u000a  top: 30px;\u000a	bottom: auto;\u000a	border: 20px solid;\u000a	border-color: #orange transparent transparent #666;\u000a}\u000a.tri-right.right-in:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: -20px;\u000a  top: 38px;\u000a	bottom: auto;\u000a	border: 12px solid;\u000a	border-color: lightyellow transparent transparent lightyellow;\u000a}\u000a\u000a/* Right triangle placed top right flush. */\u000a.tri-right.border.right-top:before {\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: -40px;\u000a  top: -8px;\u000a	bottom: auto;\u000a	border: 32px solid;\u000a	border-color: #white transparent transparent transparent;\u000a}\u000a\u000a/*PLAYER TRIANGLE */\u000a.tri-right.right-top:after{\u000a	content: ' ';\u000a	position: absolute;\u000a	width: 0;\u000a	height: 0;\u000a  left: auto;\u000a	right: -13px;\u000a  top: 0px;\u000a	bottom: auto;\u000a	border: 25px solid;\u000a	border-color: #1ca0d5 transparent transparent transparent;\u000a}\u000a\u000a/* talk bubble contents */\u000a.talktext{\u000a  padding: 0.5em;\u000a	text-align: left;\u000a  line-height: 1.2em;\u000amargin-top: -0.5em\u000a}\u000a.talktext p{\u000a  /* remove webkit p margins */\u000a  -webkit-margin-before: -1.8em;\u000a  -webkit-margin-after: -1.8em;\u000a  margin-left: 15px;\u000a  word-wrap: break-word;\u000a max-width: 250px\u000a\u000a}\u000a\u000a#footer{\u000aposition: absolute;\u000abottom: 0px;\u000acolor: white;\u000a\u000a}\u000a\u000a#footer a.externalLink {\u000acolor: white;\u000a}\u000a@media (max-width: 414px){\u000a#footer {\u000a\u000a    position: absolute;\u000a    top: 70px;\u000a    z-index: -1;\u000acolor: black;\u000a}\u000a\u000a#footer a.externalLink {\u000acolor: black;\u000a}\u000a}\u000a\u000a
-p57
-sg23
-VUntitled Stylesheet 1
-p58
-sg25
-g26
-((I2017
-I4
-I14
-I10
-I40
-I36
-I4
-I104
-I1
-tp59
-(dp60
-tp61
-Rp62
-sg31
-(lp63
-Vstylesheet
-p64
-asg33
-g26
-((I2017
-I3
-I29
-I1
-I0
-I39
-I2
-I88
-I1
-tp65
-(dp66
-tp67
-Rp68
-sbsa(dp69
-g14
-I00
-sg15
-(lp70
-F44.00000000000034
-aF1091.333333333334
-asg17
-(itiddlywiki
-Tiddler
-p71
-(dp72
-g21
-V(function () {\u000a  version.extensions['timedreplaceMacro'] = {\u000a    major: 2,\u000a    minor: 3,\u000a    revision: 0\u000a  };\u000a  macros['timedcontinue'] = macros['timedinsert'] = macros['timedreplace'] = {\u000a    handler: function (g, e, f, b) {\u000a      function cssTimeUnit(s) {\u000a        if (typeof s == "string") {\u000a          if (s.slice(-2).toLowerCase() == "ms") {\u000a            return Number(s.slice(0, -2)) || 0;\u000a          }\u000a          else if (s.slice(-1).toLowerCase() == "s") {\u000a            return Number(s.slice(0, -1)) * 1000 || 0;\u000a          }\u000a        }\u000a        throwError(g, s + " isn't a CSS time unit");\u000a        return 0;\u000a      }\u000a\u000a      function tagcontents(starttag, endtag, k) {\u000a        var a = b.source.slice(k);\u000a        var l = 0;\u000a        var c = "";\u000a        for (var i = 0; i < a.length; i++) {\u000a          var w = endtag.length;\u000a          if (a.substr(i, w) == endtag) {\u000a            if (l == 0) {\u000a              b.nextMatch = k + i + w;\u000a              return c;\u000a            }\u000a            else {\u000a              l--;\u000a              c += a.charAt(i);\u000a            }\u000a          }\u000a          else {\u000a            if (a.substr(i, starttag.length) == starttag) {\u000a              l++;\u000a            }\u000a            c += a.charAt(i);\u000a          }\u000a        }\u000a        return "";\u000a      }\u000a      var tr = "<<" + e;\u000a      var rw = "<<replacewith>>";\u000a      var etr = "<<end" + e + ">>";\u000a      var k = b.source.indexOf('>>', b.matchStart) + 2;\u000a      var c, d;\u000a	  if (e == "timedcontinue") {\u000a	    d = b.source.slice(k);\u000a		b.nextMatch = k + d.length;\u000a	  }\u000a      else if (e == "timedreplace") {\u000a        c = tagcontents(tr, rw, k);\u000a        d = tagcontents((c ? rw : tr), etr, c ? b.nextMatch : k);\u000a      }\u000a      else if (e == "timedinsert") {\u000a        d = tagcontents(tr, etr, k);\u000a      }\u000a      else if (e == "timedremove") {\u000a        c = tagcontents(tr, etr, k);\u000a      }\u000a      var tm;\u000a      tm = cssTimeUnit(f[0]);\u000a      var h;\u000a      if (c) {\u000a        if (d) {\u000a          g = insertElement(g, "span", null, "timedreplacements");\u000a        }\u000a        h = insertElement(g, "span", null, "timedreplacement timedremove");\u000a        new Wikifier(h, c);\u000a        if (d || e == "timedremove") {\u000a          setTimeout(function () {\u000a            h.classList.add("replacement-out");\u000a            setTimeout(function () {\u000a              h.parentNode.removeChild(h);\u000a            }, 1000);\u000a          }, tm);\u000a        }\u000a      }\u000a      if (d) {\u000a        var m = insertElement(g, "span", null, "timedreplacement timedinsert", d);\u000a        m.style.display = "none";\u000a        setTimeout(function () {\u000a          if (m) {\u000a            var t = m.firstChild ? m.firstChild.nodeValue : "";\u000a            removeChildren(m);\u000a            new Wikifier(m, t);\u000a            m.style.display = "inline";\u000a            m.classList.add("replacement-in");\u000a            setTimeout(function () {\u000a              m.classList.remove("replacement-in");\u000a            }, 1);\u000a            scrollWindowTo(m);\u000a          }\u000a        }, tm);\u000a      }\u000a      else if (!c && e != "timedremove") {\u000a        throwError(g, "can't find matching end" + e);\u000a        return;\u000a      }\u000a    }\u000a  }\u000a  macros['timedremove'] = macros['timedreplace'];\u000a  macros['replacewith'] = macros['endtimedinsert'] = macros['endtimedremove'] = macros['endtimedreplace'] = {\u000a    handler: function () {}\u000a  }\u000a    scrollWindowTo=function(E){var D=window.scrollY?window.scrollY:document.body.scrollTop;\u000a    var G=J(E);if(!G){return;}var C=Math.abs(D-G);var B=0;var I=(D>G)?-1:1;var F=window.setInterval(H,25);\u000adocument.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000adocument.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000a\u000adocument.body.scrollTop = document.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000a\u000a    function H(){B+=0.1;window.scrollTo(0,D+I*(C*Math.easeInOut(B)));if(B>=1){window.clearInterval(F);document.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000a\u000adocument.body.scrollTop = document.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000a\u000a    }}function J(N){var O=A(N);var P=O+N.offsetHeight;var K=window.scrollY?window.scrollY:document.body.scrollTop;\u000a    var L=window.innerHeight?window.innerHeight:document.body.clientHeight;var M=K+L;\u000a\u000adocument.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000a\u000adocument.body.scrollTop = document.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;\u000a\u000a    if(O>=K){if(P>M){if(N.offsetHeight<L){return(O-(L-N.offsetHeight)+20);}else{return O;\u000a    }}}}function A(K){var L=0;while(K.offsetParent){L+=K.offsetTop;K=K.offsetParent;}return L;\u000a  document.getElementById('content1').scrollTop = \u000a   document.getElementById('content1').scrollHeight;\u000a\u000adocument.body.scrollTop = document.getElementById('content1').scrollTop = \u000a    document.getElementById('content1').scrollHeight;  }};\u000a}());\u000a\u000a\u000a
-p73
-sg23
-Vtimedreplace
-p74
-sg25
-g26
-((I2017
-I4
-I4
-I1
-I2
-I51
-I1
-I94
-I1
-tp75
-(dp76
-tp77
-Rp78
-sg31
-(lp79
-Vscript
-p80
-asg33
-g26
-((I2017
-I4
-I1
-I22
-I56
-I30
-I5
-I91
-I1
-tp81
-(dp82
-tp83
-Rp84
-sbsa(dp85
-g14
-I00
-sg15
-(lp86
-F41.99999999999953
-aF445.3333333333339
-asg17
-(itiddlywiki
-Tiddler
-p87
-(dp88
-g21
-S'jquery:on\nhash:off\nbookmark:on\nmodernizr:off\nundo:off\nobfuscate:off\nexitprompt:off\nblankcss:off\n'
-p89
-sg23
-VStorySettings
-p90
-sg25
-g26
-((I2017
-I5
-I23
-I19
-I29
-I29
-I1
-I143
-I1
-tp91
-(dp92
-tp93
-Rp94
-sg31
-(lp95
-sg33
-g26
-((I2017
-I4
-I3
-I0
-I15
-I45
-I0
-I93
-I1
-tp96
-(dp97
-tp98
-Rp99
-sbsa(dp100
-g14
-I00
-sg15
-(lp101
-F40.333333333334494
-aF610.3333333333333
-asg17
-(itiddlywiki
-Tiddler
-p102
-(dp103
-g21
-V<<nobr>>\u000a\u000a/%\u000aCHARACTER\u000aThis is a template for a character on the left hand side. Modify the elements below to customize the character. \u000a\u000aThe title for this passage is the name of the character macro you will call to create dialog in the story passages.\u000a%/\u000a\u000a\u000a<div class="text-object" >\u000a/%\u000aCHARACTER PORTRAIT:\u000aDIMENSIONS: 50x50\u000aChange the HTML element src below to modify character potrait.\u000aSet src="<filename of portrait>"\u000a%/\u000a<img class="portrait" src="smsportraits/2b.png" > \u000a\u000a\u000a<div class="bubble-object" style="">\u000a\u000a/%\u000aCHANGE BUBBLE COLORS:\u000aAdd unique id to the div below, and then edit the corresponding colors in the stylesheet. \u000a%/\u000a<div class="talk-bubble round tri-right left-top">\u000a  <div class="talktext">\u000a<p><<print parameter(0)>></p>\u000a<span class="timestamp">\u000a<<if parameter(1) != 0>>\u000a<<print parameter(1) + ",">> \u000a<<endif>>\u000a/%\u000aCHANGE CHARACTER NAME:\u000aSet the character's "full name" below if you want it to appear\u000a%/\u000a2B\u000a\u000a</span>\u000a  </div>\u000a</div>\u000a</div>\u000a</div>\u000a\u000a\u000a/%\u000aSOUND NOTIFICATION\u000aSet this character's sound notification. \u000a%/\u000a<audio src="smssounds/beep.ogg" autoplay></audio>\u000a<<endnobr>>
-p104
-sg23
-Vfriend_char
-p105
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I31
-I56
-I4
-I104
-I1
-tp106
-(dp107
-tp108
-Rp109
-sg31
-(lp110
-sg33
-g26
-((I2017
-I4
-I3
-I0
-I30
-I15
-I0
-I93
-I1
-tp111
-(dp112
-tp113
-Rp114
-sbsa(dp115
-g14
-I00
-sg15
-(lp116
-F41.66666666666675
-aF750.0000000000009
-asg17
-(itiddlywiki
-Tiddler
-p117
-(dp118
-g21
-V<<nobr>>\u000a/%\u000aPLAYER CHARACTER\u000aThis is a template for a character on the right side, typically the player character. Modify the elements below to customize the character. \u000a\u000aThe title for this passage is the name of the character macro you will call to create dialog in the story passages.\u000a%/\u000a\u000a<div class="text-object player" >\u000a\u000a/%\u000aCHARACTER PORTRAIT:\u000aDIMENSIONS: 50x50\u000aChange the HTML element src below to modify character potrait.\u000aSet src="<filename of portrait>"\u000a%/\u000a<img class="player-portrait" src="smsportraits/9s.png">\u000a\u000a/%\u000aCHANGE BUBBLE COLORS:\u000aAdd unique id to the div below, and then edit the corresponding colors in the stylesheet. \u000a%/\u000a<div class="bubble-object player">\u000a<div class="talk-bubble round player tri-right right-top">\u000a  <div class="talktext">\u000a    <p><<print parameter(0)>></p>\u000a<span class="timestamp">\u000a<<if parameter(1) != 0>>\u000a<<print parameter(1) + ",">> \u000a<<endif>>\u000a/%\u000aCHANGE CHARACTER NAME:\u000aSet the character's "full name" below if you want it to appear\u000a%/\u000a9S\u000a\u000a</span>\u000a  </div>\u000a</div>\u000a</div>\u000a</div>\u000a\u000a/%\u000aSOUND NOTIFICATION\u000aSet this character's sound notification. \u000a%/\u000a<audio src="smssounds/beep.ogg" autoplay></audio>\u000a<<endnobr>>
-p119
-sg23
-Vplayer_char
-p120
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I31
-I45
-I4
-I104
-I1
-tp121
-(dp122
-tp123
-Rp124
-sg31
-(lp125
-sg33
-g26
-((I2017
-I4
-I3
-I1
-I26
-I30
-I0
-I93
-I1
-tp126
-(dp127
-tp128
-Rp129
-sbsa(dp130
-g14
-I00
-sg15
-(lp131
-F368.3333333333338
-aF1136.6666666666695
-asg17
-(itiddlywiki
-Tiddler
-p132
-(dp133
-g21
-V\u000a<<nobr>>\u000a <div class="text-object player" >\u000a<div class="bubble-object player">\u000a<div class="talk-bubble round player decision">\u000a  <div class="talktext">\u000a    <p><<print parameter(0)>></p>\u000a  </div>\u000a</div>\u000a</div>\u000a</div>\u000a</div>\u000a<<endnobr>>
-p134
-sg23
-Vchoice_text
-p135
-sg25
-g26
-((I2017
-I4
-I3
-I1
-I37
-I8
-I0
-I93
-I1
-tp136
-(dp137
-tp138
-Rp139
-sg31
-(lp140
-sg33
-g26
-((I2017
-I4
-I3
-I1
-I31
-I35
-I0
-I93
-I1
-tp141
-(dp142
-tp143
-Rp144
-sbsa(dp145
-g14
-I00
-sg15
-(lp146
-F346.66666666666663
-aF818.3333333333333
-asg17
-(itiddlywiki
-Tiddler
-p147
-(dp148
-g21
-V<<nobr>>\u000a\u000a/%\u000aCHARACTER\u000aThis is a template for a character on the left hand side. Modify the elements below to customize the character. \u000a\u000aThe title for this passage is the name of the character macro you will call to create dialog in the story passages.\u000a%/\u000a\u000a\u000a<div class="text-object" >\u000a/%\u000aCHARACTER PORTRAIT:\u000aDIMENSIONS: 50x50\u000aChange the HTML element src below to modify character potrait.\u000aSet src="<filename of portrait>"\u000a%/\u000a<img class="portrait" src="smsportraits/2b.png" > \u000a\u000a\u000a<div class="bubble-object" >\u000a\u000a/%\u000aCHANGE BUBBLE COLORS:\u000a1)Give the div below a unique id\u000aEX: id="ExampleCustomCharacter"\u000a2) Open the Stylesheet and add the following based on the ID name\u000a\u000a#ExampleCustomCharacter{\u000abackground-color: red;\u000a}\u000a#ExampleCustomCharacter::after{\u000a  border-color: red transparent transparent transparent;\u000a}\u000a\u000aExample provided below and in stylesheet\u000a%/\u000a\u000a<div id="ExampleCustomCharacter" class="talk-bubble round tri-right left-top">\u000a  <div class="talktext">\u000a<p><<print parameter(0)>></p>\u000a<span class="timestamp">\u000a<<if parameter(1) != 0>>\u000a<<print parameter(1) + ",">> \u000a<<endif>>\u000a/%\u000aCHANGE CHARACTER NAME:\u000aSet the character's "full name" below if you want it to appear\u000a%/\u000a2B\u000a\u000a</span>\u000a  </div>\u000a</div>\u000a</div>\u000a</div>\u000a\u000a\u000a/%\u000aSOUND NOTIFICATION\u000aSet this character's sound notification. \u000a%/\u000a<audio src="smssounds/beep.ogg" autoplay></audio>\u000a<<endnobr>>
-p149
-sg23
-Vtest_char
-p150
-sg25
-g26
-((I2017
-I4
-I7
-I0
-I33
-I22
-I4
-I97
-I1
-tp151
-(dp152
-tp153
-Rp154
-sg31
-(lp155
-sg33
-g26
-((I2017
-I4
-I7
-I0
-I1
-I16
-I4
-I97
-I1
-tp156
-(dp157
-tp158
-Rp159
-sbsa(dp160
-g14
-I00
-sg15
-(lp161
-F788.3333333333336
-aF55.00000000000019
-asg17
-(itiddlywiki
-Tiddler
-p162
-(dp163
-g21
-V<<nobr>>\u000a\u000a<<player_char "So kind of like Voices of a Distant Star?" "2:05pm">> \u000a\u000a<<timedreplace 2s>> \u000a<<friend_char "Yeah make it anime af" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 4s>> \u000a<<player_char "Yo" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 6s>> \u000a<<player_char "And then one ages faster than the other and it's like super sad" "2:06pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 9s>> \u000a<<friend_char "Suuuuuuuper sad" "2:06pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 11s>> \u000a<<player_char "And then I could like" "2:06pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 13s>> \u000a<<player_char "fudge the time stamps" "4:06am 2070">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 15s>> \u000a<<player_char "Because physics" "2:06pm">> \u000a<<endtimedreplace>>\u000a\u000a/% autojump %/\u000a<<timedreplace 16s>> \u000a<<timedgoto "ChoiceExample" 0.01s >>\u000a<<endtimedreplace>>\u000a\u000a<<endnobr>>\u000a
-p164
-sg23
-VDistantStar
-p165
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I9
-I15
-I4
-I104
-I1
-tp166
-(dp167
-tp168
-Rp169
-sg31
-(lp170
-sg33
-g26
-((I2017
-I4
-I14
-I0
-I29
-I17
-I4
-I104
-I1
-tp171
-(dp172
-tp173
-Rp174
-sbsa(dp175
-g14
-I00
-sg15
-(lp176
-F778.3333333333336
-aF280.0000000000004
-asg17
-(itiddlywiki
-Tiddler
-p177
-(dp178
-g21
-V<<nobr>>\u000a\u000a<<player_char "So kind of like Interstellar?" "2:05pm">> \u000a\u000a<<timedreplace 2s>> \u000a<<friend_char "Yeah make it sad af" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 4s>> \u000a<<player_char "Yo that's actually a sick idea" "2:05pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 6s>> \u000a<<friend_char "And then one ages faster than the other and maybe there's time travel because " "2:06pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 9s>> \u000a<<friend_char "Time travel is the best trope" "2:06pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 11s>> \u000a<<friend_char "Time travel & texting, and you can fudge the time stamps" "4:22am THE YEAR 2070">> \u000a<<endtimedreplace>>\u000a\u000a\u000a/% autojump %/\u000a<<timedreplace 12s>> \u000a<<timedgoto "ChoiceExample" 0.01s >>\u000a<<endtimedreplace>>\u000a\u000a\u000a<<endnobr>>\u000a
-p179
-sg23
-VInterstellar
-p180
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I9
-I19
-I4
-I104
-I1
-tp181
-(dp182
-tp183
-Rp184
-sg31
-(lp185
-sg33
-g26
-((I2017
-I4
-I14
-I0
-I33
-I27
-I4
-I104
-I1
-tp186
-(dp187
-tp188
-Rp189
-sbsa(dp190
-g14
-I00
-sg15
-(lp191
-F983.3333333333343
-aF108.33333333333329
-asg17
-(itiddlywiki
-Tiddler
-p192
-(dp193
-g21
-V<<nobr>>\u000a\u000a<<timedreplace 3s>> \u000a<<friend_char "Are you going to add multiple characters?" "2:07pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 5s>> \u000a<<player_char "Yeah maybe it's just two characters talking for most of the time, then a third one joins to show it supports group texting situations" "2:07pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 9s>> \u000a<<player_char "But I can't really think of an elegant way to handle the introduction" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 12s>> \u000a<<shark_char "WATUP, you know who it is, it's shark" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 15s>> \u000a<<friend_char "Maybe Shark has some ideas?" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 18s>> \u000a<<shark_char "Actually I've been waiting at Chipotle with for like 20 minutes, where are you lol" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 22s>> \u000a<<player_char "lol woops. ok we're on our way" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 24s>> \u000a<<player_char "let's just figure out the ending later" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 26s>> \u000a<<friend_char "good work team" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<timedreplace 29s>> \u000a<<timedgoto "ClearTextExample" 0.01s >>\u000a<<endtimedreplace>>\u000a\u000a\u000a<<endnobr>>\u000a
-p194
-sg23
-VChoiceExample
-p195
-sg25
-g26
-((I2017
-I7
-I9
-I22
-I25
-I34
-I6
-I190
-I1
-tp196
-(dp197
-tp198
-Rp199
-sg31
-(lp200
-sg33
-g26
-((I2017
-I4
-I14
-I0
-I38
-I5
-I4
-I104
-I1
-tp201
-(dp202
-tp203
-Rp204
-sbsa(dp205
-g14
-I00
-sg15
-(lp206
-F42.00000000000031
-aF886.3333333333333
-asg17
-(itiddlywiki
-Tiddler
-p207
-(dp208
-g21
-V<<nobr>>\u000a\u000a/%\u000aCHARACTER\u000aThis is a template for a character on the left hand side. Modify the elements below to customize the character. \u000a\u000aThe title for this passage is the name of the character macro you will call to create dialog in the story passages.\u000a%/\u000a\u000a\u000a<div class="text-object" >\u000a/%\u000aCHARACTER PORTRAIT:\u000aDIMENSIONS: 50x50\u000aChange the HTML element src below to modify character potrait.\u000aSet src="<filename of portrait>"\u000a%/\u000a<img class="portrait" src="smsportraits/shark.png" > \u000a\u000a\u000a<div class="bubble-object" >\u000a\u000a/%\u000aCHANGE BUBBLE COLORS:\u000aAdd unique id to the div below, and then edit the corresponding colors in the stylesheet. \u000a%/\u000a<div id="SharkChar" class="talk-bubble round tri-right left-top">\u000a  <div class="talktext">\u000a<p><<print parameter(0)>></p>\u000a<span class="timestamp">\u000a<<if parameter(1) != 0>>\u000a<<print parameter(1) + ",">> \u000a<<endif>>\u000a/%\u000aCHANGE CHARACTER NAME:\u000aSet the character's "full name" below if you want it to appear\u000a%/\u000aShark\u000a\u000a</span>\u000a  </div>\u000a</div>\u000a</div>\u000a</div>\u000a\u000a\u000a/%\u000aSOUND NOTIFICATION\u000aSet this character's sound notification. \u000a%/\u000a<audio src="smssounds/beep.ogg" autoplay></audio>\u000a<<endnobr>>
-p209
-sg23
-Vshark_char
-p210
-sg25
-g26
-((I2017
-I4
-I14
-I0
-I59
-I11
-I4
-I104
-I1
-tp211
-(dp212
-tp213
-Rp214
-sg31
-(lp215
-sg33
-g26
-((I2017
-I4
-I14
-I0
-I51
-I56
-I4
-I104
-I1
-tp216
-(dp217
-tp218
-Rp219
-sbsa(dp220
-g14
-I00
-sg15
-(lp221
-F16.666666666666664
-aF16.666666666666664
-asg17
-(itiddlywiki
-Tiddler
-p222
-(dp223
-g21
-VSMS Sample Saga
-p224
-sg23
-VStoryTitle
-p225
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I3
-I56
-I4
-I104
-I1
-tp226
-(dp227
-tp228
-Rp229
-sg31
-(lp230
-sg33
-g26
-((I2017
-I4
-I14
-I1
-I1
-I37
-I4
-I104
-I1
-tp231
-(dp232
-tp233
-Rp234
-sbsa(dp235
-g14
-I00
-sg15
-(lp236
-F21.99999999999986
-aF168.3333333333334
-asg17
-(itiddlywiki
-Tiddler
-p237
-(dp238
-g21
-V[[@shindags|http://www.twitter.com/shindags/]]
-p239
-sg23
-VStoryAuthor
-p240
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I3
-I43
-I4
-I104
-I1
-tp241
-(dp242
-tp243
-Rp244
-sg31
-(lp245
-sg33
-g26
-((I2017
-I4
-I14
-I1
-I1
-I47
-I4
-I104
-I1
-tp246
-(dp247
-tp248
-Rp249
-sbsa(dp250
-g14
-I00
-sg15
-(lp251
-F250.0
-aF1014.9999999999992
-asg17
-(itiddlywiki
-Tiddler
-p252
-(dp253
-g21
-Vversion.extensions.timedgotoMacro={major:1,minor:2,revision:0};\u000amacros["goto"]=macros.timedgoto={timer:null,handler:function(a,b,c,d){function cssTimeUnit(s){if(typeof s=="string"){if(s.slice(-2).toLowerCase()=="ms"){return +(s.slice(0,-2))||0\u000a}else{if(s.slice(-1).toLowerCase()=="s"){return +(s.slice(0,-1))*1000||0\u000a}}}throwError(a,s+" isn't a CSS time unit");return 0}var t,d,m,s;\u000at=c[c.length-1];d=d.fullArgs();m=0;if(b!="goto"){d=d.slice(0,d.lastIndexOf(t));\u000am=cssTimeUnit(t)}d=eval(Wikifier.parse(d));if(d+""&&state&&state.init){if(macros["goto"].timer){clearTimeout(macros["goto"].timer)\u000a}s=state.history[0].passage.title;macros["goto"].timer=setTimeout(function(){if(state.history[0].passage.title==s){state.display(d,a)\u000a}},m)}}};
-p254
-sg23
-Vtimedgoto
-p255
-sg25
-g26
-((I2017
-I4
-I14
-I1
-I6
-I58
-I4
-I104
-I1
-tp256
-(dp257
-tp258
-Rp259
-sg31
-(lp260
-Vscript
-p261
-asg33
-g26
-((I2017
-I4
-I14
-I1
-I6
-I54
-I4
-I104
-I1
-tp262
-(dp263
-tp264
-Rp265
-sbsa(dp266
-g14
-I00
-sg15
-(lp267
-F591.666666666667
-aF956.6666666666669
-asg17
-(itiddlywiki
-Tiddler
-p268
-(dp269
-g21
-Vtry {\u000a  version.extensions['cleartexthistory'] = { \u000a    major:1, minor:0, revision:0 \u000a  };\u000a  macros['cleartexthistory'] = {\u000a    handler: function(place, macroName, params, parser) {\u000a      $(".text-object").css("display", "none");\u000a    },\u000a    init: function() { },\u000a  };\u000a} catch(e) {\u000a  throwError(place,"macrodemo Setup Error: "+e.message); \u000a}
-p270
-sg23
-Vcleartexthistory
-p271
-sg25
-g26
-((I2017
-I5
-I23
-I19
-I41
-I2
-I1
-I143
-I1
-tp272
-(dp273
-tp274
-Rp275
-sg31
-(lp276
-Vscript
-p277
-asg33
-g26
-((I2017
-I5
-I23
-I19
-I2
-I10
-I1
-I143
-I1
-tp278
-(dp279
-tp280
-Rp281
-sbsa(dp282
-g14
-I00
-sg15
-(lp283
-F1178.3333333333328
-aF88.33333333333331
-asg17
-(itiddlywiki
-Tiddler
-p284
-(dp285
-g21
-V<<nobr>>\u000a\u000a<<cleartexthistory>>\u000a\u000a<<timedreplace 2s>> \u000a<<friend_char "Thanks for reading! This thank you also doubles as a way to show off that you can clear text history now!" "2:08pm">> \u000a<<endtimedreplace>>\u000a\u000a<<endnobr>>\u000a
-p286
-sg23
-VClearTextExample
-p287
-sg25
-g26
-((I2017
-I7
-I9
-I22
-I26
-I15
-I6
-I190
-I1
-tp288
-(dp289
-tp290
-Rp291
-sg31
-(lp292
-sg33
-g26
-((I2017
-I7
-I9
-I22
-I23
-I39
-I6
-I190
-I1
-tp293
-(dp294
-tp295
-Rp296
-sbsasS'scale'
-p297
-F0.6000000000000001
-sS'snapping'
-p298
-I00
-ss.
