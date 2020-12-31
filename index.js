@@ -24,6 +24,7 @@ var geojson = {
       coordinates: [-73.982121, 40.741123]
     },
     properties: {
+      'marker-color': '#3bb2d0',
       title: 'A Doubled Front',
       image: 'doubled-images/cover.gif',
       description: 'A day-in-the-life of a Chinese American healthcare worker reconciling duty and selfless service with questions of identity and belonging in the wake of surging anti-Asian hate.',
@@ -84,6 +85,23 @@ var geojson = {
       minutes: '30',
       link: 'SLstoryfinal.html',
     }
+  }, // SERIES 2 BELOW
+  { 
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [14.233548, 37.622343] 
+    },
+    properties: {
+      title: 'Masks Off',
+      image: 'series_2/giordana/Cover.PNG',
+      description: 'Maura and Liliana meet on Instagram through their shared love for art and literature. They decided to meet last year at a pizzeria in Milan and have remained friends since. This story reveals the reality of Covid in Italy, focusing homelessness, financial instability, and relational issues.',
+      writers: 'Giordana Fiorentino',
+      tech: 'Victoria Geh',
+      visuals: 'Jessica Chen', 
+      minutes: '15',
+      link: 'series_2/giordana/giordana.html',
+    }
   }]
 };
 
@@ -101,6 +119,6 @@ new mapboxgl.Marker(el)
     .setHTML('<h2>' + marker.properties.title + '</h2>'
       + '<img src="' + marker.properties.image + '"><br>'
     + '<p>' + marker.properties.description + '<br><br>'
-    +'<b>Writers: </b>'+ marker.properties.writers+'<br><b>Tech: </b>'+marker.properties.tech+'<br><b>Visuals: </b>'+marker.properties.visuals+ '<br><br><b><u>Estimated reading time:</u></b> '+ marker.properties.minutes +'mins <br><br><a href="'+marker.properties.link+'" class="enterButton">enter</a><br>'+'</p>'))
+    +'<b>Writers: </b>'+ marker.properties.writers+'<br><b>Tech: </b>'+marker.properties.tech+'<br><b>Visuals: </b>'+marker.properties.visuals+ '<br><br><b><u>Estimated reading time:</u></b> '+ marker.properties.minutes +'mins <br><br><a href="'+marker.properties.link+'" class="enterButton">enter</a><br>'+'</p><br>'))
   .addTo(map);
 });
