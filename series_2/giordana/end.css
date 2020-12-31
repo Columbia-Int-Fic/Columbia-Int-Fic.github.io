@@ -1,0 +1,43 @@
+body {
+    background-image: url('PalermoOcean.PNG');
+    background-size: cover;
+}
+
+img {
+    margin-top: 2%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clickMore {
+    text-align: center;
+    margin-top: -10%;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.nav-link {
+    padding-left:50px !important;
+    padding-right:50px !important;;
+} 
+
+a:hover {
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.epilogue {
+    background-color: #FFFDF8;
+    margin-top: 2%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+a{
+    text-align: center;
+}
