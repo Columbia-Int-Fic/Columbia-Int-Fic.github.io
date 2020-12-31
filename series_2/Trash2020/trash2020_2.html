@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="trash2020styles2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+  
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+    
+    <style>
+    
+    #mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#26262c;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:850px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 5px;
+  text-align: center;
+}
+#boxes #dialog {
+  width:450px; 
+  height:auto;
+  padding: 20px 20px 20px 20px;
+  background-color:black;
+  font-size: 15pt;
+}
+
+.agree:hover{
+  background-color: #D1D1D1;
+}
+.popupoption:hover{
+ background-color:#D1D1D1;
+ color: green;
+}
+.popupoption2:hover{
+ color: red;
+}
+
+        #san {
+            text-align: left;
+        }
+    </style>
+
+    
+    </head>
+    <body>
+    
+    <title>Trash 2020</title>
+        
+        
+        
+<div class="maintext">    
+        
+        
+        
+    <div class="fade-in1"><img src="images/title.png" class="titlepic" alt="Trash 2020">
+        
+    
+    <!-- <h1>Trash 2020</h1> -->
+         
+    
+<div class="row">
+  <div class="column left" style="background-color:#488083;">
+      
+      <!-- Google Calendar Jump to Month Script -->
+
+<!-- Google Calendar iframe paste below, add name="calendar" -->
+      <div class="responsiveCal"> <!-- to make it (somewhat) mobile responsive -->
+
+<iframe  name="calendar" src="https://calendar.google.com/calendar/embed?height=650&amp;wkst=1&amp;bgcolor=%23478083&amp;ctz=America%2FNew_York&amp;src=Y191cm41azVrZW05azk5bG5rbzN1NjhobGJva0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%233F51B5&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="border: 0; height:600px;" frameborder="0" scrolling="no"></iframe>
+</div>    
+  </div>
+  
+    
+  <div class="column right" style="background-color:#488083;">
+    <h1>&#128465;&#65039;</h1>
+      <div id="GCoptions"></div>
+
+      <!--- test script -->
+      <script>
+/*
+Google Calendar Jump to Month Script v 1.0
+by Daniel Chase @ https://riseofweb.com (thank you king!)
+*/
+function GoogleCalendarJump(){
+ var iframeName = "calendar"; //What is the Name attribute for the Google Calendar iframe embed?
+ var divHolder = "GCoptions"; //The DIV ID attribute to write to
+ var months = 12; //How many months you would like to show
+ var maxYear = 1; //Max number of full years to show
+ var columns = 1; //How many columns?
+
+ var iframeLink = document.getElementsByName(iframeName)[0].src;
+    
+    
+    
+ var theMonths = new Array("<b>1.</b> a memory", "<b>2.</b> plane tickets", "<b>3.</b> masks", "<b>4.</b> spoiled milk", "<b>5.</b> a Live Thing", "<b>6.</b> cardboard signs", "<b>7.</b> disinfectant", "<b>8.</b> tags", "<b>9.</b> paper or plastic", "<b>10.</b> bag", "<b>11.</b> trash", "<b>12.</b> 2020");
+    
+    
+ var today = new Date("January 3 2020");
+ var month = today.getMonth();
+ var year = today.getFullYear();
+ var i;
+ var link;
+ var writeToDiv = '';
+ var yearCount = 0;
+
+ function replaceFrameURL(url,param,value) {
+ var re = new RegExp("([?|&])" + param + "=.*?(&|$)","i");
+ if (url.match(re))
+ return url.replace(re,'$1' + param + "=" + value + '$2');
+ else
+ return url + '&' + param + "=" + value;
+ }
+
+ columns = Math.floor(100/columns);
+
+    //how to get the months written
+    
+ writeToDiv = '<div class="GCcolumn" style="width:'+columns+'%;">';
+ //writeToDiv = writeToDiv + '<h3 class="GCyear">' + year + '</h3>';
+ for (i=0; i<months; i++) {
+ link = String(year) + String(("0" + (month+1)).slice(-2)) + '01';
+ link = String(link) + '/' + String(link);
+ link = replaceFrameURL(iframeLink,'dates',link);
+ 
+ writeToDiv = writeToDiv + '<a class="GClink" href="'+link+'" target="'+iframeName+'">' + theMonths[month] + '</a>';
+ month++;
+ if (month % 12 === 0){
+ year++;
+ yearCount++;
+ if(yearCount >= maxYear){ break; }
+ writeToDiv = writeToDiv + '</div><div class="GCcolumn" style="width:'+columns+'%;">';
+ writeToDiv = writeToDiv + '<h3 class="GCyear">' + year + '</h3>';
+ }
+ if (month > 11) {
+ month = 0;
+ }
+ }
+ writeToDiv = writeToDiv + '</div><div class="GCclear"></div>';
+ document.getElementById(divHolder).innerHTML = writeToDiv;
+}
+(function(){ GoogleCalendarJump(); })();
+</script>
+      
+  </div>  
+
+</div>
+    </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div id="boxes">
+<div style="top: 50%; left: 50%; display: none;" id="dialog" class="window"> 
+<div id="san">
+<a href="#" class="close agree">&times;</a>
+<h4>Welcome to <i>Trash 2020</i></h4>
+    <ol><li>Navigate using the sidebar.</li>
+        <li>It's best to start at the beginning.</li>
+                <li>Entries marked "&#128467;&#65039;" are expandable.</li>
+                
+ 
+    </ol>
+</div>
+</div>
+<div style="width: 2478px; font-size: 32pt; color:white; height: 1202px; display: none; opacity: 0.4;" id="mask"></div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+    
+    <script>
+    $(document).ready(function() { 
+  var id = '#dialog';
+  var maskHeight = $(document).height();
+  var maskWidth = $(window).width();
+  $('#mask').css({'width':maskWidth,'height':maskHeight}); 
+  $('#mask').fadeIn(500); 
+  $('#mask').fadeTo("slow",0.9); 
+        var winH = $(window).height();
+  var winW = $(window).width();
+        $(id).css('top',  winH/2-$(id).height()/2);
+  $(id).css('left', winW/2-$(id).width()/2);
+     $(id).fadeIn(2000);  
+     $('.window .close').click(function (e) {
+  e.preventDefault();
+  $('#mask').hide();
+  $('.window').hide();
+     });  
+     $('#mask').click(function () {
+  $(this).hide();
+  $('.window').hide();
+ });  
+ 
+});
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<link rel="stylesheet" href="trash2020styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- replace on click? -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+   
+    <script>
+$(document).ready(function(){
+  $("button").click(function(){
+      $("p:first").replaceWith("<div class=fade-in1>" + "<p>I am the place where the useful, cherished, and inconvenient things go. <br>I am a place, a time, but most of all I am a feeling. <br>I am the feeling of survival.</p>" + "</div>");
+
+  }); 
+});
+</script>
+    
+    
+</head>
+    
+<body><title>Trash 2020</title>
+
+<div class="fade-in1">
+    <p><button><img src="images/trashcan2.png" alt="Trash 2020"></button></p>
+</div>
+
+<!--
+<div class="fade-in2">
+    <h3>Story by Lauren Alcindor</h3>
+    <h3>Illustrations by Yingjie Wang</h3>
+    </div>
+ -->
+
+</body>
+</html>

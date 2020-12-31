@@ -1,0 +1,225 @@
+/* FOR THE CALENDAR PAGE!!! */
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body {
+    background-color: #488083;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+    margin: 20px;
+    line-height: 2;
+
+}
+
+h1 {
+    /*font-family: 'Frijole', cursive;*/
+    font-size: 60px;
+    margin: 20px;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+mark {
+    background-color: #004f53;
+    border-radius: 5px;
+}
+
+
+p {
+    text-align: center;
+    padding: 5%;
+    font-size: 20px;
+}
+
+
+
+/* button work around... */
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+}
+
+
+
+
+/* testing direct links to months! */
+
+/* One Column */
+iframe[name='calendar']{
+ height:600px;
+ width:100%;
+ border:0;
+}
+
+.GClink{
+    display:block;
+    position:relative;
+    text-decoration: none;
+    color: white;
+    background-color: #488083; 
+}
+
+.GClink:hover {
+    color: black;
+}
+
+
+/* iframe */
+
+iframe {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* for mobile iframe */
+.responsiveCal {
+ 
+position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+ 
+}
+ 
+.responsiveCal iframe {
+ 
+position: absolute; top:0; left: 0; width: 100%; height: 100%;
+ 
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+img.titlepic {
+    width: 25%;
+    border-radius: 50%;
+}
+
+/* for the columns */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+
+}
+
+.left {
+  width: 90%; /*80*/
+}
+
+.right {
+  width: 10%; /*20*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Fade-in */
+.fade-in1 {
+
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+.fade-in2 {
+      
+  animation: fadeIn ease 30s;
+  -webkit-animation: fadeIn ease 30s;
+  -moz-animation: fadeIn ease 30s;
+  -o-animation: fadeIn ease 30s;
+  -ms-animation: fadeIn ease 30s;
+}
+.fade-in3 {
+
+  animation: fadeIn ease 80s;
+  -webkit-animation: fadeIn ease 80s;
+  -moz-animation: fadeIn ease 80s;
+  -o-animation: fadeIn ease 80s;
+  -ms-animation: fadeIn ease 80s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+    
+/*zoom in on calendar DOESNT WORK??? */
+div.mv-event-container table.st-grid td > span:first-child {
+  font-weight:bold !important;
+  font-size:1.5em !important;
+}
+.date-top {
+  font-weight:bold !important;
+  font-size:20px !important;
+}
