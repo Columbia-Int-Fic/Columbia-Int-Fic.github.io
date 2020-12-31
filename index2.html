@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Current CSS -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Logo link -->
+    <link rel="shortcut icon" href="images/white-logo.svg" type="image/x-icon"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Maven Pro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"> <!-- Playfair font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> <!-- Open Sans font-->
+
+    <!--mapbox-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176737183-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-176737183-1');
+    </script>
+
+    <title>Columbia Int Fic: what IF - Home</title> 
+</head>
+
+<body id="home-body">
+
+    <div class="container-fluid">
+        <div class="splash">
+          <img width="1200" src="images/white-logo.svg" class="splash-logo" alt="Columbia Int Fic Logo">
+          <h1 class="splash-txt-1">what IF</h1>
+          <p class="splash-txt-2">click to continue</p>
+    </div>
+    
+<div id='map'></div>
+
+<!-- Navigation Bar-->
+<nav class="navbar navbar-custom navbar-expand-lg navbar-light fixed-bottom">
+  <a class="navbar-brand" href="/index.html"><img src="images/favicon_io/maroon-logo.png" style="width:70px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+      <a class="nav-link" href="about.html">about </a>
+      <a class="nav-link" href="team.html">meet the team<span class="sr-only">(current)</span></a>
+      <a class="nav-link active current" href="submit.html">submit a story<span class="sr-only">(current)</span></a>
+  </div>
+  </div>
+</nav>
+
+<script src="index.js"></script>
+
+</body>
+</html>
