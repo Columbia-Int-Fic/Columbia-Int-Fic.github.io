@@ -102,6 +102,40 @@ var geojson = {
       minutes: '15',
       link: 'series_2/giordana/giordana.html',
     }
+  },
+  { 
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.445739, 37.753998] 
+    },
+    properties: {
+      title: 'Trash 2020',
+      image: 'series_2/Trash2020/images/storycover.png',
+      description: '"I wonder if people are more like paper or plastic. When they are thrown away, do they give in to the earth or struggle against it indefinitely?"',
+      writers: 'Lauren Alcindor',
+      tech: 'Lauren Alcindor',
+      visuals: 'Yingjie Wang', 
+      minutes: '15',
+      link: 'series_2/Trash2020/trash2020twine.html',
+    }
+  },
+  { 
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-90.070889, 29.999517] 
+    },
+    properties: {
+      title: 'A Letter In Which the Writer Sees Herself',
+      image: 'series_2/elizabeth/Red.jpg',
+      description: 'A meditation on sight, this lyric essay interweaves the anatomical and the anecdotal to distill what it means to see and be seen.',
+      writers: 'Elisabeth McLaughlin',
+      tech: 'Jessica Chen',
+      visuals: 'Elisabeth McLaughlin', 
+      minutes: '15',
+      link: 'series_2/elizabeth/elisabeth.html',
+    }
   }]
 };
 
