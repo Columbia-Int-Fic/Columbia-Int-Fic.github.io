@@ -1,10 +1,9 @@
 :root {
-  --dark: #000000; 
- --light: #FFFFFF; 
- --blocks: #99B3C6;
-  --transition: all 0.3s ease 0s; 
+  --dark: #000000;
+  --light: #ffffff;
+  --blocks: #99b3c6;
+  --transition: all 0.3s ease 0s;
   /* all variables above */
-  
 }
 body {
   margin: 0;
@@ -17,30 +16,34 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+.mapboxgl-marker {
+  width: 25px;
+}
 .marker {
-  background-image: url('images/map.png');
+  background-image: url("images/map.png");
   background-size: cover;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   cursor: pointer;
-}  
+}
 .splash-txt-1 {
   font-size: 100px;
-  font-family: 'tt_blackitalic', sans-serif;
+  font-family: "tt_blackitalic", sans-serif;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   animation-delay: 1s;
 }
 
 .splash-txt-2 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-size: 30px;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   animation-delay: 2s;
   cursor: pointer;
-  }
+}
 
 .mapboxgl-popup {
   max-width: 200px;
@@ -48,7 +51,7 @@ body {
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* CSS styling for splash screen */
@@ -58,7 +61,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(5, 91, 148, 0.8) 0%, rgba(5, 91, 148, 0.44) 100%);    
+  background: linear-gradient(
+    180deg,
+    rgba(5, 91, 148, 0.8) 0%,
+    rgba(5, 91, 148, 0.44) 100%
+  );
   z-index: 200;
   color: white;
   text-align: center;
@@ -81,12 +88,12 @@ body {
 }
 
 /* Splash screen text fade in keyframe function */
-@keyframes fadeIn{
+@keyframes fadeIn {
   from {
-     opacity: 0;
+    opacity: 0;
   }
   to {
-     opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -105,19 +112,18 @@ body {
   left: 0;
   z-index: 200;
   line-height: 90vh;
-  
 }
 
 .splash-txt-1 {
   font-size: 100px;
-  font-family: 'tt_blackitalic', sans-serif;
+  font-family: "tt_blackitalic", sans-serif;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   animation-delay: 1s;
 }
 
 .splash-txt-2 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-size: 30px;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
@@ -127,24 +133,24 @@ body {
 html {
   color: black;
   text-align: center;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: "Maven Pro", sans-serif;
   height: 100%;
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
 @font-face {
-  font-family: 'tt_normsbold';
-  src: url('fonts/ttnorms-bold-webfont.woff2') format('woff2'),
-     url('fonts/ttnorms-bold-webfont.woff') format('woff');
+  font-family: "tt_normsbold";
+  src: url("fonts/ttnorms-bold-webfont.woff2") format("woff2"),
+    url("fonts/ttnorms-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'tt_blackitalic';
-  src: url('fonts/ttnorms-blackitalic-webfont.woff2') format('woff2'),
-     url('fonts/ttnorms-blackitalic-webfont.woff') format('woff');
+  font-family: "tt_blackitalic";
+  src: url("fonts/ttnorms-blackitalic-webfont.woff2") format("woff2"),
+    url("fonts/ttnorms-blackitalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -153,14 +159,14 @@ html {
   height: 550px;
   width: 750px;
   background-color: powderblue;
-  }
+}
 
 img {
   height: 50%;
   width: 50%;
-  }
+}
 
-.content h2{
+.content h2 {
   color: #184876;
   font-size: 24pt;
 }
@@ -170,21 +176,21 @@ p {
 }
 
 .enterButton {
- background-color:#BAD1E5;
- display:inline-block;
- cursor:pointer;
- font-weight: 500;
+  background-color: #bad1e5;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
   font-size: 1em;
-  color:black;
- padding:8px 30px;
- text-decoration: none;
+  color: black;
+  padding: 8px 30px;
+  text-decoration: none;
 }
 .enterButton:hover {
- background-color:#BAD1E5; /*could have it change colors on hover by changing this*/
+  background-color: #bad1e5; /*could have it change colors on hover by changing this*/
 }
 .enterButton:active {
- position:relative;
- top:1px;
+  position: relative;
+  top: 1px;
 }
 
 /* Styling for Sinead-Louisa splash screen */
@@ -194,7 +200,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.9);   
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 200;
   color: white;
   text-align: center;
@@ -217,7 +223,7 @@ p {
 
 .sinead-txt-1 {
   font-size: 100px;
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: "Cedarville Cursive", cursive;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   margin-top: 40vh;
@@ -246,12 +252,12 @@ p {
 /* Styling for Sinead-Louisa webpage */
 
 #story-body {
-  background-image:url("images/sinead/bg-1.jpg");
+  background-image: url("images/sinead/bg-1.jpg");
   background-color: #541211;
   background-position: 7vh 0vh;
   background-repeat: no-repeat;
   background-size: 93%;
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   cursor: default;
   z-index: 2000;
 }
@@ -285,7 +291,7 @@ p {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #F3E9D2;
+  background-color: #f3e9d2;
   margin: auto;
   overflow: hidden;
 }
@@ -302,15 +308,15 @@ p {
   display: none; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-} 
+}
 
 #modal-pic {
   text-align: center;
