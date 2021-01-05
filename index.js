@@ -154,7 +154,7 @@ geojson.features.forEach(function(marker) {
   // create a HTML element for each feature
   var el = document.createElement("div");
   el.className = "marker";
-  geojson.style.backgroundImage = url("images/map.png");
+  el.style.backgroundImage = url("images/map.png");
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
