@@ -11,7 +11,8 @@ mapboxgl.accessToken =
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/jessicreative/ckht0rt2p24uv19p33s6h4jpf",
-  center: [12.908209, 39.49304],
+  //changed center
+  center: [-0.9077972019875915, -2.909236568950206],
   zoom: 2
 });
 
@@ -144,6 +145,65 @@ var geojson = {
         visuals: "Elisabeth McLaughlin",
         minutes: "15",
         link: "series_2/elizabeth/elisabeth.html"
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-90.05264568426435, 35.148979323280926]
+      },
+      properties: {
+        title: "CoviDiary",
+        //missing
+        image: "",
+        description:
+          "“I miss all those things...I miss my friends. I miss having structure, and having expectations for the way life was supposed to go. Even if those structures and expectations didn’t make me particularly happy - at least they were there.” From March to August 2020, this story details the ups and downs of a high school senior about to become a college freshman in the time of Covid.",
+        writers: "Vilanna Wang",
+        //missing
+        tech: "",
+        visuals: "Carly Roth, Tina Wang",
+        minutes: "30",
+        link: "series_2/covidiary.html"
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-66.46044561795037, 18.205806950530928]
+      },
+      properties: {
+        title: "Prohibido Tocar",
+        //missing
+        image: "",
+        description:
+          "The reflections of a Puerto Rican musician during a pandemic, where nothing was physically destroyed but there was silence on the streets and it was forbidden to play (prohibido tocar).",
+        writers: "Ana Valeria",
+        tech: "Yingjie Wang",
+        visuals: "Cilia Lê",
+        minutes: "25",
+        //missing
+        link: ""
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        //missing legit location
+        coordinates: [101.89503266543488, 35.367844995972206]
+      },
+      properties: {
+        title: "4",
+        image: "series_2/4/images/Final_Dumpling_Making.png",
+        description:
+          "The pandemic has taken away any semblance of a normal life away from many people worldwide, but it has also given rare opportunities for unexpected homecomings, such as four siblings finding themselves living under the same roof for the first time in a decade. Have a glimpse at the pandemic life the Chen family have been living through since March. ",
+        writers: "Donna Qi",
+        tech: "Lauren Alcindor",
+        visuals: "Christina Su",
+        minutes: "20",
+        link: "series_2/4/Donna Story.html"
       }
     }
   ]

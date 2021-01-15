@@ -156,7 +156,7 @@ html {
 }
 
 .mapboxgl-popup-content {
-  height: 550px;
+  height: 650px;
   width: 750px;
   background-color: powderblue;
 }
