@@ -8,6 +8,7 @@ splash.onclick = function() {
 mapboxgl.accessToken =
   "pk.eyJ1IjoiamVzc2ljcmVhdGl2ZSIsImEiOiJja2hzNjFkNmUwa3BtMnducGZvNmQwYmZ6In0.wlc4rP4u0x3yzKfZQw8Ojg";
 
+//use this link to find coordinates: https://docs.mapbox.com/search-playground/
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/jessicreative/ckht0rt2p24uv19p33s6h4jpf",
@@ -155,14 +156,12 @@ var geojson = {
       },
       properties: {
         title: "CoviDiary",
-        //missing
-        image: "",
+        image: "series_2/covidiaryCover.png",
         description:
           "“I miss all those things...I miss my friends. I miss having structure, and having expectations for the way life was supposed to go. Even if those structures and expectations didn’t make me particularly happy - at least they were there.” From March to August 2020, this story details the ups and downs of a high school senior about to become a college freshman in the time of Covid.",
         writers: "Vilanna Wang",
-        //missing
-        tech: "",
-        visuals: "Carly Roth, Tina Wang",
+        tech: "Erin Liang",
+        visuals: " Tina Wang, Carly Roth",
         minutes: "30",
         link: "series_2/covidiary.html"
       }
@@ -171,12 +170,11 @@ var geojson = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [-66.46044561795037, 18.205806950530928]
+        coordinates: [-66.0665152105015, 18.449746990033333]
       },
       properties: {
         title: "Prohibido Tocar",
-        //missing
-        image: "",
+        image: "series_2/coverart.png",
         description:
           "The reflections of a Puerto Rican musician during a pandemic, where nothing was physically destroyed but there was silence on the streets and it was forbidden to play (prohibido tocar).",
         writers: "Ana Valeria",
