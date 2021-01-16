@@ -156,9 +156,19 @@ html {
 }
 
 .mapboxgl-popup-content {
-  height: 650px;
-  width: 750px;
+  width: 700px;
   background-color: powderblue;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.mapboxgl-popup-content p {
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
 }
 
 img {

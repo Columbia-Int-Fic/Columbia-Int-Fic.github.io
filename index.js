@@ -13,7 +13,7 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/jessicreative/ckht0rt2p24uv19p33s6h4jpf",
   //changed center
-  center: [-0.9077972019875915, -2.909236568950206],
+  center: [-2.6559000754302815, -16.826592090829493],
   zoom: 2
 });
 
@@ -137,7 +137,7 @@ var geojson = {
         coordinates: [-90.070889, 29.999517]
       },
       properties: {
-        title: "A Letter In Which the Writer Sees Herself",
+        title: "A Lesson In Which the Writer Sees Herself",
         image: "series_2/elizabeth/Red.jpg",
         description:
           "A meditation on sight, this lyric essay interweaves the anatomical and the anecdotal to distill what it means to see and be seen.",
@@ -145,7 +145,7 @@ var geojson = {
         tech: "Jessica Chen",
         visuals: "Elisabeth McLaughlin",
         minutes: "15",
-        link: "series_2/elizabeth/elisabeth.html"
+        link: "series_2/elizabeth/ElisabethJan16Version.html"
       }
     },
     {
