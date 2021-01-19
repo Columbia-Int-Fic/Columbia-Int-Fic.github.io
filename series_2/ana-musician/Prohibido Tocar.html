@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Musician&#39;s Story" startnode="14" creator="Twine" creator-version="2.3.9" ifid="164D1530-34E0-4D56-97C5-FC66364C6A8D" zoom="1" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&Fraunces&Kalam&display=swap');
+	<tw-storydata name="Musician&#39;s Story" startnode="1" creator="Twine" creator-version="2.3.9" ifid="164D1530-34E0-4D56-97C5-FC66364C6A8D" zoom="1" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&Fraunces&Kalam&display=swap');
 
 body, tw-story
 {
@@ -323,7 +323,6 @@ Puerto Rico can’t take another hit- with hurricane María and the earthquakes-
 &lt;/div&gt;
 
 
-
 &lt;div style=&quot;text-align: right;&quot;&gt;[[March 12, 2020]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="March 12, 2020" tags="" position="328,1075" size="100,100">&lt;div class=&quot;c&quot;&gt;[[Turn on TV]] or [[open news app]]...&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Turn on TV" tags="" position="252,1228" size="100,100">&lt;div class=&quot;newsTV c&quot;&gt;La gobernadora declaró que Puerto Rico entra en estado de emergencia por el &lt;&lt;linkappend &quot;COVID-19&quot;&gt;&gt;
 The governor declared that Puerto Rico is in a state of emergency due to COVID-19&lt;&lt;/linkappend&gt;&gt;
 &lt;/div&gt;
@@ -352,18 +351,28 @@ And yet again, the island goes completely dark. However, this is a different dar
 	Dialog.wiki(Story.get(&#39;text1&#39;).processText());
 	Dialog.open();
 	&lt;&lt;/script&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="open news app" tags="" position="403,1227" size="100,100">&lt;div class=&quot;newsApp c&quot;&gt;La gobernadora declaró que Puerto Rico entra en estado de emergencia por el COVID-19” (The governor declared that Puerto Rico is in a state of emergency due to COVID-19)&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="open news app" tags="" position="403,1228" size="100,100">&lt;div class=&quot;newsApp c&quot;&gt;La gobernadora declaró que Puerto Rico entra en estado de emergencia por el &lt;&lt;linkappend &quot;COVID-19&quot;&gt;&gt;
+The governor declared that Puerto Rico is in a state of emergency due to COVID-19&lt;&lt;/linkappend&gt;&gt;&lt;/div&gt;
  
-“María, ven acá. La gobernadora habló.” (María, come here. The governor spoke). 
- 
-“Amor, lo vi. Los primeros casos positivos del coronavirus en Puerto Rico son de unos turistas de Italia y California. Ya hay como 5 casos confirmados. O algo así escuché.” (My dear, I read about it. The first confirmed cases of Coronavirus in Puerto Rico were from some tourists from Italy and California. There are around five confirmed cases. Or something like that I heard.) 
-
-
+&lt;&lt;timed 3s t8n&gt;&gt;
+&lt;div class=&quot;r&quot;&gt; María, ven acá. La gobernadora &lt;&lt;linkappend &quot;habló.&quot;&gt;&gt;
+María, come here. The governor spoke.&lt;&lt;/linkappend&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;
+Amor, lo vi. Los primeros casos positivos del coronavirus en Puerto Rico son de unos turistas de Italia y California. Ya hay como 5 casos confirmados. O algo así &lt;&lt;linkappend &quot;escuché.&quot;&gt;&gt;
+My dear, I read about it. The first confirmed cases of Coronavirus in Puerto Rico were from some tourists from Italy and California. There are around five confirmed cases. Or something like that I heard.&lt;&lt;/linkappend&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;
 &lt;div class=&quot;monologue&quot;&gt;
 And yet again, the island goes completely dark. However, this is a different darkness. Nothing has been destroyed. At least, we have electricity and water. Nonetheless, we have never faced a pandemic before. How many people will it affect? How long will it last? I just hope that the governor’s early action on this situation will not affect Puerto Rico that much. Like one, two months? &lt;&lt;linkreplace&quot;Ay que tener Fe.&quot;&gt;&gt;We need to have faith.&lt;&lt;/linkreplace&gt;&gt; It’s uncertain how long this darkness will last. 
 &lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s t8n&gt;&gt;
+&lt;div class=&quot;centerImage&quot;&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/Columbia-Int-Fic/Columbia-Int-Fic.github.io/musicians/images/musicians/2.png&quot; height= 500px width= auto&gt;
+&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 5s t8n&gt;&gt;
+&lt;&lt;timed 25s t8n&gt;&gt;
 	&lt;&lt;script&gt;&gt;
 	Dialog.setup(&quot;MESSAGES&quot;);
 	Dialog.wiki(Story.get(&#39;text1&#39;).processText());
