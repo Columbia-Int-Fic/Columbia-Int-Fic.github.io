@@ -12,9 +12,8 @@ mapboxgl.accessToken =
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/jessicreative/ckht0rt2p24uv19p33s6h4jpf",
-  //changed center
-  center: [-2.6559000754302815, -16.826592090829493],
-  zoom: 2
+  center: [-2.6559000754302815, -50.826592090829493],
+  zoom: 1.5
 });
 
 // code from the next step will go here!
