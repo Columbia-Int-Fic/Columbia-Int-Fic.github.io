@@ -180,8 +180,7 @@ var geojson = {
         tech: "Yingjie Wang",
         visuals: "Cilia Lê",
         minutes: "25",
-        //missing
-        link: ""
+        link: "series_2/ana-musician/ProhibidoTocar.html"
       }
     },
     {
