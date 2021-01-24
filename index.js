@@ -155,7 +155,7 @@ var geojson = {
       },
       properties: {
         title: "CoviDiary",
-        image: "series_2/covidiaryCover.png",
+        image: "series_2/covidiaryCover.PNG",
         description:
           "“I miss all those things...I miss my friends. I miss having structure, and having expectations for the way life was supposed to go. Even if those structures and expectations didn’t make me particularly happy - at least they were there.” From March to August 2020, this story details the ups and downs of a high school senior about to become a college freshman in the time of Covid.",
         writers: "Vilanna Wang",
@@ -178,7 +178,7 @@ var geojson = {
           "The reflections of a Puerto Rican musician during a pandemic, where nothing was physically destroyed but there was silence on the streets and it was forbidden to play (prohibido tocar).",
         writers: "Ana Valeria",
         tech: "Yingjie Wang",
-        visuals: "Cilia Lê",
+        visuals: "Celia Lê",
         minutes: "25",
         link: "series_2/ana-musician/ProhibidoTocar.html"
       }
